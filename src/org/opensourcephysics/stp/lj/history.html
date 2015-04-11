@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>History of Changes</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<h4>Molecular Dynamics</h4>
+July 31, Peter Sibley
+
+<p>Added author tags in source.</p>
+
+
+July 29, Harvey Gould
+
+<p>Added method getInstantanousKineticEnergy so that initial total energy is computed corectly. Made cosmetic changes in LJFluidApp.</p>
+
+July 12, Peter Sibley
+
+<p>Changed control.getDouble("Maximum for Temperature Scale") to "Maximum for Temperature axis".
+</p>
+
+July 11, Jan Tobochnik
+
+<p>I fixed the lennard-jones program. You forgot to add virial = 0; at the
+beginning of the accel method.</p>
+
+<p>I'm not sure I like the long names for the variables, though it does
+give a better idea what they mean.</p>
+
+<p>Also, on the plots the fluctuations in the data look so large. I'm not
+sure the y axes should be rescaled automatically. It might be more
+meaningful for the temperature at least to force the y axis to begin at
+0.</p>
+
+July 10. Peter Sibley.
+
+<p>I think the pressure fuunction is screwed up have a look at getPressure in LJfluid.java.</p>
+
+<ul>
+<li>set time plots to default to zero for their xmin.</li>
+<li>altered display to show "Initial Total energy ..."</li>
+<li>reset clears message box.</li>
+<li>changed histogram to plot v_x.</li>
+<li>changed defaults to L_x=18 , temp = 1</li>
+<li>corrected the plotting window so temperature is really temperature (it was plotting pressure in that window before)</li>
+<li>added output for instaneous energy in the message box.</li>
+<li>added dt as a parameter.</li>
+</ul>
+
+<small>
+<br>Updated 29 July 2002.
+</small>
+</body>
+</html>
