@@ -34,7 +34,8 @@ public class SecondVirialApp extends AbstractCalculation implements Function {
   }
 
   public void calculate() {
-    double x_low = 0.000001, x_high = 10000, tolerance = 0.0001;
+//	    double x_low = 0.000001, x_high = 10000, tolerance = 0.0001;
+	double x_low = 0.000001, x_high = 100, tolerance = 0.0001;
     initialize();
     double deltaT = (Tmax-Tmin)/(double) numberOfPoints;
     for(double t = Tmin; t<Tmax; t += deltaT) {
@@ -49,7 +50,7 @@ public class SecondVirialApp extends AbstractCalculation implements Function {
     double oneOverR2 = 1.0/r2;
     double oneOverR6 = oneOverR2*oneOverR2*oneOverR2;
     double z = Math.exp(-(1/T)*4.0*(oneOverR6*oneOverR6-oneOverR6));
-    return 2*Math.PI*(1-z);
+    return r2*2*Math.PI*(1-z);     // error in original version left out the r2
   }
 
 }

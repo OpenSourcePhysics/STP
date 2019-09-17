@@ -97,13 +97,13 @@ public class WangLandauPottsApp extends AbstractSimulation {
   boolean isFlat() {
     int netH = 0;
     double numEnergies = 0;
-    for(int e = 0; e<=4*N; e += 4) {
+    for(int e = 0; e<=4*N; e++) {
       if(H[e]>0) {
         netH += H[e];
         numEnergies++;
       }
     }
-    for(int e = 0; e<=4*N; e += 4) {
+    for(int e = 0; e<=4*N; e ++) {
       if((0<H[e])&&(H[e]<0.8*netH/numEnergies)) {
         return false;
       }
@@ -120,27 +120,24 @@ public class WangLandauPottsApp extends AbstractSimulation {
      histogramFrame.clearData();
     densityFrame.clearData();
     pEnergyFrame.clearData();
-    //double z = 0;
-    for(int e = 0; e<=4*N; e += 4) {
+    double z = 0;
+    for(int e = 0; e<=4*N; e++) {
       if(g[e]>0) {
         densityFrame.append(0, e-2*N, g[e]-g[0]);
         histogramFrame.append(0, e-2*N, H[e]);
-        //z += Math.exp(g[e]-g[0])*Math.exp(-beta*(e-2*N));
+        z += Math.exp(g[e]-g[0])*Math.exp(-beta*(e-2*N));
       }
     }
     histogramFrame.setMessage("mcs = "+mcs);
-    for(int e = 0; e<=4*N; e += 4) {
+    for(int e = 0; e<=4*N; e++) {
         if(g[e]>0) {
           pEnergyFrame.append(0,e-2*N, (g[e]-g[0]) -beta*(e-2*N));
         }
       }
    
     heatFrame.clearData();
-    for(double T = 0.5; T<6; T += 0.1) {
-      heatFrame.append(0, T, Thermodynamics.heatCapacity(N, g, 1/T)/N);
-    }
-    for(double T = 1.9; T<2.7; T += 0.02) {
-      heatFrame.append(0, T, Thermodynamics.heatCapacity(N, g, 1/T)/N);
+    for(double T = 0.5; T<3; T += 0.02) {
+      heatFrame.append(0, T, Thermodynamics.heatCapacityPotts(N, g, 1/T)/N);
     }
     if(isFlat()) {
       NumberFormat nf = NumberFormat.getInstance();
@@ -151,7 +148,7 @@ public class WangLandauPottsApp extends AbstractSimulation {
       control.println("f = "+nf.format(f));
    
       iterations++;
-      for(int e = 0; e<=4*N; e += 4) {
+      for(int e = 0; e<=4*N; e++) {
         H[e] = 0;
       }
     }

@@ -103,6 +103,7 @@ public class WangLandauApp extends AbstractSimulation {
   public void doStep() {
 	double beta = 1.0/control.getDouble("T for P(E)");
     int mcsMax = mcs+Math.max(100000/N, 1);
+    System.out.println(mcsMax);
     for(; mcs<mcsMax; mcs++) {
       flipSpins();
     }

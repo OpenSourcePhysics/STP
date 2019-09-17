@@ -18,19 +18,18 @@ import java.text.NumberFormat;
  *
  *  @author Hui Wang
  *  @version 1.0   revised 07/19/06
+ *  @version 3.0   revised 09/08/19 by Jan Tobochnik
  */
 public class ComputeFermiIntegralApp extends AbstractCalculation implements Function {
-  PlotFrame plotFrame = new PlotFrame("T*", "\u03bc*", ""); // ��
-  PlotFrame energyFrame = new PlotFrame("T*", "e", "");     // ��
+  PlotFrame plotFrame = new PlotFrame("T* = T/Tf", "\u03bc*", "Temperature Dependence of the Chemical Potential"); // ��
+  PlotFrame energyFrame = new PlotFrame("T* = T/Tf", "e* = E/NkTf", "Temperature Dependence of the Energy");     // ��
   double b = 1.0;
   double T = 1.0;
   double mu = 1.0;
   double rho = 0.5;
-  double x_low = 0;
-  double x_high = 1e2;
   int npoints = 0;
   double[] mua, Ta, Ea;
-  double tolerance = 0.01;
+  double tolerance = 0.001;
   int nmaxTrials = 1000;
   NumberFormat nf = NumberFormat.getInstance();
 
@@ -66,20 +65,15 @@ public class ComputeFermiIntegralApp extends AbstractCalculation implements Func
     mu = control.getDouble("\u03bc*");
     T = control.getDouble("T*");
     b = 1.0/T;
-    rho = Integral.simpson(this, x_low, x_high, 2000, tolerance);
-    //control.println();
-    //control.println("\u03bc* = "+mu);              // mu
-    //control.println("Calculated \u03c1 = " + rho);  //rho
+    rho = Integral.simpson(this, 0, 100*T, 2000, tolerance);
     control.println( nf.format(rho) + "\t \t" +  T  + "\t" + mu);	// integral 
-    //control.println("Calculated Integral = "+rho); // rho
-    plot();
-  }
+   }
 
   public double calculateE(double m, double t) {
     FermiEnergyIntegral f = new FermiEnergyIntegral();
     f.b = 1/t;
     f.mu = m;
-    double e = Integral.simpson(f, x_low, x_high, 2000, tolerance);
+    double e = Integral.simpson(f, 0, 100*T, 2000, tolerance);
     return e;
   }
 

@@ -3,6 +3,7 @@
  *
  * For additional information and documentation on Open Source Physics please see:
  * <http://www.opensourcephysics.org/>
+ * rewritten by Jan Tobochnik 9/13/19
  */
 
 package org.opensourcephysics.stp.centralLimit;
@@ -23,6 +24,7 @@ import org.opensourcephysics.display.Histogram;
 import org.opensourcephysics.display.OSPFrame;
 import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.display.PlottingPanel;
+import org.opensourcephysics.frames.PlotFrame;
 
 public class CentralApp extends AbstractSimulation {
   int n;
@@ -31,26 +33,12 @@ public class CentralApp extends AbstractSimulation {
   double y_accum, y2_accum;
   double variancex;
   double lambda = 1.0;
-  DrawingFrame frame;
-  PlottingPanel panel;
-  Histogram dist;
+  double binWidth;
+  PlotFrame histFrame = new PlotFrame("y", "p(y)", "p(y)");
+  int dist[];
   String xDistribution;
 
-  /**
-   * Constructor CentralApp
-   */
-  public CentralApp() {
-    panel = new PlottingPanel("y", "P(y)", "");
-    frame = new DrawingFrame("P(y)", panel);
-    frame.setVisible(true);
-    dist = new Histogram();
-    dist.setNormalizedToOne(true);
-    panel.addDrawable(dist);
-    panel.setAutoscaleX(true);
-    panel.setAutoscaleY(true);
-    panel.limitAutoscaleX(0,1);
-    panel.limitAutoscaleY(0,.01);
-  }
+ 
 
   public double sample_x_uniform() {
     // Generate a uniform distribution in [0, 1]
@@ -64,7 +52,8 @@ public class CentralApp extends AbstractSimulation {
 
   public double sample_x_lorentz() {
     // Generate Lorentzian distribution with mean 0.5
-    return Math.tan(Math.PI*sample_x_uniform());
+	  //return Math.tan(Math.PI*sample_x_uniform());
+	  return Math.tan(Math.PI*(sample_x_uniform()-0.5));
   }
 
   public double sample_y() {
@@ -88,6 +77,7 @@ public class CentralApp extends AbstractSimulation {
         y += x;
       }
     }
+    //System.out.print(y/n + " ");
     return y/n;
   }
 
@@ -97,24 +87,36 @@ public class CentralApp extends AbstractSimulation {
       y_accum += y;
       y2_accum += y*y;
       trials++;
-      dist.append(y);
+      int index = (int)(500 + y/binWidth);
+      if(index >= 0 && index < 1000)dist[index]++;
+      System.out.print(index + " ");
     }
-    panel.setMessage("trials="+trials);
-    panel.render();
+    histFrame.clearData();
+    for (int index = 0; index < 1000;index++){
+    	if(dist[index]> 0){
+    		double p = 1.0*dist[index]/trials;
+    		double xaxis = (index-500)*binWidth;
+    		histFrame.append(0,xaxis,p);
+    	}
+    }
+    histFrame.setMessage("trials="+trials);
   }
 
   public void initialize() {
-    dist.clear();
-    frame.repaint();
+    histFrame.clearData();
     x_accum = 0;
     x2_accum = 0;
     y_accum = 0;
     y2_accum = 0;
     trials = 0;
     n = control.getInt("N");
-    dist.setBinWidth(0.03/Math.sqrt((double) n)); // variable bin width
+    binWidth = (0.03/Math.sqrt((double) n)); // variable bin width
     xDistribution = control.getString("distribution");
+    if(xDistribution.equals("Lorentz")){
+    	binWidth *=10;
+    }
     control.clearMessages();
+    dist = new int[1000];
   }
 
   public void reset() {
@@ -144,7 +146,7 @@ public class CentralApp extends AbstractSimulation {
     } else {
       control.println("<x> =" +  ControlUtils.f4(x_avg) + " variance of x = "+ControlUtils.f4(variancex));
     }
-    control.println("<y> = "+ControlUtils.f2(y_avg));
+    control.println("<y> = "+ControlUtils.f4(y_avg));
     control.println("sample variance s\u00b2= "+ControlUtils.f4(variancey));
     control.println();
   }
@@ -152,60 +154,13 @@ public class CentralApp extends AbstractSimulation {
   /**
    * Switch to the WRApp user interface.
    */
-  public void switchGUI() {
-    stopSimulation();
-    Runnable runner = new Runnable() {
-      public synchronized void run() {
-        OSPRuntime.disableAllDrawing = true;
-        OSPFrame mainFrame = getMainFrame();
-        XMLControlElement xml = new XMLControlElement(getOSPApp());
-        WindowListener[] listeners = mainFrame.getWindowListeners();
-        int closeOperation = mainFrame.getDefaultCloseOperation();
-        mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        mainFrame.setKeepHidden(true);
-        mainFrame.dispose();
-        CentralWRApp app = new CentralWRApp();
-        CentralAppControl c = new CentralAppControl(app, app.frame, null);
-        c.getMainFrame().setDefaultCloseOperation(closeOperation);
-        for(int i = 0, n = listeners.length; i<n; i++) {
-          if(listeners[i].getClass().getName().equals("org.opensourcephysics.tools.Launcher$FrameCloser")) {
-            c.getMainFrame().addWindowListener(listeners[i]);
-          }
-        }
-        c.loadXML(xml, true);
-        app.customize();
-        c.resetSimulation();
-        System.gc();
-        OSPRuntime.disableAllDrawing = false;
-        GUIUtils.showDrawingAndTableFrames();
-      }
+ 
 
-    };
-    Thread t = new Thread(runner);
-    t.start();
-  }
-
-  void customize() {
-    OSPFrame f = getMainFrame();
-    if((f==null)||!f.isDisplayable()) {
-      return;
-    }
-    JMenu menu = f.getMenu("Display");
-    JMenuItem item = new JMenuItem("Switch GUI");
-    item.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent e) {
-        switchGUI();
-      }
-
-    });
-    menu.add(item);
-    addChildFrame(frame);
-  }
+ 
 
   public static void main(String[] args) {
     CentralApp app = new CentralApp();
     SimulationControl.createApp(app, args);
-    app.customize();
   }
 
 }
