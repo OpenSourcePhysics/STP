@@ -49,7 +49,7 @@ public class CentralWRApp extends CentralApp {
         }
         c.loadXML(xml, true);
         c.setValue("model", null);
-        app.customize();
+        //app.customize();  GUI Switch not implemented.
         app.initialize();
         System.gc();
         OSPRuntime.disableAllDrawing = false;
@@ -116,8 +116,9 @@ public class CentralWRApp extends CentralApp {
    */
   public static void main(String[] args) {
     final CentralWRApp app = new CentralWRApp();
-    new CentralAppControl(app, app.frame, args);
-    app.customize();
+    new CentralAppControl(app, null, args);
+    //new CentralAppControl(app, app.frame, args);
+    //app.customize();
   }
 
 }

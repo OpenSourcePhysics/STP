@@ -154,8 +154,7 @@ public class CentralApp extends AbstractSimulation {
   /**
    * Switch to the WRApp user interface.
    */
- 
-
+  
  
 
   public static void main(String[] args) {
