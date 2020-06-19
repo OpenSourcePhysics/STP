@@ -1,6 +1,6 @@
 /*
  * Open Source Physics software is free software as described near the bottom of this code file.
- *
+ * JT made a change here. 
  * For additional information and documentation on Open Source Physics please see:
  * <http://www.opensourcephysics.org/>
  */
