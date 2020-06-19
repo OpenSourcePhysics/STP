@@ -6,6 +6,7 @@
  */
 
 package org.opensourcephysics.stp.demon.mdDemon;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -27,6 +28,7 @@ import org.opensourcephysics.display.OSPRuntime;
  * @version 1.0 revised 03/28/05, 3/29/05
  */
 public class LJParticlesDemonApp extends AbstractSimulation {
+	public static Container frame = null;
   LJParticlesDemon md = new LJParticlesDemon();
   PlotFrame pressureData = new PlotFrame("time", "PA/NkT", "Mean pressure");
   PlotFrame demonPlot = new PlotFrame("E", "ln (P(E))", "Demon energy distribution");
@@ -241,6 +243,7 @@ public class LJParticlesDemonApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app);
     control.addButton("resetData", "Zero Averages");
     app.customize();
+    frame=control;
   }
 
 }

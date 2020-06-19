@@ -10,6 +10,8 @@ import org.opensourcephysics.controls.*;
 import org.opensourcephysics.display.GUIUtils;
 import org.opensourcephysics.display.OSPFrame;
 import org.opensourcephysics.display.OSPRuntime;
+
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -23,6 +25,7 @@ import org.opensourcephysics.frames.PlotFrame;
 
 // The demon algorithm applied to an ideal gas
 public class DemonApp extends AbstractSimulation {
+	public static Container frame = null;
   int N, dimensions, acceptedMoves = 0, mcs = 0;
   double[][] v; // (N*dimensions) particle velocities
   double systemEnergy, demonEnergy, systemEnergyAccumulator = 0, demonEnergyAccumulator = 0, delta, exponent;
@@ -203,6 +206,7 @@ public class DemonApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("zeroAverages", "Zero averages");
     app.customize();
+    frame=control;
   }
 
 }

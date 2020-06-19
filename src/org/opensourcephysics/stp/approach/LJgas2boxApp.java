@@ -7,6 +7,7 @@
 
 package org.opensourcephysics.stp.approach;
 
+import java.awt.Container;
 /**
  * TODO - check results. Original version was not working, converted to AbstractSimulation
  *
@@ -36,6 +37,7 @@ import org.opensourcephysics.frames.DisplayFrame;
 import org.opensourcephysics.frames.PlotFrame;
 
 public class LJgas2boxApp extends AbstractSimulation {
+	public static Container frame = null;
   LJgas2box gas = new LJgas2box();
   PlotFrame plotFrame = new PlotFrame("time", "n1, n2", "Number of particles in each cell");
   DisplayFrame displayFrame = new DisplayFrame("Particle positions");
@@ -139,6 +141,7 @@ public class LJgas2boxApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("reverse", "Reverse");
     app.customize();
+    frame=control;
   }
 
 }

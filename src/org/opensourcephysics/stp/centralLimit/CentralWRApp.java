@@ -6,8 +6,12 @@
  */
 
 package org.opensourcephysics.stp.centralLimit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 import org.opensourcephysics.controls.ControlUtils;
@@ -108,6 +112,25 @@ public class CentralWRApp extends CentralApp {
     ((EjsSimulationControl) control).getControl("meanY").setProperty("value", ControlUtils.f3(y_avg));
     ((EjsSimulationControl) control).getControl("s2").setProperty("value", ControlUtils.f4(variancey));
   }
+  
+  void customize() {
+    OSPFrame f = getMainFrame();
+    if((f==null)||!f.isDisplayable()) {
+      return;
+    }
+    JMenu menu = f.getMenu("Display");
+    JMenuItem item = new JMenuItem("Switch GUI");
+    item.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        switchGUI();
+      }
+
+    });
+    menu.add(item);
+    addChildFrame(histFrame);
+    //addChildFrame(plotFrame);
+    //addChildFrame(displayFrame);
+  }
 
   /**
    * Starts the program.
@@ -118,7 +141,7 @@ public class CentralWRApp extends CentralApp {
     final CentralWRApp app = new CentralWRApp();
     new CentralAppControl(app, null, args);
     //new CentralAppControl(app, app.frame, args);
-    //app.customize();
+    app.customize();
   }
 
 }

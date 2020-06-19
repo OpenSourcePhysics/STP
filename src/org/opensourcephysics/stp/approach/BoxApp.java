@@ -7,6 +7,7 @@
 
 package org.opensourcephysics.stp.approach;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -28,8 +29,10 @@ import org.opensourcephysics.frames.PlotFrame;
  * @created    December 26, 2002
  * @authors    Joshua Gould , Peter Sibley
  * modified    Natali Gulbahce, Oct 2002, Jan 28 2003
+ * modified    Wolfgang Christian, March 20 2020
  */
 public class BoxApp extends AbstractSimulation {
+	public static Container frame = null;
   PlotFrame plotFrame = new PlotFrame("time", "n", "");
   DatasetManager datasets;
 
@@ -170,6 +173,7 @@ public class BoxApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("zeroAverages", "Zero averages");
     app.customize();
+    frame=control;
   }
 
 }

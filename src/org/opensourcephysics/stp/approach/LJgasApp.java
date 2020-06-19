@@ -22,6 +22,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
 import java.awt.Color;
+import java.awt.Container;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -37,6 +38,7 @@ import org.opensourcephysics.frames.PlotFrame;
 import org.opensourcephysics.stp.approach.LJgas;
 
 public class LJgasApp extends AbstractSimulation {
+	public static Container frame = null;
   org.opensourcephysics.stp.approach.LJgas gas;
   PlotFrame plotFrame = new PlotFrame("time", "n1, n2, n3", "Number of particles in each cell");
   DisplayFrame displayFrame = new DisplayFrame("Particle positions");
@@ -149,6 +151,7 @@ public class LJgasApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("reverse", "Reverse");
     app.customize();
+    frame=control;
   }
 
 }

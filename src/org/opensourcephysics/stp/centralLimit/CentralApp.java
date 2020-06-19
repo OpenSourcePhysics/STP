@@ -150,16 +150,68 @@ public class CentralApp extends AbstractSimulation {
     control.println("sample variance s\u00b2= "+ControlUtils.f4(variancey));
     control.println();
   }
+  
+  /**
+   * Switch to the WRApp user interface.
+   */
+  public void switchGUI() {
+	stopSimulation();
+    Runnable runner = new Runnable() {
+      public synchronized void run() {
+        OSPRuntime.disableAllDrawing = true;
+        OSPFrame mainFrame = getMainFrame();
+        XMLControlElement xml = new XMLControlElement(getOSPApp());
+        WindowListener[] listeners = mainFrame.getWindowListeners();
+        int closeOperation = mainFrame.getDefaultCloseOperation();
+        mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        mainFrame.setKeepHidden(true);
+        mainFrame.dispose();
+        CentralWRApp app = new CentralWRApp();
+        CentralAppControl c = new CentralAppControl(app, null, null);
+        c.getMainFrame().setDefaultCloseOperation(closeOperation);
+        for(int i = 0, n = listeners.length; i<n; i++) {
+          if(listeners[i].getClass().getName().equals("org.opensourcephysics.tools.Launcher$FrameCloser")) {
+            c.getMainFrame().addWindowListener(listeners[i]);
+          }
+        }
+        c.loadXML(xml, true);
+        app.customize();
+        c.resetSimulation();
+        System.gc();
+        OSPRuntime.disableAllDrawing = false;
+        GUIUtils.showDrawingAndTableFrames();
+      }
+
+    };
+    Thread t = new Thread(runner);
+    t.start();
+  }
 
   /**
    * Switch to the WRApp user interface.
    */
   
- 
+  void customize() {
+    OSPFrame f = getMainFrame();
+    if((f==null)||!f.isDisplayable()) {
+      return;
+    }
+    JMenu menu = f.getMenu("Display");
+    JMenuItem item = new JMenuItem("Switch GUI");
+    item.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        switchGUI();
+      }
+
+    });
+    menu.add(item);
+    addChildFrame(histFrame);
+  }
 
   public static void main(String[] args) {
     CentralApp app = new CentralApp();
     SimulationControl.createApp(app, args);
+    app.customize();
   }
 
 }

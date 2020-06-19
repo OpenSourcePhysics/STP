@@ -19,64 +19,8 @@ import org.opensourcephysics.display.OSPFrame;
 import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.ejs.control.EjsSimulationControl;
 
-import javajs.async.SwingJSUtils;
-import javajs.async.SwingJSUtils.StateHelper;
-import javajs.async.SwingJSUtils.StateMachine;
+public class BoxWRApp extends BoxApp {
 
-public class BoxWRApp extends BoxApp implements StateMachine {
-
-	private StateHelper stateHelper;
-	private int delay = (/** @j2sNative 10 || */
-	10);
-	private final static int STATE_INIT = 0;
-	private final static int STATE_LOOP = 1;
-	private final static int STATE_DONE = 2;
-	Thread guiThread = null;
-
-	@Override
-	public boolean stateLoop() {
-		System.out.println("State Loop animationThread=" + animationThread);
-		while (guiThread != null && !guiThread.isInterrupted() && stateHelper.isAlive()) {
-			switch (stateHelper.getState()) {
-			default:
-			case STATE_INIT:
-				stateHelper.setState(STATE_LOOP);
-				stateHelper.sleep(0);
-				return true;
-			case STATE_LOOP:
-				OSPRuntime.disableAllDrawing = true;
-				OSPFrame mainFrame = getMainFrame();
-				XMLControlElement xml = new XMLControlElement(getOSPApp());
-				WindowListener[] listeners = mainFrame.getWindowListeners();
-				int closeOperation = mainFrame.getDefaultCloseOperation();
-				mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-				mainFrame.setKeepHidden(true);
-				mainFrame.dispose();
-				BoxApp app = new BoxApp();
-				SimulationControl c = SimulationControl.createApp(app);
-				c.setDefaultCloseOperation(closeOperation);
-				for (int i = 0, n = listeners.length; i < n; i++) {
-					if (listeners[i].getClass().getName().equals("org.opensourcephysics.tools.Launcher$FrameCloser")) {
-						c.addWindowListener(listeners[i]);
-					}
-				}
-				c.loadXML(xml, true);
-				c.setValue("model", null);
-				app.customize();
-				app.initialize();
-				System.gc();
-				OSPRuntime.disableAllDrawing = false;
-				GUIUtils.showDrawingAndTableFrames();
-				stateHelper.sleep(delay);
-				stateHelper.setState(STATE_DONE);
-				return true;
-			case STATE_DONE:
-				guiThread = null;
-				return false;
-			}
-		}
-		return false;
-	}
 
 	/**
 	 * Switch to the App user interface.
@@ -85,14 +29,6 @@ public class BoxWRApp extends BoxApp implements StateMachine {
 		stopSimulation();
 		Runnable runner = new Runnable() {
 			public synchronized void run() {
-				if (javajs.async.Async.isJS()) {
-					System.out.println("Running");
-					stateHelper = new SwingJSUtils.StateHelper(BoxWRApp.this);
-					stateHelper.setState(STATE_INIT);
-					stateHelper.sleep(0);
-					return;
-				}
-				// Java Tread.
 				OSPRuntime.disableAllDrawing = true;
 				OSPFrame mainFrame = getMainFrame();
 				XMLControlElement xml = new XMLControlElement(getOSPApp());
@@ -119,7 +55,7 @@ public class BoxWRApp extends BoxApp implements StateMachine {
 			}
 
 		};
-		guiThread = new Thread(runner);
+		Thread guiThread = new Thread(runner);
 		guiThread.start();
 	}
 

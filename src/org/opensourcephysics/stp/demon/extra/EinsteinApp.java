@@ -6,6 +6,7 @@
  */
 
 package org.opensourcephysics.stp.demon.extra;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -27,6 +28,7 @@ import org.opensourcephysics.frames.PlotFrame;
  *
  */
 public class EinsteinApp extends AbstractSimulation {
+	public static Container frame = null;
   boolean logScale;
   int[] E; 
   double [] histogram;
@@ -183,6 +185,7 @@ public class EinsteinApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app);
     control.addButton("zeroAverages", "Zero averages");
     app.customize();
+    frame=control;
   }
 
 }

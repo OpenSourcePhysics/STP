@@ -17,13 +17,17 @@ import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.ejs.control.EjsSimulationControl;
 
 public class LJgasWRApp extends LJgasApp {
+	
+	
+	Thread guiThread = null;
+
   /**
    * Switch to the App user interface.
    */
   public void switchGUI() {
 	stopSimulation();
-    Runnable runner = new Runnable() {
-      public synchronized void run() {
+	Runnable runner = new Runnable() {
+		public synchronized void run() {
         OSPRuntime.disableAllDrawing = true;
         OSPFrame mainFrame = getMainFrame();
         XMLControlElement xml = new XMLControlElement(getOSPApp());
@@ -51,8 +55,8 @@ public class LJgasWRApp extends LJgasApp {
       }
 
     };
-    Thread t = new Thread(runner);
-    t.start();
+    guiThread = new Thread(runner);
+    guiThread.start();
   }
   
   void messages(){  
