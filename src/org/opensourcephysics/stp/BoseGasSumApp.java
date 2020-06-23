@@ -1,9 +1,7 @@
-package org.opensourcephysics.stp.BoseGasSum;
+package org.opensourcephysics.stp;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.frames.PlotFrame;
-import org.opensourcephysics.numerics.*;
 
-import java.awt.Color;
 import java.text.NumberFormat;
 
 /**
