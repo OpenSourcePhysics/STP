@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.ising.ising2d;
+package org.opensourcephysics.stp.ising.Ising2d;
 import java.awt.event.WindowListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -23,7 +23,7 @@ import org.opensourcephysics.ejs.control.EjsSimulationControl;
  *
  * @author Wolfgang Christian
  */
-public class Ising2DWRApp extends Ising2DApp {
+public class Ising2dWRApp extends Ising2dApp {
   /**
    * Switch to the App user interface.
    */
@@ -39,7 +39,7 @@ public class Ising2DWRApp extends Ising2DApp {
         mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         mainFrame.setKeepHidden(true);
         mainFrame.dispose();
-        Ising2DApp app = new Ising2DApp();
+        Ising2dApp app = new Ising2dApp();
         SimulationControl c = SimulationControl.createApp(app);
         c.setDefaultCloseOperation(closeOperation);
         c.addButton("zeroAverages", "Zero averages");
@@ -90,7 +90,7 @@ public class Ising2DWRApp extends Ising2DApp {
    * @param args input parameters such as an xml data file
    */
   public static void main(String[] args) {
-    final Ising2DWRApp app = new Ising2DWRApp();
+    final Ising2dWRApp app = new Ising2dWRApp();
     new Ising2DControl(app, app.displayFrame, args);
     app.customize();
   }

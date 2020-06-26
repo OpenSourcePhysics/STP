@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.thermalcontact;
+package org.opensourcephysics.stp.ThermalContact;
 import java.awt.Color;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;

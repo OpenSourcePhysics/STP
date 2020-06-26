@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.ising.ising2d;
+package org.opensourcephysics.stp.ising.Ising2d;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import org.opensourcephysics.display.Drawable;
 import org.opensourcephysics.display.DrawingPanel;
 import org.opensourcephysics.display2d.CellLattice;
 
-public class Ising2D implements Drawable {
+public class Ising2d implements Drawable {
   public static final double criticalTemperature = 2.0/Math.log(1.0+Math.sqrt(2.0));
   public int[][] spin;
   public int L;
@@ -148,6 +148,7 @@ public class Ising2D implements Drawable {
       neighborList.add((currentX-1+L)%L+currentY*L);
       neighborList.add((currentX+1+L)%L+currentY*L);
       visit[currentSpin] = true;
+      int numAdded = 0;
       for(int nextSpin : neighborList) {
         boolean visited = visit[nextSpin];
         boolean inSameDir = (spin[nextSpin%this.L][nextSpin/this.L]==direction);
@@ -158,6 +159,7 @@ public class Ising2D implements Drawable {
               wolffSpins.put(stackSize, nextSpin);
               stackSize++;
             }
+            numAdded++;
           }
         }
       }

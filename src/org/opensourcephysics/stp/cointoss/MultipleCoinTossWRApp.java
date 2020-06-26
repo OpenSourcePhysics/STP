@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.cointoss;
+package org.opensourcephysics.stp.Cointoss;
 import java.awt.event.WindowListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -24,7 +24,7 @@ import org.opensourcephysics.ejs.control.EjsSimulationControl;
  *
  * @author Wolfgang Christian
  */
-public class MultipleCoinTossWRApp extends MultipleCoinTossApp {
+public class MultipleCoinTossWRApp extends CoinTossApp {
   /**
    * Switch to the App user interface.
    */
@@ -40,7 +40,7 @@ public class MultipleCoinTossWRApp extends MultipleCoinTossApp {
         mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         mainFrame.setKeepHidden(true);
         mainFrame.dispose();
-        MultipleCoinTossApp app = new MultipleCoinTossApp();
+        CoinTossApp app = new CoinTossApp();
         SimulationControl c = SimulationControl.createApp(app);
         c.setDefaultCloseOperation(closeOperation);
         for(int i = 0, n = listeners.length; i<n; i++) {

@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.xymodel;
+package org.opensourcephysics.stp.XYModel;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.frames.PlotFrame;
 
@@ -22,6 +22,7 @@ public class XYScanApp extends AbstractSimulation {
   PlotFrame heatFrame = new PlotFrame("temperature", "C", "C(t) v T");
   PlotFrame vortexFrame = new PlotFrame("temperature", "vorticty", "Vorticity versus T");
   PlotFrame chiFrame = new PlotFrame("temperature", "Chi", "Chi versus T");
+  PlotFrame energyFrame = new PlotFrame("temperature", "E", "E/N versus T");
   int N;
 
   /**
@@ -70,7 +71,6 @@ public class XYScanApp extends AbstractSimulation {
   protected void doStep() {
     // TODO Auto-generated method stub
     double temperature = xyModel.getTemperature();
-    temperature += xyModel.getdeltatemperature();
     xyModel.setTemperature(temperature);
     //control.println(String.valueOf(temperature));
     xyModel.initialize();
@@ -78,8 +78,11 @@ public class XYScanApp extends AbstractSimulation {
     heatFrame.append(0, temperature, (xyModel.getHeatCapacity()/N));
     vortexFrame.append(0, temperature, xyModel.getVorticity()/N);
     chiFrame.append(0, temperature, xyModel.getSusceptibility()/N);
-    control.clearMessages();
+    energyFrame.append(0, temperature, xyModel.getMeanEnergy()/N);
+      control.clearMessages();
     control.println("temperature = "+ControlUtils.f2(xyModel.getTemperature()));
+    temperature += xyModel.getdeltatemperature();
+    xyModel.setTemperature(temperature);
   }
 
 }

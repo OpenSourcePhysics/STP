@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.thermalcontact;
+package org.opensourcephysics.stp.ThermalContact;
 public class LJSimulation {
   public double[] x, y, vx, vy;
   double[] ax, ay;

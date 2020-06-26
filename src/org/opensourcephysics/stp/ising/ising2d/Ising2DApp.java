@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.ising.ising2d;
+package org.opensourcephysics.stp.ising.Ising2d;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -20,8 +20,8 @@ import org.opensourcephysics.display.OSPFrame;
 import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 
-public class Ising2DApp extends AbstractSimulation {
-  Ising2D ising;
+public class Ising2dApp extends AbstractSimulation {
+  Ising2d ising;
   DisplayFrame displayFrame = new DisplayFrame("Spin Configuration");
   DrawingPanel displayPanel;
   PlotFrame plotFrame = new PlotFrame("time", "E and M", "Thermodynamic Quantities");
@@ -32,8 +32,8 @@ public class Ising2DApp extends AbstractSimulation {
   /**
    * Constructor Ising2DApp
    */
-  public Ising2DApp() {
-    ising = new Ising2D();
+  public Ising2dApp() {
+    ising = new Ising2d();
     plotFrame.setPreferredMinMaxX(0, 10);
     plotFrame.setAutoscaleX(true);
     plotFrame.setAutoscaleY(true);
@@ -94,7 +94,7 @@ public class Ising2DApp extends AbstractSimulation {
 
   public void reset() {
     control.setValue("Length", 32);
-    control.setAdjustableValue("Temperature", nf.format(Ising2D.criticalTemperature));
+    control.setAdjustableValue("Temperature", nf.format(Ising2d.criticalTemperature));
     control.setAdjustableValue("External field", 0);
     OSPCombo combo = new OSPCombo(new String[] {"Metropolis", "Wolff"}, 0); // second argument is default
     control.setValue("Dynamics", combo);
@@ -124,7 +124,7 @@ public class Ising2DApp extends AbstractSimulation {
         mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         mainFrame.setKeepHidden(true);
         mainFrame.dispose();
-        Ising2DWRApp app = new Ising2DWRApp();
+        Ising2dWRApp app = new Ising2dWRApp();
         Ising2DControl c = new Ising2DControl(app, app.displayFrame, null);
         c.getMainFrame().setDefaultCloseOperation(closeOperation);
         for(int i = 0, n = listeners.length; i<n; i++) {
@@ -164,7 +164,7 @@ public class Ising2DApp extends AbstractSimulation {
   }
 
   public static void main(String[] args) {
-    Ising2DApp app = new Ising2DApp();
+    Ising2dApp app = new Ising2dApp();
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("zeroAverages", "Zero averages");
     app.customize();

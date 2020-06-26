@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.ising.ising1d;
+package org.opensourcephysics.stp.ising.Ising1d;
 import org.opensourcephysics.display.*;
 import org.opensourcephysics.display2d.*;
 import java.awt.*;
@@ -30,8 +30,8 @@ public class Ising1D implements Drawable {
     T = _T;
     H = _H;
     lattice = new CellLattice(N, 1);
-    lattice.setIndexedColor(0, Color.red);
-    lattice.setIndexedColor(2, Color.green);
+    lattice.setIndexedColor(0, Color.yellow);
+    lattice.setIndexedColor(2, Color.blue);
     // all spins up
     spin = new int[N];
     for(int i = 0; i<N; ++i) {
@@ -57,7 +57,7 @@ public class Ising1D implements Drawable {
               : this.mcs;
     double E2_avg = E2_acc/mcs;
     double E_avg = E_acc/mcs;
-    return(E2_avg-E_avg*E_avg)/(T*T*N);
+    return(E2_avg-E_avg*E_avg)/(T*T*N);   // originally divided by N*N 
   }
 
   public double susceptibility() {

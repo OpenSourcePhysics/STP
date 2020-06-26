@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.ising.ising2d;
+package org.opensourcephysics.stp.ising.Ising2d;
 import java.util.*;
 import org.opensourcephysics.display.*;
 

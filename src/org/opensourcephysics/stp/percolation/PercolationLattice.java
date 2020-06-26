@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.percolation;
+package org.opensourcephysics.stp.Percolation;
 import java.awt.*;
 import java.util.Random;
 import org.opensourcephysics.display.*;

@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.percolation;
+package org.opensourcephysics.stp.Percolation;
 
 /**
  *  Description of the Class
