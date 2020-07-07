@@ -7,12 +7,14 @@
 
 package org.opensourcephysics.stp.Ch01;
 import java.awt.Color;
+import java.awt.Container;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.frames.*;
 import org.opensourcephysics.stp.util.DoubleArray;
 
 public class ThermalContactApp extends AbstractSimulation {
+	public static Container frame = null;
   PlotFrame kinFrame;
   PlotFrame potFrame;
   DisplayFrame boardFrame = new DisplayFrame("particle display");
@@ -177,6 +179,7 @@ public class ThermalContactApp extends AbstractSimulation {
   public static void main(String[] args) {
     SimulationControl control = SimulationControl.createApp(new ThermalContactApp(), args);
     control.addButton("connectBoxes", "Contact");
+    frame=control;
   }
 
 }

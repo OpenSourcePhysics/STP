@@ -16,6 +16,12 @@ import org.opensourcephysics.display.OSPFrame;
 import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.ejs.control.EjsSimulationControl;
 
+/**
+ * TwoPartsMDWRApp adds a custom user interface to TwoPartsWRApp.
+ * Updated for conversion to JavaScript using SwingJS and java2script transpiler.
+ * @author Wolfgang Christian
+ */
+
 public class TwoPartsMDWRApp extends TwoPartsMDApp {
   /**
    * Switch to the App user interface.
@@ -34,6 +40,7 @@ public class TwoPartsMDWRApp extends TwoPartsMDApp {
         mainFrame.dispose();
         TwoPartsMDApp app = new TwoPartsMDApp();
         SimulationControl c = SimulationControl.createApp(app);
+        TwoPartsMDApp.frame=c;  //WC: required for JavaScript to access control frame
         c.setDefaultCloseOperation(closeOperation);
         c.addButton("reverse", "Reverse");
         for(int i = 0, n = listeners.length; i<n; i++) {
@@ -48,6 +55,7 @@ public class TwoPartsMDWRApp extends TwoPartsMDApp {
         System.gc();
         OSPRuntime.disableAllDrawing = false;
         GUIUtils.showDrawingAndTableFrames();
+        /** @j2sNative if(typeof centerApp === "function")centerApp() */
       }
 
     };
@@ -71,8 +79,10 @@ public class TwoPartsMDWRApp extends TwoPartsMDApp {
    */
   public static void main(String[] args) {
     final TwoPartsMDWRApp app = new TwoPartsMDWRApp();
-    new LJgas2boxWRAppControl(app, app.displayFrame, args);
+    //EjsSimulationControl control= new TwoPartsMDWRAppControl(app, app.displayFrame, args);
+    EjsSimulationControl control= new TwoPartsMDWRAppControl(app, app.plotFrame, args);
     app.customize();
+    TwoPartsMDApp.frame=control.getMainFrame();
   }
 
 }
@@ -81,8 +91,8 @@ public class TwoPartsMDWRApp extends TwoPartsMDApp {
  * A custom user interface for BoxWRApp.
  * @author Wolfgang Christian
  */
-class LJgas2boxWRAppControl extends EjsSimulationControl {
-	LJgas2boxWRAppControl(TwoPartsMDApp model, DrawingFrame frame, String[] args) {
+class TwoPartsMDWRAppControl extends EjsSimulationControl {
+	TwoPartsMDWRAppControl(TwoPartsMDWRApp model, DrawingFrame frame, String[] args) {
     super(model, frame, args);
   }
 

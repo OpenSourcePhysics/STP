@@ -11,6 +11,7 @@ import org.opensourcephysics.display.GUIUtils;
 import org.opensourcephysics.display.OSPFrame;
 import org.opensourcephysics.display.OSPRuntime;
 
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -24,8 +25,13 @@ import javax.swing.JMenuItem;
 import org.opensourcephysics.frames.HistogramFrame;
 import org.opensourcephysics.frames.PlotFrame;
 
-// The demon algorithm applied to an ideal gas
+/**
+ * The demon algorithm applied to an ideal gas
+ * Updated for conversion to JavaScript using SwingJS and java2script transpiler by Wolfgang Christian.
+ */
+
 public class DemonIdealGasApp extends AbstractSimulation {
+	public static Container frame = null;
   int N, dimensions, acceptedMoves = 0, mcs = 0;
   double[][] v; // (N*dimensions) particle velocities
   double systemEnergy, demonEnergy, systemEnergyAccumulator = 0, demonEnergyAccumulator = 0, delta, exponent;
@@ -165,6 +171,7 @@ public class DemonIdealGasApp extends AbstractSimulation {
         mainFrame.dispose();
         DemonIdealGasWRApp app = new DemonIdealGasWRApp();
         DemonWRAppControl c = new DemonWRAppControl(app, app.histogramFrame, null);
+        DemonIdealGasApp.frame=c.getMainFrame();  //WC: required for JavaScript to access ejsControl frame
         c.getMainFrame().setDefaultCloseOperation(closeOperation);
         for(int i = 0, n = listeners.length; i<n; i++) {
           if(listeners[i].getClass().getName().equals("org.opensourcephysics.tools.Launcher$FrameCloser")) {
@@ -177,6 +184,7 @@ public class DemonIdealGasApp extends AbstractSimulation {
         System.gc();
         OSPRuntime.disableAllDrawing = false;
         GUIUtils.showDrawingAndTableFrames();
+        /** @j2sNative if(typeof centerApp === "function")centerApp() */
       }
 
     };
@@ -207,6 +215,7 @@ public class DemonIdealGasApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("zeroAverages", "Zero averages");
     app.customize();
+    frame=control;
   }
 
 }

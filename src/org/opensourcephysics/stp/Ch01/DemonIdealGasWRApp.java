@@ -6,6 +6,7 @@
  */
 
 package org.opensourcephysics.stp.Ch01;
+import java.awt.Container;
 import java.awt.event.WindowListener;
 
 import javax.swing.JFrame;
@@ -21,10 +22,12 @@ import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.ejs.control.EjsSimulationControl;
 
 /**
- * DemonWRApp adds a custom user interface to DemonApp.
+ * DemonWRApp adds a custom user interface to DemonIdealGasApp.
+ * Updated for conversion to JavaScript using SwingJS and java2script transpiler.
  * @author Wolfgang Christian
  */
 public class DemonIdealGasWRApp extends DemonIdealGasApp {
+
   /**
    * Switch to the App user interface.
    */
@@ -42,6 +45,7 @@ public class DemonIdealGasWRApp extends DemonIdealGasApp {
         mainFrame.dispose();
         DemonIdealGasApp app = new DemonIdealGasApp();
         SimulationControl c = SimulationControl.createApp(app);
+        DemonIdealGasApp.frame=c;  //WC: required for JavaScript to access control frame
         c.setDefaultCloseOperation(closeOperation);
         c.addButton("zeroAverages", "Zero averages");
         for(int i = 0, n = listeners.length; i<n; i++) {
@@ -56,6 +60,7 @@ public class DemonIdealGasWRApp extends DemonIdealGasApp {
         System.gc();
         OSPRuntime.disableAllDrawing = false;
         GUIUtils.showDrawingAndTableFrames();
+        /** @j2sNative if(typeof centerApp === "function")centerApp() */
       }
 
     };
@@ -115,8 +120,9 @@ public class DemonIdealGasWRApp extends DemonIdealGasApp {
    */
   public static void main(String[] args) {
     final DemonIdealGasWRApp app = new DemonIdealGasWRApp();
-    new DemonWRAppControl(app, app.histogramFrame, args);
+    EjsSimulationControl control =new DemonWRAppControl(app, app.histogramFrame, args);
     app.customize();
+    DemonIdealGasApp.frame=control.getMainFrame();
   }
 
 }

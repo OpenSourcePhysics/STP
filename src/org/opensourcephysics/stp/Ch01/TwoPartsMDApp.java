@@ -7,6 +7,7 @@
 
 package org.opensourcephysics.stp.Ch01;
 
+import java.awt.Container;
 /**
  * TODO - check results. Original version was not working, converted to AbstractSimulation
  *
@@ -34,7 +35,12 @@ import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.DisplayFrame;
 import org.opensourcephysics.frames.PlotFrame;
 
+/**
+ * Two Partitions Simulation.
+ * Updated for conversion to JavaScript using SwingJS and java2script transpiler by Wolfgang Christian.
+ */
 public class TwoPartsMDApp extends AbstractSimulation {
+	public static Container frame = null;
   TwoPartsMD gas = new TwoPartsMD();
   PlotFrame plotFrame = new PlotFrame("time", "n1, n2", "Number of particles in each cell");
   DisplayFrame displayFrame = new DisplayFrame("Particle positions");
@@ -94,7 +100,9 @@ public class TwoPartsMDApp extends AbstractSimulation {
         mainFrame.setKeepHidden(true);
         mainFrame.dispose();
         TwoPartsMDWRApp app = new TwoPartsMDWRApp();
-        LJgas2boxWRAppControl c = new LJgas2boxWRAppControl(app, app.displayFrame, null);
+        //TwoPartsMDWRAppControl c = new TwoPartsMDWRAppControl(app, app.displayFrame, null);
+        TwoPartsMDWRAppControl c = new TwoPartsMDWRAppControl(app, app.plotFrame, null);
+        TwoPartsMDApp.frame=c.getMainFrame();  //WC: required for JavaScript to access ejsControl frame
         c.getMainFrame().setDefaultCloseOperation(closeOperation);
         for(int i = 0, n = listeners.length; i<n; i++) {
           if(listeners[i].getClass().getName().equals("org.opensourcephysics.tools.Launcher$FrameCloser")) {
@@ -107,6 +115,7 @@ public class TwoPartsMDApp extends AbstractSimulation {
         System.gc();
         OSPRuntime.disableAllDrawing = false;
         GUIUtils.showDrawingAndTableFrames();
+        /** @j2sNative if(typeof centerApp === "function")centerApp() */
       }
 
     };
@@ -137,6 +146,7 @@ public class TwoPartsMDApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("reverse", "Reverse");
     app.customize();
+    frame=control;
   }
 
 }

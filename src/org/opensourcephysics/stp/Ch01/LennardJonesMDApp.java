@@ -11,17 +11,10 @@
  */
 
 package org.opensourcephysics.stp.Ch01;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowListener;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
+import java.awt.Container;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.display.DrawingPanel;
 import org.opensourcephysics.display.GUIUtils;
-import org.opensourcephysics.display.OSPFrame;
-import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 import org.opensourcephysics.stp.util.Rdf;
 
@@ -33,6 +26,7 @@ import org.opensourcephysics.stp.util.Rdf;
  * @version 1.0 revised 03/28/05, 3/29/05, 8/14/08
  */ 
 public class LennardJonesMDApp extends AbstractSimulation {
+	public static Container frame = null;
   LennardJonesMD md = new LennardJonesMD();
   PlotFrame pressureData = new PlotFrame("time", "PA/NkT", "Mean pressure");
   PlotFrame temperatureData = new PlotFrame("time", "temperature", "Temperature");
@@ -258,6 +252,7 @@ public class LennardJonesMDApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("resetData", "Reset Data");
    // app.customize();
+    frame=control;
   }
 
 }

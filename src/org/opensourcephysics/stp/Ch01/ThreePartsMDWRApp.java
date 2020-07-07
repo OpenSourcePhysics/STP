@@ -16,6 +16,11 @@ import org.opensourcephysics.display.OSPFrame;
 import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.ejs.control.EjsSimulationControl;
 
+/**
+ * ThreePartsMDWRApp adds a custom user interface to ThreePartsMDApp.
+ * Updated for conversion to JavaScript using SwingJS and java2script transpiler.
+ * @author Wolfgang Christian
+ */
 public class ThreePartsMDWRApp extends ThreePartsMDApp {
   /**
    * Switch to the App user interface.
@@ -34,6 +39,7 @@ public class ThreePartsMDWRApp extends ThreePartsMDApp {
         mainFrame.dispose();
         ThreePartsMDApp app = new ThreePartsMDApp();
         SimulationControl c = SimulationControl.createApp(app);
+        ThreePartsMDApp.frame=c;  //WC: required for JavaScript to access control frame
         c.setDefaultCloseOperation(closeOperation);
         c.addButton("reverse", "Reverse");
         for(int i = 0, n = listeners.length; i<n; i++) {
@@ -48,6 +54,7 @@ public class ThreePartsMDWRApp extends ThreePartsMDApp {
         System.gc();
         OSPRuntime.disableAllDrawing = false;
         GUIUtils.showDrawingAndTableFrames();
+        /** @j2sNative if(typeof centerApp === "function")centerApp() */
       }
 
     };
@@ -70,8 +77,10 @@ public class ThreePartsMDWRApp extends ThreePartsMDApp {
    */
   public static void main(String[] args) {
     final ThreePartsMDWRApp app = new ThreePartsMDWRApp();
-    new LJgasWRAppControl(app, app.displayFrame, args);
+    //EjsSimulationControl control= new ThreeePartsMDWRAppControl(app, app.displayFrame, args);
+    EjsSimulationControl control= new ThreeePartsMDWRAppControl(app, app.plotFrame, args);
     app.customize();
+    ThreePartsMDApp.frame=control.getMainFrame();
   }
 
 }
@@ -80,8 +89,8 @@ public class ThreePartsMDWRApp extends ThreePartsMDApp {
  * A custom user interface for BoxWRApp.
  * @author Wolfgang Christian
  */
-class LJgasWRAppControl extends EjsSimulationControl {
-  LJgasWRAppControl(ThreePartsMDApp model, DrawingFrame frame, String[] args) {
+class ThreeePartsMDWRAppControl extends EjsSimulationControl {
+	ThreeePartsMDWRAppControl(ThreePartsMDWRApp model, DrawingFrame frame, String[] args) {
     super(model, frame, args);
   }
 

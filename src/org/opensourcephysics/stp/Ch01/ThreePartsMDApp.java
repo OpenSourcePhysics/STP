@@ -22,6 +22,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
 import java.awt.Color;
+import java.awt.Container;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -34,8 +35,12 @@ import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.DisplayFrame;
 import org.opensourcephysics.frames.PlotFrame;
 
-
+/**
+ * Three Partitions Simulation.
+ * Updated for conversion to JavaScript using SwingJS and java2script transpiler by Wolfgang Christian.
+ */
 public class ThreePartsMDApp extends AbstractSimulation {
+	public static Container frame = null;
   ThreePartsMD gas;
   PlotFrame plotFrame = new PlotFrame("time", "n1, n2, n3", "Number of particles in each cell");
   DisplayFrame displayFrame = new DisplayFrame("Particle positions");
@@ -103,7 +108,9 @@ public class ThreePartsMDApp extends AbstractSimulation {
         mainFrame.setKeepHidden(true);
         mainFrame.dispose();
         ThreePartsMDWRApp app = new ThreePartsMDWRApp();
-        LJgasWRAppControl c = new LJgasWRAppControl(app, app.displayFrame, null);
+        //ThreeePartsMDWRAppControl c = new ThreeePartsMDWRAppControl(app, app.displayFrame, null);
+        ThreeePartsMDWRAppControl c = new ThreeePartsMDWRAppControl(app, app.plotFrame, null);
+        ThreePartsMDApp.frame=c.getMainFrame();  //WC: required for JavaScript to access ejsControl frame
         c.getMainFrame().setDefaultCloseOperation(closeOperation);
         for(int i = 0, n = listeners.length; i<n; i++) {
           if(listeners[i].getClass().getName().equals("org.opensourcephysics.tools.Launcher$FrameCloser")) {
@@ -116,6 +123,7 @@ public class ThreePartsMDApp extends AbstractSimulation {
         System.gc();
         OSPRuntime.disableAllDrawing = false;
         GUIUtils.showDrawingAndTableFrames();
+        /** @j2sNative if(typeof centerApp === "function")centerApp() */
       }
 
     };
@@ -146,6 +154,7 @@ public class ThreePartsMDApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("reverse", "Reverse");
     app.customize();
+    frame=control;
   }
 
 }

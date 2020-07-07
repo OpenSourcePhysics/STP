@@ -7,6 +7,7 @@
 
 package org.opensourcephysics.stp.Ch01;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
@@ -30,6 +31,7 @@ import org.opensourcephysics.frames.PlotFrame;
  * modified    Natali Gulbahce, Oct 2002, Jan 28 2003
  */
 public class HoleInWallApp extends AbstractSimulation {
+	public static Container frame = null;
   PlotFrame plotFrame = new PlotFrame("time", "n", "");
   DatasetManager datasets;
 
@@ -128,7 +130,8 @@ public class HoleInWallApp extends AbstractSimulation {
         mainFrame.setKeepHidden(true);
         mainFrame.dispose();
         HoleInWallWRApp app = new HoleInWallWRApp();
-        BoxWRAppControl c = new BoxWRAppControl(app, app.plotFrame, null);
+        HoleInWallWRAppControl c = new HoleInWallWRAppControl(app, app.plotFrame, null);
+        HoleInWallApp.frame=c.getMainFrame();  //WC: required for JavaScript to access ejsControl frame
         c.getMainFrame().setDefaultCloseOperation(closeOperation);
         for(int i = 0, n = listeners.length; i<n; i++) {
           if(listeners[i].getClass().getName().equals("org.opensourcephysics.tools.Launcher$FrameCloser")) {
@@ -141,6 +144,7 @@ public class HoleInWallApp extends AbstractSimulation {
         System.gc();
         OSPRuntime.disableAllDrawing = false;
         GUIUtils.showDrawingAndTableFrames();
+        /** @j2sNative if(typeof centerApp === "function")centerApp() */
       }
 
     };
@@ -170,6 +174,7 @@ public class HoleInWallApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("zeroAverages", "Zero averages");
     app.customize();
+    frame=control;
   }
 
 }

@@ -18,6 +18,11 @@ import org.opensourcephysics.display.OSPFrame;
 import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.ejs.control.EjsSimulationControl;
 
+/**
+ * HoleInWallWRApp adds a custom user interface to HoleInWallApp.
+ * Updated for conversion to JavaScript using SwingJS and java2script transpiler.
+ * @author Wolfgang Christian
+ */
 public class HoleInWallWRApp extends HoleInWallApp {
 
   /**
@@ -37,6 +42,7 @@ public class HoleInWallWRApp extends HoleInWallApp {
         mainFrame.dispose();
         HoleInWallApp app = new HoleInWallApp();
         SimulationControl c = SimulationControl.createApp(app);
+        HoleInWallApp.frame=c;  //WC: required for JavaScript to access control frame
         c.setDefaultCloseOperation(closeOperation);
         for(int i = 0, n = listeners.length; i<n; i++) {
           if(listeners[i].getClass().getName().equals("org.opensourcephysics.tools.Launcher$FrameCloser")) {
@@ -50,6 +56,7 @@ public class HoleInWallWRApp extends HoleInWallApp {
         System.gc();
         OSPRuntime.disableAllDrawing = false;
         GUIUtils.showDrawingAndTableFrames();
+        /** @j2sNative if(typeof centerApp === "function")centerApp() */
       }
 
     };
@@ -101,18 +108,19 @@ public class HoleInWallWRApp extends HoleInWallApp {
    */
   public static void main(String[] args) {
     final HoleInWallWRApp app = new HoleInWallWRApp();
-    new BoxWRAppControl(app, app.plotFrame, args);
+    EjsSimulationControl control= new HoleInWallWRAppControl(app, app.plotFrame, args);
     app.customize();
+    HoleInWallApp.frame=control.getMainFrame();
   }
 
 }
 
 /**
- * A custom user interface for BoxWRApp.
+ * A custom user interface for HoleInWallWRApp.
  * @author Wolfgang Christian
  */
-class BoxWRAppControl extends EjsSimulationControl {
-  BoxWRAppControl(HoleInWallWRApp model, DrawingFrame frame, String[] args) {
+class HoleInWallWRAppControl extends EjsSimulationControl {
+	HoleInWallWRAppControl(HoleInWallWRApp model, DrawingFrame frame, String[] args) {
     super(model, frame, args);
   }
 

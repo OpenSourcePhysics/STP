@@ -6,11 +6,13 @@
  */
 
 package org.opensourcephysics.stp.Ch01;
+import java.awt.Container;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.frames.DisplayFrame;
 
 public class ChaosApp extends AbstractSimulation {
+	public static Container frame = null;
   Chaos gas;
   DisplayFrame displayFrame = new DisplayFrame("");
   NumberFormat numberformat = NumberFormat.getInstance();
@@ -65,6 +67,7 @@ public class ChaosApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(new ChaosApp(), args);
     control.addButton("perturb", "Perturb");
     control.addButton("reverse", "Reverse");
+    frame=control;
   }
 
 }
