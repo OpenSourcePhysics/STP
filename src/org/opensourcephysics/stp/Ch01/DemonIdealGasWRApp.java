@@ -6,7 +6,6 @@
  */
 
 package org.opensourcephysics.stp.Ch01;
-import java.awt.Container;
 import java.awt.event.WindowListener;
 
 import javax.swing.JFrame;
@@ -27,6 +26,14 @@ import org.opensourcephysics.ejs.control.EjsSimulationControl;
  * @author Wolfgang Christian
  */
 public class DemonIdealGasWRApp extends DemonIdealGasApp {
+	
+  /**
+   * Constructor DemonIdealGasWRApp
+   */
+  public DemonIdealGasWRApp() {
+  	super();
+  	OSPRuntime.setAppClass(this);
+	}
 
   /**
    * Switch to the App user interface.

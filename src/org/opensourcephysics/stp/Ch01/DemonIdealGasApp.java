@@ -24,6 +24,7 @@ import javax.swing.JMenuItem;
 
 import org.opensourcephysics.frames.HistogramFrame;
 import org.opensourcephysics.frames.PlotFrame;
+import org.opensourcephysics.js.JSUtil;
 
 /**
  * The demon algorithm applied to an ideal gas
@@ -146,6 +147,7 @@ public class DemonIdealGasApp extends AbstractSimulation {
    * Constructor DemonApp
    */
   public DemonIdealGasApp() {
+  	OSPRuntime.setAppClass(this);
     vhistogramFrame.setBinWidth(0.1);
     vhistogramFrame.setPreferredMinMaxX(-5, 5);
     histogramFrame.setAutoscaleY(true);
@@ -205,7 +207,7 @@ public class DemonIdealGasApp extends AbstractSimulation {
       }
 
     });
-    menu.add(item);
+    // menu.add(item);  // can't switch GUI in stpbook
     addChildFrame(histogramFrame);
     addChildFrame(vhistogramFrame);
   }
@@ -215,6 +217,8 @@ public class DemonIdealGasApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(app, args);
     control.addButton("zeroAverages", "Zero averages");
     app.customize();
+		if (JSUtil.isJS)
+			control.setLocation(0, 0); // sets top left corner for ComPADRE STPBook
     frame=control;
   }
 

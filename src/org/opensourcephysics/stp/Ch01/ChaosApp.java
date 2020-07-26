@@ -9,7 +9,9 @@ package org.opensourcephysics.stp.Ch01;
 import java.awt.Container;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.DisplayFrame;
+import org.opensourcephysics.js.JSUtil;
 
 public class ChaosApp extends AbstractSimulation {
 	public static Container frame = null;
@@ -21,6 +23,7 @@ public class ChaosApp extends AbstractSimulation {
    * Constructor LJgasApp
    */
   public ChaosApp() {
+  	OSPRuntime.setAppClass(this);
     gas = new Chaos();
     displayFrame.addDrawable(gas);
     displayFrame.setPreferredMinMax(-0.2*gas.cellLength, 1.2*gas.cellLength, -0.2*gas.cellLength, 1.2*gas.cellLength);
@@ -67,7 +70,9 @@ public class ChaosApp extends AbstractSimulation {
     SimulationControl control = SimulationControl.createApp(new ChaosApp(), args);
     control.addButton("perturb", "Perturb");
     control.addButton("reverse", "Reverse");
+    if(JSUtil.isJS)control.setLocation(0, 0);  // sets top left corner for ComPADRE STPBook
     frame=control;
+    //System.err.println("frame name="+frame.getName());
   }
 
 }

@@ -49,7 +49,7 @@ public class TwoPartsMDApp extends AbstractSimulation {
    * Constructor LJgas2boxApp
    */
   public TwoPartsMDApp() {
-   
+  	OSPRuntime.setAppClass(this);
   }
 
   public void initialize() {
@@ -136,7 +136,7 @@ public class TwoPartsMDApp extends AbstractSimulation {
 	      }
 
 	    });
-	    menu.add(item);
+	    // menu.add(item); // cannot switch GUI in stpbook
 	    addChildFrame(plotFrame);
 	    addChildFrame(displayFrame);
 	  }

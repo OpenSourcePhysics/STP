@@ -49,6 +49,7 @@ public class ThreePartsMDApp extends AbstractSimulation {
    * Constructor LJgasApp
    */
   public ThreePartsMDApp() {
+  	OSPRuntime.setAppClass(this);
     gas = new ThreePartsMD();
     plotFrame.setMarkerColor(0, Color.blue);
     plotFrame.setMarkerColor(1, Color.black);
@@ -144,7 +145,7 @@ public class ThreePartsMDApp extends AbstractSimulation {
 	      }
 
 	    });
-	    menu.add(item);
+	    //menu.add(item); // cannot switch GUI in stpbook
 	    addChildFrame(plotFrame);
 	    addChildFrame(displayFrame);
 	  }

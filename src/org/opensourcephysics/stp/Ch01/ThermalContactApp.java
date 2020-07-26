@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Container;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 import org.opensourcephysics.stp.util.DoubleArray;
 
@@ -163,6 +164,7 @@ public class ThermalContactApp extends AbstractSimulation {
    * Constructor ThermalContactApp
    */
   public ThermalContactApp() {
+  	OSPRuntime.setAppClass(this);
     boardFrame.setSize(640, 360);
     kinFrame = new PlotFrame("Time", "Kinetic Energy / Particle", "Kinetic Energy Per Particle");
     kinFrame.limitAutoscaleX(0, 0.1);

@@ -22,6 +22,15 @@ import org.opensourcephysics.ejs.control.EjsSimulationControl;
  * @author Wolfgang Christian
  */
 public class ThreePartsMDWRApp extends ThreePartsMDApp {
+	
+  /**
+   * Constructor ThreePartsMDWRApp
+   */
+  public ThreePartsMDWRApp() {
+  	super();
+  	OSPRuntime.setAppClass(this);
+	}
+	
   /**
    * Switch to the App user interface.
    */

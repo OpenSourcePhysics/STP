@@ -23,6 +23,15 @@ import org.opensourcephysics.ejs.control.EjsSimulationControl;
  */
 
 public class TwoPartsMDWRApp extends TwoPartsMDApp {
+	
+  /**
+   * Constructor TwoPartsMDWRApp
+   */
+  public TwoPartsMDWRApp() {
+  	super();
+  	OSPRuntime.setAppClass(this);
+	}
+  
   /**
    * Switch to the App user interface.
    */

@@ -50,8 +50,9 @@ public class HoleInWallApp extends AbstractSimulation {
    * Constructor BoxApp
    */
   public HoleInWallApp() {
-	plotFrame.setTitle("Approach to Equilibrium.");
-	plotFrame.setMarkerColor(0,Color.RED);
+    OSPRuntime.setAppClass(this);
+	  plotFrame.setTitle("Approach to Equilibrium.");
+	  plotFrame.setMarkerColor(0,Color.RED);
     numberFormatTwoDigits.setMaximumFractionDigits(2);
     datasets=plotFrame.getDatasetManager();
   }
@@ -165,7 +166,7 @@ public class HoleInWallApp extends AbstractSimulation {
       }
 
     });
-    menu.add(item);
+    // menu.add(item); // cannot switch GUI in stpbook
     addChildFrame(plotFrame);
   }
 
