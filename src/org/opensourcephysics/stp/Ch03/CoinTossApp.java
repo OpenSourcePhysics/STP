@@ -41,6 +41,7 @@ public class CoinTossApp extends AbstractSimulation {
    * Constructor MultipleCoinTossApp
    */
   public CoinTossApp() {
+	OSPRuntime.setAppClass(this);
     random = new Random();
     nf = NumberFormat.getInstance();
     nf.setMaximumFractionDigits(3);
