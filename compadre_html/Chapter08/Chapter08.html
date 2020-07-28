@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>Chapter 8</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+  <h2>Chapter 8: Classical Gases and Liquids</h2>
+
+  <p>The ideal gas and the Debye theory of solids are among the very few systems in statistical mechanics that can be solved analytically. Approximation techniques are essential and usually require an analytically solvable reference system. For
+  liquids there is no  analytically solvable reference system, but the properties of
+  a hard sphere fluid can be computed very accurately using computer simulations, making a system of hard spheres a useful reference system.</p>
+  
+  <p>We  use computer simulations to study the radial distribution function $g(r)$ which provides information
+  on the spatial structure of a fluid. An  important approximation technique for dense gases is the virial density expansion. 
+  We can use numerical integration to compute the integral needed to find the second virial coefficient $B_2$.    </p>
+  
+
+   <h2>Programs </h2>
+
+  <ol>
+ <li><a href="./HardDisksMD.html"> HardDisksMD </a></li>
+ <li><a href="./LennardJonesMD.html"> LennardJonesMD </a></li>
+ <li><a href="./SecondVirialCoefficient.html"> SecondVirialCoefficient </a></li>
+ 
+</ol>
+ 
+  <p class="small">Updated 7 July 2020.</p>
+
+</body>
+
+</html>

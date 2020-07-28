@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>MCEstimation</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program MCEstimation</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+<p>When we want to compute the average of a quantity that can take on many values, it is usually 
+impossible to average over all possible values. Instead we can sample the possible values and determine an appropriate average. 
+This procedure is referred to as a Monte Carlo (MC) calculation.      </p>
+
+<p>Program <tt> MCEstimation</tt> illustrates a simple example of a MC calculation by estimating the integral $$\int_0^1 y(x) dx = \int_0^1 \sqrt{1 - x^2} dx,$$
+where the possible values of $(x,y)$ are within a $1 \times 1$ box.  The program randomly generates pairs $(x_i,y_i)$ 
+and counts the percentage where $y_i \leq y(x_i)$.  Because the area of a $1 \times 1$ box is unity, 
+this percentage provides an estimate of the integral.
+    </p>
+
+
+   <h2>Resources</h2>
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file. (Need Java on your computer to run this.)  </li>
+    
+    <li>Problem 3.69 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021). </li>  
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 7 July 2020.</p>
+</div>
+
+</body>
+
+</html>

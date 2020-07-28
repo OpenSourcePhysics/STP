@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>MCEinsteinSolid</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program MCEinsteinSolid</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Program <tt>MCEinsteinSolid</tt> simulates the Einstein solid using the Metropolis Monte Carlo (MC) algorithm, 
+which simulates systems  at  constant temperature. An oscillator is chosen at random and one unit of energy is 
+either added or taken from the oscillator. If the change decreases the energy of the system,  the change is accepted. 
+If it increases the energy, a random number $r$ between 0 and 1 is computed and compared to $p = e^{-\Delta E/kT}$, where $\Delta E$ is the change in energy of the system. If 
+$p \ge r$, the change is accepted; otherwise it is rejected. This algorithm leads to a Boltzmann distribution for the microstates of the system.     </p>
+
+<p> The goal of this simulation is to show how the Metropolis algorithm works to simulate a system in the canonical ensemble. </p>
+
+
+   <h2>Resources</h2>
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 4.32 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 7 July 2020.</p>
+</div>
+
+</body>
+
+</html>

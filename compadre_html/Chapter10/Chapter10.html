@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>Chapter 10</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+  <h2>Chapter 10: It is About Time: Time-Dependent Phenomena</h2>
+
+  <p>Thermodynamics is about equilibrium time-independent phenomena. Even though thermodynamic processes are important, 
+  thermodynamics and statistical mechanics do not say anything about the time dependence of these processes. 
+  These processes are analyzed by considering quasi-static processes where systems go from
+  one equilibrium state to another and time is irrelevant.      </p>
+  
+  <p>However, even in equilibrium there are time dependent quantities such as the mean squared displacement of a particle 
+  from its original position and the velocity autocorrelation function. In addition, we  can study near equilibrium processes
+  such as the thermal conductivity for which there is a temperature gradient and the viscosity when there is a velocity 
+  gradient in the system. </p>
+  
+  <p>Molecular dynamics simulations are useful for studying these time-dependent phenomena.
+  
+
+   <h2>Programs </h2>
+
+  <ol>
+ <li><a href="./HardDisksMD.html"> HardDisksMD </a></li>
+ <li><a href="./LennardJonesMD.html"> LennardJonesMD </a></li>
+ <li><a href="./ThermalConductivity.html"> ThermalConductivity </a></li>
+ <li><a href="./Viscosity.html"> Viscosity </a></li>
+ 
+</ol>
+ 
+  <p class="small">Updated 7 July 2020.</p>
+
+</body>
+
+</html>

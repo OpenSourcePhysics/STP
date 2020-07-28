@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>ThermalContact</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program ThermalContact</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Program <tt>ThermalContact</tt>> models the behavior of two types of particles interacting 
+through a Lennard-Jones potential and moving in a two-dimensional box. The Lennard-Jones parameters $\epsilon$ and $\sigma$ are different for the two 
+types of particles, and the interaction of the particles between the two parts also has different values of $\epsilon$ and $\sigma$. 
+The motion evolves using the numerical solution of Newton's second law. The velocity Verlet algorithm is used to update the positions and velocities of the particles. 
+Each type of particle is initially separated by a wall, and the two types do not interact. After thermal equilibrium has been established, press the Contact button to turn on the interaction between the 
+ two types of particles. The potential energy per particle and the
+ kinetic energy per 
+ particle is plotted versus time.  </p>
+ 
+<p>The goal of the simulation is to determine what quantity becomes equal when thermal equilibrium is reached after 
+ two systems are placed in thermal contact. This quantity  must be related to the temperature.   </p>
+
+
+   <h2>Resources</h2>
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 1.5 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 7 July 2020.</p>
+</div>
+
+</body>
+
+</html>

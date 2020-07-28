@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>Chaos</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program Chaos</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Program <tt>Chaos</tt> simulates 11 particles initially moving with the same velocity such that the net force on each particle is zero.
+The particles interact through the Lennard-Jones potential. Perturb the system  slightly and see what happens. The velocities 
+can also be reversed to see to what extent the system is reversible.  </p>
+
+<p> The goal of this simulation is to explore how a small 
+perturbation changes a special initial state to one that we would expect to see at thermal equilibrium. 
+The idea of chaos or sensitivity to initial conditions helps us understand irreversibility and why a system of particles reaches equilibrium.    </p>
+
+
+  <h2>Resources</h2>
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 1.8 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).   
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 5 July 2020.</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>MultiplicativeProcess</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program MultiplicativeProcess</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>An example of a process which does not follow the central limit theorem is a multiplicative process. Program <tt>MultiplicativeProcess</tt> explores the distribution of the quantity   $\Pi = x_1^nx_2^{N-n}$, where $x_1$ is chosen $n$ times with 
+probability $p$   and $x_2$ is chosen $N-n$ times with probability $q = 1-p$.  
+You can choose $x_1$, $x_2$, $N$, and $p$. The distribution of $\Pi$ is plotted, and the mean value and 
+most probable value of $\Pi$ are computed. 
+    </p>
+
+
+   <h2>Resources</h2>
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file. (Need Java on your computer to run this.)  </li>
+    
+    <li>Problem 3.56 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).  </li> 
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 7 July 2020.</p>
+</div>
+
+</body>
+
+</html>

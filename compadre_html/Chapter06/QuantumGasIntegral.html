@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>QuantumGasIntegral</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program QuantumGasIntegral</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>To explicitly include indistinguishability of the particles we use the grad canonical ensemble and treat each single
+particle state as a system in equilibrium with a reservoir of all the other single 
+particle states at a temperature $T$ and chemical potential $\mu$. The number of particles and energy are given by
+$$N = \int_0^{\infty} g(\epsilon) \overline{n}(\epsilon) d\epsilon, $$
+$$E = \int_0^{\infty} \epsilon g(\epsilon) \overline{n}(\epsilon) d\epsilon, $$
+where $g(\epsilon)$ is the single particle density of states, which depends on the volume $V$ and $\overline{n}(\epsilon)$ is the mean number of particles in a single 
+particle state of energy $\epsilon$, which depends on $T$, $\mu$ and whether the particles are fermions or bosons. </p>
+
+<p>Our goal is to find 
+thermodynamic quantities as a function of $T$, $V$, and $N$. The program numerically finds by 
+trial and error the value of $\mu$ that solves Eq. (1) for a given $T$. Once we have $\mu$ we  find 
+the energy as a function of $T$. Reduced units are used by scaling the temperature by the Fermi temperature for fermions and
+the critical temperature for bosons. 
+ </p>
+
+
+
+
+  <h2>Resources</h2>
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problems 6.36 for fermions and 6.40 for bosons in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 7 July 2020.</p>
+</div>
+
+</body>
+
+</html>

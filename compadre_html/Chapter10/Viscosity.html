@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>Viscosity</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program Viscosity</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Program <tt>Viscosity</tt> simulates the behavior of particles moving in a three-dimensional box interacting through a Lennard-Jones potential. 
+The program  uses the velocity Verlet algorithm to update the positions and velocities of the particles according to Newton's second law. 
+Periodic boundary conditions are used. </p>
+
+<p>In this program the length of the system in the $z$-direction is three times longer than the 
+other two directions to allow for a better estimate of the $x$-velocity
+gradient in the $z$-direction. The system is divided into slabs in the $z$-direction.  The $x$-velocity gradient is 
+created by a momentum flux due to swapping the smallest $x$-velocity in a &#8220;high momentum slab&#8221; with the largest x-velocity in 
+the &#8220;low momentum slab.&#8221; The viscosity is determined from the ratio of the momentum flux to the $x$-velocity gradient.     </p>
+
+<p>To begin the simulation we first equilibrate the system at a user specified temperature. We then  stop the 
+equilibration, which starts 
+the swapping of velocities, creating a momentum flux and $x$-velocity gradient. </p>
+
+  <h2>Resources</h2>
+  
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 10.17 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021). </li>
+<li>Florian M&uuml;ller-Plathe, &#8220;Reversing the perturbation in nonequilibrium molecular dynamics: An easy way to calculate the shear viscosity of fluids,&#8221; Phys. Rev. E ${\bf 59}$, 4894&#8211;4898 (1999).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 7 July 2020.</p>
+</div>
+
+</body>
+
+</html>

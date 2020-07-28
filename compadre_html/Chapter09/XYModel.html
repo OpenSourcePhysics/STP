@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>XYModel</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program XYModel</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>The XY model (sometimes called the planar model) consists of spins on a  lattice where each spin 
+can take on any angle $\theta_i$ between $0$ and $2\pi$. The energy is given by
+$$E = -J \sum_{\lt ij \gt} \cos{(\theta_i - \theta_j)},$$
+where $J$ is the interaction energy that sets the scale for the energy. It has been shown that the magnetization 
+ vanishs for all nonzero temperatures $T$, and thus it was thought that there was no phase transition. However,
+Kosterlitz and Thouless showed that there is a phase transition, $T_{\rm KT}$ such that below $T_{\rm KT}$ the spin-spin correlation
+function falls off as a power law and above $T_{\rm KT}$ this correlation falls off exponentially. The phase transition
+is caused by the unbinding of pairs of vortices, which are an example of topological defects.   </p>
+
+<p> The  program simulates the XY model, calculates various thermodynamic quantities, and shows the location of the vortices.  </p>
+
+
+   <h2>Resources</h2>
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 9.21 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 7 July 2020.</p>
+</div>
+
+</body>
+
+</html>

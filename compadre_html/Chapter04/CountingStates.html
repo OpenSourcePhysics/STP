@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>Counting States</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+ <h1 id="myTitle" style="position:fixed;">Program Counting States</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>For a quantum particle in $d$ dimensions (or equivalently $d$ particles in one dimension) each  microstate 
+is represented by a point labeled by $n_1,n_2,\ldots n_d$, where the $n_i$ can each take on any positive integer.  </p>
+
+<p> This program allows us to calculate finite size effects for the number of microstates below a certain energy $E$ 
+by comparing the actual count with the approximate count given in 1d by $\Gamma_1 = R$, in 2d by $\Gamma_2 = \pi R^2/4$ and in 3d by
+$\Gamma_3 = \pi R^3/6$,  where $E = h^2R^2/8mL^2$, 
+$L$ is the length of the infinite well containing the particles, $m$ is the mass of the particle, and $h$ is the Planck constant.  
+
+
+  <h2>Resources</h2>
+  <ol>
+
+    <li><a href="./">Download</a> Java source code.</li>
+    
+    <li><a href="./">Download</a> Python program. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 4.10 and 4.11 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 7 July 2020.</p>
+</div>
+
+</body>
+
+</html>

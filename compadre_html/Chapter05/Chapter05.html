@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>Chapter 5</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+  <h2>Chapter 5: Magnetic Systems</h2>
+
+  <p>We apply the tools of statistical mechanics  to magnetic systems. 
+  The most important and simplest model containing interactions, is the Ising model defined by the energy of a microstate
+  $$E = -J \sum_{\lt ij \gt} s_i s_j - H \sum_i s_i,$$ 
+ where $J$ is the energy of interaction and is positive for a ferromagnetic interaction, $s_i = \pm 1$ 
+  is the spin of a spin 1/2 particle such as an electron, $\lt ij \gt$ denotes nearest-neighbor 
+ pairs of spins located on a lattice,
+  and $H$ is the applied external magnetic field. </p>
+  
+ <p>In addition to studying the Ising model and its variations, we consider various techniques such as transfer matrices, mean-field theories, and computer simulations, 
+ which have become essential for our understanding of magnetic systems.  </p>
+ 
+ 
+   <h2>Programs </h2>
+
+  <ol>
+ <li><a href="./Ising1d.html"> Ising1d </a></li>
+ <li><a href="./Ising2d.html"> Ising2d </a></li>
+ <li><a href="./IsingMeanField.html"> IsingMeanField </a></li>
+ <li><a href="./IsingHysteresis.html"> IsingHysteresis </a></li>
+ <li><a href="./IsingNumberOfStates.html"> IsingNumberOfStates </a></li>
+ <li><a href="./PottsNumberOfStates.html"> PottsNumberOfStates </a></li>
+ <li><a href="./LatticeGas.html"> LatticeGas </a></li>
+ <li><a href="./IsingAntiferromagnet.html"> IsingAntiferromagnet </a></li>
+ <li><a href="./Frustration.html"> Frustration </a></li>
+ 
+</ol>
+ 
+  <p class="small">Updated 7 July 2020.</p>
+
+</body>
+
+</html>
