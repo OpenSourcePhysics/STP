@@ -1,4 +1,6 @@
 .gitignore
+.project
+.metadata
 .settings
 /bin/
 /site/
