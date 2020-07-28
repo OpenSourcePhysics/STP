@@ -41,6 +41,7 @@ public class BinomialApp extends AbstractCalculation {
    * Constructor BinomialApp
    */
   public BinomialApp() {
+  	OSPRuntime.setAppClass(this);
     plotFrame.setAutoscaleY(true);
     plotFrame.setAutoscaleX(true);
     plotFrameNorm.setAutoscaleY(true);
