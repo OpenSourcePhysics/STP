@@ -39,12 +39,31 @@ MathJax.Hub.Config({
 impossible to average over all possible values. Instead we can sample the possible values and determine an appropriate average. 
 This procedure is referred to as a Monte Carlo (MC) calculation.      </p>
 
-<p>Program <tt> MCEstimation</tt> illustrates a simple example of a MC calculation by estimating the integral $$\int_0^1 y(x) dx = \int_0^1 \sqrt{1 - x^2} dx,$$
+<p>Program <tt> MCEstimation</tt> illustrates a simple example of a MC calculation by estimating the integral 
+$$\int_0^1 y(x) dx = \int_0^1 \sqrt{1 - x^2} dx,\label{1}$$
 where the possible values of $(x,y)$ are within a $1 \times 1$ box.  The program randomly generates pairs $(x_i,y_i)$ 
 and counts the percentage where $y_i \leq y(x_i)$.  Because the area of a $1 \times 1$ box is unity, 
 this percentage provides an estimate of the integral.
     </p>
 
+<b>Problem: Monte Carlo integration</b>
+
+<ol type ="a">
+
+<li> Show analytically that the integral in \eqref{1} is equal to $\pi/4$.</li>
+
+<li> Use Program <tt>MCEstimation</tt> to estimate the integral \eqref{1} by Monte Carlo
+integration. Determine the error (the magnitude of the deviation from the exact answer) 
+for trials of $n$ pairs of points equal to $n= 10^4$, $10^6$, and $10^8$. Does the error 
+decrease with increasing $n$ on the average?</li>
+
+<li> Estimate the integral using $n = 1000$. Repeat for a total of ten trials using different 
+random number seeds each time. Is the magnitude of the variation of your values of the same 
+order as the error between the average value and the exact value? For a large number of trials, 
+the error is estimated from the standard error of the mean, which approximately equals the 
+standard deviation divided by the square root of the number of trials.</li>
+
+</ol>
 
    <h2>Resources</h2>
   <ol>
@@ -62,7 +81,7 @@ this percentage provides an estimate of the integral.
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 28 July 2020.</p>
 </div>
 
 </body>
