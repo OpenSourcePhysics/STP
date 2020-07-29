@@ -47,6 +47,63 @@ if the demon has enough energy to give to cover the increase in energy of the sy
 <p> The goal of the simulation is to explore how the demon's mean energy 
 and probability distribution are related to the temperature. </p>
 
+<b>Problem: The demon and the ideal gas</b>
+
+<p>Program  <tt> DemonIdealGas</tt> simulates a demon that
+exchanges energy with an ideal gas of $N$ particles in $d$
+spatial dimensions. Because the particles do not interact, the only
+coordinate of interest is the velocity of the particles.
+The demon chooses a particle at random and changes each component of its
+velocity by an amount chosen at
+random between
+$-\Delta$ and $+\Delta$.
+For simplicity, we set the initial demon energy $E_d=0$ and the initial velocity of each
+particle equal to $+v_0 \skew3\hat{x}$, where $v_0 =
+(2E_0/mN)^{1/2}$. $E_0$ is the desired total energy of the system, and $m$ is the mass of
+the particles. We choose units such
+that $m=1$, and the energy and momentum are dimensionless.
+
+<ol type ="a">
+<li> Run the simulation using the default parameters $N=40$, $E=40$, and $d=3$. Does the 
+average energy of the demon approach a well-defined value after a sufficient number of energy exchanges 
+with the system? (One time unit is equal to $N$ trial changes.)</li>
+
+<li> What is $\overline{E}_d$, the average energy of the demon, and $\overline{E}$, 
+the average energy of the system? Compare the values of $\overline{E}_d$ and $\overline{E}/N$.</li>
+
+<li>  Fix $N=40$ and double the total energy of the system. (Remember that $E_d = 0$ initially.) 
+Compare the values of $\overline{E}_d$ and $\overline{E}/N$. 
+Consider other values of $N \geq 40$ and $E$ and determine the relation between 
+$\overline{E}_d$ and $\overline{E}/N$.(Because there are finite-size effects
+that are order $1/N$, it is desirable to consider $N \gg 1$. The trade-off is 
+that the simulation  takes longer to run.)</li>
+
+<li>  You have probably learned in other courses that the average energy 
+of an ideal gas in three dimensions is equal to $\overline{E} = \frac{3}{2}NkT$, where $T$ is 
+the temperature of the gas, $N$ is the number of particles, and $k$ is a constant. Our choice 
+of dimensionless variables 
+ implies that we have chosen units such that $k=1$.  Use this relation  for $\overline{E}$ to 
+ determine the temperature of the ideal gas in parts parts (b) and (c). 
+ Is $\overline{E}_d$ proportional to the temperature of the gas?</li>
+
+<li>  Suppose that the energy momentum relation of the particles
+is not $\epsilon = p^2/2m$, but is $\epsilon=cp$, where $c$ is a
+constant (which we take to be 1). Consider various values of $N$ and $E$ as you did in part (c). Is the dependence of $\overline{E}_d$ on $\overline{E}/N$ the same as you found in 
+ part (c)?  </li>
+
+<li> $\!\!\!\!\!{^*}$ After the demon and the system have reached equilibrium, we can
+compute the histogram $H(E_d)\Delta E_d$, the number of times that the demon has energy between $E_d$ and $E_d + \Delta E_d$. The bin width $\Delta E_d$ is chosen by the program. 
+The histogram is proportional to the probability $p(E_d)\Delta E$ that
+the demon has energy between $E_d$ and $E_d + \Delta E$. What do you think is 
+the dependence of $p(E_d)$ on $E_d$? Is the demon more likely to have zero or nonzero energy?</li>
+
+<li> $\!\!\!\!\!{^*}$ Verify the exponential form, $p(E_d)=A e^{-\beta E_d}$, where $A$ and $\beta$ are parameters. 
+How does the value of $1/\beta$ compare to the value of $\overline{E}_d$? We will find that the 
+exponential form of $p(E_d)$ is universal, that is, independent of the system with which the demon exchanges 
+energy, and that $1/\beta$ is proportional to the temperature of the system.</li>
+
+<li> Discuss why the demon is an ideal thermometer.</li> 
+</ol> 
 
    <h2>Resources</h2>
   <ol>
@@ -64,7 +121,7 @@ and probability distribution are related to the temperature. </p>
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 28 July 2020.</p>
 </div>
 
 </body>

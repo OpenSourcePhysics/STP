@@ -47,6 +47,44 @@ can lead to different macroscopic behavior such as gas, liquid, and solid phases
 Other information that can be obtained includes the velocity distribtion function, the pair distribution function g(r), which provides
 information about the spatial structure of the system, and the diffusion of a tagged particle.   </p>
 
+<b>Problem: Different phases</b>
+
+
+<ol type ="a">
+
+<li> Program <tt>LennardJonesMD</tt> simulates an
+isolated system of
+$N$ particles interacting via the Lennard-Jones potential. Choose
+$N=144$ and
+$L=18$ so that the density
+$\rho = N/L^2 \approx 0.44$. The initial positions are
+chosen at random except that no two particles are allowed to be
+closer than the length
+$\sigma$. Run the simulation and satisfy yourself that this choice
+of density and resultant total energy corresponds to a gas. What are your
+criteria?</li>
+
+<li> Slowly lower the total energy of the system. (The total energy is
+lowered by rescaling the velocities of the particles.) If you are patient,
+you will be able to observe &#8220;liquidlike&#8221; regions. How are they different
+from &#8220;gaslike&#8221; regions?</li>
+
+<li> If you decrease the total energy further, you will observe the
+system in a state roughly corresponding to a solid. What are your
+criteria for a solid? Explain why the solid that we obtain in this
+way will not be a perfect crystalline solid.</li>
+
+
+<li> Describe the motion of  individual particles in the gas,
+liquid, and solid phases.</li>
+
+<li> Speculate why a system of particles interacting via the
+Lennard-Jones potential can exist in
+different phases. Is it necessary for the potential to have an
+attractive part for the system to have a liquid phase? Is the
+attractive part necessary for there to be a solid phase? Describe
+a simulation that would help you answer this question.</li>
+</ol>
 
   <h2>Resources</h2>
   <ol>
@@ -64,7 +102,7 @@ information about the spatial structure of the system, and the diffusion of a ta
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 28 July 2020.</p>
 </div>
 
 </body>

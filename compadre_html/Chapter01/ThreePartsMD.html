@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 <script type="text/javascript">
 MathJax.Hub.Config({
     showProcessingMessages: false,
@@ -45,6 +44,66 @@ The goals of this simulation are to explore the approach to equilibrium,
  the nature of  fluctuations at equilibrium, and macroscopic irreversibility, even though the 
  microscopic motion is reversible.  </p>
 
+<b>Problem: Approach to equilibrium</b>
+
+
+<p>Suppose that we divide a box into three equal parts
+and place $N$ particles in the middle
+third of the box. (We  divided the box into three parts so that
+the effects of the toroidal boundary conditions are not  as
+apparent as if we had initially confined the particles to one half
+of the box.) The particles are placed at random with the constraint that no
+two particles can be closer than the length parameter $\sigma$. This constraint
+prevents the initial force between any two particles from being too big,
+which would lead to the breakdown of the numerical method used to solve the
+differential equations. The
+velocity of each particle is assigned at random and then their velocities are shifted so that the velocity of the
+center of mass is zero. At
+$t=0$, we remove the &#8220;walls&#8221; between the three parts and
+watch the particles move according to Newton's equations of
+motion. We say that the removal of a wall corresponds
+to the removal of an internal constraint. What do you think will
+happen? </p>
+
+<p>Program <tt>ThreePartsMD</tt> implements this simulation. The program shows the positions of the particles 
+and plots the number of particles in the left ($n_1$), center ($n_2$), and right ($n_3$) part of the box as a 
+function of time. The input parameter is $N$, the number of particles initially in the center, so that $n_1=0$, $n_2=N$, 
+and $n_3=0$ at $t=0$.</p> 
+
+<ol type ="a">
+
+<li> Does the system appear to show a direction of time for $N=6$?</li>
+
+<li> Does the system appear to show a direction of time for $N=27$? Choose various values of $N$ that are multiples of 3 up to $N=270$. 
+What is the nature of the time dependence of $n_1$, $n_2$, and $n_3$?  Is the direction of time better defined for larger $N$?</li>
+
+<li> To better understand the direction of time make a video of the motion of the positions of 270 particles starting from $t=0$. Run the simulation until the particles are approximately equally divided between the three regions. Then run the video both forward and backward. Can you tell by  looking at the video which direction is forward? Repeat for larger values of $N$. 
+Does your conclusion about the direction of time become more certain for larger $N$?</li>
+
+<li> Repeat part (c) but start the video after the particles are distributed equally among 
+the three regions, say at $t=20$. Is the direction of time more apparent? Repeat for 
+various values of $N$.</li>
+
+<li>  The time shown in the plots is in terms of $\sigma(m/\epsilon)^{1/2}$, where $\sigma$ and $\epsilon$ are the length and energy parameters 
+of the Lennard-Jones potential and $m$ is the mass of a particle. Verify that this combination has units of 
+time. For argon $\sigma = 3.4 \times 10^{-10}\,$m, $\epsilon = 1.65 \times 10^{-21}\,$J, and $m=6.69 \times 10^{-26}\,$ kg. 
+ What is the value of $\sigma(m/\epsilon)^{1/2}$ for argon? How much real time has elapsed if the program shows that $t=100$?</li>
+ 
+ <li> See Program <tt>TwoPartsMD</tt>.
+
+<li>  Why does the system exhibit a direction of
+time when the motion of each particle is time reversible?</li>
+
+<li> * After $n_1$,
+$n_2$, and $n_3$ first become approximately equal for $N=270$,
+reverse the velocities of all the particles and continue the simulation. Reversing the velocities is
+equivalent to seeing the simulation go backward in time. Do the particles return to the middle third of the
+box? Do the simulation again, but let the system evolve longer before reversing the velocities. 
+Are your results any different? Are your results consistent with the fact that Newton's equations of motion 
+are deterministic and time reversal invariant so that reversing the velocities should exactly retrace the original 
+particle trajectories? </li>
+
+</ol>
 
   <h2>Resources</h2>
   <ol>
@@ -62,7 +121,7 @@ The goals of this simulation are to explore the approach to equilibrium,
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 28 July 2020.</p>
 </div>
 
 </body>
