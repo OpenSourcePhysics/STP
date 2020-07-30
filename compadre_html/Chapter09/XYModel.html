@@ -48,6 +48,64 @@ is caused by the unbinding of pairs of vortices, which are an example of topolog
 
 <p> The  program simulates the XY model, calculates various thermodynamic quantities, and shows the location of the vortices.  </p>
 
+<b>Problem: Simulations of the two-dimensional $XY$ (planar) model</b>
+
+<p>In this model the spins are located on a $d$-dimensional lattice, but are restricted to point in any 
+direction in the plane. The interaction between two nearest neighbor spins is 
+given by $-J {\bf s}_1 \cdot {\bf s}_2$, where ${\bf s}_1$ and ${\bf s}_2$ are two unit spin vectors.</p>
+
+<p>One of the interesting features of the $XY$ model in two dimensions
+is that the mean magnetization $\langle m\rangle = 0$ for all nonzero temperatures, but there is a phase 
+transition at a nonzero temperature $T_{\rm KT}$ known as the 
+ Kosterlitz-Thouless transition. (J. Michael Kosterlitz and David J. Thouless received the 2016 Nobel Prize in 
+ Physics for discovering and explaining this phase transition, which led to finding similar phase transitions 
+ in many other systems and the recognition of the importance of topological defects such as the vortices 
+ found in the planar model. F. Duncan M. Haldane shared the prize that year for related work.) 
+ For $T \leq T_{\rm KT}$ the spin-spin correlation $C(r)$ decreases as a power law; for $T > T_{\rm KT}$, $C(r)$ 
+ decreases exponentially. The power law decay of $C(r)$ for $T \leq T_{\rm KT}$ implies that every 
+ temperature below $T_{\rm KT}$ acts as a critical point.</p>
+
+<p>Program <tt>XYModel</tt> uses the Metropolis algorithm  to simulate the $XY$ model in two dimensions. 
+In this case a spin is chosen at random and rotated by a random angle up to a maximum value $\delta$.
+
+<ol type ="a">
+<li> Rewrite the interaction $-J {\bf s}_i \cdot {\bf s}_j$ between nearest neighbor spins $i$ and $j$ 
+in a simpler form by substituting $s_{i,x} = \cos\theta_i$ and $s_{i,y} = \sin \theta_i$, where the 
+phase $\theta_i$ is measured from the horizontal axis in the counter-clockwise direction. Show that the result is
+$-J \cos(\theta_i - \theta_j)$.</li>
+
+<li> An interesting feature of the $XY$ model is the existence of vortices and antivortices. 
+A vortex is a region of the lattice where the spins rotate by at least $2\pi$ as you trace a 
+closed path. Run the simulation with the default parameters and observe the locations of the vortices. 
+Follow the arrows as they turn around a vortex. A vortex is indicated by a square box. What is the 
+difference between a positive (blue) and negative (yellow) vortex? Does a vortex ever appear isolated? 
+Count the number of positive vortices and negative vortices. Is the number the same at all times?</li>
+
+<li> Click the <tt>New</tt> button, change the temperature to 0.2, set
+the initial configuration to random, and run the simulation. You should see quenched-in vortices 
+which don't change with time. Are there an equal number of positive and negative vortices? 
+Are there isolated vortices whose centers are more than a lattice spacing apart?</li>
+
+<li> Click the <tt>New</tt> button and set the initial configuration to
+ordered and the temperature to 0.2. Also set steps per display to 100
+so that the simulation will run much faster. Run the simulation for
+at least $1000\,$mcs to equilibrate and $10,\kern1pt000\,$mcs to collect data,
+and record your estimates of the energy, specific heat, vorticity, and the
+susceptibility. Repeat for temperatures from 0.3 to 1.5 in steps of
+0.1. Plot the energy and specific heat versus the temperature. (The
+susceptibility diverges for all temperatures below the transition,
+which occurs near $T=0.9$. The location of the specific heat peak is
+different from the transition temperature. The program computes
+$x=(1/NT^2)\langle M^2\rangle$ instead of the usual expression, because
+$\langle M\rangle=0$ in the thermodynamic limit.) Is the vorticity (the mean number density of vortices) a 
+smooth function of the temperature?</li>
+
+<li> Look at configurations showing the vortices near the
+Kosterlitz-Thouless transition at $T=T_{\rm KT}\approx0.9$.  Is there any evidence that the positive 
+vortices are moving away from the negative vortices? The Kosterlitz-Thouless transition is due to 
+this unbinding of vortex pairs.</li>
+</ol>
+
 
    <h2>Resources</h2>
   <ol>
@@ -65,7 +123,7 @@ is caused by the unbinding of pairs of vortices, which are an example of topolog
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>
