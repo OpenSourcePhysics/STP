@@ -47,6 +47,60 @@ if the demon has enough energy to give to cover the increase in energy of the sy
 <p> The goal of this simulation is to explore how the demon's mean energy 
 and probability distribution are related to the temperature. </p>
 
+<b>Problem: The demon and an ideal classical gas</b>
+
+<p>Consider a demon that exchanges energy with an ideal classical gas
+of
+$N$ identical particles of mass $m=1$ in $d$ dimensions. Because the
+energy of a particle in an ideal gas depends only on its speed, the positions
+of the particles are irrelevant. In Program <tt>DemonIdealGas</tt> 
+the demon chooses a
+particle $i$ at random and changes a random component $k$ of the particle's velocity by an amount
+$\delta$ chosen at random between
+$-\delta_{\max}$ and
+$\delta_{\max}$. The parameter
+$\delta_{\max}$ is arbitrary. The change in energy of the system is
+$\Delta E = {1 \over 2}[(v_{i,k} + \delta)^2 - v_{i,k}^2]$. For simplicity, the program assigns each particle the same initial
+velocity ${\vec v}$ in the $x$-direction; $|{\vec v}|$ is chosen so that the initial energy of the system is $E$. 
+The initial demon energy is equal to zero.
+
+<ol type ="a">
+
+ 
+<li> Before you do the simulation, 
+sketch the energy dependence of the probability $p(E_d)\Delta E_d$ that the demon has 
+an energy between $E_d$ and $E_d + \Delta E_d$. Is $p(E_d)$ an increasing or decreasing function of $E_d$ 
+or does it have a maximum at some value of $E_d$? </li> 
+
+<li> Choose $d=3$ and $N=
+40$ and $E=40$ so that $E/N=1$. Determine $\overline{E_{d}}$, the mean energy of the demon, and $\overline{E}/N$, the mean energy per particle of the system after the demon and the
+system have reached equilibrium. Then choose other combinations of $N$ and $E$ and
+ determine the relation between $\overline{E_{d}}$ and $\overline{E}/N$.</li> 
+
+<li>  The mean energy of an ideal classical gas in three dimensions is equal to $3NkT/2$, 
+where $T$ is the temperature of the gas. Use this relation and the values of $\overline{E}/N$ that 
+you found in part (a) to estimate the temperature of the gas. 
+What is the relation of the value of $T$ that you found in this way to $\overline{E_{d}}$? 
+(Use units such that $k=1$.)</li> 
+
+<li>  Run for a sufficient number of trials so that the form of
+$p(E_{d})$ is well defined. Is the form of $p(E_{d})$ consistent with an exponential? 
+Fit your results for $\ln p(E_{\rm d})$ to the form $-\beta E_{\rm d} + {\rm constant}$, where $\beta$ is a parameter. 
+Compare your results for the value of $T$ that you found in part (c) 
+with the value of $1/\beta$. How do the values of $T$ and the slope compare?</li> 
+
+
+<li> How do your results change for an ideal
+gas in two dimensions?</li> 
+
+<li>  What is the relation of $p(E_{d})$ to the Boltzmann distribution? What properties of the 
+demon make it an ideal thermometer?</li> 
+
+<li>  Compare the initial velocity of the particles in the system to their mean value after
+equilibrium has been established. What is the form of the distribution of 
+velocities in equilibrium? </li> 
+</ol>
+
 
    <h2>Resources</h2>
   <ol>
@@ -64,7 +118,7 @@ and probability distribution are related to the temperature. </p>
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 28 July 2020.</p>
 </div>
 
 </body>

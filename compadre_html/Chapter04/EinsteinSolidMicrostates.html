@@ -39,14 +39,59 @@ MathJax.Hub.Config({
 
 <p>The Einsein model consists of $N$ oscillators and $E$ packets of energy 
 which can be distributed among the oscillators in $\Omega$ ways, where
-$$\Omega = \frac{(E+N-1)!}{E! (N-1)!}.$$
+$$\Omega = \frac{(E+N-1)!}{E! (N-1)!}.\label{1}$$
 Each way is  a  <i>microstate</i>. </p>
 
 <p>Program <tt>EinsteinSolidMicrostates</tt> considers two systems    which can share energy; the number of
 oscillators in each system is fixed. The  idea is to explore the probability of various distributions
 of energy between the two systems.</p>
 
+<b>Problem: Two Einstein solids in thermal contact</b>
 
+<p>Consider two Einstein solids
+with $N_A = 4$ and
+$E_A = 10$ and $N_B = 4$ and $E_B = 2$. The two subsystems are
+thermally isolated from one another and from their surroundings. Verify that the number of microstates accessible to subsystem $A$ is 286 and the number of microstates accessible to subsystem $B$ is 10. What is the initial number of accessible
+microstates for the composite system?
+
+Program <tt>EinsteinSolidMicrostates</tt> determines the number
+of accessible microstates of an Einstein solid using
+(\ref{1}) and will help you answer the following questions.
+
+<ol type ="a">
+
+<li> The internal
+constraint is removed so that the two subsystems may exchange energy. Determine
+the probability
+$P_A(E_A)$ that system
+$A$ has energy
+$E_A$. Plot
+$P_A$ versus $E_A$ and discuss its qualitative energy dependence.
+
+<li> What is the probability that energy is transferred from system $A$ to system $B$ and from 
+system $B$ to system $A$? 
+Which system would you identify as the colder system? </li>
+
+<li> Determine the mean energy $\overline{E}_A$, the most probable energy $\skew3\tilde E_A$, the 
+standard deviations $\sigma_A$ and $\sigma_B$, and the relative fluctuations $\sigma_A/\overline{E}_A$. </li>
+
+
+<li> What is the number of accessible microstates of the
+composite system after the internal constraint has been
+relaxed? What is the change in $S$ of the 
+system (choose units such that $k=1$)?</li>
+
+<li> The
+quantity $S$ of the composite system when each subsystem is in its most
+probable macrostate is $\ln \Omega_A(\skew3\tilde E_A)
+\Omega_B(E_{\rm tot} - \skew3\tilde E_A)$. Compare the value of this contribution to the value of 
+$S_{\rm tot} = \ln \sum_{E_A} \Omega_A(E_A)
+\Omega_B(E_{\rm tot}- E_A)$.
+
+<li> Consider
+successively larger systems and describe the qualitative behavior of the various quantities.</li>
+
+</ol>
   <h2>Resources</h2>
   <ol>
 
@@ -63,7 +108,7 @@ of energy between the two systems.</p>
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 28 July 2020.</p>
 </div>
 
 </body>

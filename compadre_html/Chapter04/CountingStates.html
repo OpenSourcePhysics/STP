@@ -29,7 +29,7 @@ MathJax.Hub.Config({
 
 <body>
 
- <h1 id="myTitle" style="position:fixed;">Program Counting States</h1>
+ <h1 id="myTitle" style="position:fixed;">Program CountingStates</h1>
 
 
   <div style="position:absolute;left:30px;top:500px;">
@@ -43,7 +43,26 @@ is represented by a point labeled by $n_1,n_2,\ldots n_d$, where the $n_i$ can e
 <p> This program allows us to calculate finite size effects for the number of microstates below a certain energy $E$ 
 by comparing the actual count with the approximate count given in 1d by $\Gamma_1 = R$, in 2d by $\Gamma_2 = \pi R^2/4$ and in 3d by
 $\Gamma_3 = \pi R^3/6$,  where $E = h^2R^2/8mL^2$, 
-$L$ is the length of the infinite well containing the particles, $m$ is the mass of the particle, and $h$ is the Planck constant.  
+$L$ is the length of the infinite well containing the particles, $m$ is the mass 
+of the particle, and $h$ is the Planck constant.  </p>
+
+<b>Problem: Finite-size effects in two dimensions</b>
+
+<p>
+\begin{equation}
+\Gamma(E) = {1 \over 4}\pi\! R^2 = \pi {L^2 \over h^2}
+(2mE).
+\label{eq:4/phipart}
+\end{equation}
+
+<p>Equation (\ref{eq:4/phipart}) for $\Gamma(E)$ is valid only
+for large $E$ because the area of a quadrant of a circle
+overestimates the number of lattice points $n_x,n_y$ inside a circle
+of radius $R$. Use  Program <tt>CountingStates</tt> to explore how well the relation $\Gamma = \pi\!R^2/4$
+approximates the actual number of microstates. The program computes the number of nonzero, positive integers that satisfy
+the condition $n_x^2 + n_y^2 \leq R^2$.
+What is the minimum value of $R$ for which the difference between
+the asymptotic relation and the exact number is less than 1%?
 
 
   <h2>Resources</h2>
@@ -62,7 +81,7 @@ $L$ is the length of the infinite well containing the particles, $m$ is the mass
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 28 July 2020.</p>
 </div>
 
 </body>

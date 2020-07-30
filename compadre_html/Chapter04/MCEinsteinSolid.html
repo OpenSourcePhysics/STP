@@ -43,8 +43,26 @@ either added or taken from the oscillator. If the change decreases the energy of
 If it increases the energy, a random number $r$ between 0 and 1 is computed and compared to $p = e^{-\Delta E/kT}$, where $\Delta E$ is the change in energy of the system. If 
 $p \ge r$, the change is accepted; otherwise it is rejected. This algorithm leads to a Boltzmann distribution for the microstates of the system.     </p>
 
-<p> The goal of this simulation is to show how the Metropolis algorithm works to simulate a system in the canonical ensemble. </p>
+<p> The goal of this simulation is to show how the Metropolis algorithm works to simulate a system in the 
+canonical ensemble. </p>
 
+
+<b>Problem: Simulation of the Einstein solid in
+equilibrium with a reservoir</b>
+
+<p>Program <tt>MCEinsteinSolid</tt>  implements the Metropolis algorithm for an Einstein solid of $N$
+particles at a temperature $T$. (As usual, we choose units such
+that the Boltzmann constant $k=1$.)
+
+<ol type ="a">
+
+<li> Choose
+$N=20$ and $\beta = 1$. Does the energy of the system eventually reach a
+well-defined average? If so, determine $\overline{E}(T)$.</li> 
+
+<li> Compare your results to the analytical results found in Problem 4.26 in the text.  </li> 
+
+</ol>
 
    <h2>Resources</h2>
   <ol>
@@ -62,7 +80,7 @@ $p \ge r$, the change is accepted; otherwise it is rejected. This algorithm lead
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 28 July 2020.</p>
 </div>
 
 </body>
