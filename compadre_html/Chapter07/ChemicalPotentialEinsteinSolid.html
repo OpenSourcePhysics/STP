@@ -45,7 +45,32 @@ The entropy is $S = k\ln{\Omega}$. </p>
 oscillators in each subsystem is fixed. This example illustrated the fact that we can define the temperature as $1/T = \partial S/\partial E$. 
 Now we consider the same system but allow the number of oscillators to be shared between the two subsystems, but not the energy which is fixed in each subsystem. The program computes
 the total entropy for different  distributions of the $N$ oscillators and  illustrates how $\mu/T \equiv \partial S/\partial N$ for each system is equal when the 
-composite entropy is at a maximum. 
+composite entropy is at a maximum. </p>
+
+<b>Problem: Numerical calculation of the chemical potential of the Einstein solid</b>
+
+
+<p>Use Program <tt>ChemicalPotentialEinsteinSolid</tt>
+ to consider an isolated composite Einstein solid of two subsystems. The program counts the number of 
+ states using the relation 
+ \begin{equation}
+\Omega = {(E + N -1)! \over E!\,(N-1)!}. \label{eq:4/omh}
+\end{equation}
+The inputs to the program are $E_A$, $E_B$, and $N\!=\!N_A+N_B$.
+<ol type ="a">
+<li> The two subsystems are initially separated by an insulating and impermeable partition, 
+with $N_A=8$, $N_B=4$, $E_A=15$, and $E_B=30$. What is the initial entropy of the system? 
+The partition is then replaced by one that allows particles but not energy to be transferred 
+between the two subsystems. Construct a table to
+show that the ratio $\mu/T$ is approximately equal for the most probable 
+macrostate (defined by the values of $N_A$ and $N_B$). Is the entropy of this macrostate higher than the 
+initial entropy? Then try other combinations of $N$, $E_A$, and $E_B$. In a more realistic problem 
+particles could not move from one system to another without transferring energy as well.</li>
+<li> Why is $\mu$ negative for the Einstein solid? </li>
+
+<li> If the amount of energy is the same in each subsystem of a composite Einstein solid, what is the 
+equilibrium number of particles in each subsystem?</li>
+</ol>
 
 
   <h2>Resources</h2>
@@ -64,7 +89,7 @@ composite entropy is at a maximum.
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>

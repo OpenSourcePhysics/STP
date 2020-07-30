@@ -52,6 +52,66 @@ repulsion can be added to prevent more than one particle at the same position.
 <p> The goal of this simulation is to explore how $\mu$ depends on particle density and the effect of the interactions. 
   </p>
 
+<b>Problem: The chemical potential of a one-dimensional ideal gas</b>
+
+<p>Program <tt>ChemicalPotentialDemon</tt>
+implements this algorithm for the one-dimensional ideal gas and computes $P(E_d,N_d)$, the probability 
+that the demon has energy $E_d$ and $N_d$ particles.
+
+<ol type ="a">
+
+<li> Use the default
+parameters $N=100$, $E=200$, and $L=100$, where $N$ is the total number of
+particles, $L$ is the
+length of the box, and $E$ is the maximum total energy. The program uses units such that 
+$\Delta x \Delta p=1$, and $m=1/2$ so
+that the kinetic energy of a particle is $\epsilon=p^2$. These choices
+imply that the momentum and energy are integers. 
+The $N$ particles are initially
+randomly placed on the sites of the phase space lattice with no more
+than one particle on a site such that the total energy does not exceed $E$. The initial demon energy $E_d=0$ and
+particle number $N_d=0$. Run the simulation and discuss the qualitative features of the positions of 
+the particles in phase space. Do some  particles  have the same position? Run the simulation for different 
+values of $E$, but the same values of the other parameters.
+Where in phase space are most of the particles located?</li>
+
+<li> Explain why the simulation in part (a) is identical to a simulation of an ideal gas in the semiclassical limit. 
+Show that the chemical potential is given by
+\begin{equation}
+\mu = -T \ln[(L/N)(\pi T)^{1/2}].
+\label{eq:usingthermo/mudemon}
+\end{equation}
+(Remember that $\Delta x \Delta p=1$.)</li>
+
+<li> Use the same parameters as in part (a) and run for about 200 Monte Carlo steps per particle (mcs) to 
+equilibrate the system. Then click <tt>Zero Averages</tt> and average over at least $1000\,$mcs. 
+(The simulation will run faster if you increase the steps per display to 10 or 100.) 
+After the simulation is stopped, click the <tt>Plot Demon Distributions</tt> button to display the demon energy and 
+particle number distributions. The plot of $\ln P(E_d, N_d = 1)$ versus $E_d$ should be approximately linear for 
+small $E_d$.
+Use the plots to estimate the values of $T$ and $\mu$ and compare your Monte Carlo results with the exact result 
+that you found in part (b).</li>
+
+<li> How do you expect $\mu$ to change if you lower the particle density? Run the 
+simulation for $N= 50$, $E = 100$, and $L= 100$ and compare the temperature and chemical potential 
+obtained from the demon distributions with the results found in part (c). </li>
+</ol>
+
+<b>Problem: The effects of interparticle interactions</b>
+
+<p>What are the effects of including interactions between the particles in a dilute classical gas?
+<ol type ="a">
+
+<li> If the interaction has a hard core, no two particles can have the same position. 
+How do you expect $\mu$ to change compared to the ideal gas?
+Use Program <tt>ChemicalPotentialDemon</tt> and determine the effect of including a hard core on $\mu$. 
+For this comparison set $L = 200$ and $N = 100$. Why must $L$ be much larger than $N$?</li>
+
+<li> If we include an attractive interaction between particles that are nearest neighbors in position, 
+the energy of the system will be lowered for some particle additions, thus giving the demon more energy.
+How do you expect $\mu$ to change compared to the hard core system?</li>
+</ol>
+
 
    <h2>Resources</h2>
   <ol>
@@ -69,7 +129,7 @@ repulsion can be added to prevent more than one particle at the same position.
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>
