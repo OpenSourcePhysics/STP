@@ -42,6 +42,25 @@ number of microstates $\Omega(E)$ for each value of $E$ of the 2d Ising model on
 such as the mean energy can be found at any temperature using
 $$\overline{E} = \sum_E EP(E) = \frac{\sum_E E\Omega(E)e^{-E/kT}}{\sum_E\Omega(E)e^{-E/kT}}. $$  The program also calculates the specific heat as a function of temperature from a single simulation.  </p>
 
+<b>Problem: Wang-Landau algorithm for the Ising model</b>
+
+<p>Program <tt>IsingNumberOfStates</tt> implements the Wang-Landau algorithm for the Ising model on a square lattice.
+
+<ol type ="a">
+
+<li>
+Calculate the exact values of $\Omega(E)$ for the $2 \times 2$ Ising model. Run the simulation for $L = 2$ and
+ verify that the computed number of states is close to your exact answer.</li>
+
+<li>
+Choose larger values of $L$, for example, $L = 16$, and describe the qualitative energy dependence of $\Omega(E)$.</li>
+
+<li>
+The program computes the specific heat as a function of temperature using the estimated value of $\Omega(E)$. 
+Describe the qualitative temperature dependence of the specific heat.</li>
+
+</ol>
+
 
    <h2>Resources</h2>
   <ol>
@@ -59,7 +78,7 @@ $$\overline{E} = \sum_E EP(E) = \frac{\sum_E E\Omega(E)e^{-E/kT}}{\sum_E\Omega(E
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>

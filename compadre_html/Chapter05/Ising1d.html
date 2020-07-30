@@ -41,6 +41,34 @@ MathJax.Hub.Config({
 The Metropolis Monte Carlo algorithm is used.  The goal of this simulation is to explore the properties of the 1d Ising model and compare with analytical results. 
 It is also important  to understand why there is no phase transition for  temperature $T > 0$. </p>
 
+<b>Problem: Computer simulation of the Ising chain</b>
+
+<p>Use Program <tt>Ising1d</tt> to simulate the
+one-dimensional Ising model. It is convenient to measure the temperature in 
+units such that $J/k = 1$. For example, a temperature of $T=2$ means that $T = 2J/k$. The &#8220;time&#8221; is 
+measured in terms of Monte Carlo steps per spin (mcs), where in one Monte Carlo step per spin, $N$ 
+spins are chosen at random for trial changes. (On the average each spin will be chosen equally, 
+but during any finite interval, some spins might be chosen more than others.)  Choose $N \geq 200$ and $H=0$.
+
+<ol type ="a">
+
+<li> Determine the heat capacity $C$ and susceptibility $\chi$ for different temperatures, and discuss the 
+qualitative temperature dependence of $\chi$ and $C$.</li>
+
+<li> Why is the mean value of the magnetization of little interest for the one-dimensional 
+Ising model? Why does the simulation usually give $\overline{M} \neq 0$?</li>
+
+<li> Visually estimate the mean size of the domains (regions of parallel spins) at $T=1.0$ and $T=0.5$. 
+By how much does the mean size of the domains increase when $T$ is decreased? 
+Compare your estimates with the correlation length given by 
+\begin{equation}
+\xi =-{1 \over \ln (\tanh \beta J)}.
+\label{eq:5/correl1d}
+\end{equation} 
+What is the qualitative temperature dependence of the mean domain size?</li>
+
+<li> Why does the Metropolis algorithm become inefficient at low temperatures?</li>
+</ol>
 
    <h2>Resources</h2>
   <ol>
@@ -58,7 +86,7 @@ It is also important  to understand why there is no phase transition for  temper
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>

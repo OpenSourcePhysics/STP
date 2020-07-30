@@ -45,6 +45,139 @@ The Metropolis Monte Carlo algorithm is used.      </p>
 behavior and the nature of the phase transition between a ferromagnetic state at 
 low temperatures and a paramagnetic state at high temperatures. </p>
 
+<b>Problem: Simulation of the two-dimensional Ising model</b>
+
+<p>Use Program <tt>Ising2d</tt> to explore some of the properties of the two-dimensional 
+Ising model on a square lattice at a given temperature $T$ and external magnetic field $H$. First choose
+$N=L^2 = 32^2$ and set
+$H=0$. The initial
+orientation of the spins is all spins up.
+
+<ol type ="a">
+
+<li>
+Choose $T = 10$ and run until equilibrium has been established. Is the orientation of
+the spins random and the mean magnetization approximately equal to
+zero? What is a typical size of a domain, a region of parallel
+spins?</li>
+
+
+<li>
+Choose a low temperature such as $T = 0.5$. Are the spins still random or is there a preferred direction? You will notice that $\overline{M} \approx 0$ for sufficient high $T$ and $\overline{M} \neq 0$ for sufficiently low $T$.
+Hence, there is an intermediate value of $T$ at which $\overline{M}$ first becomes nonzero.</li>
+
+
+<li>
+Choose $L=4$ and $T=2.0$. Does the sign of $M$
+change during the simulation? Choose a larger value of $L$ and
+observe if the sign of $M$ changes. Will the sign of $M$ change for $L \gg 1$? 
+Should a theoretical calculation of $\langle M\rangle$ yield $\langle M \rangle \neq 0$ or $\langle M \rangle = 0$ for $T < T_c$?
+</li>
+
+<li>
+Start at $T=4$ and determine the temperature dependence of $m$, the zero-field susceptibility $\chi$, 
+the mean energy per spin $E/N$, and the specific heat $C$. Decrease the temperature in intervals of 0.2 
+until $T \approx 1.6$, equilibrating for at least 1000\,mcs before collecting data at each value of $T$. 
+Describe the qualitative temperature dependence of these quantities. (When the simulation is stopped, 
+the mean magnetization and the mean of the absolute value of the magnetization is returned.) 
+Because $M$ sometimes changes sign for small systems, the value of $\langle |m| \rangle$ is a more accurate 
+representation of the magnetization. For this reason the susceptibility is given by
+\begin{equation}
+\chi = \frac{1}{kT}\big[\langle M^2\rangle -\langle|M|\rangle^2\big],
+\label{eq:5/chiabs}
+\end{equation}
+rather than by using $\langle M \rangle$.</li>
+
+
+<li>
+Set $T = T_c \approx 2.269$ and choose $L \geq 128$. Obtain $\langle m \rangle$ for $H = 0.01$, 0.02, 0.04, 0.08, and 0.16. 
+Make sure you equilibrate the system at each value of $H$ before collecting data. Make a log-log plot of $m$ 
+versus $H$ and estimate the critical exponent $\delta$ using  
+\begin{equation}
+|m| \sim |H|^{1/\delta} \qquad (T = T_c).
+\label{eq:5/delta}
+\end{equation}  </li>
+
+</ol>
+
+<b>Problem: Simulations of metastability</b>
+
+<ol type ="a">
+
+<li>
+Use Program <tt>Ising2d</tt> to simulate the Ising model in a magnetic field. Choose $L=64$, $T=1$, and $H=0.7$. 
+Run until the system reaches equilibrium. You will notice that most of the spins are aligned with the magnetic field.</li>
+
+
+<li>
+Pause the simulation and let $H=-0.7$; we say that we have &#8220;flipped&#8221; the field. 
+Continue the simulation after the flip of the field and watch the spins. What is the equilibrium 
+state of the system after the flip of the field? Do the spins align themselves with the magnetic field 
+immediately after the flip? Monitor $m$ as a function of time. Is there a time interval  
+during which the mean value of $m$ does not change appreciably? At what time does $m$ change sign? 
+Is the time when $m$ becomes negative the same each time you do the simulation? 
+(The program uses a different random number seed each time it is run.) </li>
+
+<li>
+Keep the temperature fixed at $T=1$, set $H = 0.6$, and flip the field as in part (b). How does the time that
+ $m$ changes sign compare to the mean time for $|H|=0.7$?</li> 
+</ol>
+
+
+<b>Problem: Finite-size scaling and critical exponents</b>
+
+<p>
+We expect that if the correlation length $\xi(T)$ is less than 
+the linear dimension $L$ of the system, our simulations will yield results comparable to an infinite system. 
+However, for $T$ close to $T_c$, the results of simulations will be limited by finite-size effects. 
+Because we can only simulate finite systems, it is difficult to obtain estimates for the critical 
+exponents $\alpha$, $\beta$, and $\gamma$ by varying the temperature.</p>
+
+<p>The effects of finite system size can be made quantitative by the following argument, which assumes 
+that the only important length near the critical point is the correlation length.  Consider, for example, 
+the critical behavior of $\chi$. If the correlation length $\xi \gg 1$, (all lengths are measured 
+in terms of the lattice spacing) but is much less than $L$, a power law behavior  
+is expected to hold. However, if $\xi$ is comparable to $L$, $\xi$ cannot change appreciably 
+and 
+\begin{equation}\chi \sim |\epsilon|^{-\gamma}\label{eq:5/gamma}
+\end{equation} 
+is no longer applicable. This qualitative change in the behavior of $\chi$ and other physical quantities occurs 
+for
+\begin{equation}
+\xi \sim L \sim |T - T_c|^{-\nu}.\label{eq:5/lenscale}
+\end{equation}
+We invert (\ref{eq:5/lenscale}) and write
+\begin{equation}
+|T - T_c| \sim L^{-1/\nu}. \label{eq:5/distance}
+\end{equation}
+
+If $\xi$ and $L$ are approximately the same size, we can substitute \eqref{eq:5/distance} into \eqref{eq:5/gamma} 
+to obtain
+\begin{equation}
+\chi(T=T_c) \sim [L^{-1/\nu}]^{-\gamma} \sim L^{\gamma/\nu}.
+\label{eq:5/finitechi}
+\end{equation}
+The relation (\ref{eq:5/finitechi}) between $\chi$ and $L$ at $T=T_c$ is consistent with the fact that a 
+phase transition is defined only for infinite systems. We can use the relation (\ref{eq:5/finitechi}) 
+to determine the ratio $\gamma/\nu$. This method of analysis is known as <i>finite-size scaling</i>. 
+
+<ol type ="a">
+
+<li>
+Use Program <tt>Ising2d</tt> to estimate $\chi$ at $T=T_c$ for different values of $L$. 
+Make a log-log plot of $\chi$ versus $L$ and use the scaling relation
+\eqref{eq:5/finitechi} to determine the ratio
+$\gamma/\nu$. Use the exact result
+$\nu=1$ to estimate $\gamma$. Then use the same reasoning to determine the exponent $\beta$ and 
+compare your estimates for $\beta$ and $\gamma$ with the exact values $\beta = 1/8$ and $\gamma = 7/4$. </li>
+
+<li>
+Make a log-log plot of $C$ versus $L$. If your data for $C$ are sufficiently accurate, you will find that the log-log plot of $C$ versus $L$ is not a straight line but shows curvature. The reason
+is that the exponent $\alpha$  equals zero for the two-dimensional Ising model, 
+and $C \sim C_0 \ln L$. Is your data for $C$ consistent with this form? The constant
+$C_0$ is approximately 0.4995.</li>
+</ol>
+
 
    <h2>Resources</h2>
   <ol>
@@ -62,7 +195,7 @@ low temperatures and a paramagnetic state at high temperatures. </p>
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>

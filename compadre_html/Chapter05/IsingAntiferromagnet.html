@@ -45,6 +45,33 @@ with red and black squares; $c_i = +1$
 on the black squares and $c_i =-1$ on the red squares. The goal of this simulation is to explore the similarities between the ferromagnetic Ising model 
 and the antiferromagnetic version.  </p>
 
+<b>Problem: Ising antiferromagnet</b>
+
+<p>We have considered the ferromagnetic Ising model for which the energy of interaction between 
+two nearest-neighbor spins is $J>0$. Hence all spins are parallel in the ground state in the ferromagnetic Ising model. 
+In contrast, if $J < 0$, nearest-neighbor spins must be antiparallel to minimize their energy of interaction.
+
+<ol type ="a">
+<li> Sketch the ground state of the one-dimensional  antiferromagnetic
+Ising model. Then do the same for the antiferromagnetic Ising model on a
+square lattice. What is the value of $m$ for the ground state of an Ising antiferromagnet?</li>
+
+<li> Use Program <tt>IsingAntiferromagnet</tt> to simulate
+the antiferromagnetic Ising model on a square lattice for various temperatures and describe its
+qualitative behavior. Does the system have a phase transition at $T>0$? Does the value of $m$ 
+show evidence of a phase transition?</li>
+
+<li> In addition to the usual thermodynamic quantities the program calculates the <i>staggered</i> 
+magnetization and the staggered susceptibility. The staggered magnetization is calculated by 
+considering the square lattice as a checkerboard with black and red sites so that each black 
+site has four red sites as nearest neighbors and vice versa. The staggered magnetization is 
+calculated from $\sum c_i s_i$ where $c_i = +1$ for a black site and $c_i = -1$ for a red site. 
+Describe the behavior of these quantities and compare them to the behavior of $m$ and $\chi$ for the 
+ferromagnetic Ising model.</li>
+
+
+</ol>
+
 
    <h2>Resources</h2>
   <ol>
@@ -62,7 +89,7 @@ and the antiferromagnetic version.  </p>
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>

@@ -38,9 +38,9 @@ MathJax.Hub.Config({
 
 
 <p>The results of   mean-field theory require the numerical solution of the self-consistent equation
-$$m = \tanh \big[(Jqm + H)/kT\big].$$
+$$m = \tanh \big[(Jqm + H)/kT\big].\label{m}$$
 To understand the solutions it is helpful to also calculate the Helmholtz function (per spin)
-$$f = -kT \ln \bigg[2\cosh \big[(Jqm + H)/kT\big] \bigg].$$    </p>
+$$f = -kT \ln \bigg[2\cosh \big[(Jqm + H)/kT\big] \bigg]. \label{f}$$    </p>
 
 <p> The program plots $m$ versus $m$ and $\tanh \big[(Jqm + H)/kT\big]$ versus $m$ in one window and
 $f$ versus $m$ in another window. From the first window we can pick out the possible equilibrium 
@@ -48,6 +48,58 @@ values of $m$. From the minima of $f(m)$
 we can determine the actual equilibrium value(s) of $m$. Units are chosen so that $k = 1$ and $J = 1$. </p>
 
 
+<b>Problem: Numerical solutions of \eqref{m}</b>
+
+<p>Program <tt>IsingMeanField</tt> uses Newton's method to find the zeros of the 
+function $g(m) = m - \tanh \beta (Jqm + H)$.
+
+<ol type ="a">
+
+<li>
+Set $H = 0$ and $q=4$ and confirm the mean-field approximation for the critical 
+temperature $T_c$ of the Ising model on a square lattice. Start with $kT/Jq=10$ and 
+then proceed to lower temperatures. The equilibrium value of $m$ is the solution with the 
+lowest value of the Helmholtz function.</li>
+
+<li> Plot the temperature dependence of $m$ for $T < T_c$.</li>
+
+<li>
+Determine $m(T)$ for the one-dimensional Ising model ($q=2$) and
+$H =0$ and $H=1$. Compare your values for $m(T)$ with the exact solution in one
+dimension.</li>
+
+</ol>
+
+<b>Problem: Minima of the Helmholtz function</b>
+<p>It can be shown that  $f(m)$  near the critical point  can be written as
+\begin{equation}
+\label{eq:5/freemf}
+f(m) = a + b(1-\beta q J)m^2 + cm^4,
+\end{equation}
+where $a$, $b$, and $c$ are positive.
+
+<ol type ="a">
+
+<li>
+Show that the minimum value of $f$ for $T>T_c$  is at $m=0$, and that $m =\pm m_0$ corresponds to a 
+lower value of $f$ for $T \lt T_c$.</li>
+
+<li>
+Use Program <tt>IsingMeanField</tt> to plot $f(m)$ as a function 
+of $m$ for $T>T_c$. For what value of $m$ does $f(m)$ have a minimum? </li>
+
+<li>
+Plot $f(m)$ for $T=1$. Where are the minima of $f(m)$? Do they have the same depth? If so, what is the 
+meaning of this result?</li>
+
+<li>
+If $H$ is nonzero but small,   there is an additional term $-mH$ in \eqref{eq:5/freemf}.
+Choose $T=1$ and $H=0.5$. Do the two minima have the same depth? The global minimum of $f$ 
+corresponds to the stable phase. If we quickly &#8220;flip&#8221; the field and let $H \to -0.5$, 
+the minimum at $m \approx 1$ will become a local minimum. The system will remain in this 
+local minimum for some time before it switches to the global minimum. </li>
+
+</ol>
    <h2>Resources</h2>
   <ol>
 
@@ -64,7 +116,7 @@ we can determine the actual equilibrium value(s) of $m$. Units are chosen so tha
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>
