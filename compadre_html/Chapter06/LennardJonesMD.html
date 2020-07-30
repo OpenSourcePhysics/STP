@@ -37,7 +37,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>lennardJonesMD</tt>> models the behavior of particles  in a two-dimensional box interacting through a Lennard-Jones potential. 
+<p>Program <tt>lennardJonesMD</tt> models the behavior of particles  in a two-dimensional box interacting through a Lennard-Jones potential. 
 The motion evolves using the numerical solution of the 
 differential equations in Newton's second law. The velocity Verlet algorithm is used to update the positions and velocities of the particles. 
 Periodic boundary conditions are used so that particles that leave the box enter on the other side, much like many video games. </p>
@@ -47,6 +47,19 @@ can lead to different macroscopic behavior such as gas, liquid, or solid phases.
 Other information that can be obtained includes the velocity distribtion function, the pair distribution function $g(r)$, which provides
 information about the spatial structure of the substance, and the diffusion of a tagged particle.   </p>
 
+<b>Problem: Simulations of the Maxwell velocity distribution</b>
+
+
+<p>Program <tt>LennardJonesMD</tt> simulates a system of particles interacting via the Lennard-Jones 
+potential 
+in two dimensions by solving Newton's equations of motion numerically. 
+The program computes the distribution of velocities in the $x$-direction among other quantities. 
+Compare the form of the computed velocity distribution to the form of the Maxwell velocity distribution 
+\begin{equation}
+\label{eq:noninteract/maxwellvelx}
+f(v_x)\,dv_x = \left({m \over 2 \pi kT}\right)^{1/2} e^{-mv_x^2/2kT} dv_x.
+\end{equation}
+ How does its width depend on the temperature?
 
   <h2>Resources</h2>
   <ol>
@@ -64,7 +77,7 @@ information about the spatial structure of the substance, and the diffusion of a
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 30 July 2020.</p>
 </div>
 
 </body>
