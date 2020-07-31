@@ -51,6 +51,32 @@ the &#8220;low momentum slab.&#8221; The viscosity is determined from the ratio 
 equilibration, which starts 
 the swapping of velocities, creating a momentum flux and $x$-velocity gradient. </p>
 
+<b>Problem: Simulation of the viscosity</b>
+
+<p>Program <tt>Viscosity</tt>  uses $\eta = - \frac{P_{xz}}{(\Delta v_x/\Delta z)}$
+to determine the viscosity for a system of particles interacting via the Lennard-Jones potential
+with a cutoff equal to $3\,\sigma$.  The number of particles is $N=3k^3$, 
+where the number of slabs in the $z$ direction is $3k$. The default values are $k=10$, $T=0.7$, and $\rho = 0.849$.
+Run the program until the system reaches  equilibrium  at the desired constant value of $T$. 
+(The program uses velocity rescaling.)
+When the <tt>Stop equilibration</tt> button is pressed, the process of momentum transfer from slab at $z=0$
+to the middle slab is started. Press the <tt>Reset Data</tt> button several times to ensure that the system has 
+reached a steady state. The mean $x$ momentum in the left and right halves of the box are plotted separately 
+so that you can determine how well they agree.
+
+<ol type ="a">
+<li> What is the value of the viscosity for the default values of $N$, $\rho$, and $T$?</li>
+<li> How do you expect $\eta$ to change with increasing $T$ for fixed $\rho$? Test your expectation 
+using Program <tt>Viscosity</tt>  by doubling the temperature.</li>
+
+<li> How do you expect $\eta$ to change with increasing $\rho$ for fixed $T$? Test your expectation 
+using Program <tt>Viscosity</tt> by increasing the density by $10\%$.</li>
+
+<li> *Increase $N$ while keeping the density and the temperature the same as in part (a) and determine the importance of finite size effects on the 
+computed value of $\eta$.</li>
+
+</ol>
+
   <h2>Resources</h2>
   
   <ol>
@@ -69,7 +95,7 @@ the swapping of velocities, creating a momentum flux and $x$-velocity gradient. 
 </ol>
 
  
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 31 July 2020.</p>
 </div>
 
 </body>

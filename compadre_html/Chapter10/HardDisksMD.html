@@ -44,6 +44,100 @@ and the new velocities of the colliding disks after the collision are determined
 as well as the mean free time $\tau$ and mean free path $\lambda$.</p>
     </p>
 
+<b>Problem: The motion of particles in a fluid</b>ß
+
+
+<p>Program <tt>HardDisksMD</tt> simulates a system of hard disks
+and tags one of the particles blue so that it can be distinguished from the other particles. 
+The default density is $\rho=0.16$, a density that is far from the density at the fluid-solid transition. 
+How would you describe the motion of the tagged particle? Does its motion differ from that of the other particles?
+ Does its motion look random? Are the collisions of the particles well defined?</p>
+ 
+ 
+<b>Problem: The mean square displacement of particles in a fluid</b>
+
+
+<ol type ="a">
+
+<li> Why is the mean displacement, $(1/N)\sum_{i=1}^N \langle {\bf r}_i(t)\rangle$, of little interest? </li>
+
+<li> Program <tt>HardDisksMD</tt>  computes the mean square displacement $r^2(t)$ 
+of a system of hard disks. The displacements in the $x$ and $y$ directions are computed separately 
+to give you an idea of the statistical error. Describe the behavior of $r^2(t)$ for very short times 
+and for long times. </li>
+
+<li> Program <tt>LennardJonesMD</tt> simulates a system of particles interacting with the Lennard-Jones potential. 
+Is the motion of the tagged particle similar to what you observed for hard disks?  </li>
+
+<li> How does $r^2(t)$ for the two systems compare at the same density?</li>
+</ol>
+
+<b>Problem: The self-diffusion coefficient of hard disks</b>
+
+
+<p>Program <tt>HardDisksMD</tt> computes the mean square displacement by averaging over all particles and over time 
+origins chosen at $10\,\tau$ apart. The time is measured in units of $\tau = m \sigma^2/kT)^{1/2}$, 
+where $\sigma$ is the hard disk diameter, $m$ is the mass of a disk, and $T$ is the 
+temperature. 
+
+<ol type ="a">
+
+<li> What is the time-dependence of the mean square displacement $r^2(t)$ for long times?</li>
+
+<li> Do you expect $D$ to increase, decrease, or remain unchanged as the density is increased 
+at fixed temperature?</li>
+
+<li> Do you expect $D$ to increase, decrease, or remain unchanged as the temperature is increased 
+at fixed density? Explain your reasoning for both cases. </li>
+
+<li> Choose several densities in the range $0.10 \leq \rho \leq 0.30$ and determine the qualitative 
+dependence of $D$ on $\rho$.</li>
+
+<li> What is the approximate time dependence of $r^2(t)$ for short times?</li>
+
+</ol>
+
+<b>Problem: Distribution of times between successive collisions</b>
+
+
+<p>We can gain insight into the dynamics of a dilute gas by looking at the statistics of the collisions in a 
+system of hard disks.
+
+<ol type ="a">
+
+<li> Let $P(t)$ be the distribution of times $t$ between successive collisions of a particular particle with any 
+other particle in the system. What do you expect the form of $P(t)$ to be for low densities?</li>
+
+<li> Program <tt>HardDisksMD</tt>  computes the histogram of collision times for a 
+system of hard disks \index{hard disks} at density $\rho=0.16$ (and $T=1$). The results are averaged over all 
+particles to obtain better results. The histogram is an estimate of $P(t)$ if the data is normalized. 
+Does the qualitative behavior of the histogram agree with your expectations?</li>
+
+<li> Fit your numerical data for the histogram to your choice of functional form and use your fit to determine 
+the mean time between collisions.</li>
+
+</ol>
+
+<b>Problem: Tests of simple kinetic theory arguments</b>
+
+<p>Compare the results from Program <tt>HardDisksMD</tt> for the mean collision time and mean free path 
+to the predictions $\tau = 1/\nu = 1/\rho \sigma_c \overline{v}$ 
+and $\lambda \approx 1/\sqrt 2 \rho \sigma_c$.</p>
+
+<b>Problem: Self-diffusion coefficient for hard disks</b>
+
+<ol type ="a">
+
+<li> Use arguments similar to the ones used in the text to 
+determine the temperature and density dependence of $D$ for a dilute system of hard disks. 
+You will need to calculate $\overline{v}$ using the two-dimensional version of the Maxwell 
+velocity distribution function. </li> 
+
+<li>  Compare your results from Program <tt>HardDisksMD</tt> for the self-diffusion 
+coefficient to the predictions from part (a) and the Boltzmann equation given by $D_B= \dfrac{1}{2 \rho \sigma } \Big (\dfrac{kT}{\pi m} \Big)^{\!1/2}$.</li> 
+
+</ol>
+
 
    <h2>Resources</h2>
   <ol>
@@ -60,8 +154,7 @@ as well as the mean free time $\tau$ and mean free path $\lambda$.</p>
  
 </ol>
 
- 
-  <p class="small">Updated 7 July 2020.</p>
+  <p class="small">Updated 31 July 2020.</p>
 </div>
 
 </body>
