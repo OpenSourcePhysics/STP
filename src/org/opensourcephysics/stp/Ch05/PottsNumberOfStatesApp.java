@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.display.Dataset;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 
 public class PottsNumberOfStatesApp extends AbstractSimulation {
@@ -179,6 +180,7 @@ public class PottsNumberOfStatesApp extends AbstractSimulation {
    * Constructor WangLandauApp
    */
   public PottsNumberOfStatesApp() {
+    OSPRuntime.setAppClass(this);
     histogramFrame.setPreferredMinMaxY(0, 10000);
     histogramFrame.setAutoscaleY(true);
     densityFrame.setMarkerColor(0, Color.blue);

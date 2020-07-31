@@ -7,6 +7,7 @@
 package org.opensourcephysics.stp.Ch07;
 import org.opensourcephysics.controls.AbstractCalculation;
 import org.opensourcephysics.controls.CalculationControl;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 
 /**
@@ -22,6 +23,7 @@ public class ChemicalPotentialEinsteinSolidApp extends AbstractCalculation {
    * Constructor EinsteinSolidChemicalPotentialApp
    */
   public ChemicalPotentialEinsteinSolidApp() {
+  	OSPRuntime.setAppClass(this);
     plotFrame.setXYColumnNames(0, "N_a", "omegaA");
     plotFrame.setXYColumnNames(1, "N_a", "log omegaA");
     plotFrame.setXYColumnNames(2, "N_a", "muA/kT");

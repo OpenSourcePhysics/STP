@@ -38,6 +38,7 @@ public class MCEstimationApp extends AbstractCalculation {
    * Constructor MonteCarloEstimationApp
    */
   public MCEstimationApp() {
+  	OSPRuntime.setAppClass(this);
     functionDrawer = new FunctionDrawer(function);
     functionDrawer.initialize(0, 1, 1000, false);
     plotFrame.setMarkerColor(0, Color.blue);
@@ -133,7 +134,7 @@ public class MCEstimationApp extends AbstractCalculation {
       }
 
     });
-    menu.add(item);
+   // menu.add(item); not supported in stpbook
     addChildFrame(plotFrame);
   }
 

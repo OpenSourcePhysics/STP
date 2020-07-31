@@ -8,6 +8,7 @@
 package org.opensourcephysics.stp.Ch05;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 
 public class IsingAntiferromagnetApp extends AbstractSimulation {
@@ -20,6 +21,7 @@ public class IsingAntiferromagnetApp extends AbstractSimulation {
    * Constructor Ising2DAntiApp
    */
   public IsingAntiferromagnetApp() {
+  	OSPRuntime.setAppClass(this);
     ising = new IsingAntiferromagnet();
     plotFrame.setAutoscaleX(true);
     plotFrame.setAutoscaleY(true);

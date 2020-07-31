@@ -10,7 +10,7 @@ package org.opensourcephysics.stp.Ch05;
 import java.text.DecimalFormat;
 
 import org.opensourcephysics.controls.*;
-
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 
 import org.opensourcephysics.numerics.*;
@@ -42,7 +42,9 @@ public class IsingMeanFieldApp extends AbstractCalculation implements Function {
 	double[] root; // three roots
 	boolean negative = false;
 	DecimalFormat numberFormat = (DecimalFormat) DecimalFormat.getInstance();
+
 	IsingMeanFieldApp() {
+		OSPRuntime.setAppClass(this);
 		root = new double[3];
 		plotFrame.setConnected(true);
 		plotFrame.setMarkerColor(1,Color.RED);
@@ -51,6 +53,7 @@ public class IsingMeanFieldApp extends AbstractCalculation implements Function {
 		energyFrame.setConnected(true);
 		numberFormat.setMinimumFractionDigits(3);
 	}
+
 
 	public void reset() {
 		control.setValue("T", 1.0);

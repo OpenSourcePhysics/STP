@@ -46,6 +46,7 @@ public class RandomWalk1dApp extends AbstractSimulation {
    * Constructor OneDimensionalWalkApp
    */
   public RandomWalk1dApp() {
+  	OSPRuntime.setAppClass(this);
      numberFormat = NumberFormat.getInstance();
     numberFormat.setMaximumFractionDigits(2);
     random = new Random();
@@ -160,7 +161,7 @@ public class RandomWalk1dApp extends AbstractSimulation {
       }
 
     });
-    menu.add(item);
+    // menu.add(item);  not supported in stpbook
     addChildFrame(histogramFrame);
   }
 

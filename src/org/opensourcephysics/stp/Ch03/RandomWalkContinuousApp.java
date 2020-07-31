@@ -43,6 +43,7 @@ public class RandomWalkContinuousApp extends AbstractSimulation {
    * Constructor VariableStepLengthWalkApp
    */
   public RandomWalkContinuousApp() {
+  	OSPRuntime.setAppClass(this);
     drawingPanel = histogramFrame.getDrawingPanel();
     numberFormat = NumberFormat.getInstance();
     numberFormat.setMaximumFractionDigits(2);
@@ -165,7 +166,7 @@ public class RandomWalkContinuousApp extends AbstractSimulation {
       }
 
     });
-    menu.add(item);
+    //menu.add(item);  // not supported in stpbook
     addChildFrame(histogramFrame);
   }
 

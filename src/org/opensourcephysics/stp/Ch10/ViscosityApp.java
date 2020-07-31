@@ -44,7 +44,10 @@ public class ViscosityApp extends AbstractSimulation {
   double dvxdz;
   boolean equil = true;
   
- 
+  public ViscosityApp() {
+    OSPRuntime.setAppClass(this);
+  }
+  
   /**
    * Initializes the model by reading the number of particles.
    */

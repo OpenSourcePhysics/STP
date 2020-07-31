@@ -11,6 +11,7 @@ import java.text.DecimalFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.frames.*;
 import org.opensourcephysics.display.GUIUtils;
+import org.opensourcephysics.display.OSPRuntime;
 
 /**
  * WidomApp simulates a two-dimensional system of interacting particles
@@ -25,6 +26,10 @@ public class ChemicalPotentialMCApp extends AbstractSimulation {
   //PlotFrame energyData = new PlotFrame("mcs", "PE", "Mean potential energy");
   PlotFrame cpData = new PlotFrame("mcs", "mu*", "Mean excess chemical potential");
   DisplayFrame display = new DisplayFrame("x", "y", "Lennard-Jones system");
+  
+  public ChemicalPotentialMCApp() {
+    OSPRuntime.setAppClass(this);
+  }
 
   /**
    * Initializes the model by reading the number of particles.

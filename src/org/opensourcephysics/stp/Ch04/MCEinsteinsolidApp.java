@@ -49,6 +49,9 @@ public class MCEinsteinsolidApp extends AbstractSimulation {
   /**
    * Constructor EinsteinsolidMCApp
    */
+  public MCEinsteinsolidApp() {
+  	OSPRuntime.setAppClass(this);
+  }
  
   public void doStep() {
     T = control.getDouble("T");

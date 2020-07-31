@@ -8,6 +8,7 @@
 package org.opensourcephysics.stp.Ch08;
 import org.opensourcephysics.controls.AbstractCalculation;
 import org.opensourcephysics.controls.CalculationControl;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 import org.opensourcephysics.numerics.Function;
 import org.opensourcephysics.numerics.Integral;
@@ -16,6 +17,10 @@ public class SecondVirialCoefficientApp extends AbstractCalculation implements F
   PlotFrame pf = new PlotFrame("T", "B_2", "Second Virial Coefficient");
   double Tmin, Tmax, T;
   int numberOfPoints = 400;
+  
+  public SecondVirialCoefficientApp() {
+    OSPRuntime.setAppClass(this);
+  }
 
   public static void main(String[] args) {
     CalculationControl.createApp(new SecondVirialCoefficientApp(), args);

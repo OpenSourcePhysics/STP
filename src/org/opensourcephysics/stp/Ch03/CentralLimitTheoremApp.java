@@ -40,6 +40,7 @@ public class CentralLimitTheoremApp extends AbstractSimulation {
    * Constructor CentralApp
    */
   public CentralLimitTheoremApp() {
+  	OSPRuntime.setAppClass(this);
     panel = new PlottingPanel("y", "P(y)", "");
     frame = new DrawingFrame("P(y)", panel);
     frame.setVisible(true);
@@ -198,7 +199,7 @@ public class CentralLimitTheoremApp extends AbstractSimulation {
       }
 
     });
-    menu.add(item);
+    // menu.add(item); not supported in stpbook
     addChildFrame(frame);
   }
 

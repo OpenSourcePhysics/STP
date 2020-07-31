@@ -33,6 +33,7 @@ public class Ising2dApp extends AbstractSimulation {
    * Constructor Ising2DApp
    */
   public Ising2dApp() {
+  	OSPRuntime.setAppClass(this);
     ising = new Ising2d();
     plotFrame.setPreferredMinMaxX(0, 10);
     plotFrame.setAutoscaleX(true);
@@ -158,7 +159,7 @@ public class Ising2dApp extends AbstractSimulation {
       }
 
     });
-    menu.add(item);
+    //menu.add(item); //not supported in stpbook
     addChildFrame(displayFrame);
     addChildFrame(plotFrame);
   }

@@ -1,5 +1,6 @@
 package org.opensourcephysics.stp.Ch06;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 import org.opensourcephysics.numerics.*;
 
@@ -31,7 +32,9 @@ public class BoseGasSumApp extends AbstractCalculation{
 	 NumberFormat numberFormatTwoDigits = NumberFormat.getInstance();
 	  NumberFormat numberFormatFourDigits = NumberFormat.getInstance();
 
-	
+	 public BoseGasSumApp(){
+	  OSPRuntime.setAppClass(this);
+	  }
 
    public void reset() {
 	   control.setValue("T0", 2.0); 

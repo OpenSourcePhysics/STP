@@ -6,6 +6,7 @@
 
 package org.opensourcephysics.stp.Ch06;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 import org.opensourcephysics.numerics.*;
 
@@ -36,6 +37,7 @@ public class QuantumGasIntegralApp extends AbstractCalculation implements Functi
   NumberFormat nf = NumberFormat.getInstance();
 
   QuantumGasIntegralApp() {
+	  OSPRuntime.setAppClass(this);
     mua = new double[nmaxTrials];
     Ta = new double[nmaxTrials];
     Ea = new double[nmaxTrials];

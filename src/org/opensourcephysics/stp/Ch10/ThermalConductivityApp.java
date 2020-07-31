@@ -44,6 +44,10 @@ public class ThermalConductivityApp extends AbstractSimulation {
   double dTdz;
   boolean equil = true;
   
+  public ThermalConductivityApp() {
+    OSPRuntime.setAppClass(this);
+  }
+  
  
   /**
    * Initializes the model by reading the number of particles.

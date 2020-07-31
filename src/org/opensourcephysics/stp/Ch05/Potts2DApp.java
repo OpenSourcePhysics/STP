@@ -33,6 +33,7 @@ public class Potts2DApp extends AbstractSimulation {
    * Constructor Ising2DApp
    */
   public Potts2DApp() {
+    OSPRuntime.setAppClass(this);
     ising = new Potts2D();
     plotFrame.setPreferredMinMaxX(0, 10);
     plotFrame.setAutoscaleX(true);

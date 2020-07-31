@@ -156,7 +156,7 @@ public class CoinTossApp extends AbstractSimulation {
       }
 
     });
-    menu.add(item);
+    // menu.add(item); not supported in stpbook
     addChildFrame(histogramFrame);
   }
 

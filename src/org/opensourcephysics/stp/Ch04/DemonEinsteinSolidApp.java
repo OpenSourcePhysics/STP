@@ -38,6 +38,7 @@ public class DemonEinsteinSolidApp extends AbstractSimulation {
   PlotFrame histogramFrame = new PlotFrame("Ed", "ln P(Ed)", "Demon Energy Distribution");;
     JButton logButton;
   NumberFormat nf;
+  
 
   /**
    * Does the Monte Carlo steps.
@@ -121,6 +122,7 @@ public class DemonEinsteinSolidApp extends AbstractSimulation {
    * Constructor EinsteinApp
    */
   public DemonEinsteinSolidApp() {
+  	OSPRuntime.setAppClass(this);
     histogramFrame.setPreferredMinMax(0, 5, 0, 1);
     histogramFrame.setAutoscaleX(true);
     histogramFrame.setAutoscaleY(true);
@@ -176,7 +178,7 @@ public class DemonEinsteinSolidApp extends AbstractSimulation {
       }
 
     });
-    menu.add(item);
+    //menu.add(item);  not supported in stpbook
     addChildFrame(histogramFrame);
   }
 

@@ -9,12 +9,17 @@ package org.opensourcephysics.stp.Ch07;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.frames.*;
 import org.opensourcephysics.controls.ControlUtils;
+import org.opensourcephysics.display.OSPRuntime;
 
 public class ChemicalPotentialDemonApp extends AbstractSimulation {
   ChemicalPotentialDemon demon = new ChemicalPotentialDemon();
   PlotFrame ePlot = new PlotFrame("E", "ln (P(E))", "Demon Energy distribution");
   PlotFrame nPlot = new PlotFrame("N", "ln (P(N))", "Demon Number distribution");
   DisplayFrame display = new DisplayFrame("x", "p", "Phase Space Lattice");
+  
+  public ChemicalPotentialDemonApp(){
+    OSPRuntime.setAppClass(this);
+  }
 
   public void initialize() {
     demon.N = control.getInt("N");

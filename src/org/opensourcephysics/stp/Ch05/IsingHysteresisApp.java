@@ -36,6 +36,7 @@ public class IsingHysteresisApp extends AbstractSimulation {
 	 * Constructor Ising2DApp
 	 */
 	public IsingHysteresisApp() {
+		OSPRuntime.setAppClass(this);
 		ising = new Ising2d();
 		plotFrame.setPreferredMinMax(-1, 1,-1,1);
 		plotFrame.setAutoscaleX(false);

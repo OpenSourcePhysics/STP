@@ -11,6 +11,7 @@ import org.opensourcephysics.controls.*;
 import org.opensourcephysics.frames.*;
 import org.opensourcephysics.display.DrawingFrame;
 import org.opensourcephysics.display.DrawingPanel;
+import org.opensourcephysics.display.OSPRuntime;
 
 
 /**
@@ -31,6 +32,7 @@ public class FrustrationApp extends AbstractSimulation {
    * Constructor IsingTriangularAntiApp
    */
   public FrustrationApp() {
+  	OSPRuntime.setAppClass(this);
     ising = new Frustration();
     plotFrame.setAutoscaleX(true);
     plotFrame.setAutoscaleY(true);

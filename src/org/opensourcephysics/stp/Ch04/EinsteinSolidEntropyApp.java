@@ -13,6 +13,7 @@ import org.opensourcephysics.controls.*;
 import org.opensourcephysics.display.Dataset;
 import org.opensourcephysics.display.InteractiveMouseHandler;
 import org.opensourcephysics.display.InteractivePanel;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 import org.opensourcephysics.stp.util.MyMath;
 
@@ -35,6 +36,7 @@ public class EinsteinSolidEntropyApp extends AbstractCalculation implements Inte
    * Constructor EntropyApp
    */
   public EinsteinSolidEntropyApp() {
+  	OSPRuntime.setAppClass(this);
     plotFrame.setMarkerColor(0, Color.red);
     plotFrame.setMarkerColor(1, Color.blue);
     plotFrame.setMarkerColor(2, Color.GREEN);

@@ -8,12 +8,17 @@
 package org.opensourcephysics.stp.Ch04;
 import org.opensourcephysics.controls.AbstractCalculation;
 import org.opensourcephysics.controls.CalculationControl;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 
 public class CountingStatesApp extends AbstractCalculation {
   int dim = 2;
   double R = 10;
   PlotFrame plotFrame = new PlotFrame("R", "NumOfStates", "Number Of States");
+  
+  public CountingStatesApp() {
+  	OSPRuntime.setAppClass(this);
+  }
   
   /**
    * put your documentation comment here

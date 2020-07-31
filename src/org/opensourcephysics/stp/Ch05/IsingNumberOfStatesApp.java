@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.display.Dataset;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 
 public class IsingNumberOfStatesApp extends AbstractSimulation {
@@ -24,6 +25,7 @@ public class IsingNumberOfStatesApp extends AbstractSimulation {
   // translated by 2N)
   int[] H, spin; // histogram (reduce f when it is "flat")
   double f;      // multiplicative modification factor to g
+
 
   int sumNeighbors(int i) {
     int u = i-L;
@@ -165,6 +167,7 @@ public class IsingNumberOfStatesApp extends AbstractSimulation {
    * Constructor WangLandauApp
    */
   public IsingNumberOfStatesApp() {
+    OSPRuntime.setAppClass(this);
     histogramFrame.setPreferredMinMaxY(0, 10000);
     histogramFrame.setAutoscaleY(true);
     densityFrame.setMarkerColor(0, Color.blue);

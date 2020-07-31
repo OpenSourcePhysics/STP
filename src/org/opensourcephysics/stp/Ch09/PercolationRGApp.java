@@ -7,6 +7,7 @@
 
 package org.opensourcephysics.stp.Ch09;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -22,6 +23,10 @@ public class PercolationRGApp extends AbstractCalculation {
   LatticeFrame[] blockedLattices;
   int n = 0;
  
+  public PercolationRGApp(){
+    OSPRuntime.setAppClass(this);
+  }
+  
   
   public void calculate() {
 	   int nOld = n;

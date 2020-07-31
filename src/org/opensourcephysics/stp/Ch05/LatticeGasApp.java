@@ -9,6 +9,7 @@ package org.opensourcephysics.stp.Ch05;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.display.OSPFrame;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 
 public class LatticeGasApp extends AbstractSimulation {
@@ -23,6 +24,7 @@ public class LatticeGasApp extends AbstractSimulation {
    * Constructor Ising2DApp
    */
   public LatticeGasApp() {
+    OSPRuntime.setAppClass(this);
     ising = new LatticeGas();
     plotFrame.setPreferredMinMaxX(0, 10);
     plotFrame.setAutoscaleX(true);

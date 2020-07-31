@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SwingJS test _NAME_</title><meta charset="utf-8" />
+<title>SwingJS test _NAME_</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="./swingJS.css" />
 <script src="swingjs/swingjs2.js"></script>
 <script>
 if (!self.SwingJS)alert('swingjs2.js was not found. It needs to be in swingjs folder in the same directory as ' + document.location.href)
+
+ function initApp() {
+			//if (!Chaos.app) alert('App not found.');
+			//Chaos.app.getMainFrame().setResizeAction('changeSize');
+			changeSize();
+  }
+  
+  changeSize = function () {
+	  //let dim = Chaos.app.getMainFrameSize();
+	  //document.getElementById("controlFrame-div").style.width = dim[0] + "px";
+	  //document.getElementById("controlFrame-div").style.height = dim[1] + "px";
+  }
+
 Info = {
   code: _CODE_,
   main: _MAIN_,
-  core: "NONE",
+	core: "_stp",
+	resourceZip: "misc-assets.zip",
+	assets: "DEFAULT",
 	width: 850,
 	height: 550,
-  readyFunction: null,
+  readyFunction: initApp,
 	serverURL: 'https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php',
 	j2sPath: 'swingjs/j2s',
 	console:'sysoutdiv',

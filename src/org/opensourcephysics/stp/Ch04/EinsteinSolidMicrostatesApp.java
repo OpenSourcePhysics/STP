@@ -34,6 +34,7 @@ public class EinsteinSolidMicrostatesApp extends AbstractCalculation {
    * Constructor EinsteinSolidApp
    */
   public EinsteinSolidMicrostatesApp() {
+  	OSPRuntime.setAppClass(this);
     numberFormat = NumberFormat.getInstance();
     numberFormat.setMaximumFractionDigits(4);
     plotFrame.setAutoclear(false);

@@ -7,6 +7,7 @@
 
 package org.opensourcephysics.stp.Ch09;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 
 /**
@@ -28,6 +29,10 @@ public class PercolationApp extends AbstractSimulation {
   double[] P_span;           // probability of a spanning cluster
   double[] numClustersAccum; // number of clusters of size s
   int numberOfTrials;
+  
+  public PercolationApp() {
+    OSPRuntime.setAppClass(this);
+  }
 
   public void initialize() {
     int L = control.getInt("lattice size L");

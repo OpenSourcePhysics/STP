@@ -164,7 +164,7 @@ public class BinomialApp extends AbstractCalculation {
       }
 
     });
-    menu.add(item);
+    //menu.add(item); //switch GYI npot suported in stpbook
     addChildFrame(plotFrameNorm);
     addChildFrame(plotFrame);
   }

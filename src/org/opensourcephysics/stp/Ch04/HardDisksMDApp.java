@@ -8,6 +8,7 @@
 package org.opensourcephysics.stp.Ch04;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 import org.opensourcephysics.stp.util.Rdf;;
 
@@ -36,6 +37,7 @@ public class HardDisksMDApp extends AbstractSimulation {
    * Constructor HDApp
    */
   public HardDisksMDApp() {
+  	OSPRuntime.setAppClass(this);
     numberFormatTwoDigits.setMaximumFractionDigits(2);
     numberFormatTwoDigits.setMinimumFractionDigits(2);
     numberFormatFourDigits.setMaximumFractionDigits(4);
