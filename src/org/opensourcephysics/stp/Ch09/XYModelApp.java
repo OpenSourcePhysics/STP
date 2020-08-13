@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.xymodel;
+package org.opensourcephysics.stp.Chapter09;
 import java.text.DecimalFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.frames.DisplayFrame;

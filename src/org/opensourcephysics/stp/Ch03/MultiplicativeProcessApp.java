@@ -1,6 +1,6 @@
 
 
-package org.opensourcephysics.stp.MultiplicativeProcess;
+package org.opensourcephysics.stp.Chapter03;
 
 import java.text.NumberFormat;
 import java.util.Random;
