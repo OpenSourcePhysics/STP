@@ -5,9 +5,10 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.xymodel;
+package org.opensourcephysics.stp.Ch09;
 import java.text.DecimalFormat;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.DisplayFrame;
 import org.opensourcephysics.frames.PlotFrame;
 
@@ -40,6 +41,7 @@ public class XYModelApp extends AbstractSimulation {
     numberFormatFourDigits.setMinimumFractionDigits(4);
     numberFormatFourDigits.setGroupingSize(100);
     xy = new XYModel();
+    OSPRuntime.setAppClass(this);
   }
 
   public void initialize() {

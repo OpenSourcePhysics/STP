@@ -5,8 +5,9 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.xymodel;
+package org.opensourcephysics.stp.Ch09;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.PlotFrame;
 
 /**
@@ -30,6 +31,7 @@ public class XYScanApp extends AbstractSimulation {
    */
   public XYScanApp() {
     xyModel = new XYModel();
+    OSPRuntime.setAppClass(this);
   }
 
   public void initialize() {

@@ -5,7 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.stp.xymodel;
+package org.opensourcephysics.stp.Ch09;
 import java.awt.*;
 import java.awt.geom.*;
 import java.util.Random;

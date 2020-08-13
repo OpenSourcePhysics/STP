@@ -1,10 +1,11 @@
 
 
-package org.opensourcephysics.stp.MultiplicativeProcess;
+package org.opensourcephysics.stp.Ch03;
 
 import java.text.NumberFormat;
 import java.util.Random;
 import org.opensourcephysics.controls.*;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.HistogramFrame;
 
 /*
@@ -22,11 +23,11 @@ public class MultiplicativeProcessApp extends AbstractSimulation
 	double probability, x, y, product, time, dt, sum = 0.0, sum2 = 0.0;
 	int numberOfMultiplication, numberOfRuns = 0;
 
-	public MultiplicativeProcessApp()
-	{
+	public MultiplicativeProcessApp(){
 		random = new Random();
 		numberFormat = NumberFormat.getInstance();
 		numberFormat.setMaximumFractionDigits(4);
+		OSPRuntime.setAppClass(this);
 		
 	}
 

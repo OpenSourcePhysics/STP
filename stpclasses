@@ -858,6 +858,7 @@ org/opensourcephysics/stp/Ch03/CoinTossWRAppControl.js
 org/opensourcephysics/stp/Ch03/MCEstimationApp.js
 org/opensourcephysics/stp/Ch03/MCEstimationWRApp.js
 org/opensourcephysics/stp/Ch03/MonteCarloEstimationControl.js
+org/opensourcephysics/stp/Ch03/MultiplicativeProcessApp.js
 org/opensourcephysics/stp/Ch03/OneDimensionalWalkWRAppControl.js
 org/opensourcephysics/stp/Ch03/RandomWalk1dApp.js
 org/opensourcephysics/stp/Ch03/RandomWalk1dWRApp.js
@@ -903,12 +904,16 @@ org/opensourcephysics/stp/Ch08/SecondVirialCoefficientApp.js
 org/opensourcephysics/stp/Ch09/PercolationApp.js
 org/opensourcephysics/stp/Ch09/PercolationClusters.js
 org/opensourcephysics/stp/Ch09/PercolationRGApp.js
+org/opensourcephysics/stp/Ch09/XYModel.js
+org/opensourcephysics/stp/Ch09/XYModelApp.js
+org/opensourcephysics/stp/Ch09/XYScanApp.js
 org/opensourcephysics/stp/Ch10/ThermalConductivity.js
 org/opensourcephysics/stp/Ch10/ThermalConductivityApp.js
 org/opensourcephysics/stp/Ch10/Viscosity.js
 org/opensourcephysics/stp/Ch10/ViscosityApp.js
 org/opensourcephysics/stp/util/MyMath.js
 org/opensourcephysics/stp/util/Rdf.js
+org/opensourcephysics/stp/util/Util.js
 org/opensourcephysics/tools/DataColumn.js
 org/opensourcephysics/tools/DataTool.js
 org/opensourcephysics/tools/DataToolPropsTable.js
