@@ -5,11 +5,7 @@
  * <http://www.opensourcephysics.org/>
  */
 
-<<<<<<< HEAD
-package org.opensourcephysics.stp.Chapter09;
-=======
 package org.opensourcephysics.stp.Ch09;
->>>>>>> 21587f732c3b26918396413e3ec3807a4442aef4
 import java.text.DecimalFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.display.OSPRuntime;

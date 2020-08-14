@@ -1,10 +1,6 @@
 
 
-<<<<<<< HEAD
-package org.opensourcephysics.stp.Chapter03;
-=======
 package org.opensourcephysics.stp.Ch03;
->>>>>>> 21587f732c3b26918396413e3ec3807a4442aef4
 
 import java.text.NumberFormat;
 import java.util.Random;

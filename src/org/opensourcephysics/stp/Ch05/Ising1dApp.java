@@ -11,6 +11,7 @@ import java.awt.Color;
 import java.text.NumberFormat;
 import org.opensourcephysics.controls.*;
 import org.opensourcephysics.display.GUIUtils;
+import org.opensourcephysics.display.OSPRuntime;
 import org.opensourcephysics.frames.*;
 
 public class Ising1dApp extends AbstractSimulation {
@@ -24,6 +25,7 @@ public class Ising1dApp extends AbstractSimulation {
    * Constructor Ising1DApp
    */
   public Ising1dApp() {
+  	OSPRuntime.setAppClass(this);
     ising = new Ising1d();
     eFrame.setPreferredMinMaxX(0, 10);
     eFrame.setAutoscaleX(true);
