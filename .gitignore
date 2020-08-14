@@ -2,6 +2,6 @@
 .project
 .metadata
 .settings
-.DS_Store
+*.DS_Store
 /bin/
 /site/
