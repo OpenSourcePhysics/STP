@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>DemonEinsteinSolid</title>
+  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program DemonEinsteinSolid</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Program <tt>DemonEinsteinSolid</tt>  models an ideal thermometer,   called the <i>demon</i>. The demon is in thermal equilibrium 
+with  a system of $N$ oscillators called an Einstein solid. The energy of each oscillator is restricted to an integer and is $\geq 0$. The energy of the demon is its only property, and thus the 
+energy of the demon is a label for a  microstate of the demon.</p>
+
+<p>The demon   
+randomly visits an oscillator and randomly attempts to increase or decrease its energy by $\pm 1$. 
+If the change decreases 
+the energy,
+ the change is accepted and the lost energy goes to the demon. If the change increases the energy, 
+ this change is  accepted only
+if the demon has enough energy to give to cover the increase in the energy of the system. (The energy of each oscillator must be nonnegative.)</p>
+
+<p> The goal of this simulation is to explore how the demon's mean energy 
+and probability distribution are related to the temperature and to determine the temperature dependence of the energy
+for an Einstein solid. The key idea is that the demon acts as a system in thermal equilibrium with a reservoir of 
+Einstein oscillators, and
+thus the energy distribution of the demon follows a Boltzmann distribution.</p>
+
+<b>Problem: The demon and the Einstein solid</b>
+
+<p>Consider a demon that exchanges energy with an Einstein solid of
+$N$ particles. The demon selects a particle at random and randomly changes its energy
+by $\pm 1$ consistent with the constraint that $E_{d}
+\geq 0$. In this case the energy of a particle in the system also must 
+remain nonnegative. Why? 
+Use Program <tt>DemonEinsteinSolid</tt>  to do the simulations.
+
+<ol type ="a">
+
+<li> Choose
+$N=40$ and various value of $E \geq 200$. What is the mean energy of the demon after
+equilibrium between the demon and the system has been established? 
+Plot $\overline{E}/N$ versus $\overline{E_{d}}$. Is the value of $\overline{E}/N$ 
+proportional to  $\overline{E_{d}}$ as it is for an ideal gas?</li> 
+
+<li> Compute the probability
+$P(E_{\rm d})$ for various values of $E$ and $N$ and determine $-\beta$, the slope of $\ln P(E_{\rm d})$. 
+How is $1/\beta$ related to $\overline{E_d}$?</li> 
+
+<li> Why is the slope of $\ln{P(E_d)}$ independent of $E/N$?</li> 
+
+<li> Suppose that the demon can transfer energy to and from the system easily so that most of its trial 
+changes are accepted. What can you conclude about the slope of $\ln{P(E_d)}$ versus $E_d$ in this case? 
+Is the temperature high or low? What can you conclude about the slope if the temperature is such that 
+few trial changes are accepted?</li> 
+
+
+<li> Explain why the demon's mean energy is
+given by
+\begin{equation}
+\label{eq:4/edbar}
+\overline{E_{d}} = \frac{\sum_{n=0}^\infty n e^{-\beta n} }{\sum_{n=0}^\infty e^{-\beta n}}.
+\end{equation}
+Why is the energy of the demon restricted to
+integer values?</li> 
+
+<li> Do the sums in (\ref{eq:4/edbar}) to determine
+the temperature dependence of
+$\overline{E_{d}}$. It is only necessary to directly evaluate the sum in the 
+denominator of \eqref{eq:4/edbar}. 
+The numerator can be determined by an appropriate derivative of the result for the denominator.</li> 
+
+<li> Why is the temperature dependence of $\overline{E_{d}}$
+different for an ideal gas and an
+Einstein solid? </li> 
+
+</ol>
+
+   <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li>Problem 4.31 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

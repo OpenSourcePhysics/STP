@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>ChemicalPotentialEinsteinSolid</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program ChemicalPotentialEinsteinSolid</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>The Einsein model consists of $N$ oscillators and $E$ packets of energy 
+which can be distributed among the oscillators in $\Omega = \dfrac{(E+N-1)!}{E! (N-1)!}$ ways. 
+The entropy is $S = k\ln{\Omega}$. </p>
+
+<p> Previously we considered two subsystems in thermal contact which can share energy but the number of
+oscillators in each subsystem is fixed. This example illustrated the fact that we can define the temperature as $1/T = \partial S/\partial E$. 
+Now we consider the same system but allow the number of oscillators to be shared between the two subsystems, but not the energy which is fixed in each subsystem. The program computes
+the total entropy for different  distributions of the $N$ oscillators and  illustrates how $\mu/T \equiv \partial S/\partial N$ for each system is equal when the 
+composite entropy is at a maximum. </p>
+
+<b>Problem: Numerical calculation of the chemical potential of the Einstein solid</b>
+
+
+<p>Use Program <tt>ChemicalPotentialEinsteinSolid</tt>
+ to consider an isolated composite Einstein solid of two subsystems. The program counts the number of 
+ states using the relation 
+ \begin{equation}
+\Omega = {(E + N -1)! \over E!\,(N-1)!}. \label{eq:4/omh}
+\end{equation}
+The inputs to the program are $E_A$, $E_B$, and $N\!=\!N_A+N_B$.
+<ol type ="a">
+<li> The two subsystems are initially separated by an insulating and impermeable partition, 
+with $N_A=8$, $N_B=4$, $E_A=15$, and $E_B=30$. What is the initial entropy of the system? 
+The partition is then replaced by one that allows particles but not energy to be transferred 
+between the two subsystems. Construct a table to
+show that the ratio $\mu/T$ is approximately equal for the most probable 
+macrostate (defined by the values of $N_A$ and $N_B$). Is the entropy of this macrostate higher than the 
+initial entropy? Then try other combinations of $N$, $E_A$, and $E_B$. In a more realistic problem 
+particles could not move from one system to another without transferring energy as well.</li>
+<li> Why is $\mu$ negative for the Einstein solid? </li>
+
+<li> If the amount of energy is the same in each subsystem of a composite Einstein solid, what is the 
+equilibrium number of particles in each subsystem?</li>
+</ol>
+
+
+  <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    
+   <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 7.2 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

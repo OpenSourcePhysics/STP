@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>QuantumGasIntegral</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program QuantumGasIntegral</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>To explicitly include indistinguishability of the particles we use the grad canonical ensemble and treat each single
+particle state as a system in equilibrium with a reservoir of all the other single 
+particle states at a temperature $T$ and chemical potential $\mu$. The number of particles and energy are given by
+$$N = \int_0^{\infty} g(\epsilon) \overline{n}(\epsilon) d\epsilon, $$
+$$E = \int_0^{\infty} \epsilon g(\epsilon) \overline{n}(\epsilon) d\epsilon, $$
+where $g(\epsilon)$ is the single particle density of states, which depends on the volume $V$ and $\overline{n}(\epsilon)$ is the mean number of particles in a single 
+particle state of energy $\epsilon$, which depends on $T$, $\mu$ and whether the particles are fermions or bosons. </p>
+
+<p>Our goal is to find 
+thermodynamic quantities as a function of $T$, $V$, and $N$. The program numerically finds by 
+trial and error the value of $\mu$ that solves Eq. (1) for a given $T$. Once we have $\mu$ we  find 
+the energy as a function of $T$. Reduced units are used by scaling the temperature by the Fermi temperature for fermions and
+the critical temperature for bosons. 
+ </p>
+
+<b>Problem: Evaluation of the chemical potential of an ideal Fermi gas</b>
+<p> To find $\mu(T > 0)$, we need to find the
+value of $\mu$ that yields the desired mean number of particles. We have
+\begin{equation}
+\label{eq:noninteract/munum}
+N = \!\int_0^\infty \overline{n}(\epsilon)g(\epsilon)d\epsilon = \frac{V(2m)^{3/2}}{2 \pi^2
+\hbar^3}\!\!\int_0^\infty\!\frac{\epsilon^{1/2}d\epsilon}{e^{\beta(\epsilon-\mu)}+1},
+\end{equation}
+where 
+\begin{equation}
+g(\epsilon)\,d\epsilon = {n_{\rm spin} V \over {4\pi^2\hbar^3}} (2m)^{3/2} \,
+\epsilon^{1/2} \, d\epsilon. \label{eq:noninteract/pe1}
+\end{equation}
+ We let $\epsilon
+= x \epsilon_f $, $\mu = \mu^* \epsilon_f$, and $T^*=kT/\epsilon_f$, and rewrite
+\eqref{eq:noninteract/munum} as
+\begin{equation}
+\rho = \frac{N}{V}  = \frac{(2m)^{3/2}}{2 \pi^2 \hbar^3}
+\epsilon_f^{3/2}\!\int_0^\infty\!\frac{x^{1/2}\,dx}{e^{(x-\mu^*)/T^*}+1}, \label{eq:6/rhoFermi}
+\end{equation}
+or
+\begin{equation}
+\label{eq:noninteract/mufermicalc}
+1  = \frac32\!\int_0^\infty\!\frac{x^{1/2}\,dx}{e^{(x-\mu^*)/T^*}+1},
+\end{equation}
+where we have substituted 
+\begin{equation}
+\epsilon_f = {\hbar^2 \over 2m} (3 \pi^2 \rho)^{2/3} \qquad
+\label{eq:noninteract/ef}
+\end{equation}
+ for $\epsilon_f$. To find the dependence
+of $\mu^*$ on $T^*$ use Program <tt>QuantumGasIntegral</tt> to evaluate the integral on the right-hand side of
+\eqref{eq:noninteract/mufermicalc} numerically. 
+
+<ol type ="a">
+
+<li> Verify that $\mu^* = 1$ at $T^*=0$.
+
+<li> Start with $T^* = 0.05$ and find $\mu^*$ such that \eqref{eq:noninteract/mufermicalc} is
+satisfied. Does $\mu^*$ initially increase or decrease as $T^*$ is increased
+from zero? Is the change of $\mu^*$ linear or quadratic in $T^*$ as $T^*$ is increased?</li>
+
+<li> Estimate the value of $T^*$ at which $\mu^* \approx 0$.</li>
+
+<li> What is the sign of $\mu^*$ for $T^* \gg 1$?</li>
+
+<li> Given the values of $\mu^*(T^*)$, the program computes the values of $E(T)$. 
+Describe its qualitative $T$ dependence and the $T$ dependence of $C_V$.</li>
+</ol>
+
+<b>Problem: Evaluation of $\mu$ for an ideal Bose gas</b>
+
+<p>Program <tt>QuantumGasIntegral</tt> numerically evaluates the
+integral on the right-hand side of 
+\begin{equation}
+\rho = \frac{\overline{N}}{V} = \frac{(2m)^{3/2}}{4 \pi^2 \hbar^3}\!\int_0^\infty \! \!
+{\epsilon^{1/2} \,d\epsilon \over e^{\beta(\epsilon-\mu)} - 1}. \label{eq:noninteract/nbose2}
+\end{equation}
+The goal is to
+find the value of $\mu$ for a given value of $\beta$ that yields the desired
+value of $\rho$.
+
+To put \eqref{eq:noninteract/nbose2} in a convenient form we introduce dimensionless variables and 
+let $\epsilon = kT_c y$, $T=T_cT^*$, and $\mu = kT_c \mu^*$ and rewrite \eqref{eq:noninteract/nbose2} as
+\begin{equation}
+1  = \frac{2}{2.612\sqrt{\pi}}\!\int_0^\infty \frac{y^{1/2} dy}{e^{(y - \mu^*)/T^*} - 1}, \label{eq:6/numereval.a}
+\end{equation}
+\begin{equation}
+ 1 =0.432\!\int_0^\infty \frac{y^{1/2} dy}{e^{(y - \mu^*)/T^*} - 1},\label{eq:6/numereval.b}
+\end{equation}
+where we have used 
+\begin{equation}
+kT_c= \frac{1}{2.612^{2/3}}
+\frac{2\pi \hbar^2}{m}\rho^{2/3}.\label{eq:noninteract/tcbose}
+\end{equation}
+<ol type ="a">
+
+<li> Fill in the missing steps and derive \eqref{eq:6/numereval.b}.
+
+<li> The program evaluates the right-hand side of \eqref{eq:6/numereval.b}. The idea is to find $\mu^*$ for a given value of $T^*$ such that the right-hand side of \eqref{eq:6/numereval.b} equals 1. Begin with $T^*=10$. First choose $\mu^* = -10$ and find the value of the integral. Do you have
+to increase or decrease the value of $\mu^*$ to make the numerical value of the 
+right-hand side of \eqref{eq:6/numereval.b} closer to 1? Change $\mu^*$ by trial and 
+error until you find the desired result. You should find that $\mu^* \approx -25.2$ for $T^*=10$.</li>
+
+<li> Let $T^*=5$ and find the value of $\mu^*$ so that the right-hand side of \eqref{eq:6/numereval.b} equals 1. 
+Does $\mu$ increase or decrease in magnitude? Continue this procedure for lower values of $T^*$. 
+Click on the <tt>plot</tt> button each time an approximately correct value of $\mu$ is found and generate a 
+plot of $\mu^*$ versus $T^*$.</li>
+
+<li> Discuss the qualitative temperature dependence of $\mu$ for fixed density.</li>
+</ol>
+
+
+  <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problems 6.36 for fermions and 6.40 for bosons in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

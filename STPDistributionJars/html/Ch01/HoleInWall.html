@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>HoleINWall</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program HoleInWall</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+   
+
+<p>Program <tt>HoleInWall</tt> models the behavior of N particles that are located in one of two halves of a two-dimensional box. 
+The dynamics is very simple. A a particle is chosen at random and moved to the other half of the box.
+ The macroscopic quantity of interest is the number of particles in 
+the left half of the box. 
+The goals of this simulation are to explore the approach to equilibrium,
+ the nature of the fluctuations at equilibrium, and the relation between the magnnitude of the fluctuations and N.  </p>
+
+<b>Problem: Hole in the wall</b>
+
+<ol type ="a">
+
+<li> Before you run the program describe what you think will be the qualitative behavior of $n(t)$, 
+the time dependence of the number of particles on the left side of the box.</li>
+ <li>             Run the program and describe the behavior of $n(t)$ for various values of $N$.
+Does the system approach equilibrium? How would you characterize
+equilibrium? In what sense is equilibrium better defined as $N$
+is increased? Does your definition of
+equilibrium depend on how the particles were initially distributed
+between the two halves of the box? </li>
+<li> When the system is in equilibrium, does the number
+of particles on the left-hand side remain a constant? If not, how
+would you describe the nature of equilibrium? </li>
+<li> If $N \gtrsim 32$, does the system return to its initial
+state during the time you have patience to watch the system? </li>
+<li> How does $\skew3\overline{n}$, the average number of particles on the
+left-hand side, depend on $N$ after the system has reached
+equilibrium?  The program computes various averages
+from the time $t = 0$. Why does such a calculation not yield the
+correct equilibrium average values? Use the <tt>Zero Averages</tt> button to reset the calculation of the averages.</li>
+<li> Define the quantity $\sigma$ by the
+relation (This use of $\sigma$ should not be confused with the length $\sigma$ in the Lennard-Jones potential.)
+
+$$\sigma^2 = \overline{\Delta n)^2} =  \overline{(n - \skew3\overline{n})^2}.$$
+
+What
+does
+$\sigma$ measure? What would be its value if $n$ were constant?
+How does 
+$\sigma$ depend on
+$N$? How does the ratio $\sigma/\skew3\overline{n}$ depend on $N$? We say that $\sigma$ is a
+ measure of the fluctuations of $n$ about its average, and $\sigma/\skew3\overline{n}$ is a 
+ measure of the relative fluctuations of $n$.</li>
+</ol>
+
+   <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+  
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 1.2 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

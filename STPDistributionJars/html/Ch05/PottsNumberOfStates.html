@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>PottsNumberOfStates</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program PottsNumberOfStates</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Program <tt>PottsNumberOfStates</tt> uses the Wang-Landau Monte Carlo algorithm to estimate the 
+number of microstates $\Omega(E)$ for each value of $E$ in the q-state 2d Potts model on a square lattice. In the Potts model 
+there are $q$ possible states for each spin and the interaction energy between any pair of neighboring spins is $-J$ 
+if the spins have the same value and is 0 otherwise. The 2-state Potts model is equivalent to the Ising model. 
+ Once $\Omega(E)$  is known  averages 
+such as the mean energy can be found at any temperature using
+$$\overline{E} = \sum_E EP(E) = \frac{\sum_E E\Omega(E)e^{-E/kT}}{\sum_E\Omega(E)e^{-E/kT}}. $$   </p>
+
+<p> The program also calculates the specific heat as a function of temperature from a single simulation. From the
+energy distribution $\ln{P(E)}$ we obtain evidence for whether the phase transition is continuous or discontinuous. 
+The nature of the transition depends on $q$. </p>
+
+<b>Problem: Application of Wang-Landau algorithm to the Potts model</b>
+<ol type ="a">
+
+<li>
+What is the relation of the $q=2$ Potts model to the usual Ising model? In particular, 
+what is the relation of the interaction energy $K$ defined in the Potts model and the 
+interaction energy $J$ defined in the Ising model? </li>
+
+<li>
+Program <tt>PottsNumberOfStates</tt> implements the Wang-Landau algorithm
+ for the Potts model on a square lattice. Run the program for $L = 16$ and various values of $q$ and 
+ verify that the peak in the specific heat occurs near the known exact value of the transition temperature 
+ given by $T_c = (\ln{(1 + \sqrt{q})})^{-1}$. You will need more than 100,000 Monte Carlo steps to obtain 
+ reliable data.</li>
+
+<li>
+Choose $q = 2$ and $q=3$ and observe the energy distribution $P(E) = \Omega(E) e^{-\beta E}$ at $T=T_c$. 
+Do you see one peak or two?</li>
+
+<li>
+Choose $q = 10$ and observe the energy distribution $P(E)$ at $T=T_c$. You should notice 
+two peaks in this distribution. Discuss why the occurrence of two peaks is appropriate 
+for a discontinuous transition.
+</ol>
+
+
+
+   <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 5.21 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>RandomWalk1d</title>
+  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program RandomWalk1d</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Program <tt>RandomWalk1d</tt> allows you to explore the properties of random walks in one dimension. Random walks are an example of a Bernoulli process for which there are two possible independent 
+events (a step to the right or to the left). The distribution of walks in a particular direction is given by the <i>binomial distribution</i>. In addition, random walks are models of <i>diffusion</i>.    </p>
+
+<b>ProblemMonte Carlo simulation of a one-dimensional random walk</b>
+
+Program <tt>RandomWalk1d</tt> simulates a random walk in one dimension. 
+A walker starts at the origin and takes $N$ steps. At each step the walker goes to 
+the right with probability $p$ or to the left with probability $q = 1 - p$. Each step has the same unit 
+length and is independent of the previous steps. 
+Are some displacements more likely than others? 
+We can simulate an $N$-step walk by the following pseudocode:
+<p>do istep = 1,N
+ <p> $\,\,\,\,$if (rnd <= p) then
+ <p>   $\,\,\,\,\,\,\,\,$x = x + 1
+<p>  $\,\,\,\,$else
+<p>    $\,\,\,\,\,\,\,\,$x = x - 1
+<p>  $\,\,\,\,$end if
+<p>end do
+
+
+<p>The function <tt>rnd</tt> generates a  number between zero
+and one with equal probability. The quantity
+$x$ is the net displacement after $N$ steps assuming that the steps are of unit
+length.
+
+<p>We average over many walkers (trials), where each trial consists of a $N$ step walk and 
+construct a histogram for the number of times that the displacement $x$ is found. 
+The probability that the walker is a distance $x$ from the origin after $N$ steps is proportional to 
+the corresponding value of the histogram. This procedure is called <i>Monte Carlo</i> sampling.
+
+
+<ol type ="a">
+<li> Is the value of $x$ for one trial of any interest? Why do we have to average over many trials? </li> 
+
+<li> Will we obtain the exact answer for the probability distribution by doing a Monte Carlo simulation? </li> 
+
+<li> How does the histogram  change  for larger values of $N$. Assume $p=1/2$ here and in the following. </li> 
+
+<li> What is the most probable value of $x$ for  $N = 16$ and $N = 32$?  Estimate the width of the 
+distribution visually. How does the width change as a function of $N$? </li> 
+
+<li> How does the histogram change, if at all, as the number of walkers increases for  $N=4$? </li> 
+</ol>
+
+
+   <h2>Resources</h2>
+  <ol>
+
+    <li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+
+    <li><a href="./">Download</a> executable jar file. (Need Java on your computer to run this.)  </li>
+    
+    <li>Problem 3.41 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).  </li> 
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 14 August 2020.</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>ChemicalPotentialMC</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program ChemicalPotentialMC</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>For a classical  many-particle system the chemical potential $\mu$ can be divided into two parts, one  
+ equal to the chemical potential of an ideal gas, 
+and the other associated with 
+interactions of the particles, which is denoated as $\mu_{\rm excess}$. We can compute $\mu_{\rm excess}$ in a Monte Carlo 
+simulation by using the Widom insertion method such that
+$$\mu_{\rm excess} = -kT\langle e^{-\beta \Delta U} \rangle,$$
+where $\Delta U$ is the change in the potential energy of the system if an imaginary particle is
+ placed at a random position in the system. The average is formed by doing this imaginary insertion many times throughout the simulation.   </p>
+
+<p> The program does a standard  Metropolis simulation of particles interacting through the Lennard-Jones potential, and computes $\mu_{\rm excess}$. </p>
+
+<b>Problem: The excess chemical potential of a Lennard-Jones fluid</b>
+<p>Program <tt>ChemicalPotentialMC</tt> implements the Widom insertion method to estimate the chemical potential 
+for a system of particles interacting with the Lennard-Jones potential. 
+Determine the density dependence of the excess chemical potential of a Lennard-Jones fluid. 
+Are your results for $\mu_{\rm excess}$ consistent with qualitative arguments given in the text?</p>
+   <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 7.6 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

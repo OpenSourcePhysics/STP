@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>IsingAntiferromagnet</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program IsingAntiferromagnet</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>If the interaction energy $J$ in the Ising model is negative, then neighboring spins 
+lower their energy by being antiparallel. Such a system is called an <i>antiferromagnet</i>.  The 2d Ising antiferromagnet
+on a square lattice behaves almost identically to the ferromagnetic Ising model if we focus on the <i>staggered</i> 
+magnetization, which is defined as $$m_s = (1/N)\sum c_i s_i,$$ where we imagine a checkerboard lattice 
+with red and black squares; $c_i = +1$
+on the black squares and $c_i =-1$ on the red squares. The goal of this simulation is to explore the similarities between the ferromagnetic Ising model 
+and the antiferromagnetic version.  </p>
+
+<b>Problem: Ising antiferromagnet</b>
+
+<p>We have considered the ferromagnetic Ising model for which the energy of interaction between 
+two nearest-neighbor spins is $J>0$. Hence all spins are parallel in the ground state in the ferromagnetic Ising model. 
+In contrast, if $J < 0$, nearest-neighbor spins must be antiparallel to minimize their energy of interaction.
+
+<ol type ="a">
+<li> Sketch the ground state of the one-dimensional  antiferromagnetic
+Ising model. Then do the same for the antiferromagnetic Ising model on a
+square lattice. What is the value of $m$ for the ground state of an Ising antiferromagnet?</li>
+
+<li> Use Program <tt>IsingAntiferromagnet</tt> to simulate
+the antiferromagnetic Ising model on a square lattice for various temperatures and describe its
+qualitative behavior. Does the system have a phase transition at $T>0$? Does the value of $m$ 
+show evidence of a phase transition?</li>
+
+<li> In addition to the usual thermodynamic quantities the program calculates the <i>staggered</i> 
+magnetization and the staggered susceptibility. The staggered magnetization is calculated by 
+considering the square lattice as a checkerboard with black and red sites so that each black 
+site has four red sites as nearest neighbors and vice versa. The staggered magnetization is 
+calculated from $\sum c_i s_i$ where $c_i = +1$ for a black site and $c_i = -1$ for a red site. 
+Describe the behavior of these quantities and compare them to the behavior of $m$ and $\chi$ for the 
+ferromagnetic Ising model.</li>
+
+
+</ol>
+
+
+   <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 5.41 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script type="text/javascript">
+
+MathJax.Hub.Config({
+
+    showProcessingMessages: false,
+
+    messageStyle: "none",
+
+    TeX: { equationNumbers: {autoNumber: "all"} },
+
+    extensions: ["tex2jax.js"],
+
+    jax: ["input/TeX", "output/HTML-CSS"],
+
+    tex2jax: {
+
+      inlineMath: [ ['$','$'] ],
+
+      displayMath: [ ['$$','$$'] ],
+
+      processEscapes: true
+
+    },
+
+    SVG: { linebreaks: { automatic: true } },
+
+    "HTML-CSS": { availableFonts: ["TeX"] }
+
+});
+
+</script>
+
+<html>
+
+
+
+<head>
+
+  <title>Binomial</title>
+
+  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+
+
+  </head>
+
+
+
+<body>
+
+
+
+  <h1 id="myTitle" style="position:fixed;">Program Binomial</h1>
+
+
+
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+
+
+  
+
+
+
+
+
+<p>Coin tosses, random walks, and spins in a magnetic field can all be described  the same way. The number
+
+of heads, steps to the right, or spins aligned with the magnetic field 
+
+is described by the <i>binomial distribution</i>.  If the number of tosses, steps, or spins becomes large so
+
+the number can be considered to be continuous, the binomial distribution becomes the 
+
+<i>Gaussian distribution</i>, which describes the fluctuations from mean values of macroscopic quantities in 
+
+thermal equilibrium.   </p>
+
+
+
+<p>Program <tt>Binomial</tt> allows you to explore the properties of the binomial distribution. </p>
+
+
+<b>Problem: The binomial distribution</b>
+
+<ol type ="a">
+
+<li> Calculate the probability
+$P_N(n)$ for $p=q=1/2$ that $n$ spins are up out of a total of $N$ for
+$N=4$ and $N=16$. Determine the mean values of
+$n$ and $n^2$ using your values of $P_N(n)$. Although it is 
+better to first do the calculation of $P_N(n)$ by hand for small $N$, 
+you can use Program <tt>Binomial</tt> to do the calculation. 
+</li>
+
+<li> Use Program <tt>Binomial</tt> to plot $P_N(n)$ versus $n$ for larger values of $N$ and
+$p=q=1/2$. Determine the value of $n$ corresponding to the maximum of the probability and visually estimate the width for each
+value of
+$N$. What is your measure of the width?</li>
+
+<li> One measure of the width is to use the two values of $n$ at which $P_N(n)$ is 
+equal to half of its value at its maximum. What is the qualitative dependence of the width on $N$? 
+Compare the relative heights of the maximum of $P_N$ for increasing values of $N$.</li>
+
+<li> Program <tt>Binomial</tt> also plots $P_N(n)$ versus $n/\overline{n}$. Does the width of $P_N(n)$ 
+appear to become larger or smaller as $N$ is increased?</li>
+
+<li> Plot $\ln P_N(n)$ versus $n$ for $N=16$. Describe the qualitative dependence of $\ln P_N(n)$ on $n$. 
+Can $\ln P_N(n)$ be fitted to
+a parabola of the form $A + B(n-\overline{n})^2$, where $A$ and
+$B$ are fit parameters? </li>
+</ol>
+
+
+
+   <h2>Resources</h2>
+
+  <ol>
+
+
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+
+
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+
+    <li>Problem 3.37 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+
+
+ 
+
+</ol>
+
+
+
+ 
+
+  <p class="small">Updated 12 August 2020.</p>
+
+</div>
+
+
+
+</body>
+
+
+
+</html>

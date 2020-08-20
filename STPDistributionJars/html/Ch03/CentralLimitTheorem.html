@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>CentralLimitTheorem</title>
+  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program CentralLimitTheorem</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>The central limit theorem explains why Gaussian distributions are so common, and in particular is essential for
+thermodynamics. Any quantity which is the sum of 
+individual terms whose values are described by almost any probability distribution, will be described by the Gaussian distribution. 
+The key requirement is that the distribution describing the individual values must have a finite second moment.     </p>
+
+<p>Program <tt>CentralLimitTheorem</tt> lets you test the central limit theorem for three  distributions, and explore the distribution as a function of the number of terms $N$ in the sum.    </p>
+
+<b>Problem: Central limit theorem</b>
+
+<p>Use Program <tt>CentralLimitTheorem</tt> to test the applicability of the central
+limit theorem. 
+
+<ol type ="a">
+
+<li> Assume that the variable
+$s$ is uniformly distributed between 0 and 1. Calculate analytically the
+mean and standard deviation of $s$ and compare your numerical
+results from the program with your analytical calculation.</li>
+
+<li> Use the default value of $N=12$, the number of terms in the sum $S = \sum_{i=1}^N s_i$, and 
+describe the qualitative form of $p(S)$ that is computed and plotted by the program; $p(S)\Delta S$ is 
+the probability that the sum $S$ is between $S$ and $S+\Delta S$. Does the qualitative form of $p(S)$ 
+change as the number of measurements (trials) of $S$ is increased for a given value of $N$?</li>
+
+<li> What is the approximate width of $p(S)$ for $N = 12$? Describe the changes, if any, of the width of $p(S)$ as $N$ is increased. Increase $N$ by at least a factor of four.
+Do
+your results depend strongly on the number of
+measurements?</li>
+
+<li> To determine the generality of your results, 
+consider the probability density $f(s) = e^{-s}$ for $s \geq 0$ and answer the 
+same questions as in parts (a)--(c).</li>
+
+<li> Consider the  Lorentz distribution
+$$
+f(s) = (1/\pi)(1/(s^2 + 1)), 
+$$
+where $-\infty \leq s \leq \infty$. What is the mean value and variance of $s$? 
+Is the form of $p(S)$ consistent with the results that you found 
+in parts (b)--(d)?</li>
+
+<li> *Each value of $S$ can be considered to be a measurement. The sample variance $\tilde \sigma_S^2$ is a measure of the square of the differences of the result of each measurement and is given by
+\begin{equation}
+\tilde \sigma_S^2 = \frac{1}{N-1}\sum_{j=1}^N (S_j - \overline{S})^2.
+\label{eq:3/stadardmeans}
+\end{equation}
+The reason for the factor of $N - 1$ rather than $N$ in the definition of $\tilde \sigma_S^2$ is that to compute it, we need to use the $N$ values of $s$ to compute the mean of $S$. Thus, loosely speaking, we have only $N - 1$ independent values of $s$ remaining to calculate $\tilde \sigma_S^2$. Show that if $N \gg 1$, then $\tilde \sigma_S \approx \sigma_S$, where the standard deviation $\sigma_S$ is given by
+$\sigma_S^2 = \overline{S^2} - \overline{S}^2$.</li>
+
+<li> *The quantity $\tilde \sigma_S$ in \eqref{eq:3/stadardmeans}
+is known as the  <i>standard deviation of the means</i>. 
+That is, $\tilde \sigma_S$ is a measure of how much variation we expect to find if we make repeated 
+measurements of $S$. How does the value of $\tilde \sigma_S$ compare to your estimated width of the 
+probability density $p(S)$? </li>
+</ol>
+
+   <h2>Resources</h2>
+  <ol>
+
+   <li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 3.51 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 13 August 2020.</p>
+</div>
+
+</body>
+
+</html>

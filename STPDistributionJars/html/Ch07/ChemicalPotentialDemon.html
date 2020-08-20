@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>ChemicalPotentialDemon</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program ChemicalPotentialDemon</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Previously we used the demon algorithm as an ideal thermometer, where the demon was an extra degree of freedom that 
+could exchange energy with the system. A plot of the log of the demon energy distribution $\ln P(E_d)$ versus the demon energy
+$E_d$ is a straight line with a slope equal to $-1/kT$. We now  also allow the demon to exchange particles with the system,
+ so that a plot of  the log of the demon particle number distribution $\ln P(N_d)$ versus the demon particle number
+$N_d$ for a particular value of $E_d$ is a straight line with a slope equal to $\mu/kT$.  </p>
+
+<p> The program  simulates a simple model in one dimension where the particles have discrete values of momentum and position. A 
+ single particle state is defined by
+its location in a two-dimensional momentum-position phase space. To represent a dilute classical system only one 
+particle per phase space point is allowed.  Attractive interactions between neighboring particles can be added and a hard core 
+repulsion can be added to prevent more than one particle at the same position. 
+
+<p> The goal of this simulation is to explore how $\mu$ depends on particle density and the effect of the interactions. 
+  </p>
+
+<b>Problem: The chemical potential of a one-dimensional ideal gas</b>
+
+<p>Program <tt>ChemicalPotentialDemon</tt>
+implements this algorithm for the one-dimensional ideal gas and computes $P(E_d,N_d)$, the probability 
+that the demon has energy $E_d$ and $N_d$ particles.
+
+<ol type ="a">
+
+<li> Use the default
+parameters $N=100$, $E=200$, and $L=100$, where $N$ is the total number of
+particles, $L$ is the
+length of the box, and $E$ is the maximum total energy. The program uses units such that 
+$\Delta x \Delta p=1$, and $m=1/2$ so
+that the kinetic energy of a particle is $\epsilon=p^2$. These choices
+imply that the momentum and energy are integers. 
+The $N$ particles are initially
+randomly placed on the sites of the phase space lattice with no more
+than one particle on a site such that the total energy does not exceed $E$. The initial demon energy $E_d=0$ and
+particle number $N_d=0$. Run the simulation and discuss the qualitative features of the positions of 
+the particles in phase space. Do some  particles  have the same position? Run the simulation for different 
+values of $E$, but the same values of the other parameters.
+Where in phase space are most of the particles located?</li>
+
+<li> Explain why the simulation in part (a) is identical to a simulation of an ideal gas in the semiclassical limit. 
+Show that the chemical potential is given by
+\begin{equation}
+\mu = -T \ln[(L/N)(\pi T)^{1/2}].
+\label{eq:usingthermo/mudemon}
+\end{equation}
+(Remember that $\Delta x \Delta p=1$.)</li>
+
+<li> Use the same parameters as in part (a) and run for about 200 Monte Carlo steps per particle (mcs) to 
+equilibrate the system. Then click <tt>Zero Averages</tt> and average over at least $1000\,$mcs. 
+(The simulation will run faster if you increase the steps per display to 10 or 100.) 
+After the simulation is stopped, click the <tt>Plot Demon Distributions</tt> button to display the demon energy and 
+particle number distributions. The plot of $\ln P(E_d, N_d = 1)$ versus $E_d$ should be approximately linear for 
+small $E_d$.
+Use the plots to estimate the values of $T$ and $\mu$ and compare your Monte Carlo results with the exact result 
+that you found in part (b).</li>
+
+<li> How do you expect $\mu$ to change if you lower the particle density? Run the 
+simulation for $N= 50$, $E = 100$, and $L= 100$ and compare the temperature and chemical potential 
+obtained from the demon distributions with the results found in part (c). </li>
+</ol>
+
+<b>Problem: The effects of interparticle interactions</b>
+
+<p>What are the effects of including interactions between the particles in a dilute classical gas?
+<ol type ="a">
+
+<li> If the interaction has a hard core, no two particles can have the same position. 
+How do you expect $\mu$ to change compared to the ideal gas?
+Use Program <tt>ChemicalPotentialDemon</tt> and determine the effect of including a hard core on $\mu$. 
+For this comparison set $L = 200$ and $N = 100$. Why must $L$ be much larger than $N$?</li>
+
+<li> If we include an attractive interaction between particles that are nearest neighbors in position, 
+the energy of the system will be lowered for some particle additions, thus giving the demon more energy.
+How do you expect $\mu$ to change compared to the hard core system?</li>
+</ol>
+
+
+   <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problems 7.41 and 7.42 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

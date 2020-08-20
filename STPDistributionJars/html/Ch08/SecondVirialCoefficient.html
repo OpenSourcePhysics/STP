@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>SecondVirialCoefficient</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program SecondVirialCoefficient</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>Approximation techniques are used to study the effect of inter-particle interactions in  gases. A
+ common technique is the virial density expansion. The first-order expansion for the ideal gas is given by
+$$\frac{PV}{NkT} = 1 + \rho B_2(T),$$
+where the second virial coefficient is
+$$B_2(T) = 2\pi \int_0^{\infty} [1 - e^{u(r)/kT}] r^2dr \label{B2}$$
+for a spherically symmetric inter-particle potential $u(r)$. 
+
+<p>Program <tt>SecondVirialCoefficient</tt> computes $B_2(T)$ for the Lennard-Jones potential. </p> 
+
+<b>Problem: Temperature dependence of $B_2$</b>
+
+<ol type ="a">
+<li> A potential that captures some of the properties of the Lennard-Jones potential is the 
+square well potential which is defined as
+\begin{equation}
+u(r)=\begin{cases}
+\infty & (r < \sigma), \\
+-\epsilon & (0 < r < \lambda \sigma),\\
+0 & (r > \lambda\sigma),
+\end{cases}
+\label{eq:8/squarewell}
+\end{equation}
+where $\sigma$ is the diameter of the hard core, $\lambda \sigma$ is the range of the attractive well, 
+and $\epsilon$ is the well depth. Show that for this potential the Mayer function $f(r)$ is 
+given by \begin{equation}
+f(r)= \begin{cases}
+-1 & (r < \sigma), \\
+g & (r < \lambda \sigma),\\
+0 & (r > \lambda\sigma),
+\end{cases}
+\label{eq:8/frsqw}
+\end{equation}
+and
+\begin{equation}
+\label{eq:8/b2squarewell}
+B_2(T) = \frac{2\pi\sigma^3}{3}\big[1 - (\lambda^3 - 1)g \big].
+\end{equation}
+where $g=e^{\beta \epsilon} - 1$.
+
+<li>Plot the temperature dependence of $B_2(T)$ as given by \eqref{eq:8/b2squarewell} and compare it to the 
+approximate temperature dependence given by $B_2 = b - {a \over kT}$.</li>
+
+<li> Program <tt>SecondVirialCoefficient</tt>  evaluates the integral over $r$ in \eqref{B2} 
+numerically to determine the temperature dependence of $B_2$ for the Lennard-Jones potential. 
+ Compare the numerical results for the Lennard-Jones potential with the approximate 
+ result $B_2 = b - {a \over kT}$. At what temperature does $B_2$ vanish? How does this 
+ temperature compare with that predicted by $B_2 = b - {a \over kT} = 0$? </li>
+</ol>
+  <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 8.32 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>

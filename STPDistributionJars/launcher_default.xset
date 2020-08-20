@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object class="org.opensourcephysics.tools.Launcher$LaunchSet">
+    <property name="width" type="int">907</property>
+    <property name="height" type="int">657</property>
+    <property name="divider" type="int">212</property>
+    <property name="editor_enabled" type="boolean">true</property>
+    <property name="selected_node" type="string">STP Interactive Programs/Stat. Mech I/Ch 5: Magnetic Systems/Ising 1d</property>
+    <property name="expanded" type="array" class="[Ljava.util.Collection;">
+        <property name="[0]" type="collection" class="java.util.ArrayList">
+            <property name="item" type="string">STP Interactive Programs/Stat. Mech I</property>
+            <property name="item" type="string">STP Interactive Programs/Ch 1: Micro to Maco</property>
+            <property name="item" type="string">STP Interactive Programs/Stat. Mech I/Ch 5: Magnetic Systems</property>
+            <property name="item" type="string">STP Interactive Programs/Stat. Mech II</property>
+            <property name="item" type="string">STP Interactive Programs</property>
+            <property name="item" type="string">STP Interactive Programs/Stat. Mech I/Ch 6: Many Particle Systems</property>
+        </property>
+    </property>
+    <property name="launch_nodes" type="collection" class="java.util.ArrayList">
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.tools.LaunchNode">
+            <property name="name" type="string">STP Interactive Programs</property>
+            <property name="description" type="string"><![CDATA[Empty Launcher.
+
+Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml document that specifies programs and html pages to be displayed in Launcher.
+            ]]></property>
+            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                    <property name="[1]" type="string">html/STPBook.html</property>
+                </property>
+            </property>
+            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                <property name="[0]" type="object">null</property>
+            </property>
+            <property name="author" type="string">Wolfgang Christian</property>
+            <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                <property name="item" type="object">
+                <object class="org.opensourcephysics.tools.LaunchNode">
+                    <property name="name" type="string">Preface</property>
+                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                            <property name="[1]" type="string">html/Preface2.html</property>
+                        </property>
+                    </property>
+                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="object">null</property>
+                    </property>
+                </object>
+                </property>
+                <property name="item" type="object">
+                <object class="org.opensourcephysics.tools.LaunchNode">
+                    <property name="name" type="string">Ch 1: Micro to Maco</property>
+                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                            <property name="[1]" type="string">html/Ch01/Chapter01.html</property>
+                        </property>
+                    </property>
+                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="object">null</property>
+                    </property>
+                    <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Three Parts MD</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch01/ThreePartsMD.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.ThreePartsMDApp</property>
+                            <property name="classpath" type="string">STPLauncher.jar</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Two Parts MD</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch01/TwoPartsMD.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.TwoPartsMDApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Hole In Wall</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch01/HoleInWall.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.HoleInWallApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Thermal Contact</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch01/ThermalContact.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.ThermalContactApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Demon Ideal Gas</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch01/DemonIdealGas.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.DemonIdealGasApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Chaos</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch01/Chaos.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.ChaosApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Lennard-Jones MD</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch01/LennardJonesMD.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.LennardJonesMDApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                    </property>
+                </object>
+                </property>
+                <property name="item" type="object">
+                <object class="org.opensourcephysics.tools.LaunchNode">
+                    <property name="name" type="string">Ch 2: Thermodynamics</property>
+                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                            <property name="[1]" type="string">html/Ch02/Chapter02.html</property>
+                        </property>
+                    </property>
+                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="object">null</property>
+                    </property>
+                </object>
+                </property>
+                <property name="item" type="object">
+                <object class="org.opensourcephysics.tools.LaunchNode">
+                    <property name="name" type="string"><![CDATA[Ch 3: Concepts & Tools]]></property>
+                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                            <property name="[1]" type="string">html/Ch03/Chapter03.html</property>
+                        </property>
+                    </property>
+                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="object">null</property>
+                    </property>
+                    <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Coin Toss</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch03/CoinToss.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch03.CoinTossApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Binominal</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch03/Binomial.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch03.BinomialApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Random Walk 1D</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch03/RandomWalk1d.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch03.RandomWalk1dApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Random Walk Continous</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch03/RandomWalkContinuous.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch03.RandomWalkContinuousApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Central Limit Theorem</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch03/CentralLimitTheorem.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch03.CentralLimitTheoremApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Multiplicative Process</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch03/MultiplicativeProcess.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch03.MultiplicativeProcessApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Montecarlo Estimation</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch03/MCEstimation.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch03.MCEstimationApp</property>
+                            <property name="singleton" type="boolean">true</property>
+                            <property name="single_vm" type="boolean">true</property>
+                        </object>
+                        </property>
+                    </property>
+                </object>
+                </property>
+                <property name="item" type="object">
+                <object class="org.opensourcephysics.tools.LaunchNode">
+                    <property name="name" type="string">Stat. Mech I</property>
+                    <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Ch 4: Methodology</property>
+                            <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Einstein Solid Microstates</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch04/EinsteinSolidMicrostates.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.EinsteinSolidMicrostatesApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Einstein Solid Entropy</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch04/EinsteinSolidEntropy.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.EinsteinSolidEntropyApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Counting States</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch04/CountingStates.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.CountingStatesApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Demon Ideal Gas</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch04/DemonIdealGas.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.HardDisksMDApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Demon Einstein Solid</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch04/DemonEinsteinSolid.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.DemonEinsteinSolidApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">MC Einstein Solid</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch04/MCEinsteinSolid.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.MCEinsteinsolidApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Hard Disk MD</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch04/HardDisksMD.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.HardDisksMDApp</property>
+                                </object>
+                                </property>
+                            </property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Ch 5: Magnetic Systems</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch05/Chapter05.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Ising 1d</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/Ising1d.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.Ising1dApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Ising 2d</property>
+                                </object>
+                                </property>
+                            </property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Ch 6: Many Particle Systems</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch06/Chapter06.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Lenard Jones MD</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Quantum Gas Integral</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Bose Gas Sum</property>
+                                </object>
+                                </property>
+                            </property>
+                        </object>
+                        </property>
+                    </property>
+                </object>
+                </property>
+                <property name="item" type="object">
+                <object class="org.opensourcephysics.tools.LaunchNode">
+                    <property name="name" type="string">Stat. Mech II</property>
+                    <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Ch 7: Chemical Potential and Phase Equilibria</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch07/Chapter07.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string"><![CDATA[Ch 8: Classical Gases & Liquids]]></property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch08/Chapter08.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Ch 9: Ctitial Phenomena</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch09/Chapter09.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                        </object>
+                        </property>
+                    </property>
+                </object>
+                </property>
+                <property name="item" type="object">
+                <object class="org.opensourcephysics.tools.LaunchNode">
+                    <property name="name" type="string">Ch 10: Time-Dependent Phomena</property>
+                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                            <property name="[1]" type="string">html/Ch10/Chapter10.html</property>
+                        </property>
+                    </property>
+                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="object">null</property>
+                    </property>
+                </object>
+                </property>
+            </property>
+        </object>
+        </property>
+    </property>
+</object>

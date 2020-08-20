@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    TeX: { equationNumbers: {autoNumber: "all"} },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+<html>
+
+<head>
+  <title>IsingHysteresis</title>
+  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  </head>
+
+<body>
+
+  <h1 id="myTitle" style="position:fixed;">Program IsingHysteresis</h1>
+
+
+  <div style="position:absolute;left:30px;top:500px;">
+
+  
+
+
+<p>When the magnetic field applied to a ferromagnet changes direction, the spins within the ferromagnet do not immediately
+flip to reach their typical equilibrium state. The magnetization is not just a function of the applied
+magnetic field, but also depends on the current state and the rate at which the field changes. 
+ This non-equilibrium behavior is called <i>hysteresis</i>.    </p>
+
+<p> In this Monte Carlo Metropolis program the spins are initially  aligned with the magnetic field. Then slowly the field is 
+reduced to zero and then changes sign and is increased in the opposite direction. The spins eventually align 
+with the magnetic field in the opposite direction, and then the field is reduced to zero again, and again changes sign. 
+You can explore hysteresis as a function of temperature as well as the rate at which the field is changed. </p>
+
+<b>Problem: The Ising model in an external magnetic field </b>
+
+<p>Go to Program
+<tt>Ising2d</tt> and simulate the
+Ising model on a square lattice at a given temperature. Choose
+$N=L^2=32^2$. Run for at least 200 Monte Carlo steps per spin at each value of the field.
+
+<ol type ="a">
+
+<li>
+Set $H=0.2$ and $T = 3$ and estimate the approximate value of the magnetization. Then change the field to $H = 0.1$ 
+and continue updating the spins (do not press <tt>New</tt>) so that the simulation is continued from the last microstate. Note the value of $m$. Continue this procedure with $H=0$, then $H = -0.1$ and then $H=-0.2$. Do your values of $m$ change abruptly as you change the field?
+Is there any indication of a phase transition as you change $H$?</li> 
+
+<li>
+Repeat the same procedure as in part (a) at $T = 1.8$ which is below the critical temperature. 
+What happens now? Is there evidence of a sudden change in $m$ as you change the direction of the field?</li>
+
+<li>
+Use Program <tt>IsingHysteresis</tt> with $T= 1.8$, the initial magnetic 
+field $H = 1$, $\Delta H=0.01$, and 10\,mcs for each value of $H$. The program plots the mean magnetization 
+for each value of $H$, and changes $H$ by $\Delta H$ until $H$ reaches $H=-1$, when it changes $\Delta H$ to $-\Delta H$. 
+Describe what you obtain and why it occurred. The resulting curve is called a <i>hysteresis</i> loop, and is 
+characteristic of discontinuous phase transitions. </li>
+
+<li>
+Change the value of mcs for each value of $H$ to 1 and view the resulting plot for $m$ versus $H$.  
+Repeat for mcs equal to 100. Explain the differences you see.</li>
+
+</ol>
+
+   <h2>Resources</h2>
+  <ol>
+
+<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
+  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
+
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+    
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    
+    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    
+    <li>Problem 5.19 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
+    Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
+
+ 
+</ol>
+
+ 
+  <p class="small">Updated 12 August 2020.</p>
+</div>
+
+</body>
+
+</html>
