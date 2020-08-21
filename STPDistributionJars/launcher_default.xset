@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <object class="org.opensourcephysics.tools.Launcher$LaunchSet">
-    <property name="width" type="int">907</property>
-    <property name="height" type="int">657</property>
+    <property name="width" type="int">1092</property>
+    <property name="height" type="int">585</property>
     <property name="divider" type="int">212</property>
     <property name="editor_enabled" type="boolean">true</property>
-    <property name="selected_node" type="string">STP Interactive Programs/Stat. Mech I/Ch 5: Magnetic Systems/Ising 1d</property>
+    <property name="selected_node" type="string">STP Interactive Programs/Ch 10: Time-Dependent Phomena/Viscosity</property>
     <property name="expanded" type="array" class="[Ljava.util.Collection;">
         <property name="[0]" type="collection" class="java.util.ArrayList">
-            <property name="item" type="string">STP Interactive Programs/Stat. Mech I</property>
-            <property name="item" type="string">STP Interactive Programs/Ch 1: Micro to Maco</property>
-            <property name="item" type="string">STP Interactive Programs/Stat. Mech I/Ch 5: Magnetic Systems</property>
+            <property name="item" type="string">STP Interactive Programs/Ch 10: Time-Dependent Phomena</property>
+            <property name="item" type="string">STP Interactive Programs/Stat. Mech I/Ch 4: Methodology</property>
             <property name="item" type="string">STP Interactive Programs/Stat. Mech II</property>
             <property name="item" type="string">STP Interactive Programs</property>
-            <property name="item" type="string">STP Interactive Programs/Stat. Mech I/Ch 6: Many Particle Systems</property>
+            <property name="item" type="string">STP Interactive Programs/Stat. Mech I</property>
+            <property name="item" type="string">STP Interactive Programs/Ch 1: Micro to Maco</property>
         </property>
     </property>
     <property name="launch_nodes" type="collection" class="java.util.ArrayList">
@@ -408,7 +408,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                                 </property>
                                 <property name="item" type="object">
                                 <object class="org.opensourcephysics.tools.LaunchNode">
-                                    <property name="name" type="string">Hard Disk MD</property>
+                                    <property name="name" type="string">Hard Disks MD</property>
                                     <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                         <property name="[0]" type="array" class="[Ljava.lang.String;">
                                             <property name="[1]" type="string">html/Ch04/HardDisksMD.html</property>
@@ -452,6 +452,113 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                                 <property name="item" type="object">
                                 <object class="org.opensourcephysics.tools.LaunchNode">
                                     <property name="name" type="string">Ising 2d</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/Ising2d.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.Ising1dApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Ising Mean Field</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/IsingMeanField.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.IsingMeanFieldApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Ising Hysteresis</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/IsingHysteresis.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.IsingHysteresisApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Ising Number of States</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/IsingNumberOfStates.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.IsingNumberOfStatesApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Potts Number of States</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/PottsNumberOfStates.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.PottsNumberOfStatesApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Lattice Gas</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/LatticeGas.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.LatticeGasApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Ising Antiferromagnet</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/IsingAntiferromagnet.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.IsingAntiferromagnetApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Frustration</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch05/Frustration.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch05.FrustrationApp</property>
                                 </object>
                                 </property>
                             </property>
@@ -471,17 +578,44 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                             <property name="child_nodes" type="collection" class="java.util.ArrayList">
                                 <property name="item" type="object">
                                 <object class="org.opensourcephysics.tools.LaunchNode">
-                                    <property name="name" type="string">Lenard Jones MD</property>
+                                    <property name="name" type="string">Lennard-Jones MD</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch06/LennardJonesMD.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.LennardJonesMDApp</property>
                                 </object>
                                 </property>
                                 <property name="item" type="object">
                                 <object class="org.opensourcephysics.tools.LaunchNode">
                                     <property name="name" type="string">Quantum Gas Integral</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch06/QuantumGasIntegral.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch06.QuantumGasIntegralApp</property>
                                 </object>
                                 </property>
                                 <property name="item" type="object">
                                 <object class="org.opensourcephysics.tools.LaunchNode">
                                     <property name="name" type="string">Bose Gas Sum</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch06/BoseGasSum.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch06.BoseGasSumApp</property>
                                 </object>
                                 </property>
                             </property>
@@ -505,6 +639,50 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                             <property name="display_args" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="object">null</property>
                             </property>
+                            <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Chemical Potential Einstein Solid</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch07/ChemicalPotentialEinsteinSolid.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch07.ChemicalPotentialEinsteinSolidApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Chemical Potential MC</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch07/ChemicalPotentialMC.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch07.ChemicalPotentialMCApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Chemical Potential Demon</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch07/ChemicalPotentialDemon.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch07.ChemicalPotentialDemonApp</property>
+                                </object>
+                                </property>
+                            </property>
                         </object>
                         </property>
                         <property name="item" type="object">
@@ -518,11 +696,55 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                             <property name="display_args" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="object">null</property>
                             </property>
+                            <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Hard Disks MD</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch08/HardDisksMD.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.HardDisksMDApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Lennard-Jones MD</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch08/LennardJonesMD.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.LennardJonesMDApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Second Virial  Coefficient</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch08/SecondVirialCoefficient.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch08.SecondVirialCoefficientApp</property>
+                                </object>
+                                </property>
+                            </property>
                         </object>
                         </property>
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Ch 9: Ctitial Phenomena</property>
+                            <property name="name" type="string">Ch 9: Critical Phenomena</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch09/Chapter09.html</property>
@@ -530,6 +752,50 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                             </property>
                             <property name="display_args" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Percolation</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch09/Percolation.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch09.PercolationApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">Percolation RG</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch09/PercolationRG.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch09.PercolationRGApp</property>
+                                </object>
+                                </property>
+                                <property name="item" type="object">
+                                <object class="org.opensourcephysics.tools.LaunchNode">
+                                    <property name="name" type="string">XY Model</property>
+                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                            <property name="[1]" type="string">html/Ch09/XYModel.html</property>
+                                        </property>
+                                    </property>
+                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                        <property name="[0]" type="object">null</property>
+                                    </property>
+                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch09.XYModelApp</property>
+                                </object>
+                                </property>
                             </property>
                         </object>
                         </property>
@@ -546,6 +812,64 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                     </property>
                     <property name="display_args" type="array" class="[[Ljava.lang.String;">
                         <property name="[0]" type="object">null</property>
+                    </property>
+                    <property name="child_nodes" type="collection" class="java.util.ArrayList">
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Hard Disks MD</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch10/HardDisksMD.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.HardDisksMDApp</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Lennard-Jones MD</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch10/LennardJonesMD.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.LennardJonesMDApp</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Thermal Conductivity</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch10/ThermalConductivity.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch10.ThermalConductivityApp</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Viscosity</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch10/Viscosity.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch10.ViscosityApp</property>
+                        </object>
+                        </property>
                     </property>
                 </object>
                 </property>

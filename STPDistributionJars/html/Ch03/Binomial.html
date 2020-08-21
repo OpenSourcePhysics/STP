@@ -4,38 +4,6 @@
 
 
 
-<script type="text/javascript">
-
-MathJax.Hub.Config({
-
-    showProcessingMessages: false,
-
-    messageStyle: "none",
-
-    TeX: { equationNumbers: {autoNumber: "all"} },
-
-    extensions: ["tex2jax.js"],
-
-    jax: ["input/TeX", "output/HTML-CSS"],
-
-    tex2jax: {
-
-      inlineMath: [ ['$','$'] ],
-
-      displayMath: [ ['$$','$$'] ],
-
-      processEscapes: true
-
-    },
-
-    SVG: { linebreaks: { automatic: true } },
-
-    "HTML-CSS": { availableFonts: ["TeX"] }
-
-});
-
-</script>
-
 <html>
 
 
@@ -44,8 +12,7 @@ MathJax.Hub.Config({
 
   <title>Binomial</title>
 
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
-
+ 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -93,34 +60,34 @@ thermal equilibrium.   </p>
 <p>Program <tt>Binomial</tt> allows you to explore the properties of the binomial distribution. </p>
 
 
-<b>Problem: The binomial distribution</b>
+<h2>Problem: The binomial distribution</h2>
 
 <ol type ="a">
 
 <li> Calculate the probability
-$P_N(n)$ for $p=q=1/2$ that $n$ spins are up out of a total of $N$ for
-$N=4$ and $N=16$. Determine the mean values of
-$n$ and $n^2$ using your values of $P_N(n)$. Although it is 
-better to first do the calculation of $P_N(n)$ by hand for small $N$, 
+P<sub>N</sub>(n) for p=q=1/2 that n spins are up out of a total of N for
+N=4 and N=16. Determine the mean values of
+n and n<sup>2</sup> using your values of P<sub>N</sub>(n). Although it is 
+better to first do the calculation of P<sub>N</sub>(n) by hand for small N, 
 you can use Program <tt>Binomial</tt> to do the calculation. 
 </li>
 
-<li> Use Program <tt>Binomial</tt> to plot $P_N(n)$ versus $n$ for larger values of $N$ and
-$p=q=1/2$. Determine the value of $n$ corresponding to the maximum of the probability and visually estimate the width for each
+<li> Use Program <tt>Binomial</tt> to plot P<sub>N</sub>(n) versus n for larger values of N and
+p=q=1/2. Determine the value of n corresponding to the maximum of the probability and visually estimate the width for each
 value of
-$N$. What is your measure of the width?</li>
+N. What is your measure of the width?</li>
 
-<li> One measure of the width is to use the two values of $n$ at which $P_N(n)$ is 
-equal to half of its value at its maximum. What is the qualitative dependence of the width on $N$? 
-Compare the relative heights of the maximum of $P_N$ for increasing values of $N$.</li>
+<li> One measure of the width is to use the two values of n at which P<sub>N</sub>(n) is 
+equal to half of its value at its maximum. What is the qualitative dependence of the width on N? 
+Compare the relative heights of the maximum of P<sub>N</sub> for increasing values of N.</li>
 
-<li> Program <tt>Binomial</tt> also plots $P_N(n)$ versus $n/\overline{n}$. Does the width of $P_N(n)$ 
-appear to become larger or smaller as $N$ is increased?</li>
+<li> Program <tt>Binomial</tt> also plots P<sub>N</sub>(n) versus n/\overline{n}. Does the width of P<sub>N</sub>(n) 
+appear to become larger or smaller as N is increased?</li>
 
-<li> Plot $\ln P_N(n)$ versus $n$ for $N=16$. Describe the qualitative dependence of $\ln P_N(n)$ on $n$. 
-Can $\ln P_N(n)$ be fitted to
-a parabola of the form $A + B(n-\overline{n})^2$, where $A$ and
-$B$ are fit parameters? </li>
+<li> Plot ln P<sub>N</sub>(n) versus n for N=16. Describe the qualitative dependence of ln P<sub>N</sub>(n) on n. 
+Can ln P<sub>N</sub>(n) be fitted to
+a parabola of the form A + B(n-&lt;n&gt;)P<sup>2</sup>, where A and
+B are fit parameters? </li>
 </ol>
 
 
@@ -131,16 +98,11 @@ $B$ are fit parameters? </li>
 
 
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+<li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-
-
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
 
     <li>Problem 3.37 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
 
@@ -156,7 +118,7 @@ $B$ are fit parameters? </li>
 
  
 
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 20 August 2020.</p>
 
 </div>
 

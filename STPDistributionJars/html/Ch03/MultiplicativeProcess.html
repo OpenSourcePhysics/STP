@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>MultiplicativeProcess</title>
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -37,28 +36,30 @@ MathJax.Hub.Config({
   
 
 
-<p>An example of a process which does not follow the central limit theorem is a multiplicative process. Program <tt>MultiplicativeProcess</tt> explores the distribution of the quantity   $\Pi = x_1^nx_2^{N-n}$, where $x_1$ is chosen $n$ times with 
-probability $p$   and $x_2$ is chosen $N-n$ times with probability $q = 1-p$.  
-You can choose $x_1$, $x_2$, $N$, and $p$. The distribution of $\Pi$ is plotted, and the mean value and 
-most probable value of $\Pi$ are computed. 
+<p>An example of a process which does not follow the central limit theorem is a 
+multiplicative process. Program <tt>MultiplicativeProcess</tt> explores the distribution of 
+the quantity   &Pi; = (x<sub>1</sub>)<sup>n</sup>(x<sub>2</sub>)<sup>N-n</sup>, where x<sub>1</sub> is chosen n times with 
+probability p   and x<sub>2</sub> is chosen N-n times with probability q = 1-p.  
+You can choose x<sub>1</sub>, x<sub>2</sub>, N, and p. The distribution of &Pi; is plotted, and the mean value and 
+most probable value of &Pi; are computed. 
     </p>
 
-<b> Problem: Simulation of a multiplicative process</b>
+<h2> Problem: Simulation of a multiplicative process</h2>
 
 <p>Use Program  <tt>MultiplicativeProcess</tt> to simulate the
 distribution of values of the product
-${x_1}^n {x_2}^{N-n}$. Choose
-$x_1=2$, $x_2=1/2$, and $p=q=1/2$.
+(x<sub>1</sub>)<sup>n</sup> (x<sub>2</sub>)<sup>N-n</sup>. Choose
+x<sub>1</sub>=2, x<sub>2</sub>=1/2, and p=q=1/2.
 
 <ol type ="a">
 
-<li> Choose $N=4$ and estimate
-$\overline{\Pi}$ and
-$\widetilde{\Pi}$. Do your estimated values converge more or less
+<li> Choose N=4 and estimate
+&lt;&Pi;&gt; and
+the most probable value of &Pi;. Do your estimated values converge more or less
 uniformly to the analytical values as the number of measurements
 becomes large? </li>
 
-<li> Do a similar simulation for $N=40$. Compare your
+<li> Do a similar simulation for N=40. Compare your
 results with a similar simulation of a random walk and discuss the
 importance of extreme events for random multiplicative processes.</li>
 </ol>
@@ -67,16 +68,11 @@ importance of extreme events for random multiplicative processes.</li>
    <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+<li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-
-    
-    <li><a href="./">Download</a> executable jar file. (Need Java on your computer to run this.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
     <li>Problem 3.56 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).  </li> 
@@ -85,7 +81,7 @@ importance of extreme events for random multiplicative processes.</li>
 </ol>
 
  
-  <p class="small">Updated 13 August 2020.</p>
+  <p class="small">Updated 20 August 2020.</p>
 </div>
 
 </body>
