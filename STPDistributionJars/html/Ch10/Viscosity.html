@@ -1,27 +1,11 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
   <title>Viscosity</title>
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -41,39 +25,40 @@ MathJax.Hub.Config({
 The program  uses the velocity Verlet algorithm to update the positions and velocities of the particles according to Newton's second law. 
 Periodic boundary conditions are used. </p>
 
-<p>In this program the length of the system in the $z$-direction is three times longer than the 
-other two directions to allow for a better estimate of the $x$-velocity
-gradient in the $z$-direction. The system is divided into slabs in the $z$-direction.  The $x$-velocity gradient is 
-created by a momentum flux due to swapping the smallest $x$-velocity in a &#8220;high momentum slab&#8221; with the largest x-velocity in 
-the &#8220;low momentum slab.&#8221; The viscosity is determined from the ratio of the momentum flux to the $x$-velocity gradient.     </p>
+<p>In this program the length of the system in the z-direction is three times longer than the 
+other two directions to allow for a better estimate of the x-velocity
+gradient in the z-direction. The system is divided into slabs in the z-direction.  The x-velocity gradient is 
+created by a momentum flux due to swapping the smallest x-velocity in a &#8220;high momentum slab&#8221; with the largest x-velocity in 
+the &#8220;low momentum slab.&#8221; The viscosity is determined from the ratio of the momentum flux to the x-velocity gradient.     </p>
 
 <p>To begin the simulation we first equilibrate the system at a user specified temperature. We then  stop the 
 equilibration, which starts 
-the swapping of velocities, creating a momentum flux and $x$-velocity gradient. </p>
+the swapping of velocities, creating a momentum flux and x-velocity gradient. </p>
 
-<b>Problem: Simulation of the viscosity</b>
+<h2>Problem: Simulation of the viscosity</h2>
 
-<p>Program <tt>Viscosity</tt>  uses $\eta = - \frac{P_{xz}}{(\Delta v_x/\Delta z)}$
+<p>Program <tt>Viscosity</tt>  uses &eta; = - P<sub>xz</sub>/(&Delta;v<sub>x</sub>/&Delta;z)
 to determine the viscosity for a system of particles interacting via the Lennard-Jones potential
-with a cutoff equal to $3\,\sigma$.  The number of particles is $N=3k^3$, 
-where the number of slabs in the $z$ direction is $3k$. The default values are $k=10$, $T=0.7$, and $\rho = 0.849$.
-Run the program until the system reaches  equilibrium  at the desired constant value of $T$. 
+with a cutoff equal to 3 &sigma;.  The number of particles is N=3k<sup>3</sup>, 
+where the number of slabs in the z direction is 3k. The default values are k=10, T=0.7, and &rho; = 0.849.
+Run the program until the system reaches  equilibrium  at the desired constant value of T. 
 (The program uses velocity rescaling.)
-When the <tt>Stop equilibration</tt> button is pressed, the process of momentum transfer from slab at $z=0$
+When the <tt>Stop equilibration</tt> button is pressed, the process of momentum transfer from slab at z=0
 to the middle slab is started. Press the <tt>Reset Data</tt> button several times to ensure that the system has 
-reached a steady state. The mean $x$ momentum in the left and right halves of the box are plotted separately 
+reached a steady state. The mean x momentum in the left and right halves of the box are plotted separately 
 so that you can determine how well they agree.
 
 <ol type ="a">
-<li> What is the value of the viscosity for the default values of $N$, $\rho$, and $T$?</li>
-<li> How do you expect $\eta$ to change with increasing $T$ for fixed $\rho$? Test your expectation 
+<li> What is the value of the viscosity for the default values of N, &rho;, and T?</li>
+<li> How do you expect &eta; to change with increasing T for fixed &rho;? Test your expectation 
 using Program <tt>Viscosity</tt>  by doubling the temperature.</li>
 
-<li> How do you expect $\eta$ to change with increasing $\rho$ for fixed $T$? Test your expectation 
-using Program <tt>Viscosity</tt> by increasing the density by $10\%$.</li>
+<li> How do you expect &eta; to change with increasing &rho; for fixed T? Test your expectation 
+using Program <tt>Viscosity</tt> by increasing the density by 10%.</li>
 
-<li> *Increase $N$ while keeping the density and the temperature the same as in part (a) and determine the importance of finite size effects on the 
-computed value of $\eta$.</li>
+<li> *Increase N while keeping the density and the temperature the same as in part (a) 
+and determine the importance of finite size effects on the 
+computed value of &eta;.</li>
 
 </ol>
 
@@ -81,25 +66,21 @@ computed value of $\eta$.</li>
   
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+   <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-    
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
     <li>Problem 10.17 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021). </li>
-<li>Florian M&uuml;ller-Plathe, &#8220;Reversing the perturbation in nonequilibrium molecular dynamics: An easy way to calculate the shear viscosity of fluids,&#8221; Phys. Rev. E ${\bf 59}$, 4894&#8211;4898 (1999).</li>
+<li>Florian M&uuml;ller-Plathe, &#8220;Reversing the perturbation in nonequilibrium molecular dynamics: An easy way to calculate the shear viscosity of fluids,&#8221; Phys. Rev. E {\bf 59}, 4894&#8211;4898 (1999).</li>
 
  
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 22 August 2020.</p>
 </div>
 
 </body>

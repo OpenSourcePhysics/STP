@@ -1,27 +1,11 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
   <title>ThermalConductivity</title>
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -42,9 +26,9 @@ The motion evolves using the numerical solution of the
 differential equations in Newton's second law. The velocity Verlet algorithm is used to update the positions and velocities of the particles. 
 Periodic boundary conditions are used so that particles that leave the box enter on the other side, much like many video games. </p>
 
-<p>In the program the length of the system in the $z$-direction is three times longer than the 
+<p>In the program the length of the system in the z-direction is three times longer than the 
 other two directions to allow for a better estimate of a temperature
-gradient in the $z$-direction. The system is divided into slabs in the $z$-direction.  The temperature gradient is 
+gradient in the z-direction. The system is divided into slabs in the z-direction.  The temperature gradient is 
 created by an energy flux due to swapping the slowest moving particle in a &#8220;hot slab&#8221; with the fastest moving particle in 
 the &#8220;cold slab.&#8221; The thermal conductivity is determined from the ratio of the energy flux to the temperature gradient.     </p>
 
@@ -52,32 +36,32 @@ the &#8220;cold slab.&#8221; The thermal conductivity is determined from the rat
 the swapping, thus creating an energy flux and temperature gradient.</p>
 
 
-<b>Problem: Determining the thermal conductivity</b>
+<h2>Problem: Determining the thermal conductivity</h2>
 
 
-<p>Program <tt>ThermalConductivity</tt> computes the thermal conductivity for a system of particles interacting 
-with a Lennard-Jones potential cut off at $3\,\sigma$.  The program uses the 
-algorithm by M&uuml;ller-Plathe that we have discussed. The total number of particles is $N=3k^3$, 
-where the number of slabs in the $z$ direction is $3k$. The default values are $k=10$, $T=0.7$, and $\rho = 0.849$.
-Run the program until the system reaches  equilibrium  at constant $T$. (The program uses velocity rescaling to bring
+<p>Program <tt>ThermalConductivity</tt> computes the thermal conductivity &kappa; for a system of particles interacting 
+with a Lennard-Jones potential cut off at 3&sigma;.  The program uses the 
+algorithm by M&uuml;ller-Plathe that we have discussed. The total number of particles is N=3k<sup>3</sup>, 
+where the number of slabs in the z direction is 3k. The default values are k=10, T=0.7, and &rho; = 0.849.
+Run the program until the system reaches  equilibrium  at constant T. (The program uses velocity rescaling to bring
 the system to the desired temperature.)
 When the <tt>Stop equilibration</tt> button is pressed, velocity rescaling is stopped, and energy 
-transfer from the slab at $z=0$ to the middle slab is started. Press the <tt>Reset Data</tt> button several 
+transfer from the slab at z=0 to the middle slab is started. Press the <tt>Reset Data</tt> button several 
 times to check that the simulation has reached a steady state. The temperature profiles in the left and 
 right halves of the box are plotted separately to give you an idea of how well the averages have converged.
 
 <ol type ="a">
-<li> What is the estimated value of $\kappa$ for the default values of $N$, $\rho$, and $T$?</li>
+<li> What is the estimated value of &kappa; for the default values of N, &rho;, and T?</li>
 
-<li> How do you expect $\kappa$ to change with increasing $T$ for fixed $\rho$?
+<li> How do you expect &kappa; to change with increasing T for fixed &rho; ?
 Test your expectation by doubling the temperature.</li>
 
-<li> How do you expect $\kappa$ to change with increasing $\rho$ for fixed $T$? Test your expectation by 
-increasing the density by $10\%$.</li>
+<li> How do you expect &kappa; to change with increasing &rho;  for fixed T? Test your expectation by 
+increasing the density by 10%.</li>
 
-<li> *Increase $N$ while keeping the density and the temperature the same as in part (a) and determine the 
+<li> *Increase N while keeping the density and the temperature the same as in part (a) and determine the 
 importance of finite size effects on the 
-computed value of $\kappa$.</li>
+computed value of &kappa;.</li>
 
 </ol>
 
@@ -85,25 +69,21 @@ computed value of $\kappa$.</li>
   
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+   <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-  
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
     <li>Problem 10.15 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
-<li>Florian M&uuml;ller-Plathe, &#8220;A simple nonequilibrium molecular dynamics method for calculating the thermal conductivity,&#8221; J. Chem. Phys. ${\bf 106}$, 6082&#8211;6085 (1997).</li>
+<li>Florian M&uuml;ller-Plathe, &#8220;A simple nonequilibrium molecular dynamics method for calculating the thermal conductivity,&#8221; J. Chem. Phys. {\bf 106}, 6082&#8211;6085 (1997).</li>
 
  
 </ol>
 
 
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 22 August 2020.</p>
 </div>
 
 </body>

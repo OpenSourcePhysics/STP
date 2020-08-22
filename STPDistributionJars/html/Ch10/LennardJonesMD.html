@@ -1,27 +1,11 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
   <title>LennardJonesMD</title>
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -42,37 +26,34 @@ The motion evolves using the numerical solution of the
 differential equations in Newton's second law. The velocity Verlet algorithm is used to update the positions and velocities of the particles. 
 Periodic boundary conditions are used. </p>
 
-<p>The output includes the velocity distribtion function, the pair distribution function $g(r)$, and the self-diffusion of a tagged particle.   </p>
+<p>The output includes the velocity distribtion function, the pair distribution function g(r), and the self-diffusion of a tagged particle.   </p>
 
-<b>Problem: The mean square displacement of particles in a fluid</b>
+<h2>Problem: The mean square displacement of particles in a fluid</h2>
 
 
 <ol type ="a">
 
-<li> Why is the mean displacement, $(1/N)\sum_{i=1}^N \langle {\bf r}_i(t)\rangle$, of little interest? </li>
+<li> Why is the mean displacement, (1/N)&sum; &lt; <b>r</b><sub>i</sub>(t)&gt;, of little interest? </li>
 
-<li> Program <tt>HardDisksMD</tt>  computes the mean square displacement $r^2(t)$ 
-of a system of hard disks. The displacements in the $x$ and $y$ directions are computed separately 
-to give you an idea of the statistical error. Describe the behavior of $r^2(t)$ for very short times 
+<li> Program <tt>HardDisksMD</tt>  computes the mean square displacement r<sup>2</sup>(t) 
+of a system of hard disks. The displacements in the x and y directions are computed separately 
+to give you an idea of the statistical error. Describe the behavior of r<sup>2</sup>(t) for very short times 
 and for long times. </li>
 
 <li> Program <tt>LennardJonesMD</tt> simulates a system of particles interacting with the Lennard-Jones potential. 
 Is the motion of the tagged particle similar to what you observed for hard disks?  </li>
 
-<li> How does $r^2(t)$ for the two systems compare at the same density?</li>
+<li> How does r<sup>2</sup>(t) for the two systems compare at the same density?</li>
 </ol>
   <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+   <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
     
     <li>Problems 1.9, 6.14, 8.16, and 10.2 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -81,7 +62,7 @@ Is the motion of the tagged particle similar to what you observed for hard disks
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 22 August 2020.</p>
 </div>
 
 </body>
