@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>EinsteinSolidEntropy</title>
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -37,52 +36,50 @@ MathJax.Hub.Config({
   
 
 
-<p>The Einsein model consists of $N$ oscillators and $E$ packets of energy 
-which can be distributed among the oscillators in $\Omega$ ways, where
-$$\Omega = \frac{(E+N-1)!}{E! (N-1)!}.$$ 
+<p>The Einsein model consists of N oscillators and E packets of energy 
+which can be distributed among the oscillators in &Omega; ways, where
+&Omega; = (E+N-1)!/[E! (N-1)!]. 
 Each way is  a  <i>microstate</i>. </p>
 
 <p>Program <tt>EinsteinSolidEntropy</tt> considers two systems which can share energy; the number of
 oscillators in each system is fixed. The key idea is to explore the    total entropy 
-$S = k\ln{ \Omega}$  and the inverse temperature $\partial S/\partial E$ for each system at equilibrium. In the program $k = 1$.</p>
+S = k ln &Omega;  and the inverse temperature &part;S/&part;E for each system at equilibrium. 
+In the program k = 1.</p>
 
-<b>Problem: Two Einstein solids in thermal contact</b>
+<h2>Problem: Two Einstein solids in thermal contact</h2>
 
-<p>The
+The
 entropies of two Einstein solids in thermal contact are computed and plotted in 
 Program <tt>EinsteinSolidEntropy</tt>.
 
 <ol type ="a">
 
 <li> Consider
-$N_A = 50$, $N_B = 30$, and total energy $E_{\rm tot} = 200$. Discuss the qualitative
-dependence of $S_A$, $S_B$, and $S_{\rm tot}$ on the energy
-$E_A$. Why is $S_A$ is an increasing function
-of $E_A$ and $S_B$ a decreasing function of
-$E_A$? Given this dependence of $S_A$ and $S_B$ on $E_A$, why does
-$S_{\rm
-tot}$ have a maximum at a particular value of $E_A$?</li>
+N<sub>A</sub> = 50, N<sub>B</sub> = 30, and total energy E<sub>tot</sub> = 200. Discuss the qualitative
+dependence of S<sub>A</sub>, S<sub>B</sub>, and S<sub>tot</sub> on the energy
+E<sub>A</sub>. Why is S<sub>A</sub> is an increasing function
+of E<sub>A</sub> and S<sub>B</sub> a decreasing function of
+E<sub>A</sub>? Given this dependence of S<sub>A</sub> and S<sub>B</sub> on E<sub>A</sub>, why does
+S<sub>tot</sub> have a maximum at a particular value of E<sub>A</sub>?</li>
 
-<li> The values of the inverse of $\partial S_A/\partial E_A$ and $\partial S_B/\partial E_B$ are shown in the 
+<li> The values of the inverse of &part;S<sub>A</sub>/&part;E<sub>A</sub> 
+and &part;S<sub>A</sub>/&part;E<sub>A</sub> are shown in the 
 lower right corner by clicking on the corresponding plots. 
 What is the relation of these values of the inverse of the slopes to the temperature? 
-Determine the value of $E_A$ at which the slopes are equal. 
-What can you say about the total entropy at this value of $E_A$? 
-Consider several values of $N_A$, $N_B \neq N_A$ and $E_{\rm tot}$.</li>
+Determine the value of E<sub>A</sub> at which the slopes are equal. 
+What can you say about the total entropy at this value of E<sub>A</sub>? 
+Consider several values of N<sub>A</sub>, N<sub>B</sub> &ne; N<sub>A</sub> and E<sub>tot</sub>.</li>
 </ol>
 
   <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+<li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-   
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
+    
     
     <li>Problem 4.6 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -91,7 +88,7 @@ Consider several values of $N_A$, $N_B \neq N_A$ and $E_{\rm tot}$.</li>
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

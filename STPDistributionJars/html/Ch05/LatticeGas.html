@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>LatticeGas</title>
-  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -38,27 +37,29 @@ MathJax.Hub.Config({
 
 
 <p>The Ising model is very versatile. In addition to being a model of magnetic systems, it can also be a model of a fluid. 
-The <i>lattice gas</i>  version of the Ising model replaces the spins $s_i = \pm 1$ with occupation numbers $n_i = 0$ or $1$. 
-If there are particles on both neighboring sites, there is an attractive interaction $-u_0$;
+The <i>lattice gas</i>  version of the Ising model replaces the spins s<sub>i</sub> = &plusmn; 1 with 
+occupation numbers n<sub>i</sub> = 0 or 1. 
+If there are particles on both neighboring sites, there is an attractive interaction -u<sub>0</sub>;
 otherwise, the interaction energy is 0. A hard core repulsion typical of fluid particles is maintained by the limitation that 
-$n_i \le 1$.     </p>
+n<sub>i</sub> &le; 1.     </p>
 
-<p> In the lattice gas Monte Carlo simulation we exchange the values of $n_i$ for neighboring sites rather than flipping spins.
+<p> In the lattice gas Monte Carlo simulation we exchange the values of n<sub>i</sub> for neighboring sites rather 
+than flipping spins.
 Thus, the number of particles is conserved, and the chemical potential plays a role analogous the magnetic field. 
 The program also includes a gravitational field which causes particles to sink toward the bottom. In addition to exploring 
 the phase transition in this model, the program can be used to explore quenches from high to low temperatures.   </p>
 
-<b>Problem: Simulation of the lattice gas</b>
+<h2>Problem: Simulation of the lattice gas</h2>
 
 <ol type ="a">
 
 <li>
-What is the value of the critical temperature $T_c$ for the lattice gas in two dimensions in units of $u_0/k$?</li>
+What is the value of the critical temperature T<sub>c</sub> for the lattice gas in two dimensions in units of u<sub>0</sub>/k?</li>
 
 <li>
-Program <tt>LatticeGas</tt> simulates the lattice gas on a square lattice of linear dimension $L$. 
-The initial state has all the particles at the bottom of the simulation cell. Choose $L=32$ and 
-set the gravitational field equal to zero. Do a simulation at $T= 0.4$ with $N= 600$ particles. 
+Program <tt>LatticeGas</tt> simulates the lattice gas on a square lattice of linear dimension L. 
+The initial state has all the particles at the bottom of the simulation cell. Choose L=32 and 
+set the gravitational field equal to zero. Do a simulation at T= 0.4 with N= 600 particles. 
 After a few Monte Carlo steps you should see the bottom region of particles (blue sites) develop a 
 few small holes or bubbles and the unoccupied region contain a few isolated particles or small clusters of 
 particles. This system represents a liquid (the predominately blue region) in equilibrium with its 
@@ -66,8 +67,8 @@ vapor (the mostly yellow region). Record the energy. To speed up the simulation 
  equal to 100.</li>
 
 <li>
-Increase the temperature in steps of 0.05 until $T = 0.7$. At each value of $T$ run for at least $10,000\,$mcs to 
-reach equilibrium and then press the <tt>Zero Averages</tt> button. Run for at least $20,000\,$mcs before recording 
+Increase the temperature in steps of 0.05 until T = 0.7. At each value of T run for at least 10,000 mcs to 
+reach equilibrium and then press the <tt>Zero Averages</tt> button. Run for at least 20,000 mcs before recording 
 your estimate of the energy. Describe the visual appearance of the positions of the particle and empty sites at 
 each temperature. At what temperature does the one large liquid region break up into many pieces, such that 
 there is no longer a sharp distinction between the liquid and vapor region? At this temperature there is a 
@@ -76,19 +77,19 @@ to a one-phase system has occurred? </li>
 
 
 <li>
-Repeat part (b) with $N=512$. In this case the system will pass through a critical point. 
+Repeat part (b) with N=512. In this case the system will pass through a critical point. 
 The change from a one-phase to a two-phase system occurs continuously in the thermodynamic limit. 
 Can you detect this change or does the system look similar to the case in part (b)? </li>
 
 <li>
 If we include a gravitational field, the program removes the periodic boundary conditions in the 
 vertical direction, and thus sites in the top and bottom rows have three neighbors instead of four. 
-The gravitational field should help define the liquid and gas regions. Choose $g =0.01$ and repeat the 
+The gravitational field should help define the liquid and gas regions. Choose g =0.01 and repeat the 
 above simulations. Describe the differences you see.</li>
 
 <li>
-Simulate a lattice gas of $N = 2048$ particles on a $L=64 \times 64$ lattice at $T = 2.0$ with no 
-gravitational field for $5000\,$mcs. Then change the temperature to $T = 0.2$. This process is called 
+Simulate a lattice gas of N = 2048 particles on a L=64 x 64 lattice at T = 2.0 with no 
+gravitational field for 5000 mcs. Then change the temperature to T = 0.2. This process is called 
 a (temperature) quench, and the resulting behavior is called <i>spinodal decomposition</i>. 
 The domains grow very slowly as a function of time. Discuss why it is 
 difficult for the system to reach its equilibrium state for which there is one domain of mostly 
@@ -98,15 +99,12 @@ occupied sites in equilibrium with one domain of mostly unoccupied sites.</li>
    <h2>Resources</h2>
   <ol>
 
- <li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+   <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
+    
     
     <li>Problem 5.24 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -115,7 +113,7 @@ occupied sites in equilibrium with one domain of mostly unoccupied sites.</li>
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

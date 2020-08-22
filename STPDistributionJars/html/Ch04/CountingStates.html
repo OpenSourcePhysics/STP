@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>Counting States</title>
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -37,46 +36,39 @@ MathJax.Hub.Config({
   
 
 
-<p>For a quantum particle in $d$ dimensions (or equivalently $d$ particles in one dimension) each  microstate 
-is represented by a point labeled by $n_1,n_2,\ldots n_d$, where the $n_i$ can each take on any positive integer.  </p>
+<p>For a quantum particle in d dimensions (or equivalently d particles in one dimension) each  microstate 
+is represented by a point labeled by n<sub>1</sub>,n<sub>2</sub>,... n<sub>d</sub>, where the n<sub>i</sub> 
+can each take on any positive integer.  </p>
 
-<p> This program allows us to calculate finite size effects for the number of microstates below a certain energy $E$ 
-by comparing the actual count with the approximate count given in 1d by $\Gamma_1 = R$, in 2d by $\Gamma_2 = \pi R^2/4$ and in 3d by
-$\Gamma_3 = \pi R^3/6$,  where $E = h^2R^2/8mL^2$, 
-$L$ is the length of the infinite well containing the particles, $m$ is the mass 
-of the particle, and $h$ is the Planck constant.  </p>
+<p> This program allows us to calculate finite size effects for the number of microstates below a certain energy E 
+by comparing the actual count with the approximate count given in 1d by &Gamma;<sub>1</sub> = R, 
+in 2d by &Gamma;<sub>2</sub> = &pi; R<sup>2</sup>/4 and in 3d by
+&Gamma;<sub>3</sub> = &pi; R<sup>3</sup>/6,  where E = h<sup>2</sup>R<sup>2</sup>/8mL<sup>2</sup>, 
+L is the length of the infinite well containing the particles, m is the mass 
+of the particle, and h is the Planck constant.  </p>
 
-<b>Problem: Finite-size effects in two dimensions</b>
+<h2>Problem: Finite-size effects in two dimensions</h2>
 
-<p>
-\begin{equation}
-\Gamma(E) = {1 \over 4}\pi\! R^2 = \pi {L^2 \over h^2}
-(2mE).
-\label{eq:4/phipart}
-\end{equation}
+&Gamma;(E) = (1/4)&pi; R<sup>2</sup> = &pi; (L<sup>2</sup>/h<sup>2</sup>)(2mE).&nbsp; &nbsp; &nbsp; (1)
 
-<p>Equation (\ref{eq:4/phipart}) for $\Gamma(E)$ is valid only
-for large $E$ because the area of a quadrant of a circle
-overestimates the number of lattice points $n_x,n_y$ inside a circle
-of radius $R$. Use  Program <tt>CountingStates</tt> to explore how well the relation $\Gamma = \pi\!R^2/4$
+<p>Equation (1) for &Gamma;(E) is valid only
+for large E because the area of a quadrant of a circle
+overestimates the number of lattice points n<sub>x</sub>,n<sub>y</sub> inside a circle
+of radius R. Use  Program <tt>CountingStates</tt> to explore how well the relation &Gamma; = &pi;R<sup>2</sup>/4
 approximates the actual number of microstates. The program computes the number of nonzero, positive integers that satisfy
-the condition $n_x^2 + n_y^2 \leq R^2$.
-What is the minimum value of $R$ for which the difference between
+the condition (n<sub>x</sub>)<sup>2</sup> + (n<sub>y</sub>)<sup>2</sup> &le; R<sup>2</sup>.
+What is the minimum value of R for which the difference between
 the asymptotic relation and the exact number is less than 1%?
 
 
   <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+<li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-    
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
     <li>Problem 4.10 and 4.11 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -85,7 +77,7 @@ the asymptotic relation and the exact number is less than 1%?
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

@@ -4,15 +4,12 @@
     <property name="height" type="int">585</property>
     <property name="divider" type="int">212</property>
     <property name="editor_enabled" type="boolean">true</property>
-    <property name="selected_node" type="string">STP Interactive Programs/Ch 10: Time-Dependent Phomena/Viscosity</property>
+    <property name="selected_node" type="string">STP Interactive Programs/Stat. Mech I/Ch 4: Methodology</property>
     <property name="expanded" type="array" class="[Ljava.util.Collection;">
         <property name="[0]" type="collection" class="java.util.ArrayList">
-            <property name="item" type="string">STP Interactive Programs/Ch 10: Time-Dependent Phomena</property>
-            <property name="item" type="string">STP Interactive Programs/Stat. Mech I/Ch 4: Methodology</property>
-            <property name="item" type="string">STP Interactive Programs/Stat. Mech II</property>
-            <property name="item" type="string">STP Interactive Programs</property>
             <property name="item" type="string">STP Interactive Programs/Stat. Mech I</property>
-            <property name="item" type="string">STP Interactive Programs/Ch 1: Micro to Maco</property>
+            <property name="item" type="string">STP Interactive Programs</property>
+            <property name="item" type="string">STP Interactive Programs/Stat. Mech II</property>
         </property>
     </property>
     <property name="launch_nodes" type="collection" class="java.util.ArrayList">
@@ -249,7 +246,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                         </property>
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Random Walk Continous</property>
+                            <property name="name" type="string">Random Walk Continuous</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch03/RandomWalkContinuous.html</property>
@@ -297,7 +294,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                         </property>
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Montecarlo Estimation</property>
+                            <property name="name" type="string">Monte Carlo Estimation</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch03/MCEstimation.html</property>
@@ -321,6 +318,14 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
                             <property name="name" type="string">Ch 4: Methodology</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch04/Chapter04.html</property>
+                                </property>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
                             <property name="child_nodes" type="collection" class="java.util.ArrayList">
                                 <property name="item" type="object">
                                 <object class="org.opensourcephysics.tools.LaunchNode">

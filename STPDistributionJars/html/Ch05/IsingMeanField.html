@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -38,80 +38,78 @@ MathJax.Hub.Config({
 
 
 <p>The results of   mean-field theory require the numerical solution of the self-consistent equation
-$$m = \tanh \big[(Jqm + H)/kT\big].\label{m}$$
-To understand the solutions it is helpful to also calculate the Helmholtz function (per spin)
-$$f = -kT \ln \bigg[2\cosh \big[(Jqm + H)/kT\big] \bigg]. \label{f}$$    </p>
+<p>&nbsp; &nbsp;m = tanh [(Jqm + H)/kT].  &nbsp; &nbsp; (1)
+<p>To understand the solutions it is helpful to also calculate the Helmholtz function (per spin)
+<p>&nbsp; &nbsp;f = -kT ln[2cosh[(Jqm + H)/kT]]. &nbsp; &nbsp; (2)    </p>
 
-<p> The program plots $m$ versus $m$ and $\tanh \big[(Jqm + H)/kT\big]$ versus $m$ in one window and
-$f$ versus $m$ in another window. From the first window we can pick out the possible equilibrium 
-values of $m$. From the minima of $f(m)$ 
-we can determine the actual equilibrium value(s) of $m$. Units are chosen so that $k = 1$ and $J = 1$. </p>
+<p> The program plots m versus m and tanh[(Jqm + H)/kT] versus m in one window and
+f versus m in another window. From the first window we can pick out the possible equilibrium 
+values of m. From the minima of f(m) 
+we can determine the actual equilibrium value(s) of m. Units are chosen so that k = 1 and J = 1. </p>
 
 
-<b>Problem: Numerical solutions of \eqref{m}</b>
+<h2>Problem: Numerical solutions of  mean field equations</h2>
 
-<p>Program <tt>IsingMeanField</tt> uses Newton's method to find the zeros of the 
-function $g(m) = m - \tanh \beta (Jqm + H)$.
+Program <tt>IsingMeanField</tt> uses Newton's method to find the zeros of the 
+function g(m) = m - tanh &beta;(Jqm + H).
 
 <ol type ="a">
 
 <li>
-Set $H = 0$ and $q=4$ and confirm the mean-field approximation for the critical 
-temperature $T_c$ of the Ising model on a square lattice. Start with $kT/Jq=10$ and 
-then proceed to lower temperatures. The equilibrium value of $m$ is the solution with the 
+Set H = 0 and q=4 and confirm the mean-field approximation for the critical 
+temperature T<sub>c</sub> of the Ising model on a square lattice. Start with kT/Jq=10 and 
+then proceed to lower temperatures. The equilibrium value of m is the solution with the 
 lowest value of the Helmholtz function.</li>
 
-<li> Plot the temperature dependence of $m$ for $T < T_c$.</li>
+<li> Plot the temperature dependence of m for T &lt; T<sub>c</sub>.</li>
 
 <li>
-Determine $m(T)$ for the one-dimensional Ising model ($q=2$) and
-$H =0$ and $H=1$. Compare your values for $m(T)$ with the exact solution in one
+Determine m(T) for the one-dimensional Ising model (q=2) and
+H =0 and H=1. Compare your values for m(T) with the exact solution in one
 dimension.</li>
 
 </ol>
 
-<b>Problem: Minima of the Helmholtz function</b>
-<p>It can be shown that  $f(m)$  near the critical point  can be written as
-\begin{equation}
-\label{eq:5/freemf}
-f(m) = a + b(1-\beta q J)m^2 + cm^4,
-\end{equation}
-where $a$, $b$, and $c$ are positive.
+<h2>Problem: Minima of the Helmholtz function</h2>
+It can be shown that  f(m)  near the critical point  can be written as
+
+
+<p>&nbsp; &nbsp;f(m) = a + b(1-&beta;q J)m<sup>2</sup> + cm<sup>4</sup>,&nbsp; &nbsp; (3)
+
+<p>where a, b, and c are positive.
 
 <ol type ="a">
 
 <li>
-Show that the minimum value of $f$ for $T>T_c$  is at $m=0$, and that $m =\pm m_0$ corresponds to a 
-lower value of $f$ for $T \lt T_c$.</li>
+Show that the minimum value of f for T &gt;T<sub>c</sub>  is at m=0, and that 
+m =&plusmn; m<sub>0</sub> corresponds to a 
+lower value of f for T &lt; T<sub>c</sub>.</li>
 
 <li>
-Use Program <tt>IsingMeanField</tt> to plot $f(m)$ as a function 
-of $m$ for $T>T_c$. For what value of $m$ does $f(m)$ have a minimum? </li>
+Use Program <tt>IsingMeanField</tt> to plot f(m) as a function 
+of m for T&gt;T<sub>c</sub>. For what value of m does f(m) have a minimum? </li>
 
 <li>
-Plot $f(m)$ for $T=1$. Where are the minima of $f(m)$? Do they have the same depth? If so, what is the 
+Plot f(m) for T=1. Where are the minima of f(m)? Do they have the same depth? If so, what is the 
 meaning of this result?</li>
 
 <li>
-If $H$ is nonzero but small,   there is an additional term $-mH$ in \eqref{eq:5/freemf}.
-Choose $T=1$ and $H=0.5$. Do the two minima have the same depth? The global minimum of $f$ 
-corresponds to the stable phase. If we quickly &#8220;flip&#8221; the field and let $H \to -0.5$, 
-the minimum at $m \approx 1$ will become a local minimum. The system will remain in this 
+If H is nonzero but small, there is an additional term -mH in Eq. (3).
+Choose T=1 and H=0.5. Do the two minima have the same depth? The global minimum of f 
+corresponds to the stable phase. If we quickly &#8220;flip&#8221; the field and let H go to -0.5, 
+the minimum at m &asymp; 1 will become a local minimum. The system will remain in this 
 local minimum for some time before it switches to the global minimum. </li>
 
 </ol>
    <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+  <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
     
     <li>Problem 5.15 and 5.17 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -120,7 +118,7 @@ local minimum for some time before it switches to the global minimum. </li>
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

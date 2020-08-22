@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>IsingNumberOfStates</title>
-  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -38,25 +37,27 @@ MathJax.Hub.Config({
 
 
 <p>Program <tt>IsingNumberOfStates</tt> uses the Wang-Landau Monte Carlo algorithm to estimate the 
-number of microstates $\Omega(E)$ for each value of $E$ of the 2d Ising model on a square lattice. Once $\Omega(E)$ is known from one simulation  averages 
+number of microstates &Omega;(E) for each value of E of the 2d Ising model on a square lattice. Once &Omega;(E) is 
+known from one simulation  averages 
 such as the mean energy can be found at any temperature using
-$$\overline{E} = \sum_E EP(E) = \frac{\sum_E E\Omega(E)e^{-E/kT}}{\sum_E\Omega(E)e^{-E/kT}}. $$  The program also calculates the specific heat as a function of temperature from a single simulation.  </p>
+&lt;E&gt; = &Sigma;<sub>E</sub> EP(E) = &Sigma;<sub>E</sub> E&Omega;(E)e<sup>-E/kT</sup> / &Sigma;<sub>E</sub>&Omega;(E)e<sup>-E/kT</sup>.   
+The program also calculates the specific heat as a function of temperature from a single simulation.  </p>
 
-<b>Problem: Wang-Landau algorithm for the Ising model</b>
+<h2>Problem: Wang-Landau algorithm for the Ising model</h2>
 
 <p>Program <tt>IsingNumberOfStates</tt> implements the Wang-Landau algorithm for the Ising model on a square lattice.
 
 <ol type ="a">
 
 <li>
-Calculate the exact values of $\Omega(E)$ for the $2 \times 2$ Ising model. Run the simulation for $L = 2$ and
+Calculate the exact values of &Omega;(E) for the 2 x 2 Ising model. Run the simulation for L = 2 and
  verify that the computed number of states is close to your exact answer.</li>
 
 <li>
-Choose larger values of $L$, for example, $L = 16$, and describe the qualitative energy dependence of $\Omega(E)$.</li>
+Choose larger values of L, for example, L = 16, and describe the qualitative energy dependence of &Omega;(E).</li>
 
 <li>
-The program computes the specific heat as a function of temperature using the estimated value of $\Omega(E)$. 
+The program computes the specific heat as a function of temperature using the estimated value of &Omega;(E). 
 Describe the qualitative temperature dependence of the specific heat.</li>
 
 </ol>
@@ -65,14 +66,12 @@ Describe the qualitative temperature dependence of the specific heat.</li>
    <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+  <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
+    
     
     <li>Problem 5.20 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -81,7 +80,7 @@ Describe the qualitative temperature dependence of the specific heat.</li>
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

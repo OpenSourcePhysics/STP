@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>Ising2d</title>
-  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -37,160 +36,177 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>Ising2d</tt> simulates $N$ Ising model spins  on a $L \times L$ square 
+<p>Program <tt>Ising2d</tt> simulates N Ising model spins  on a L x L square 
 lattice with periodic boundary conditions. 
 The Metropolis Monte Carlo algorithm is used.      </p>
 
-<p> The goal of this simulation is to explore the properties of the 2d Ising model, including high and low temperature
+<p> The goal of this simulation is to explore the properties of the 2d Ising model, including 
+high and low temperature
 behavior and the nature of the phase transition between a ferromagnetic state at 
 low temperatures and a paramagnetic state at high temperatures. </p>
 
-<b>Problem: Simulation of the two-dimensional Ising model</b>
+<h2>Problem: Simulation of the two-dimensional Ising model</h2>
 
-<p>Use Program <tt>Ising2d</tt> to explore some of the properties of the two-dimensional 
-Ising model on a square lattice at a given temperature $T$ and external magnetic field $H$. First choose
-$N=L^2 = 32^2$ and set
-$H=0$. The initial
+Use Program <tt>Ising2d</tt> to explore some of the properties of the two-dimensional 
+Ising model on a square lattice at a given temperature T and external magnetic field H. First choose
+N=L<sup>2</sup> = 32<sup>2</sup> and set
+H=0. The initial
 orientation of the spins is all spins up.
 
 <ol type ="a">
 
 <li>
-Choose $T = 10$ and run until equilibrium has been established. Is the orientation of
+Choose T = 10 and run until equilibrium has been established. Is the orientation of
 the spins random and the mean magnetization approximately equal to
 zero? What is a typical size of a domain, a region of parallel
 spins?</li>
 
 
 <li>
-Choose a low temperature such as $T = 0.5$. Are the spins still random or is there a preferred direction? You will notice that $\overline{M} \approx 0$ for sufficient high $T$ and $\overline{M} \neq 0$ for sufficiently low $T$.
-Hence, there is an intermediate value of $T$ at which $\overline{M}$ first becomes nonzero.</li>
+Choose a low temperature such as T = 0.5. Are the spins still random or is there a preferred direction? 
+You will notice that &lt;M&gt; &asymp; 0 for sufficient high T and &lt;M&gt; &ne; 0 for sufficiently low T.
+Hence, there is an intermediate value of T at which &lt;M&gt; first becomes nonzero.</li>
 
 
 <li>
-Choose $L=4$ and $T=2.0$. Does the sign of $M$
-change during the simulation? Choose a larger value of $L$ and
-observe if the sign of $M$ changes. Will the sign of $M$ change for $L \gg 1$? 
-Should a theoretical calculation of $\langle M\rangle$ yield $\langle M \rangle \neq 0$ or $\langle M \rangle = 0$ for $T < T_c$?
+Choose L=4 and T=2.0. Does the sign of M
+change during the simulation? Choose a larger value of L and
+observe if the sign of M changes. Will the sign of M change for L &#8811; 1? 
+Should a theoretical calculation of &lt;M&gt; yield &lt;M&gt; &ne; 0 or &lt;M&gt; = 0 for T &lt; T<sub>c</sub>?
 </li>
 
 <li>
-Start at $T=4$ and determine the temperature dependence of $m$, the zero-field susceptibility $\chi$, 
-the mean energy per spin $E/N$, and the specific heat $C$. Decrease the temperature in intervals of 0.2 
-until $T \approx 1.6$, equilibrating for at least 1000\,mcs before collecting data at each value of $T$. 
+Start at T=4 and determine the temperature dependence of m, the zero-field susceptibility &chi;, 
+the mean energy per spin E/N, and the specific heat C. Decrease the temperature in intervals of 0.2 
+until T &asymp; 1.6, equilibrating for at least 1000 mcs before collecting data at each value of T. 
 Describe the qualitative temperature dependence of these quantities. (When the simulation is stopped, 
 the mean magnetization and the mean of the absolute value of the magnetization is returned.) 
-Because $M$ sometimes changes sign for small systems, the value of $\langle |m| \rangle$ is a more accurate 
+Because M sometimes changes sign for small systems, the value of &lt;|M|&gt; is a more accurate 
 representation of the magnetization. For this reason the susceptibility is given by
-\begin{equation}
-\chi = \frac{1}{kT}\big[\langle M^2\rangle -\langle|M|\rangle^2\big],
-\label{eq:5/chiabs}
-\end{equation}
-rather than by using $\langle M \rangle$.</li>
+
+<p>&nbsp; &nbsp; &chi; = (1/kT)[&lt;M<sup>2</sup>&gt; -&lt;|M|&gt;<sup>2</sup>], &nbsp; &nbsp; (1)
+
+<p>rather than by using &lt;M&gt;.</li>
 
 
 <li>
-Set $T = T_c \approx 2.269$ and choose $L \geq 128$. Obtain $\langle m \rangle$ for $H = 0.01$, 0.02, 0.04, 0.08, and 0.16. 
-Make sure you equilibrate the system at each value of $H$ before collecting data. Make a log-log plot of $m$ 
-versus $H$ and estimate the critical exponent $\delta$ using  
-\begin{equation}
-|m| \sim |H|^{1/\delta} \qquad (T = T_c).
-\label{eq:5/delta}
-\end{equation}  </li>
+Set T = T<sub>c</sub> &asymp; 2.269 and choose L &ge; 128. Obtain &lt;M&gt; for H = 0.01, 0.02, 0.04, 0.08, and 0.16. 
+Make sure you equilibrate the system at each value of H before collecting data. Make a log-log plot of m 
+versus H and estimate the critical exponent &delta; using  
+
+<p>&nbsp; &nbsp;&lt;|M|&gt; \sim &lt;H&gt;<sup>1/&delta;</sup> &nbsp; &nbsp; (T = T<sub>c</sub>). &nbsp; &nbsp; (2)
+
 
 </ol>
 
-<b>Problem: Simulations of metastability</b>
+<h2>Problem: The Ising model in an external magnetic field</h2>
+
+<p>Use Program
+<tt>Ising2d</tt>  to simulate the
+Ising model on a square lattice at a given temperature. Choose
+N=L<sup>2</sup>=32<sup>2</sup>. Run for at least 200 Monte Carlo steps per spin at each value of the field.
 
 <ol type ="a">
 
 <li>
-Use Program <tt>Ising2d</tt> to simulate the Ising model in a magnetic field. Choose $L=64$, $T=1$, and $H=0.7$. 
+Set H=0.2 and T = 3 and estimate the approximate value of the magnetization. Then change the field to H = 0.1 and continue updating the spins (do not press <tt>New</tt>) so that the simulation is continued from the last microstate. Note the value of m. Continue this procedure with H=0, then H = -0.1 and then H=-0.2. Do your values of m change abruptly as you change the field?
+Is there any indication of a phase transition as you change H?</li> 
+
+<li>
+Repeat the same procedure as in part (a) at T = 1.8 which is below the critical temperature. What happens now? Is there evidence of a sudden change in m as you change the direction of the field?</li>
+
+</ol>
+
+
+<h2>Problem: Simulations of metastability</h2>
+
+<ol type ="a">
+
+<li>
+Use Program <tt>Ising2d</tt> to simulate the Ising model in a magnetic field. Choose L=64, T=1, and H=0.7. 
 Run until the system reaches equilibrium. You will notice that most of the spins are aligned with the magnetic field.</li>
 
 
 <li>
-Pause the simulation and let $H=-0.7$; we say that we have &#8220;flipped&#8221; the field. 
+Pause the simulation and let H=-0.7; we say that we have &#8220;flipped&#8221; the field. 
 Continue the simulation after the flip of the field and watch the spins. What is the equilibrium 
 state of the system after the flip of the field? Do the spins align themselves with the magnetic field 
-immediately after the flip? Monitor $m$ as a function of time. Is there a time interval  
-during which the mean value of $m$ does not change appreciably? At what time does $m$ change sign? 
-Is the time when $m$ becomes negative the same each time you do the simulation? 
+immediately after the flip? Monitor m as a function of time. Is there a time interval  
+during which the mean value of m does not change appreciably? At what time does m change sign? 
+Is the time when m becomes negative the same each time you do the simulation? 
 (The program uses a different random number seed each time it is run.) </li>
 
 <li>
-Keep the temperature fixed at $T=1$, set $H = 0.6$, and flip the field as in part (b). How does the time that
- $m$ changes sign compare to the mean time for $|H|=0.7$?</li> 
+Keep the temperature fixed at T=1, set H = 0.6, and flip the field as in part (b). How does the time that
+ m changes sign compare to the mean time for |H|=0.7?</li> 
 </ol>
 
 
-<b>Problem: Finite-size scaling and critical exponents</b>
+<h2>Problem: Finite-size scaling and critical exponents</h2>
 
-<p>
-We expect that if the correlation length $\xi(T)$ is less than 
-the linear dimension $L$ of the system, our simulations will yield results comparable to an infinite system. 
-However, for $T$ close to $T_c$, the results of simulations will be limited by finite-size effects. 
+
+We expect that if the correlation length &xi;(T) is less than 
+the linear dimension L of the system, our simulations will yield results comparable to an infinite system. 
+However, for T close to T<sub>c</sub>, the results of simulations will be limited by finite-size effects. 
 Because we can only simulate finite systems, it is difficult to obtain estimates for the critical 
-exponents $\alpha$, $\beta$, and $\gamma$ by varying the temperature.</p>
+exponents &alpha;, &beta;, and &gamma; by varying the temperature.</p>
 
 <p>The effects of finite system size can be made quantitative by the following argument, which assumes 
 that the only important length near the critical point is the correlation length.  Consider, for example, 
-the critical behavior of $\chi$. If the correlation length $\xi \gg 1$, (all lengths are measured 
-in terms of the lattice spacing) but is much less than $L$, a power law behavior  
-is expected to hold. However, if $\xi$ is comparable to $L$, $\xi$ cannot change appreciably 
+the critical behavior of &chi;. If the correlation length &xi; &#8811; 1, (all lengths are measured 
+in terms of the lattice spacing) but is much less than L, a power law behavior  
+is expected to hold. However, if &xi; is comparable to L, &xi; cannot change appreciably 
 and 
-\begin{equation}\chi \sim |\epsilon|^{-\gamma}\label{eq:5/gamma}
-\end{equation} 
-is no longer applicable. This qualitative change in the behavior of $\chi$ and other physical quantities occurs 
-for
-\begin{equation}
-\xi \sim L \sim |T - T_c|^{-\nu}.\label{eq:5/lenscale}
-\end{equation}
-We invert (\ref{eq:5/lenscale}) and write
-\begin{equation}
-|T - T_c| \sim L^{-1/\nu}. \label{eq:5/distance}
-\end{equation}
+<p>&nbsp; &nbsp;&chi; &#8765; |&epsilon;|<sup>-&gamma;</sup>  &nbsp;  &nbsp; (3)
 
-If $\xi$ and $L$ are approximately the same size, we can substitute \eqref{eq:5/distance} into \eqref{eq:5/gamma} 
+<p>is no longer applicable. This qualitative change in the behavior of &chi; and other physical quantities occurs 
+for
+
+<p>&nbsp; &nbsp;&xi; &#8765; L &#8765;|T - T<sub>c</sub>|<sup>-&nu;</sup>. &nbsp; &nbsp; (4)
+
+<p>We invert Eq. (4) and write
+
+<p>&nbsp; &nbsp;&nbsp; &nbsp;|T - T<sub>c</sub>| &#8765; L<sup>-1/&nu;</sup>. &nbsp; &nbsp; (5)
+
+
+<p>If &xi; and L are approximately the same size, we can substitute Eq. (5)  into Eq. (3) 
 to obtain
-\begin{equation}
-\chi(T=T_c) \sim [L^{-1/\nu}]^{-\gamma} \sim L^{\gamma/\nu}.
-\label{eq:5/finitechi}
-\end{equation}
-The relation (\ref{eq:5/finitechi}) between $\chi$ and $L$ at $T=T_c$ is consistent with the fact that a 
-phase transition is defined only for infinite systems. We can use the relation (\ref{eq:5/finitechi}) 
-to determine the ratio $\gamma/\nu$. This method of analysis is known as <i>finite-size scaling</i>. 
+
+<p>&nbsp; &nbsp;&chi;(T=T<sub>c</sub>) &#8765; [L<sup>-1/&nu;</sup>]<sup>-&gamma;</sup> &#8765; L<sup>&gamma;/&nu;</sup>. &nbsp; &nbsp; (6)
+
+
+<p>The relation Eq. (6) between &chi; and L at T=T<sub>c</sub> is consistent with the fact that a 
+phase transition is defined only for infinite systems. We can use the relation Eq. (6) 
+to determine the ratio &gamma;/&nu;. This method of analysis is known as <i>finite-size scaling</i>. 
 
 <ol type ="a">
 
 <li>
-Use Program <tt>Ising2d</tt> to estimate $\chi$ at $T=T_c$ for different values of $L$. 
-Make a log-log plot of $\chi$ versus $L$ and use the scaling relation
-\eqref{eq:5/finitechi} to determine the ratio
-$\gamma/\nu$. Use the exact result
-$\nu=1$ to estimate $\gamma$. Then use the same reasoning to determine the exponent $\beta$ and 
-compare your estimates for $\beta$ and $\gamma$ with the exact values $\beta = 1/8$ and $\gamma = 7/4$. </li>
+Use Program <tt>Ising2d</tt> to estimate &chi; at T=T<sub>c</sub> for different values of L. 
+Make a log-log plot of &chi; versus L and use the scaling relation
+Eq. (6) to determine the ratio
+&gamma;/&nu;. Use the exact result
+&nu;=1 to estimate &gamma;. Then use the same reasoning to determine the exponent &beta; and 
+compare your estimates for &beta; and &gamma; with the exact values &beta; = 1/8 and &gamma; = 7/4. </li>
 
 <li>
-Make a log-log plot of $C$ versus $L$. If your data for $C$ are sufficiently accurate, you will find that the log-log plot of $C$ versus $L$ is not a straight line but shows curvature. The reason
-is that the exponent $\alpha$  equals zero for the two-dimensional Ising model, 
-and $C \sim C_0 \ln L$. Is your data for $C$ consistent with this form? The constant
-$C_0$ is approximately 0.4995.</li>
+Make a log-log plot of C versus L. If your data for C are sufficiently accurate, 
+you will find that the log-log plot of C versus L is not a straight line but shows curvature. The reason
+is that the exponent &alpha;  equals zero for the two-dimensional Ising model, 
+and C &#8765; C<sub>0</sub> ln L. Is your data for C consistent with this form? The constant
+C<sub>0</sub> is approximately 0.4995.</li>
 </ol>
 
 
    <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+  <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
     
     <li>Problems 5.14, 5.19, 5.22 and 5.38 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -199,7 +215,7 @@ $C_0$ is approximately 0.4995.</li>
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

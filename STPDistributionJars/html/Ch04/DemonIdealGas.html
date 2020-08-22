@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title> DemonIdealGas</title>
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -37,8 +36,10 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt> DemonIdeaGas</tt> model an ideal thermometer,   called the <i>demon</i>. The demon is in thermal equilibrium 
-with the system of interest, an ideal gas. The energy of the demon is its only property. The demon measures randomly chooses a particle and attempts to change its velocity. If the change decreases 
+<p>Program <tt> DemonIdeaGas</tt> model an ideal thermometer,   called the <i>demon</i>. 
+The demon is in thermal equilibrium 
+with the system of interest, an ideal gas. The energy of the demon is its only property. 
+The demon measures randomly chooses a particle and attempts to change its velocity. If the change decreases 
 the energy,
  the change is accepted and the lost energy goes to the demon. If the velocity change increases the energy, 
  this change is  accepted only
@@ -47,53 +48,55 @@ if the demon has enough energy to give to cover the increase in energy of the sy
 <p> The goal of this simulation is to explore how the demon's mean energy 
 and probability distribution are related to the temperature. </p>
 
-<b>Problem: The demon and an ideal classical gas</b>
+<h2>Problem: The demon and an ideal classical gas</h2>
 
-<p>Consider a demon that exchanges energy with an ideal classical gas
+Consider a demon that exchanges energy with an ideal classical gas
 of
-$N$ identical particles of mass $m=1$ in $d$ dimensions. Because the
+N identical particles of mass m=1 in d dimensions. Because the
 energy of a particle in an ideal gas depends only on its speed, the positions
 of the particles are irrelevant. In Program <tt>DemonIdealGas</tt> 
 the demon chooses a
-particle $i$ at random and changes a random component $k$ of the particle's velocity by an amount
-$\delta$ chosen at random between
-$-\delta_{\max}$ and
-$\delta_{\max}$. The parameter
-$\delta_{\max}$ is arbitrary. The change in energy of the system is
-$\Delta E = {1 \over 2}[(v_{i,k} + \delta)^2 - v_{i,k}^2]$. For simplicity, the program assigns each particle the same initial
-velocity ${\vec v}$ in the $x$-direction; $|{\vec v}|$ is chosen so that the initial energy of the system is $E$. 
+particle i at random and changes a random component k of the particle's velocity by an amount
+&delta; chosen at random between
+-&delta;<sub>max</sub> and
+&delta;<sub>max</sub>. The parameter
+&delta;<sub>max</sub> is arbitrary. The change in energy of the system is
+&delta; E = (1/2)[(v<sub>i,k</sub> + &delta;)<sup>2</sup> - (v<sub>i,k</sub>)<sup>2</sup>]. For simplicity, 
+the program assigns each particle the same initial
+velocity in the x-direction; the initial speed is chosen so that the initial energy of the system is E. 
 The initial demon energy is equal to zero.
 
 <ol type ="a">
 
  
 <li> Before you do the simulation, 
-sketch the energy dependence of the probability $p(E_d)\Delta E_d$ that the demon has 
-an energy between $E_d$ and $E_d + \Delta E_d$. Is $p(E_d)$ an increasing or decreasing function of $E_d$ 
-or does it have a maximum at some value of $E_d$? </li> 
+sketch the energy dependence of the probability p(E<sub>d</sub>)&delta; E<sub>d</sub> that the demon has 
+an energy between E<sub>d</sub> and E<sub>d</sub> + &delta; E<sub>d</sub>. Is p(E<sub>d</sub>) an increasing or 
+decreasing function of E<sub>d</sub> 
+or does it have a maximum at some value of E<sub>d</sub>? </li> 
 
-<li> Choose $d=3$ and $N=
-40$ and $E=40$ so that $E/N=1$. Determine $\overline{E_{d}}$, the mean energy of the demon, and $\overline{E}/N$, the mean energy per particle of the system after the demon and the
-system have reached equilibrium. Then choose other combinations of $N$ and $E$ and
- determine the relation between $\overline{E_{d}}$ and $\overline{E}/N$.</li> 
+<li> Choose d=3 and N=
+40 and E=40 so that E/N=1. Determine &lt;E<sub>d</sub>&gt;, the mean energy of the demon, and &lt;E&gt;/N, the mean energy per particle of the system after the demon and the
+system have reached equilibrium. Then choose other combinations of N and E and
+ determine the relation between &lt;E<sub>d</sub>&gt; and &lt;E&gt;/N.</li> 
 
-<li>  The mean energy of an ideal classical gas in three dimensions is equal to $3NkT/2$, 
-where $T$ is the temperature of the gas. Use this relation and the values of $\overline{E}/N$ that 
+<li>  The mean energy of an ideal classical gas in three dimensions is equal to 3NkT/2, 
+where T is the temperature of the gas. Use this relation and the values of &lt;E&gt;/N that 
 you found in part (a) to estimate the temperature of the gas. 
-What is the relation of the value of $T$ that you found in this way to $\overline{E_{d}}$? 
-(Use units such that $k=1$.)</li> 
+What is the relation of the value of T that you found in this way to &lt;E<sub>d</sub>&gt;? 
+(Use units such that k=1.)</li> 
 
 <li>  Run for a sufficient number of trials so that the form of
-$p(E_{d})$ is well defined. Is the form of $p(E_{d})$ consistent with an exponential? 
-Fit your results for $\ln p(E_{\rm d})$ to the form $-\beta E_{\rm d} + {\rm constant}$, where $\beta$ is a parameter. 
-Compare your results for the value of $T$ that you found in part (c) 
-with the value of $1/\beta$. How do the values of $T$ and the slope compare?</li> 
+p(E<sub>d</sub>) is well defined. Is the form of p(E<sub>d</sub>) consistent with an exponential? 
+Fit your results for ln p(E<sub>d</sub>) to the form -&beta; E<sub>d</sub> +  constant, where &beta; is a parameter. 
+Compare your results for the value of T that you found in part (c) 
+with the value of 1/&beta;. How do the values of T and the slope compare?</li> 
 
 
 <li> How do your results change for an ideal
 gas in two dimensions?</li> 
 
-<li>  What is the relation of $p(E_{d})$ to the Boltzmann distribution? What properties of the 
+<li>  What is the relation of p(E<sub>d</sub>) to the Boltzmann distribution? What properties of the 
 demon make it an ideal thermometer?</li> 
 
 <li>  Compare the initial velocity of the particles in the system to their mean value after
@@ -105,15 +108,12 @@ velocities in equilibrium? </li>
    <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+<li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
     
     <li>Problems 1.7 and 4.29 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -122,7 +122,7 @@ velocities in equilibrium? </li>
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

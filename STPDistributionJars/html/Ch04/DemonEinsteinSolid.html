@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>DemonEinsteinSolid</title>
-  <link rel="stylesheet" type="text/css" href="../swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -37,12 +36,14 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>DemonEinsteinSolid</tt>  models an ideal thermometer,   called the <i>demon</i>. The demon is in thermal equilibrium 
-with  a system of $N$ oscillators called an Einstein solid. The energy of each oscillator is restricted to an integer and is $\geq 0$. The energy of the demon is its only property, and thus the 
+<p>Program <tt>DemonEinsteinSolid</tt>  models an ideal thermometer,   called the <i>demon</i>. The demon is in thermal 
+equilibrium 
+with  a system of N oscillators called an Einstein solid. The energy of each oscillator is restricted 
+to an integer and is greater than or equal to  0. The energy of the demon is its only property, and thus the 
 energy of the demon is a label for a  microstate of the demon.</p>
 
 <p>The demon   
-randomly visits an oscillator and randomly attempts to increase or decrease its energy by $\pm 1$. 
+randomly visits an oscillator and randomly attempts to increase or decrease its energy by &plusmn; 1. 
 If the change decreases 
 the energy,
  the change is accepted and the lost energy goes to the demon. If the change increases the energy, 
@@ -55,51 +56,50 @@ for an Einstein solid. The key idea is that the demon acts as a system in therma
 Einstein oscillators, and
 thus the energy distribution of the demon follows a Boltzmann distribution.</p>
 
-<b>Problem: The demon and the Einstein solid</b>
+<h2>Problem: The demon and the Einstein solid</h2>
 
-<p>Consider a demon that exchanges energy with an Einstein solid of
-$N$ particles. The demon selects a particle at random and randomly changes its energy
-by $\pm 1$ consistent with the constraint that $E_{d}
-\geq 0$. In this case the energy of a particle in the system also must 
+Consider a demon that exchanges energy with an Einstein solid of
+N particles. The demon selects a particle at random and randomly changes its energy
+by &plusmn; 1 consistent with the constraint that E<sub>d</sub>
+&ge; 0. In this case the energy of a particle in the system also must 
 remain nonnegative. Why? 
 Use Program <tt>DemonEinsteinSolid</tt>  to do the simulations.
 
 <ol type ="a">
 
 <li> Choose
-$N=40$ and various value of $E \geq 200$. What is the mean energy of the demon after
+N=40 and various value of E &ge; 200. What is the mean energy of the demon after
 equilibrium between the demon and the system has been established? 
-Plot $\overline{E}/N$ versus $\overline{E_{d}}$. Is the value of $\overline{E}/N$ 
-proportional to  $\overline{E_{d}}$ as it is for an ideal gas?</li> 
+Plot &lt;E&gt;/N versus &lt;E<sub>d</sub>&gt;. Is the value of &lt;E&gt;/N 
+proportional to  &lt;E<sub>d</sub>&gt; as it is for an ideal gas?</li> 
 
 <li> Compute the probability
-$P(E_{\rm d})$ for various values of $E$ and $N$ and determine $-\beta$, the slope of $\ln P(E_{\rm d})$. 
-How is $1/\beta$ related to $\overline{E_d}$?</li> 
+P(E<sub>d</sub>) for various values of E and N and determine -&beta; the slope of ln P(E<sub>d</sub>). 
+How is 1/&beta; related to &lt;E<sub>d</sub>&gt;?</li> 
 
-<li> Why is the slope of $\ln{P(E_d)}$ independent of $E/N$?</li> 
+<li> Why is the slope of ln P(E<sub>d</sub>) independent of E/N?</li> 
 
 <li> Suppose that the demon can transfer energy to and from the system easily so that most of its trial 
-changes are accepted. What can you conclude about the slope of $\ln{P(E_d)}$ versus $E_d$ in this case? 
+changes are accepted. What can you conclude about the slope of ln P(E<sub>d</sub>) versus E<sub>d</sub> in this case? 
 Is the temperature high or low? What can you conclude about the slope if the temperature is such that 
 few trial changes are accepted?</li> 
 
 
 <li> Explain why the demon's mean energy is
 given by
-\begin{equation}
-\label{eq:4/edbar}
-\overline{E_{d}} = \frac{\sum_{n=0}^\infty n e^{-\beta n} }{\sum_{n=0}^\infty e^{-\beta n}}.
-\end{equation}
-Why is the energy of the demon restricted to
+
+<p>&lt;E<sub>d</sub>&gt; = [&Sigma<sub>n</sub> n e<sup>-&beta; n</sup>]/[&Sigma<sub>n</sub> n e<sup>-&beta; n</sup>]. &nbsp; &nbsp; (1)
+
+<p>Why is the energy of the demon restricted to
 integer values?</li> 
 
-<li> Do the sums in (\ref{eq:4/edbar}) to determine
+<li> Do the sums in Eq. (1) to determine
 the temperature dependence of
-$\overline{E_{d}}$. It is only necessary to directly evaluate the sum in the 
-denominator of \eqref{eq:4/edbar}. 
+&lt;E<sub>d</sub>&gt;. It is only necessary to directly evaluate the sum in the 
+denominator of Eq. (1). 
 The numerator can be determined by an appropriate derivative of the result for the denominator.</li> 
 
-<li> Why is the temperature dependence of $\overline{E_{d}}$
+<li> Why is the temperature dependence of &lt;E<sub>d</sub>&gt;
 different for an ideal gas and an
 Einstein solid? </li> 
 
@@ -108,13 +108,12 @@ Einstein solid? </li>
    <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+<li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
+    
     
     <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
     <li>Problem 4.31 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 

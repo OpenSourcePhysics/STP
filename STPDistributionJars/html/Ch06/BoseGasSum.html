@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>BoseGasSum</title>
-  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -39,85 +38,96 @@ MathJax.Hub.Config({
 
 <p>To explicitly include indistinguishability of bosons we use the grad canonical ensemble and treat each single
 particle state as a system in equilibrium with a reservoir of all the other single 
-particle states at a temperature $T$ and chemical potential $\mu$. The number of bosons and energy are given by
-$$N = \sum_{\epsilon_{\bf n}} \overline{n}(\epsilon_{\bf n}),$$
-$$E = \sum_{\epsilon_{\bf n}} \epsilon_{\bf n}\overline{n}(\epsilon_{\bf n}), $$
-$$\overline{n}(\epsilon_{\bf n}) 
-= \frac{1}{e^{(\epsilon_{{\bf n}} -\mu)/kT} - 1}$$
-where $\epsilon_{\bf n}$ is a single particle energy, and $\overline{n}(\epsilon_{\bf n})$  is the mean number of bosons in a single 
-particle microstate state of energy $\epsilon_{\bf n} = A(n_x^2 + n_y^2+n_z^2)$. The integers $n_x$, $n_y$, and $n_z$ 
-can take on any positive nonzero value and $A$ is a constant that depends on the mass of the boson and the volume of the system.</p>
+particle states at a temperature T and chemical potential &mu;. The number of bosons and energy are given by
+<p>&nbsp; &nbsp;N = &Sigma; &lt;n(&epsilon;<sub><b>n</b></sub>)&gt;,&nbsp; &nbsp; (1)
+<p>&nbsp; &nbsp;E = &Sigma; &epsilon;<sub><b>n</b></sub>&lt;n(&epsilon;<sub><b>n</b></sub>)&gt;, &nbsp; &nbsp;  (2)
+<p>where the sums are over the single particle states &epsilon;<sub><b>n</b></sub>, and   
+<p>&nbsp; &nbsp;  &lt;n(&epsilon;<sub><b>n</b></sub>)&gt; 
+= 1/[exp(&epsilon;<sub><b>n</b></sub> -&mu;)/kT) - 1]  &nbsp; &nbsp;  (3) 
+<p>where &lt;n(&epsilon;<sub><b>n</b></sub>)&gt;  is the mean number of bosons in a single 
+particle microstate state of energy &epsilon;<sub><b>n</b></sub> = A[(n<sub>x</sub>)<sup>2</sup> 
++ (n<sub>y</sub>)<sup>2</sup>+(n<sub>z</sub>)<sup>2</sup>]. 
+The integers n<sub>x</sub>, n<sub>y</sub>, and n<sub>z</sub> 
+can take on any positive nonzero value and A is a constant that depends on the mass of the boson and the volume of the system.</p>
 
-<p> For a given value of $N$ and each value of $T$ the program numerically determines the value of $\mu$ that satisfies Eq. (1), 
+<p> For a given value of N and each value of T the program numerically determines the value of &mu; that satisfies Eq. (1), 
 and then uses Eq. (2) 
-to find the energy and the specific heat $c = (1/N)\Delta E/\Delta T$ as a function of $T$.  </p>
+to find the energy and the specific heat c = (1/N)&Delta;E/&Delta;T as a function of T.  </p>
 
-<b>Problem: The ideal Bose gas for a finite number of particles</b>
+<h2>Problem: The ideal Bose gas for a finite number of particles</h2>
 
-<p>Our discussion of Bose condensation has involved some subtle issues associated with the chemical potential 
+Our discussion of Bose condensation has involved some subtle issues associated with the chemical potential 
 and the limit of an infinite system. It is instructive to consider the ideal Bose gas 
 for a finite number of particles and see how Bose condensation arises as the number of particles is increased.
 (This problem is based on a paper by Price and Swendsen.) 
 The idea is to start with the expressions for a finite system
-\begin{align}
-N(T, \mu) & = \sum_{\vec n} \frac{1}{e^{\beta (\epsilon_{\vec n}-\mu)} - 1} \label{eq:6/Nsum}\\
-E(T, \mu) & = \sum_{\vec n} \epsilon_{\vec n} \frac{1}{e^{\beta (\epsilon_{\vec n}-\mu)} - 1},
-\end{align}
-and do the sums over $\vec n = (n_x, n_y, n_z)$. We write $\epsilon_{\vec n} = A (n_x^2 + n_y^2 + n_z^2)$, 
-where $A = \hbar^2 \pi^2 /2mL^2$. For simplicity, choose units such that $A=1$.
+
+<p>&nbsp; &nbsp;N(T, &mu;)  = &Sigma;<sub><b>n</b></sub> 1/[exp(&beta;(&epsilon;<sub><b>n</b></sub>-&mu;)) - 1] &nbsp; &nbsp; (4)
+<p>&nbsp; &nbsp;E(T, &mu;)  = &Sigma;<sub><b>n</b></sub> &epsilon;<sub><b>n</b></sub> 1/[exp({&beta;(&epsilon;<sub><b>n</b></sub>-&mu;)) - 1], &nbsp; &nbsp; (5)
+
+<p>and do the sums over <b>n</b> = (n<sub>x</sub>, n<sub>y</sub>, n<sub>z</sub>). We write &epsilon;<sub><b>n</b></sub> = 
+A[(n<sub>x</sub>)<sup>2</sup> 
++ (n<sub>y</sub>)<sup>2</sup>+(n<sub>z</sub>)<sup>2</sup>], 
+where A = (h/2&pi;)<sup>2</sup> &pi;<sup>2</sup> /2mL<sup>2</sup>. For simplicity, choose units such that A=1.
 
 <ol type ="a">
 
-<li> Explain why the value of $T_c$ depends on $A$ and $N$.
+<li> Explain why the value of T<sub>c</sub> depends on A and N.
 
-<li>  Write a program to do the sums in \eqref{eq:6/Nsum} as three nested loops 
-over $n_x$, $n_y$, and $n_z$. Because $\overline{n}( \epsilon)$ goes to zero rapidly 
-for large $\epsilon$, restrict the sums to values of $\vec n$ for which $\overline{n}(\epsilon) > \delta$ 
-with $\delta = 10^{-8}$. Take $n_x^2 + n_y^2 + n_z^2 < M$, where
-\begin{equation}
-\frac{1}{e^{\beta (AM - \mu)} - 1} = \delta,
-\end{equation}
-or
-\begin{equation}
-M = \ln(\delta ^{-1} + 1)/\beta A + \mu/A. \label{eq:priceM}
-\end{equation}
-Determine $M$ from \eqref{eq:priceM} and calculate the upper limits on the nested sums successively as $n_x^2 \lt M$, $n_y^2 < M - n_x^2$, and $n_z^2 < M - n_x^2 - n_y^2$. However, your program will run reasonably quickly if you choose $M$ as the upper limit for all three loops.
+<li>  Write a program to do the sums in Eq. (1) as three nested loops 
+over n<sub>x</sub>, n<sub>y</sub>, and n<sub>z</sub>. Because &lt;n(&epsilon;)&gt; goes to zero rapidly 
+for large &epsilon;, restrict the sums to values of <b>n</b> for which &lt;n(&epsilon;)&gt; &gt; &delta; 
+with &delta; = 10<sup>-8</sup>. Take (n<sub>x</sub>)<sup>2</sup> 
++ (n<sub>y</sub>)<sup>2</sup>+(n<sub>z</sub>)<sup>2</sup> &lt; M, where
 
-<li>  Compute $N(T, \mu)$ for values of $\mu$ between 1.0 and 7.0 for $T=1.0$. 
-Note the divergence of $N$ at $\mu= 3 A$ (the lowest single-particle energy state) and the 
-negative values of $N$ that can occur for $\mu \geq 3A$. Are there other values of $\mu$ where $N$ diverges? 
-Why does this nonphysical behavior of $N(T, \mu)$ occur?
+<p>&nbsp; &nbsp;1 / [exp(&beta; (AM - &mu;)) - 1] = &delta;,&nbsp; &nbsp; (6)
 
-<li>  Use your results for $N(T,\mu)$ to determine $\mu(N,T)$ by successively halving the interval 
-containing the correct value of $\mu$ until $N_{\rm trial}$ is close to the desired value. 
-Choose the initial upper and lower limits of the interval to be $\mu_+ =\epsilon_0 = 3A$ and $\mu_- = -10\epsilon_0$. 
+<p>or
+
+<p>&nbsp; &nbsp;M = ln(1/&delta;  + 1)/&beta;A + &mu;/A. &nbsp; &nbsp; (7)
+
+<p>Determine M from Eq, (7) and calculate the upper limits on the nested sums successively 
+as (n<sub>x</sub>)<sup>2</sup> &lt; M, (n<sub>y</sub>)<sup>2</sup> &lt; M - (n<sub>x</sub>)<sup>2</sup>, 
+and (n<sub>z</sub>)<sup>2</sup> &lt; M - (n<sub>x</sub>)<sup>2</sup> - (n<sub>y</sub>)<sup>2</sup>. 
+However, your program will run reasonably quickly if you choose M as the upper limit for all three loops.
+
+<li>  Compute N(T, &mu;) for values of &mu; between 1.0 and 7.0 for T=1.0. 
+Note the divergence of N at &mu;= 3 A (the lowest single-particle energy state) and the 
+negative values of N that can occur for &mu; &ge; 3A. Are there other values of &mu; where N diverges? 
+Why does this nonphysical behavior of N(T, &mu;) occur?
+
+<li>  Use your results for N(T,&mu;) to determine &mu;(N,T) by successively halving the interval 
+containing the correct value of &mu; until N<sub>trial</sub> is close to the desired value. 
+Choose the initial upper and lower limits of the interval to be &mu;<sub>+</sub> =&epsilon;<sub>0</sub> = 3A 
+and &mu;<sub>-</sub> = -10&epsilon;<sub>0</sub>. 
 A summary of the algorithm is given by the following:
 
 <ol>
 
-<li> Set $\mu_{\rm trial} = \frac12(\mu_+ + \mu_-)$.</li>
+<li> Set &mu;<sub>trial</sub> = (1/2)(&mu;<sub>+</sub> + &mu;<sub>-</sub>).</li>
 
-<li>Compute $N_{\rm trial} = N(\mu_{\rm trial},T)$</li>
+<li>Compute N<sub>trial</sub> = N(&mu;<sub>trial</sub>,T)</li>
 
-<li>If $N_{\rm trial} > N$, set $\mu_+ = \mu_{\rm trial}$; otherwise, set $\mu_- = \mu_{\rm trial}$.</li>
+<li>If N<sub>trial</sub> &gt; N, set &mu;<sub>+</sub> = &mu;<sub>trial</sub>; otherwise, set &mu;<sub>-</sub> = &mu;<sub>trial</sub>.</li>
 
-<li>If $\mu_+ - \mu_- > \delta \mu$, go to step 1.</li>
+<li>If &mu;<sub>+</sub> - &mu;<sub>-</sub> &gt; &Delta;&mu;, go to step 1.</li>
 </ol>
-First choose $N=5$ to check that your program is working correctly and then consider $N = 500$.
+First choose N=5 to check that your program is working correctly and then consider N = 500.
 
-<li>  Use the results from part(d) to plot $\mu$ as a function of $T/T_c$ for $N=500$ and 
-describe its qualitative behavior. (In your program include code to find $T_c$ using the answer 
-to part(a).) What is the upper limit of $\mu$?
+<li>  Use the results from part(d) to plot &mu; as a function of T/T<sub>c</sub> for N=500 and 
+describe its qualitative behavior. (In your program include code to find T<sub>c</sub> using the answer 
+to part(a).) What is the upper limit of &mu;?
 
-<li>  Plot the fraction of particles in the two lowest energy states as a function of $T$. Discuss their behavior as a function of temperature.
+<li>  Plot the fraction of particles in the two lowest energy states as a function of T. 
+Discuss their behavior as a function of temperature.
 
 <li>  Although it is instructive to write your own program, 
-Program  <tt>BoseGasSum</tt> implements the sum over $\vec n$ and computes $\mu$ by varying its value until the 
-computed $N$ equals the desired input value. The program plots $\overline{N}_0$, $\overline{N}_{\epsilon} = N-\overline{N}_0$ 
-and the specific heat $C = (1/N)\Delta E/\Delta T$ by using two neighboring values of the temperature.
+Program  <tt>BoseGasSum</tt> implements the sum over <b>n</b> and computes &mu; by varying its value until the 
+computed N equals the desired input value. The program plots &lt;N<sub>0</sub>&gt;, &lt;N<sub>ex</sub>&gt; = N-&lt;N<sub>0</sub>&gt;
+and the specific heat C = (1/N)&Delta;E/&Delta;T by using two neighboring values of the temperature.
 Use the default values and explain why there appears to be a phase transition. How does the value of the transition 
 temperature depend on the difference between the ground state and the first excited state? 
-Does the transition temperature become better defined as $N$ is increased?
+Does the transition temperature become better defined as N is increased?
 
 
 </ol>
@@ -126,15 +136,11 @@ Does the transition temperature become better defined as $N$ is increased?
   <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+ <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-    
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
     <li>Problem 6.67 in <i>Statistical and Thermal Physics: With Computer Applications,</i> 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>   
@@ -146,7 +152,7 @@ Does the transition temperature become better defined as $N$ is increased?
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

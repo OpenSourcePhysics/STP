@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>XYModel</title>
-  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -38,44 +37,46 @@ MathJax.Hub.Config({
 
 
 <p>The XY model (sometimes called the planar model) consists of spins on a  lattice where each spin 
-can take on any angle $\theta_i$ between $0$ and $2\pi$. The energy is given by
-$$E = -J \sum_{\lt ij \gt} \cos{(\theta_i - \theta_j)},$$
-where $J$ is the interaction energy that sets the scale for the energy. It has been shown that the magnetization 
- vanishs for all nonzero temperatures $T$, and thus it was thought that there was no phase transition. However,
-Kosterlitz and Thouless showed that there is a phase transition, $T_{\rm KT}$ such that below $T_{\rm KT}$ the spin-spin correlation
-function falls off as a power law and above $T_{\rm KT}$ this correlation falls off exponentially. The phase transition
+can take on any angle &theta;<sub>i</sub> between 0 and 2&pi;. The energy is given by
+<p>&nbsp; &nbsp;E = -J &sum;<sub>&lt;ij&gt;</sub> cos(&theta;<sub>i</sub> - &theta;<sub>j</sub>),  &nbsp; &nbsp; (1)
+<p>where J is the interaction energy that sets the scale for the energy. It has been shown that the magnetization 
+ vanishs for all nonzero temperatures T, and thus it was thought that there was no phase transition. However,
+Kosterlitz and Thouless showed that there is a phase transition, T<sub>KT</sub> such that below T<sub>KT</sub> the spin-spin correlation
+function falls off as a power law and above T<sub>KT</sub> this correlation falls off exponentially. The phase transition
 is caused by the unbinding of pairs of vortices, which are an example of topological defects.   </p>
 
 <p> The  program simulates the XY model, calculates various thermodynamic quantities, and shows the location of the vortices.  </p>
 
-<b>Problem: Simulations of the two-dimensional $XY$ (planar) model</b>
+<h2>Problem: Simulations of the two-dimensional XY (planar) model</h2>
 
-<p>In this model the spins are located on a $d$-dimensional lattice, but are restricted to point in any 
+<p>In this model the spins are located on a d-dimensional lattice, but are restricted to point in any 
 direction in the plane. The interaction between two nearest neighbor spins is 
-given by $-J {\bf s}_1 \cdot {\bf s}_2$, where ${\bf s}_1$ and ${\bf s}_2$ are two unit spin vectors.</p>
+given by -J <b>s</b><sub>1</sub> &sdot; <b>s</b><sub>2</sub>, where <b>s</b><sub>1</sub> 
+and <b>s</b><sub>2</sub> are two unit spin vectors.</p>
 
-<p>One of the interesting features of the $XY$ model in two dimensions
-is that the mean magnetization $\langle m\rangle = 0$ for all nonzero temperatures, but there is a phase 
-transition at a nonzero temperature $T_{\rm KT}$ known as the 
+<p>One of the interesting features of the XY model in two dimensions
+is that the mean magnetization &lt;m&gt; = 0 for all nonzero temperatures, but there is a phase 
+transition at a nonzero temperature T<sub>KT</sub> known as the 
  Kosterlitz-Thouless transition. (J. Michael Kosterlitz and David J. Thouless received the 2016 Nobel Prize in 
  Physics for discovering and explaining this phase transition, which led to finding similar phase transitions 
  in many other systems and the recognition of the importance of topological defects such as the vortices 
  found in the planar model. F. Duncan M. Haldane shared the prize that year for related work.) 
- For $T \leq T_{\rm KT}$ the spin-spin correlation $C(r)$ decreases as a power law; for $T > T_{\rm KT}$, $C(r)$ 
- decreases exponentially. The power law decay of $C(r)$ for $T \leq T_{\rm KT}$ implies that every 
- temperature below $T_{\rm KT}$ acts as a critical point.</p>
+ For T &le; T<sub>KT</sub> the spin-spin correlation C(r) decreases as a power law; for T &gt; T<sub>KT</sub>, C(r) 
+ decreases exponentially. The power law decay of C(r) for T &le; T<sub>KT</sub> implies that every 
+ temperature below T<sub>KT</sub> acts as a critical point.</p>
 
-<p>Program <tt>XYModel</tt> uses the Metropolis algorithm  to simulate the $XY$ model in two dimensions. 
-In this case a spin is chosen at random and rotated by a random angle up to a maximum value $\delta$.
+<p>Program <tt>XYModel</tt> uses the Metropolis algorithm  to simulate the XY model in two dimensions. 
+In this case a spin is chosen at random and rotated by a random angle up to a maximum value &delta;.
 
 <ol type ="a">
-<li> Rewrite the interaction $-J {\bf s}_i \cdot {\bf s}_j$ between nearest neighbor spins $i$ and $j$ 
-in a simpler form by substituting $s_{i,x} = \cos\theta_i$ and $s_{i,y} = \sin \theta_i$, where the 
-phase $\theta_i$ is measured from the horizontal axis in the counter-clockwise direction. Show that the result is
-$-J \cos(\theta_i - \theta_j)$.</li>
+<li> Rewrite the interaction -J <b>s</b><sub>i</sub> &sdot; <b>s</b><sub>j</sub> between nearest neighbor spins i and j 
+in a simpler form by substituting s<sub>i,x</sub> = cos &theta;<sub>i</sub> and s<sub>i,y</sub> = sin &theta;<sub>i</sub>, 
+where the 
+phase &theta;<sub>i</sub> is measured from the horizontal axis in the counter-clockwise direction. Show that the result is
+-J cos(&theta;<sub>i</sub> - &theta;<sub>j</sub>).</li>
 
-<li> An interesting feature of the $XY$ model is the existence of vortices and antivortices. 
-A vortex is a region of the lattice where the spins rotate by at least $2\pi$ as you trace a 
+<li> An interesting feature of the XY model is the existence of vortices and antivortices. 
+A vortex is a region of the lattice where the spins rotate by at least 2&pi; as you trace a 
 closed path. Run the simulation with the default parameters and observe the locations of the vortices. 
 Follow the arrows as they turn around a vortex. A vortex is indicated by a square box. What is the 
 difference between a positive (blue) and negative (yellow) vortex? Does a vortex ever appear isolated? 
@@ -89,19 +90,19 @@ Are there isolated vortices whose centers are more than a lattice spacing apart?
 <li> Click the <tt>New</tt> button and set the initial configuration to
 ordered and the temperature to 0.2. Also set steps per display to 100
 so that the simulation will run much faster. Run the simulation for
-at least $1000\,$mcs to equilibrate and $10,\kern1pt000\,$mcs to collect data,
+at least 1000 mcs to equilibrate and 10,000 mcs to collect data,
 and record your estimates of the energy, specific heat, vorticity, and the
 susceptibility. Repeat for temperatures from 0.3 to 1.5 in steps of
 0.1. Plot the energy and specific heat versus the temperature. (The
 susceptibility diverges for all temperatures below the transition,
-which occurs near $T=0.9$. The location of the specific heat peak is
+which occurs near T=0.9. The location of the specific heat peak is
 different from the transition temperature. The program computes
-$x=(1/NT^2)\langle M^2\rangle$ instead of the usual expression, because
-$\langle M\rangle=0$ in the thermodynamic limit.) Is the vorticity (the mean number density of vortices) a 
+&chi;=(1/NT<sup>2</sup>)&lt;M<sup>2</sup>&gt; instead of the usual expression, because
+&lt;M&gt;=0 in the thermodynamic limit.) Is the vorticity (the mean number density of vortices) a 
 smooth function of the temperature?</li>
 
 <li> Look at configurations showing the vortices near the
-Kosterlitz-Thouless transition at $T=T_{\rm KT}\approx0.9$.  Is there any evidence that the positive 
+Kosterlitz-Thouless transition at T=T<sub>KT</sub> &asymp; 0.9.  Is there any evidence that the positive 
 vortices are moving away from the negative vortices? The Kosterlitz-Thouless transition is due to 
 this unbinding of vortex pairs.</li>
 </ol>
@@ -110,15 +111,12 @@ this unbinding of vortex pairs.</li>
    <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+   <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-   
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
+    
     
     <li>Problem 9.21 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -127,7 +125,7 @@ this unbinding of vortex pairs.</li>
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>

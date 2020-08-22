@@ -9,8 +9,8 @@ MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
+      inlineMath: [ ['',''] ],
+      displayMath: [ ['',''] ],
       processEscapes: true
     },
     SVG: { linebreaks: { automatic: true } },
@@ -21,7 +21,6 @@ MathJax.Hub.Config({
 
 <head>
   <title>HardDisksMD</title>
-  <link rel="stylesheet" type="text/css" href="./swingJS.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
 
@@ -35,55 +34,53 @@ MathJax.Hub.Config({
   <div style="position:absolute;left:30px;top:500px;">
 
   
-<p>One of the simplest models of particle interactions is the hard core interaction, for which the interactioninteraction is infinite 
-if two particles are closer than their diameter $\sigma$ and is zero otherwise. 
+<p>One of the simplest models of particle interactions is the hard core interaction, 
+for which the interactioninteraction is infinite 
+if two particles are closer than their diameter &sigma; and is zero otherwise. 
 Hard disks are the two dimensional version of this interaction. A molecular dynamics (MD) simulation 
 keeps track of the location and velocity of each hard disk and determines when the next collision occurs. Then all the 
 hard disks are moved during the time between the last collision and the next collision, 
 and the new velocities of the colliding disks after the collision are determined.        </p>
 
 <p>This model is very versatile. 
-In Chapter 4 we use Program HardDisksMD to explore the pressure dependence of the density and the possibility of a phase transition. 
+In Chapter 4 we use Program HardDisksMD to explore the pressure dependence of the density and the possibility 
+of a phase transition. 
 In Chapter 8 we explore the structure of the fluid, and in Chapter 10 we explore the self-diffusion constant, 
 as well as the mean free time and mean free path.
     </p>
 
-<b>Problem: Qualitative behavior of $g(r)$</b>
+<h2>Problem: Qualitative behavior of g(r)</h2>
 
-<p>Use Programs <tt>HardDisksMD</tt> and <tt>LennardJonesMD</tt> to simulate a system of hard disks
+Use Programs <tt>HardDisksMD</tt> and <tt>LennardJonesMD</tt> to simulate a system of hard disks
  and particles interacting with the Lennard-Jones potential
-  to determine the behavior of $g(r)$ for various densities and temperatures. 
+  to determine the behavior of g(r) for various densities and temperatures. 
    We consider two-dimensional systems because they are easier to visualize.
 
 <ol type ="a">
 
-<li> Consider a system of hard disks and describe how $g(r)$
-changes with the density. The program uses units such that diameter $\sigma=1$. Is the temperature of 
+<li> Consider a system of hard disks and describe how g(r)
+changes with the density. The program uses units such that diameter &sigma;=1. Is the temperature of 
 the system relevant?</li>
 
 <li> Consider a system of particles interacting with the Lennard-Jones potential at the same densities 
 (and number of particles) as you considered in part (a). 
-Compare $g(r)$ for the two systems at the same density.</li>
+Compare g(r) for the two systems at the same density.</li>
 
-<li> Consider either interaction and describe how $g(r)$ changes as the density is increased. What is the
- meaning of the peaks in $g(r)$? </li>
+<li> Consider either interaction and describe how g(r) changes as the density is increased. What is the
+ meaning of the peaks in g(r)? </li>
 
-<li>How does $g(r)$ change with temperature for a given $\rho$? </li>
+<li>How does g(r) change with temperature for a given density &rho;? </li>
 
 </ol>
 
    <h2>Resources</h2>
   <ol>
 
-<li> The program on this page was converted from Java to JavaScript by Wolfgang Christian 
-  and Robert Hanson using the SwingJS system developed at St. Olaf College.</li>
-
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
-    Source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
+   <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5284&Attachment=1">Download</a> 
+    source code for all java programs. Requires <a href="https://github.com/OpenSourcePhysics/osp">OSP</a> library to run.</li>
     
-    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> All python programs. </li>
-    
-    <li><a href="./">Download</a> executable jar file (need to install Java on your computer to run jar files.)  </li>
+    <li><a href="https://www.compadre.org/OSP/document/ServeFile.cfm?ID=15436&DocID=5285&Attachment=1">Download</a> all python programs. </li>
+    <li><a href="https://www.compadre.org/osp/items/detail.cfm?ID=7308">Download</a> latest executable jar file for all programs. </li>
     
     <li>Problems 4.33, 8.16, 10.1, 10.2, 10.4, 10.8, 10.11, and 10.12  in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
@@ -92,7 +89,7 @@ Compare $g(r)$ for the two systems at the same density.</li>
 </ol>
 
  
-  <p class="small">Updated 12 August 2020.</p>
+  <p class="small">Updated 21 August 2020.</p>
 </div>
 
 </body>
