@@ -39,11 +39,11 @@ MathJax.Hub.Config({
 <p>Program <tt>LennardJonesMD</tt> simulates the behavior of particles moving in a two-dimensional box interacting through the Lennard-Jones potential. 
 The velocities and positions evolve according to the numerical solution of the 
 differential equations in Newton's second law. The velocity Verlet algorithm is used to update the positions and velocities of the particles. 
-Periodic boundary conditions are used so that particles that leave the box enter on the other side, much like many video games. </p>
+Toroidal boundary conditions are used so that particles that leave the box enter on the other side, much like many video games. </p>
 
 <p>One goal of this simulation is to explore how the same inter-particle potential 
 can lead to different macroscopic behavior such as gas, liquid, and solid phases. 
-Other information that can be obtained includes the velocity distribtion function, the pair distribution function g(r), which provides
+Other information that can be obtained includes the velocity distribution function, the pair distribution function g(r), which provides
 information about the spatial structure of the system, and the diffusion of a tagged particle.   </p>
 
 <h2>Problem: Different phases</h2>
@@ -53,13 +53,13 @@ information about the spatial structure of the system, and the diffusion of a ta
 
 <li> Program <tt>LennardJonesMD</tt> simulates an
 isolated system of
-$N$ particles interacting via the Lennard-Jones potential. Choose
-$N=144$ and
-$L=18$ so that the density
-$\rho = N/L^2 \approx 0.44$. The initial positions are
+N particles interacting via the Lennard-Jones potential. Choose
+N = 144 and
+L = 18 so that the density
+&#961; = N/L<sup>2</sup> &#8776; 0.44. The initial positions are
 chosen at random except that no two particles are allowed to be
 closer than the length
-$\sigma$. Run the simulation and satisfy yourself that this choice
+&#963;. Run the simulation and satisfy yourself that this choice
 of density and resultant total energy corresponds to a gas. What are your
 criteria?</li>
 
