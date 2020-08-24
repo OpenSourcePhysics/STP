@@ -53,26 +53,26 @@ at a user specified value of p. Clusters are identified using the Hoshen-Kopelma
 Program <tt>Percolation</tt> generates site percolation configurations on a
 square lattice and computes P<sub>&infin;</sub>(p), the fraction of states in the spanning cluster; S(p), 
 the mean number of sites in the finite clusters; P<sub>span</sub>(p), the probability of a spanning cluster; 
-and n<sub>S</sub>, the number of clusters with s sites for various values of p. The clusters are shown at the 
-default value of p=p<sub>c</sub> &asymp; 0.5927.
+and n<sub>s</sub>, the number of clusters with s sites for various values of p. The clusters are shown at the 
+default value of p = p<sub>c</sub> &asymp; 0.5927.
 
 <ol type ="a">
 <li> Run the program and look at the configurations. A spanning cluster is defined in the program as
 one that connects the top and bottom of the lattice and the
-left and right boundaries. Describe the structure of the spanning clusters at p=0.8. 
+left and right boundaries. Describe the structure of the spanning clusters at p = 0.8. 
 Are the clusters compact with few holes or ramified and stringy?</li>
 
-<li> How would you describe the spanning clusters at p=p<sub>c</sub>? Increase the size of the lattice. 
-Do the spanning clusters become less dense? Do you see clusters of all sizes at p= p<sub>c</sub>? </li>
+<li> How would you describe the spanning clusters at p = p<sub>c</sub>? Increase the size of the lattice. 
+Do the spanning clusters become less dense? Do you see clusters of all sizes at p =  p<sub>c</sub>? </li>
 
-<li> Run the program for at least 100 trials at p=p<sub>c</sub> and make a log-log plot of the cluster size 
+<li> Run the program for at least 100 trials at p = p<sub>c</sub> and make a log-log plot of the cluster size 
 distribution n<sub>s</sub> versus s. Do you see linear behavior for some range of values of s? 
 Choose <tt>Data Table</tt> under the <tt>Views</tt> menu and fit your data to the form n<sub>s</sub> = A s<sup>-&tau;</sup>, 
 where A and &tau; are fitting parameters. Compare your estimate for &tau; to the exact result 
-for &tau; in d=2 given by &tau; = 187/91.</li>
+for &tau; in d = 2 given by &tau; = 187/91.</li>
 
-<li> Choose p =0.4 and 0.8 and look at the log-log plots of the cluster size distribution n<sub>s</sub> versus s. 
-Is the qualitative behavior of n<sub>s</sub> for large s the same as it is at p=p<sub>c</sub>?</li>
+<li> Choose p = 0.4 and 0.8 and look at the log-log plots of the cluster size distribution n<sub>s</sub> versus s. 
+Is the qualitative behavior of n<sub>s</sub> for large s the same as it is at p = p<sub>c</sub>?</li>
 
 <li> *Choose L = 128 and do at least 100 trials (1000 is better) for values of p near p<sub>c</sub>. 
 Make a log-log plot of S(p) and P<sub>&infin;</sub>(p) versus p-p<sub>c</sub>. Is there a region of your plot that is linear, 
@@ -84,13 +84,13 @@ indicating a possible power law? </li>
 A better way to estimate the values of the critical
 exponents &beta; and &gamma; than fitting the p dependence of P<sub>&infin;</sub>(p) and S(p) to their power 
 law forms near p<sub>c</sub> is to use <i>finite-size scaling</i> as we did for the Ising model. 
-The assumption of finite-size scaling is that there is only one important length in the system near p=p<sub>c</sub>, 
+The assumption of finite-size scaling is that there is only one important length in the system near p = p<sub>c</sub>, 
 the connectedness length &xi;. 
 We write &xi; &sim; |p-p<sub>c</sub>|<sup>-&nu;</sup> and |p - p<sub>c</sub>| &sim; &xi;<sup>-1/&nu;</sup>. 
 Hence P<sub>&infin;</sub> &sim; (p - p<sub>c</sub>)<sup>&beta;</sup> &sim; &xi;<sup>-&beta;/&nu;</sup>. For a finite system we 
 replace &xi; by L and write P<sub>&infin;</sub> &sim; L<sup>-&beta;/&nu;</sup>. Similar 
 reasoning gives S &sim; L<sup>&gamma;/&nu;</sup>. Use Program <tt>Percolation</tt> to generate 
-configurations at p=p<sub>c</sub> for L = 10, 20, 40, and 80, and determine the ratios &beta;/&nu; and &gamma;/&nu;. 
+configurations at p = p<sub>c</sub> for L = 10, 20, 40, and 80, and determine the ratios &beta;/&nu; and &gamma;/&nu;. 
 Use the exact result &nu; = 4/3, and compare your results with the exact 
 results &beta; = 5/36 and &gamma; = 43/18. 
 (Because &beta; is small, your results for &beta;/&nu; are likely to not be very accurate.)</p>

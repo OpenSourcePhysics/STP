@@ -41,12 +41,12 @@ the swapping, thus creating an energy flux and temperature gradient.</p>
 
 <p>Program <tt>ThermalConductivity</tt> computes the thermal conductivity &kappa; for a system of particles interacting 
 with a Lennard-Jones potential cut off at 3&sigma;.  The program uses the 
-algorithm by M&uuml;ller-Plathe that we have discussed. The total number of particles is N=3k<sup>3</sup>, 
-where the number of slabs in the z direction is 3k. The default values are k=10, T=0.7, and &rho; = 0.849.
+algorithm by M&uuml;ller-Plathe that we have discussed. The total number of particles is N = 3k<sup>3</sup>, 
+where the number of slabs in the z direction is 3k. The default values are k = 10, T = 0.7, and &rho; = 0.849.
 Run the program until the system reaches  equilibrium  at constant T. (The program uses velocity rescaling to bring
 the system to the desired temperature.)
 When the <tt>Stop equilibration</tt> button is pressed, velocity rescaling is stopped, and energy 
-transfer from the slab at z=0 to the middle slab is started. Press the <tt>Reset Data</tt> button several 
+transfer from the slab at z = 0 to the middle slab is started. Press the <tt>Reset Data</tt> button several 
 times to check that the simulation has reached a steady state. The temperature profiles in the left and 
 right halves of the box are plotted separately to give you an idea of how well the averages have converged.
 
@@ -59,7 +59,7 @@ Test your expectation by doubling the temperature.</li>
 <li> How do you expect &kappa; to change with increasing &rho;  for fixed T? Test your expectation by 
 increasing the density by 10%.</li>
 
-<li> *Increase N while keeping the density and the temperature the same as in part (a) and determine the 
+<li> <sup>*</sup>Increase N while keeping the density and the temperature the same as in part (a) and determine the 
 importance of finite size effects on the 
 computed value of &kappa;.</li>
 
@@ -77,7 +77,7 @@ computed value of &kappa;.</li>
     
     <li>Problem 10.15 in <i>Statistical and Thermal Physics: With Computer Applications</i>, 2nd ed., 
     Harvey Gould and Jan Tobochnik, Princeton University Press (2021).</li>
-<li>Florian M&uuml;ller-Plathe, &#8220;A simple nonequilibrium molecular dynamics method for calculating the thermal conductivity,&#8221; J. Chem. Phys. {\bf 106}, 6082&#8211;6085 (1997).</li>
+<li>Florian M&uuml;ller-Plathe, &#8220;A simple nonequilibrium molecular dynamics method for calculating the thermal conductivity,&#8221; J. Chem. Phys. <b> 106</b>, 6082&#8211;6085 (1997).</li>
 
  
 </ol>
