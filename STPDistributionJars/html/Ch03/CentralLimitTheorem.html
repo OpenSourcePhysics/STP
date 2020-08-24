@@ -55,7 +55,7 @@ s is uniformly distributed between 0 and 1. Calculate analytically the
 mean and standard deviation of s and compare your numerical
 results from the program with your analytical calculation.</li>
 
-<li> Use the default value of N=12, the number of terms in the sum S = &Sigma;<sub>i=1</sub> s<sub>i</sub>, and 
+<li> Use the default value of N = 12, the number of terms in the sum S = &Sigma;<sub>i=1</sub> s<sub>i</sub>, and 
 describe the qualitative form of p(S) that is computed and plotted by the program; p(S)&Delta; S is 
 the probability that the sum S is between S and S + &Delta; S. Does the qualitative form of p(S) 
 change as the number of measurements (trials) of S is increased for a given value of N?</li>
@@ -76,17 +76,16 @@ Is the form of p(S) consistent with the results that you found
 in parts (b)--(d)?</li>
 
 <li> *Each value of S can be considered to be a measurement. The sample variance &sigma;<sub>S</sub><sup>2</sup> is 
-a measure of the square of the differences of the result of each measurement and is given by
-
- &sigma;<sub>S</sub><sup>2</sup> = [1/(N-1)]&sum;<sub>j=1</sub> (S<sub>j</sub> - &lt;S&gt;)<sup>2</sup>.
-
+a measure of the square of the differences of the result of each measurement and is given by<br>
+&sigma;<sub>S</sub><sup>2</sup> = [1/(N-1)]&sum;<sub>j=1</sub> (S<sub>j</sub> - S&#772;)<sup>2</sup>.
+</br>
 The reason for the factor of N-1 rather than N in the definition of  &sigma;<sub>S</sub><sup>2</sup> is that to 
 compute it, we need to use the N values of s to compute the mean of S. Thus, loosely speaking, we 
 have only N-1 independent values of s remaining to calculate &sigma;<sub>S</sub><sup>2</sup>. 
 Show that if N &#8811; 1, then  
-&sigma;<sub>S</sub><sup>2</sup> = &lt;S<sup>2</sup>&gt; - &lt;S&gt;<sup>2</sup>.</li>
+&sigma;<sub>S</sub><sup>2</sup> = &lt;S<sup>2</sup>&gt; - S&#772;<sup>2</sup>.</li>
 
-<li> *The quantity &sigma;<sub>S</sub> 
+<li> <sup>*</sup>The quantity &sigma;<sub>S</sub> 
 is known as the  <i>standard deviation of the means</i>. 
 That is, &sigma;<sub>S</sub> is a measure of how much variation we expect to find if we make repeated 
 measurements of S. How does the value of &sigma;<sub>S</sub> compare to your estimated width of the 

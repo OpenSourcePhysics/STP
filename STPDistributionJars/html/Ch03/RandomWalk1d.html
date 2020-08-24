@@ -47,13 +47,13 @@ the right with probability p or to the left with probability q = 1 - p. Each ste
 length and is independent of the previous steps. 
 Are some displacements more likely than others? 
 We can simulate an N-step walk by the following pseudocode:
-<p>do istep = 1,N
- <p> &nbsp; &nbsp;if (rnd <= p) then
- <p>  &nbsp; &nbsp; &nbsp;x = x + 1
-<p>  &nbsp; &nbsp;else
-<p>    &nbsp; &nbsp; &nbsp;x = x - 1
-<p>  &nbsp; &nbsp;end if
-<p>end do
+<br>do istep = 1, N
+ <br> &nbsp; &nbsp;if (rnd <= p) then
+ <br>  &nbsp; &nbsp; &nbsp;&nbsp;x = x + 1
+<br>  &nbsp; &nbsp;else
+<br>    &nbsp; &nbsp; &nbsp;&nbsp;x = x - 1
+<br>  &nbsp; &nbsp;end if
+<br>end do
 
 
 <p>The function <tt>rnd</tt> generates a  number between zero
@@ -72,12 +72,12 @@ the corresponding value of the histogram. This procedure is called <i>Monte Carl
 
 <li> Will we obtain the exact answer for the probability distribution by doing a Monte Carlo simulation? </li> 
 
-<li> How does the histogram  change  for larger values of N. Assume p=1/2 here and in the following. </li> 
+<li> How does the histogram  change  for larger values of N. Assume p = 1/2 here and in the following. </li> 
 
 <li> What is the most probable value of x for  N = 16 and N = 32?  Estimate the width of the 
 distribution visually. How does the width change as a function of N? </li> 
 
-<li> How does the histogram change, if at all, as the number of walkers increases for  N=4? </li> 
+<li> How does the histogram change, if at all, as the number of walkers increases for  N = 4? </li> 
 </ol>
 
 
