@@ -46,7 +46,7 @@ particle states at a temperature T and chemical potential &mu;. The number of bo
 = 1/[exp(&epsilon;<sub><b>n</b></sub> -&mu;)/kT) - 1]  &nbsp; &nbsp;  (3) 
 <p>where &lt;n(&epsilon;<sub><b>n</b></sub>)&gt;  is the mean number of bosons in a single 
 particle microstate state of energy &epsilon;<sub><b>n</b></sub> = A[(n<sub>x</sub>)<sup>2</sup> 
-+ (n<sub>y</sub>)<sup>2</sup>+(n<sub>z</sub>)<sup>2</sup>]. 
++ (n<sub>y</sub>)<sup>2</sup> + (n<sub>z</sub>)<sup>2</sup>]. 
 The integers n<sub>x</sub>, n<sub>y</sub>, and n<sub>z</sub> 
 can take on any positive nonzero value and A is a constant that depends on the mass of the boson and the volume of the system.</p>
 
@@ -67,8 +67,8 @@ The idea is to start with the expressions for a finite system
 
 <p>and do the sums over <b>n</b> = (n<sub>x</sub>, n<sub>y</sub>, n<sub>z</sub>). We write &epsilon;<sub><b>n</b></sub> = 
 A[(n<sub>x</sub>)<sup>2</sup> 
-+ (n<sub>y</sub>)<sup>2</sup>+(n<sub>z</sub>)<sup>2</sup>], 
-where A = (h/2&pi;)<sup>2</sup> &pi;<sup>2</sup> /2mL<sup>2</sup>. For simplicity, choose units such that A=1.
++ (n<sub>y</sub>)<sup>2</sup> + (n<sub>z</sub>)<sup>2</sup>], 
+where A = (h/2&pi;)<sup>2</sup> &pi;<sup>2</sup> /2mL<sup>2</sup>. For simplicity, choose units such that A = 1.
 
 <ol type ="a">
 
@@ -91,8 +91,8 @@ as (n<sub>x</sub>)<sup>2</sup> &lt; M, (n<sub>y</sub>)<sup>2</sup> &lt; M - (n<s
 and (n<sub>z</sub>)<sup>2</sup> &lt; M - (n<sub>x</sub>)<sup>2</sup> - (n<sub>y</sub>)<sup>2</sup>. 
 However, your program will run reasonably quickly if you choose M as the upper limit for all three loops.
 
-<li>  Compute N(T, &mu;) for values of &mu; between 1.0 and 7.0 for T=1.0. 
-Note the divergence of N at &mu;= 3 A (the lowest single-particle energy state) and the 
+<li>  Compute N(T, &mu;) for values of &mu; between 1.0 and 7.0 for T = 1.0. 
+Note the divergence of N at &mu; = 3 A (the lowest single-particle energy state) and the 
 negative values of N that can occur for &mu; &ge; 3A. Are there other values of &mu; where N diverges? 
 Why does this nonphysical behavior of N(T, &mu;) occur?
 
@@ -112,9 +112,9 @@ A summary of the algorithm is given by the following:
 
 <li>If &mu;<sub>+</sub> - &mu;<sub>-</sub> &gt; &Delta;&mu;, go to step 1.</li>
 </ol>
-First choose N=5 to check that your program is working correctly and then consider N = 500.
+First choose N = 5 to check that your program is working correctly and then consider N = 500.
 
-<li>  Use the results from part(d) to plot &mu; as a function of T/T<sub>c</sub> for N=500 and 
+<li>  Use the results from part (d) to plot &mu; as a function of T/T<sub>c</sub> for N = 500 and 
 describe its qualitative behavior. (In your program include code to find T<sub>c</sub> using the answer 
 to part(a).) What is the upper limit of &mu;?
 
@@ -123,7 +123,7 @@ Discuss their behavior as a function of temperature.
 
 <li>  Although it is instructive to write your own program, 
 Program  <tt>BoseGasSum</tt> implements the sum over <b>n</b> and computes &mu; by varying its value until the 
-computed N equals the desired input value. The program plots &lt;N<sub>0</sub>&gt;, &lt;N<sub>ex</sub>&gt; = N-&lt;N<sub>0</sub>&gt;
+computed N equals the desired input value. The program plots &lt;N<sub>0</sub>&gt;, &lt;N<sub>ex</sub>&gt; = N - &lt;N<sub>0</sub>&gt;
 and the specific heat C = (1/N)&Delta;E/&Delta;T by using two neighboring values of the temperature.
 Use the default values and explain why there appears to be a phase transition. How does the value of the transition 
 temperature depend on the difference between the ground state and the first excited state? 
