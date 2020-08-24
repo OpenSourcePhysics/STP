@@ -49,8 +49,8 @@ low temperatures and a paramagnetic state at high temperatures. </p>
 
 Use Program <tt>Ising2d</tt> to explore some of the properties of the two-dimensional 
 Ising model on a square lattice at a given temperature T and external magnetic field H. First choose
-N=L<sup>2</sup> = 32<sup>2</sup> and set
-H=0. The initial
+N = L<sup>2</sup> = 32<sup>2</sup> and set
+H = 0. The initial
 orientation of the spins is all spins up.
 
 <ol type ="a">
@@ -69,14 +69,14 @@ Hence, there is an intermediate value of T at which &lt;M&gt; first becomes nonz
 
 
 <li>
-Choose L=4 and T=2.0. Does the sign of M
+Choose L = 4 and T = 2.0. Does the sign of M
 change during the simulation? Choose a larger value of L and
 observe if the sign of M changes. Will the sign of M change for L &#8811; 1? 
 Should a theoretical calculation of &lt;M&gt; yield &lt;M&gt; &ne; 0 or &lt;M&gt; = 0 for T &lt; T<sub>c</sub>?
 </li>
 
 <li>
-Start at T=4 and determine the temperature dependence of m, the zero-field susceptibility &chi;, 
+Start at T = 4 and determine the temperature dependence of m, the zero-field susceptibility &chi;, 
 the mean energy per spin E/N, and the specific heat C. Decrease the temperature in intervals of 0.2 
 until T &asymp; 1.6, equilibrating for at least 1000 mcs before collecting data at each value of T. 
 Describe the qualitative temperature dependence of these quantities. (When the simulation is stopped, 
@@ -94,7 +94,7 @@ Set T = T<sub>c</sub> &asymp; 2.269 and choose L &ge; 128. Obtain &lt;M&gt; for 
 Make sure you equilibrate the system at each value of H before collecting data. Make a log-log plot of m 
 versus H and estimate the critical exponent &delta; using  
 
-<p>&nbsp; &nbsp;&lt;|M|&gt; \sim &lt;H&gt;<sup>1/&delta;</sup> &nbsp; &nbsp; (T = T<sub>c</sub>). &nbsp; &nbsp; (2)
+<p>&nbsp; &nbsp;&lt;|M|&gt; &sim; &lt;H&gt;<sup>1/&delta;</sup> &nbsp; &nbsp; (T = T<sub>c</sub>). &nbsp; &nbsp; (2)
 
 
 </ol>
@@ -109,7 +109,7 @@ N=L<sup>2</sup>=32<sup>2</sup>. Run for at least 200 Monte Carlo steps per spin 
 <ol type ="a">
 
 <li>
-Set H=0.2 and T = 3 and estimate the approximate value of the magnetization. Then change the field to H = 0.1 and continue updating the spins (do not press <tt>New</tt>) so that the simulation is continued from the last microstate. Note the value of m. Continue this procedure with H=0, then H = -0.1 and then H=-0.2. Do your values of m change abruptly as you change the field?
+Set H = 0.2 and T = 3 and estimate the approximate value of the magnetization. Then change the field to H = 0.1 and continue updating the spins (do not press <tt>New</tt>) so that the simulation is continued from the last microstate. Note the value of m. Continue this procedure with H = 0, then H = -0.1 and then H = -0.2. Do your values of m change abruptly as you change the field?
 Is there any indication of a phase transition as you change H?</li> 
 
 <li>
@@ -123,12 +123,12 @@ Repeat the same procedure as in part (a) at T = 1.8 which is below the critical 
 <ol type ="a">
 
 <li>
-Use Program <tt>Ising2d</tt> to simulate the Ising model in a magnetic field. Choose L=64, T=1, and H=0.7. 
+Use Program <tt>Ising2d</tt> to simulate the Ising model in a magnetic field. Choose L = 64, T = 1, and H = 0.7. 
 Run until the system reaches equilibrium. You will notice that most of the spins are aligned with the magnetic field.</li>
 
 
 <li>
-Pause the simulation and let H=-0.7; we say that we have &#8220;flipped&#8221; the field. 
+Pause the simulation and let H = -0.7; we say that we have &#8220;flipped&#8221; the field. 
 Continue the simulation after the flip of the field and watch the spins. What is the equilibrium 
 state of the system after the flip of the field? Do the spins align themselves with the magnetic field 
 immediately after the flip? Monitor m as a function of time. Is there a time interval  
@@ -137,8 +137,8 @@ Is the time when m becomes negative the same each time you do the simulation?
 (The program uses a different random number seed each time it is run.) </li>
 
 <li>
-Keep the temperature fixed at T=1, set H = 0.6, and flip the field as in part (b). How does the time that
- m changes sign compare to the mean time for |H|=0.7?</li> 
+Keep the temperature fixed at T = 1, set H = 0.6, and flip the field as in part (b). How does the time that
+ m changes sign compare to the mean time for |H| = 0.7?</li> 
 </ol>
 
 
@@ -165,28 +165,28 @@ for
 <p>&nbsp; &nbsp;&xi; &#8765; L &#8765;|T - T<sub>c</sub>|<sup>-&nu;</sup>. &nbsp; &nbsp; (4)
 
 <p>We invert Eq. (4) and write
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;|T - T<sub>c</sub>| &#8765; L<sup>-1/&nu;</sup>. &nbsp; &nbsp; (5)
 
-<p>&nbsp; &nbsp;&nbsp; &nbsp;|T - T<sub>c</sub>| &#8765; L<sup>-1/&nu;</sup>. &nbsp; &nbsp; (5)
-
-
-<p>If &xi; and L are approximately the same size, we can substitute Eq. (5)  into Eq. (3) 
+If &xi; and L are approximately the same size, we can substitute Eq. (5)  into Eq. (3) 
 to obtain
 
-<p>&nbsp; &nbsp;&chi;(T=T<sub>c</sub>) &#8765; [L<sup>-1/&nu;</sup>]<sup>-&gamma;</sup> &#8765; L<sup>&gamma;/&nu;</sup>. &nbsp; &nbsp; (6)
+<br>
+>&nbsp; &nbsp;&chi;(T=T<sub>c</sub>) &#8765; [L<sup>-1/&nu;</sup>]<sup>-&gamma;</sup> &#8765; L<sup>&gamma;/&nu;</sup>. &nbsp; &nbsp; (6)
 
 
-<p>The relation Eq. (6) between &chi; and L at T=T<sub>c</sub> is consistent with the fact that a 
+<p>The relation Eq. (6) between &chi; and L at T = T<sub>c</sub> is consistent with the fact that a 
 phase transition is defined only for infinite systems. We can use the relation Eq. (6) 
 to determine the ratio &gamma;/&nu;. This method of analysis is known as <i>finite-size scaling</i>. 
 
 <ol type ="a">
 
 <li>
-Use Program <tt>Ising2d</tt> to estimate &chi; at T=T<sub>c</sub> for different values of L. 
+Use Program <tt>Ising2d</tt> to estimate &chi; at T = T<sub>c</sub> for different values of L. 
 Make a log-log plot of &chi; versus L and use the scaling relation
 Eq. (6) to determine the ratio
 &gamma;/&nu;. Use the exact result
-&nu;=1 to estimate &gamma;. Then use the same reasoning to determine the exponent &beta; and 
+&nu; = 1 to estimate &gamma;. Then use the same reasoning to determine the exponent &beta; and 
 compare your estimates for &beta; and &gamma; with the exact values &beta; = 1/8 and &gamma; = 7/4. </li>
 
 <li>

@@ -52,16 +52,16 @@ and probability distribution are related to the temperature. </p>
 
 Consider a demon that exchanges energy with an ideal classical gas
 of
-N identical particles of mass m=1 in d dimensions. Because the
+N identical particles of mass m = 1 in d dimensions. Because the
 energy of a particle in an ideal gas depends only on its speed, the positions
 of the particles are irrelevant. In Program <tt>DemonIdealGas</tt> 
 the demon chooses a
 particle i at random and changes a random component k of the particle's velocity by an amount
-&delta; chosen at random between
--&delta;<sub>max</sub> and
-&delta;<sub>max</sub>. The parameter
-&delta;<sub>max</sub> is arbitrary. The change in energy of the system is
-&delta; E = (1/2)[(v<sub>i,k</sub> + &delta;)<sup>2</sup> - (v<sub>i,k</sub>)<sup>2</sup>]. For simplicity, 
+&#948; chosen at random between
+-&#948;<sub>max</sub> and
+&#948;<sub>max</sub>. The parameter
+&#948;<sub>max</sub> is arbitrary. The change in energy of the system is
+&#948; E = (1/2)[(v<sub>i,k</sub> + &#948;)<sup>2</sup> - (v<sub>i,k</sub>)<sup>2</sup>]. For simplicity, 
 the program assigns each particle the same initial
 velocity in the x-direction; the initial speed is chosen so that the initial energy of the system is E. 
 The initial demon energy is equal to zero.
@@ -70,13 +70,13 @@ The initial demon energy is equal to zero.
 
  
 <li> Before you do the simulation, 
-sketch the energy dependence of the probability p(E<sub>d</sub>)&delta; E<sub>d</sub> that the demon has 
-an energy between E<sub>d</sub> and E<sub>d</sub> + &delta; E<sub>d</sub>. Is p(E<sub>d</sub>) an increasing or 
+sketch the energy dependence of the probability p(E<sub>d</sub>)&#948; E<sub>d</sub> that the demon has 
+an energy between E<sub>d</sub> and E<sub>d</sub> + &#948; E<sub>d</sub>. Is p(E<sub>d</sub>) an increasing or 
 decreasing function of E<sub>d</sub> 
 or does it have a maximum at some value of E<sub>d</sub>? </li> 
 
-<li> Choose d=3 and N=
-40 and E=40 so that E/N=1. Determine &lt;E<sub>d</sub>&gt;, the mean energy of the demon, and &lt;E&gt;/N, the mean energy per particle of the system after the demon and the
+<li> Choose d = 3 and N = 
+40 and E = 40 so that E/N = 1. Determine &lt;E<sub>d</sub>&gt;, the mean energy of the demon, and &lt;E&gt;/N, the mean energy per particle of the system after the demon and the
 system have reached equilibrium. Then choose other combinations of N and E and
  determine the relation between &lt;E<sub>d</sub>&gt; and &lt;E&gt;/N.</li> 
 
@@ -84,13 +84,13 @@ system have reached equilibrium. Then choose other combinations of N and E and
 where T is the temperature of the gas. Use this relation and the values of &lt;E&gt;/N that 
 you found in part (a) to estimate the temperature of the gas. 
 What is the relation of the value of T that you found in this way to &lt;E<sub>d</sub>&gt;? 
-(Use units such that k=1.)</li> 
+(Use units such that k = 1.)</li> 
 
 <li>  Run for a sufficient number of trials so that the form of
 p(E<sub>d</sub>) is well defined. Is the form of p(E<sub>d</sub>) consistent with an exponential? 
-Fit your results for ln p(E<sub>d</sub>) to the form -&beta; E<sub>d</sub> +  constant, where &beta; is a parameter. 
+Fit your results for ln p(E<sub>d</sub>) to the form -&#946; E<sub>d</sub> +  constant, where &#946; is a parameter. 
 Compare your results for the value of T that you found in part (c) 
-with the value of 1/&beta;. How do the values of T and the slope compare?</li> 
+with the value of 1/&#946;. How do the values of T and the slope compare?</li> 
 
 
 <li> How do your results change for an ideal
