@@ -52,35 +52,25 @@ the critical temperature for bosons.
  </p>
 
 <h2>Problem: Evaluation of the chemical potential of an ideal Fermi gas</h2>
-To find &mu;(T &gt; 0), we need to find the
+<p>To find &mu;(T &gt; 0), we need to find the
 value of &mu; that yields the desired mean number of particles. We have
-
-<p> &nbsp; &nbsp; N = &int; &lt;n(&epsilon;)&gt;g(&epsilon;)d&epsilon; = [(V(2m)<sup>3/2</sup> /[2 &pi;<sup>2</sup>
+<br>&nbsp; &nbsp; N = &int; &lt;n(&epsilon;)&gt;g(&epsilon;)d&epsilon; = [(V(2m)<sup>3/2</sup> /[2 &pi;<sup>2</sup>
 (h/2&pi;)<sup>3</sup>] &int; d&epsilon; &epsilon;<sup>1/2</sup> / [exp(&beta;(&epsilon;-&mu;)}+1], &nbsp; &nbsp; (3)
-
-<p>where 
-
-<p> &nbsp; &nbsp;g(&epsilon;) d&epsilon; = n<sub>spin</sub> V / [4&pi;<sup>2</sup>(h/2&pi;)<sup>3</sup>] (2m)<sup>3/2</sup> 
+<br>where 
+<br> &nbsp; &nbsp;g(&epsilon;) d&epsilon; = n<sub>spin</sub> V / [4&pi;<sup>2</sup>(h/2&pi;)<sup>3</sup>] (2m)<sup>3/2</sup> 
 &epsilon;<sup>1/2</sup>  d&epsilon;. &nbsp; &nbsp; (4)
 
  <p>We let &epsilon;
 = x &epsilon;<sub>f</sub> , &mu; = &mu;<sup>*</sup> &epsilon;<sub>f</sub>, and T<sup>*</sup> = kT/&epsilon;<sub>f</sub>, 
 <p>and rewrite
 Eq. (3) as
-
-<p> &nbsp; &nbsp;&rho; = N/V  =  &epsilon;<sub>f</sub><sup>3/2</sup> (2m)<sup>3/2</sup> / (2 &pi;<sup>2</sup> (h/2&pi;)<sup>3</sup>)
+<br> &nbsp; &nbsp;&rho; = N/V  =  &epsilon;<sub>f</sub><sup>3/2</sup> (2m)<sup>3/2</sup> / (2 &pi;<sup>2</sup> (h/2&pi;)<sup>3</sup>)
  &int; dx x<sup>1/2</sup> /[exp(x-&mu;<sup>*</sup>)/T<sup>*</sup>)+1], &nbsp; &nbsp; (5)
-
-<p>or
-
-<p> &nbsp; &nbsp;1  = (3/2)&int; dx x<sup>1/2</sup> / [exp(x-&mu;<sup>*</sup>)/T<sup>*</sup>)+1], &nbsp; &nbsp; (6)
-
-<p>where we have substituted 
-
-<p> &nbsp; &nbsp; &epsilon;<sub>f</sub> = [(h/2&pi;)<sup>2</sup> / 2m] (3 &pi;<sup>2</sup> &rho;)<sup>2/3</sup> &nbsp; &nbsp; (7)
-
-
- <p>for &epsilon;<sub>f</sub>. To find the dependence
+<br>or
+<br> &nbsp; &nbsp;1  = (3/2)&int; dx x<sup>1/2</sup> / [exp(x-&mu;<sup>*</sup>)/T<sup>*</sup>)+1], &nbsp; &nbsp; (6)
+<br>where we have substituted 
+<br> &nbsp; &nbsp; &epsilon;<sub>f</sub> = [(h/2&pi;)<sup>2</sup> / 2m] (3 &pi;<sup>2</sup> &rho;)<sup>2/3</sup> &nbsp; &nbsp; (7)
+ <br>for &epsilon;<sub>f</sub>. To find the dependence
 of &mu;<sup>*</sup> on T<sup>*</sup> use Program <tt>QuantumGasIntegral</tt> to evaluate the integral on the right-hand side of
 Eq. (6) numerically. 
 
@@ -113,16 +103,14 @@ find the value of &mu; for a given value of &beta; that yields the desired
 value of &rho;.
 
 To put Eq. (7) in a convenient form we introduce dimensionless variables and 
-let &epsilon; = kT<sub>c</sub> y, T=T<sub>c</sub>T<sup>*</sup>, and &mu; = kT<sub>c</sub> &mu;<sup>*</sup> 
+let &epsilon; = kT<sub>c</sub> y, T = T<sub>c</sub>T<sup>*</sup>, and &mu; = kT<sub>c</sub> &mu;<sup>*</sup> 
 and rewrite Eq. (8) as
 
-<p> &nbsp; &nbsp; 1  = (2/2.612&pi;<sup>1/2</sup>) &int; dy y<sup>1/2</sup> /[exp(y - &mu;<sup>*</sup>)/T<sup>*</sup>) - 1], &nbsp; &nbsp; (9)
+<br> &nbsp; &nbsp; 1  = (2/2.612&pi;<sup>1/2</sup>) &int; dy y<sup>1/2</sup> /[exp(y - &mu;<sup>*</sup>)/T<sup>*</sup>) - 1], &nbsp; &nbsp; (9)
+ <br> &nbsp; &nbsp; 1 = 0.432 &int; dy y<sup>1/2</sup> / [exp(y - &mu;<sup>*</sup>)/T<sup>*</sup>) - 1],&nbsp; &nbsp; (10)
+<br>where we have used 
 
-
- <p> &nbsp; &nbsp; 1 = 0.432 &int; dy y<sup>1/2</sup> / [exp(y - &mu;<sup>*</sup>)/T<sup>*</sup>) - 1],&nbsp; &nbsp; (10)
-<p>where we have used 
-
-<p> &nbsp; &nbsp; kT<sub>c</sub> = 1/2.612<sup>2/3</sup>
+<br> &nbsp; &nbsp; kT<sub>c</sub> = 1/2.612<sup>2/3</sup>
 2&pi; [(h/2&pi;)<sup>2</sup> /m] &rho;<sup>2/3</sup>. &nbsp; &nbsp; (11)
 
 <ol type ="a">

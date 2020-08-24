@@ -4,12 +4,12 @@
     <property name="height" type="int">585</property>
     <property name="divider" type="int">212</property>
     <property name="editor_enabled" type="boolean">true</property>
-    <property name="selected_node" type="string">STP Interactive Programs/Stat. Mech I/Ch 4: Methodology</property>
+    <property name="selected_node" type="string">STP Interactive Programs/Ch 1: Micro to Macro</property>
     <property name="expanded" type="array" class="[Ljava.util.Collection;">
         <property name="[0]" type="collection" class="java.util.ArrayList">
+            <property name="item" type="string">STP Interactive Programs/Stat. Mech II</property>
             <property name="item" type="string">STP Interactive Programs/Stat. Mech I</property>
             <property name="item" type="string">STP Interactive Programs</property>
-            <property name="item" type="string">STP Interactive Programs/Stat. Mech II</property>
         </property>
     </property>
     <property name="launch_nodes" type="collection" class="java.util.ArrayList">
@@ -45,7 +45,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Ch 1: Micro to Maco</property>
+                    <property name="name" type="string">Ch 1: Micro to Macro</property>
                     <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                         <property name="[0]" type="array" class="[Ljava.lang.String;">
                             <property name="[1]" type="string">html/Ch01/Chapter01.html</property>
