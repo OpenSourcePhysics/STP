@@ -313,71 +313,67 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Statistical Mechanics I</property>
+                    <property name="name" type="string">Chapter 4: Methodology</property>
+                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="array" class="[Ljava.lang.String;">
+                            <property name="[1]" type="string">html/Ch04/Chapter04.html</property>
+                        </property>
+                    </property>
+                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                        <property name="[0]" type="object">null</property>
+                    </property>
                     <property name="child_nodes" type="collection" class="java.util.ArrayList">
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Chapter 4: Methodology</property>
+                            <property name="name" type="string">Einstein Solid Microstates</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
-                                    <property name="[1]" type="string">html/Ch04/Chapter04.html</property>
+                                    <property name="[1]" type="string">html/Ch04/EinsteinSolidMicrostates.html</property>
                                 </property>
                             </property>
                             <property name="display_args" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="object">null</property>
                             </property>
-                            <property name="child_nodes" type="collection" class="java.util.ArrayList">
-                                <property name="item" type="object">
-                                <object class="org.opensourcephysics.tools.LaunchNode">
-                                    <property name="name" type="string">Einstein Solid Microstates</property>
-                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
-                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
-                                            <property name="[1]" type="string">html/Ch04/EinsteinSolidMicrostates.html</property>
-                                        </property>
-                                    </property>
-                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
-                                        <property name="[0]" type="object">null</property>
-                                    </property>
-                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.EinsteinSolidMicrostatesApp</property>
-                                </object>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.EinsteinSolidMicrostatesApp</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Einstein Solid Entropy</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch04/EinsteinSolidEntropy.html</property>
                                 </property>
-                                <property name="item" type="object">
-                                <object class="org.opensourcephysics.tools.LaunchNode">
-                                    <property name="name" type="string">Einstein Solid Entropy</property>
-                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
-                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
-                                            <property name="[1]" type="string">html/Ch04/EinsteinSolidEntropy.html</property>
-                                        </property>
-                                    </property>
-                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
-                                        <property name="[0]" type="object">null</property>
-                                    </property>
-                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.EinsteinSolidEntropyApp</property>
-                                </object>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.EinsteinSolidEntropyApp</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Counting States</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch04/CountingStates.html</property>
                                 </property>
-                                <property name="item" type="object">
-                                <object class="org.opensourcephysics.tools.LaunchNode">
-                                    <property name="name" type="string">Counting States</property>
-                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
-                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
-                                            <property name="[1]" type="string">html/Ch04/CountingStates.html</property>
-                                        </property>
-                                    </property>
-                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
-                                        <property name="[0]" type="object">null</property>
-                                    </property>
-                                    <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.CountingStatesApp</property>
-                                </object>
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="object">null</property>
+                            </property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.CountingStatesApp</property>
+                        </object>
+                        </property>
+                        <property name="item" type="object">
+                        <object class="org.opensourcephysics.tools.LaunchNode">
+                            <property name="name" type="string">Demon Ideal Gas</property>
+                            <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
+                                <property name="[0]" type="array" class="[Ljava.lang.String;">
+                                    <property name="[1]" type="string">html/Ch04/DemonIdealGas.html</property>
                                 </property>
-                                <property name="item" type="object">
-                                <object class="org.opensourcephysics.tools.LaunchNode">
-                                    <property name="name" type="string">Demon Ideal Gas</property>
-                                    <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
-                                        <property name="[0]" type="array" class="[Ljava.lang.String;">
-                                            <property name="[1]" type="string">html/Ch04/DemonIdealGas.html</property>
-                                        </property>
-                                    </property>
-                                    <property name="display_args" type="array" class="[[Ljava.lang.String;">
+                            </property>
+                            <property name="display_args" type="array" class="[[Ljava.lang.String;">
                                         <property name="[0]" type="object">null</property>
                                     </property>
                                     <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.HardDisksMDApp</property>
@@ -626,13 +622,6 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                             </property>
                         </object>
                         </property>
-                    </property>
-                </object>
-                </property>
-                <property name="item" type="object">
-                <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Statistical Mechanics II</property>
-                    <property name="child_nodes" type="collection" class="java.util.ArrayList">
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
                             <property name="name" type="string">Chapter 7: Chemical Potential and Phase Equilibria</property>
@@ -804,9 +793,6 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                             </property>
                         </object>
                         </property>
-                    </property>
-                </object>
-                </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
                     <property name="name" type="string">Chapter 10: Time-Dependent Phomena</property>
