@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -36,7 +21,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>PottsNumberOfStates</tt> uses the Wang-Landau Monte Carlo algorithm to estimate the 
+<p>Program <code>PottsNumberOfStates</code> uses the Wang-Landau Monte Carlo algorithm to estimate the 
 number of microstates &Omega;(E) for each value of E in the q-state 2d Potts model on a square lattice. In the Potts model 
 there are q possible states for each spin and the interaction energy between any pair of neighboring spins is -J 
 if the spins have the same value and is 0 otherwise. The 2-state Potts model is equivalent to the Ising model. 
@@ -58,7 +43,7 @@ what is the relation of the interaction energy K defined in the Potts model and 
 interaction energy J defined in the Ising model? </li>
 
 <li>
-Program <tt>PottsNumberOfStates</tt> implements the Wang-Landau algorithm
+Program <code>PottsNumberOfStates</code> implements the Wang-Landau algorithm
  for the Potts model on a square lattice. Run the program for L = 16 and various values of q and 
  verify that the peak in the specific heat occurs near the known exact value of the transition temperature 
  given by T<sub>c</sub> = (ln(1 + q<sup>1/2</sup>))<sup>-1</sup>. You will need more than 100,000 Monte Carlo steps to obtain 

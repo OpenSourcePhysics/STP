@@ -2,14 +2,14 @@
 <object class="org.opensourcephysics.tools.Launcher$LaunchSet">
     <property name="width" type="int">1092</property>
     <property name="height" type="int">585</property>
-    <property name="divider" type="int">212</property>
+    <property name="divider" type="int">364</property>
     <property name="editor_enabled" type="boolean">true</property>
-    <property name="selected_node" type="string">STP Interactive Programs/Ch 1: Micro to Macro</property>
+    <property name="selected_node" type="string">STP Interactive Programs/Chapter 1: Micro to Macro</property>
     <property name="expanded" type="array" class="[Ljava.util.Collection;">
         <property name="[0]" type="collection" class="java.util.ArrayList">
-            <property name="item" type="string">STP Interactive Programs/Stat. Mech II</property>
-            <property name="item" type="string">STP Interactive Programs/Stat. Mech I</property>
             <property name="item" type="string">STP Interactive Programs</property>
+            <property name="item" type="string">STP Interactive Programs/Statistical Mechanics I</property>
+            <property name="item" type="string">STP Interactive Programs/Statistical Mechanics II</property>
         </property>
     </property>
     <property name="launch_nodes" type="collection" class="java.util.ArrayList">
@@ -45,7 +45,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Ch 1: Micro to Macro</property>
+                    <property name="name" type="string">Chapter 1: Micro to Macro</property>
                     <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                         <property name="[0]" type="array" class="[Ljava.lang.String;">
                             <property name="[1]" type="string">html/Ch01/Chapter01.html</property>
@@ -173,7 +173,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Ch 2: Thermodynamics</property>
+                    <property name="name" type="string">Chapter 2: Thermodynamics</property>
                     <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                         <property name="[0]" type="array" class="[Ljava.lang.String;">
                             <property name="[1]" type="string">html/Ch02/Chapter02.html</property>
@@ -186,7 +186,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string"><![CDATA[Ch 3: Concepts & Tools]]></property>
+                    <property name="name" type="string"><![CDATA[Chapter 3: Concepts & Tools]]></property>
                     <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                         <property name="[0]" type="array" class="[Ljava.lang.String;">
                             <property name="[1]" type="string">html/Ch03/Chapter03.html</property>
@@ -313,11 +313,11 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Stat. Mech I</property>
+                    <property name="name" type="string">Statistical Mechanics I</property>
                     <property name="child_nodes" type="collection" class="java.util.ArrayList">
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Ch 4: Methodology</property>
+                            <property name="name" type="string">Chapter 4: Methodology</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch04/Chapter04.html</property>
@@ -430,7 +430,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                         </property>
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Ch 5: Magnetic Systems</property>
+                            <property name="name" type="string">Chapter 5: Magnetic Systems</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch05/Chapter05.html</property>
@@ -571,7 +571,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                         </property>
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Ch 6: Many Particle Systems</property>
+                            <property name="name" type="string">Chapter 6: Many Particle Systems</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch06/Chapter06.html</property>
@@ -631,11 +631,11 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Stat. Mech II</property>
+                    <property name="name" type="string">Statistical Mechanics II</property>
                     <property name="child_nodes" type="collection" class="java.util.ArrayList">
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Ch 7: Chemical Potential and Phase Equilibria</property>
+                            <property name="name" type="string">Chapter 7: Chemical Potential and Phase Equilibria</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch07/Chapter07.html</property>
@@ -692,7 +692,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                         </property>
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string"><![CDATA[Ch 8: Classical Gases & Liquids]]></property>
+                            <property name="name" type="string"><![CDATA[Chapter 8: Classical Gases & Liquids]]></property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch08/Chapter08.html</property>
@@ -749,7 +749,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                         </property>
                         <property name="item" type="object">
                         <object class="org.opensourcephysics.tools.LaunchNode">
-                            <property name="name" type="string">Ch 9: Critical Phenomena</property>
+                            <property name="name" type="string">Chapter 9: Critical Phenomena</property>
                             <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="array" class="[Ljava.lang.String;">
                                     <property name="[1]" type="string">html/Ch09/Chapter09.html</property>
@@ -809,7 +809,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Ch 10: Time-Dependent Phomena</property>
+                    <property name="name" type="string">Chapter 10: Time-Dependent Phomena</property>
                     <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                         <property name="[0]" type="array" class="[Ljava.lang.String;">
                             <property name="[1]" type="string">html/Ch10/Chapter10.html</property>

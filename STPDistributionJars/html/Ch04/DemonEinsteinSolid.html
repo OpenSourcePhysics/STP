@@ -1,22 +1,5 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
 <html>
 
 <head>
@@ -36,7 +19,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>DemonEinsteinSolid</tt>  models an ideal thermometer,   called the <i>demon</i>. The demon is in thermal 
+<p>Program <code>DemonEinsteinSolid</code>  models an ideal thermometer,   called the <i>demon</i>. The demon is in thermal 
 equilibrium 
 with  a system of N oscillators called an Einstein solid. The energy of each oscillator is restricted 
 to an integer and is greater than or equal to  0. The energy of the demon is its only property, and thus the 
@@ -63,7 +46,7 @@ N particles. The demon selects a particle at random and randomly changes its ene
 by &plusmn; 1 consistent with the constraint that E<sub>d</sub>
 &ge; 0. In this case the energy of a particle in the system also must 
 remain nonnegative. Why? 
-Use Program <tt>DemonEinsteinSolid</tt>  to do the simulations.
+Use Program <code>DemonEinsteinSolid</code>  to do the simulations.
 
 <ol type ="a">
 

@@ -1,22 +1,6 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ [' ',' '] ],
-      displayMath: [ ['  ','  '] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
@@ -36,7 +20,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>Chaos</tt> simulates 11 particles initially moving with the same velocity such that the net force on each particle is zero.
+<p>Program <code>Chaos</code> simulates 11 particles initially moving with the same velocity such that the net force on each particle is zero.
 The particles interact through the Lennard-Jones potential. Perturb the system  slightly and see what happens. The velocities 
 can also be reversed to see to what extent the system is reversible.  </p>
 
@@ -48,7 +32,7 @@ The idea of chaos or sensitivity to initial conditions helps us understand irrev
 <h2>Problem: Irreversibility</h2>
 
 
-Program <tt>Chaos</tt>
+Program <code>Chaos</code>
 simulates a system of
  N = 11  particles with a special initial condition.
 

@@ -1,22 +1,6 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
@@ -36,7 +20,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>LennardJonesMD</tt> simulates the behavior of particles moving in a two-dimensional box interacting through the Lennard-Jones potential. 
+<p>Program <code>LennardJonesMD</code> simulates the behavior of particles moving in a two-dimensional box interacting through the Lennard-Jones potential. 
 The velocities and positions evolve according to the numerical solution of the 
 differential equations in Newton's second law. The velocity Verlet algorithm is used to update the positions and velocities of the particles. 
 Toroidal boundary conditions are used so that particles that leave the box enter on the other side, much like many video games. </p>
@@ -51,7 +35,7 @@ information about the spatial structure of the system, and the diffusion of a ta
 
 <ol type ="a">
 
-<li> Program <tt>LennardJonesMD</tt> simulates an
+<li> Program <code>LennardJonesMD</code> simulates an
 isolated system of
 N particles interacting via the Lennard-Jones potential. Choose
 N = 144 and

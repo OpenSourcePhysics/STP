@@ -1,22 +1,5 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
 <html>
 
 <head>
@@ -42,7 +25,7 @@ which can be distributed among the oscillators in &Omega; ways, where
 
 <p>Each way is  a  <i>microstate</i>. </p>
 
-<p>Program <tt>EinsteinSolidMicrostates</tt> considers two systems    which can share energy; the number of
+<p>Program <code>EinsteinSolidMicrostates</code> considers two systems    which can share energy; the number of
 oscillators in each system is fixed. The  idea is to explore the probability of various distributions
 of energy between the two systems.</p>
 
@@ -54,7 +37,7 @@ E<sub>A</sub> = 10 and N<sub>B</sub> = 4 and E<sub>B</sub> = 2. The two subsyste
 thermally isolated from one another and from their surroundings. Verify that the number of microstates accessible to subsystem A is 286 and the number of microstates accessible to subsystem B is 10. What is the initial number of accessible
 microstates for the composite system?
 
-Program <tt>EinsteinSolidMicrostates</tt> determines the number
+Program <code>EinsteinSolidMicrostates</code> determines the number
 of accessible microstates of an Einstein solid using
 Eq. (1) and will help you answer the following questions.
 

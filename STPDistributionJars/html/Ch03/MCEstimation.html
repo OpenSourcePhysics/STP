@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -38,7 +23,7 @@ MathJax.Hub.Config({
 impossible to average over all possible values. Instead we can sample the possible values and determine an appropriate average. 
 This procedure is referred to as a Monte Carlo (MC) calculation.      </p>
 
-<p>Program <tt> MCEstimation</tt> illustrates a simple example of a MC calculation by estimating the integral 
+<p>Program <code> MCEstimation</code> illustrates a simple example of a MC calculation by estimating the integral 
 &int; y(x) dx = &int; {1 - x<sup>2</sup>)<sup>1/2</sup> dx from x = 0 to x = 1,
 where the possible values of (x,y) are within a 1 x 1 box.  The program randomly generates pairs (x<sub>i</sub>,y<sub>i</sub>) 
 and counts the percentage where y<sub>i</sub> &le; y(x<sub>i</sub>).  Because the area of a 1 x 1 box is unity, 
@@ -51,7 +36,7 @@ this percentage provides an estimate of the integral.
 
 <li> Show analytically that the integral  is equal to &pi;/4.</li>
 
-<li> Use Program <tt>MCEstimation</tt> to estimate the integral by Monte Carlo
+<li> Use Program <code>MCEstimation</code> to estimate the integral by Monte Carlo
 integration. Determine the error (the magnitude of the deviation from the exact answer) 
 for trials of n pairs of points equal to n= 10<sup>4</sup>, 10<sup>6</sup>, and 10<sup>8</sup>. Does the error 
 decrease with increasing n on the average?</li>

@@ -1,22 +1,6 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
@@ -38,12 +22,12 @@ MathJax.Hub.Config({
 
 <p>Approximation techniques are used to study the effect of inter-particle interactions in  gases. A
  common technique is the virial density expansion. The first-order expansion for the ideal gas is given by
-<p>&nbsp; &nbsp; PV/NkT = 1 + &rho; B<sub>2</sub>(T), &nbsp; &nbsp;  (1)
-<p>where the second virial coefficient is
-<p>&nbsp;&nbsp;B<sub>2</sub>(T) = 2&pi; &int; [1 - e<sup>u(r)/kT</sup>] r<sup>2</sup> dr &nbsp; &nbsp; (2)
-<p>where the integral runs from 0 to &infin; and u(r) is a spherically symmetric inter-particle potential. 
+<br>&nbsp; &nbsp; PV/NkT = 1 + &rho; B<sub>2</sub>(T), &nbsp; &nbsp;  (1)
+<br>where the second virial coefficient is
+<br>&nbsp;&nbsp;B<sub>2</sub>(T) = 2&pi; &int; [1 - e<sup>u(r)/kT</sup>] r<sup>2</sup> dr .&nbsp; &nbsp; (2)
+<br>The integral runs from 0 to &infin; and u(r) is a spherically symmetric inter-particle potential. 
 
-<p>Program <tt>SecondVirialCoefficient</tt> computes B<sub>2</sub>(T) for the Lennard-Jones potential. </p> 
+<p>Program <code>SecondVirialCoefficient</code> computes B<sub>2</sub>(T) for the Lennard-Jones potential. </p> 
 
 <h2>Problem: Temperature dependence of B<sub>2</sub></h2>
 
@@ -54,24 +38,20 @@ square well potential which is defined as
 <p>&nbsp;u(r) = &infin; &nbsp; (r &lt; &sigma;), 
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&epsilon; &nbsp; (&sigma; &lt; r &lt; &lambda;&sigma;),
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; (r &gt; &lambda;&sigma;),  &nbsp; &nbsp; &nbsp; &nbsp; (3)
-
-<p>where &sigma; is the diameter of the hard core, &lambda;&sigma; is the range of the attractive well, 
+<br>where &sigma; is the diameter of the hard core, &lambda;&sigma; is the range of the attractive well, 
 and &epsilon; is the well depth. Show that for this potential the Mayer function f(r) is 
 given by 
 <p>&nbsp;f(r) = -1 &nbsp; (r &lt; &sigma;), 
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g &nbsp; (&sigma; &lt; r &lt; &lambda;&sigma;),
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; (r &gt; &lambda;&sigma;),  &nbsp; &nbsp; &nbsp; &nbsp;(4)
-
-<p>and
-
-<p>B<sub>2</sub>(T) = (2&pi;&sigma;<sup>3</sup>/3)[1 - (&lambda;<sup>3</sup> - 1)g].&nbsp; &nbsp; (5)
-
-<p>where g = e<sup>&beta;&epsilon;</sup> - 1.
+<br>and
+<br>B<sub>2</sub>(T) = (2&pi;&sigma;<sup>3</sup>/3)[1 - (&lambda;<sup>3</sup> - 1)g].&nbsp; &nbsp; (5)
+<br>and g = e<sup>&beta;&epsilon;</sup> - 1.
 
 <li>Plot the temperature dependence of B<sub>2</sub>(T) as given by Eq. (2) and compare it to the 
 approximate temperature dependence given by B<sub>2</sub> = b - a/kT.</li>
 
-<li> Program <tt>SecondVirialCoefficient</tt>  evaluates the integral over r in Eq. (2)
+<li> Program <code>SecondVirialCoefficient</code>  evaluates the integral over r in Eq. (2)
 numerically to determine the temperature dependence of B<sub>2</sub> for the Lennard-Jones potential. 
  Compare the numerical results for the Lennard-Jones potential with the approximate 
  result B<sub>2</sub> = b - a/kT. At what temperature does B<sub>2</sub> vanish? How does this 

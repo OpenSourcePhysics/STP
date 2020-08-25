@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -36,7 +21,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>Ising2d</tt> simulates N Ising model spins  on a L x L square 
+<p>Program <code>Ising2d</code> simulates N Ising model spins  on a L x L square 
 lattice with periodic boundary conditions. 
 The Metropolis Monte Carlo algorithm is used.      </p>
 
@@ -47,7 +32,7 @@ low temperatures and a paramagnetic state at high temperatures. </p>
 
 <h2>Problem: Simulation of the two-dimensional Ising model</h2>
 
-Use Program <tt>Ising2d</tt> to explore some of the properties of the two-dimensional 
+Use Program <code>Ising2d</code> to explore some of the properties of the two-dimensional 
 Ising model on a square lattice at a given temperature T and external magnetic field H. First choose
 N = L<sup>2</sup> = 32<sup>2</sup> and set
 H = 0. The initial
@@ -102,14 +87,14 @@ versus H and estimate the critical exponent &delta; using
 <h2>Problem: The Ising model in an external magnetic field</h2>
 
 <p>Use Program
-<tt>Ising2d</tt>  to simulate the
+<code>Ising2d</code>  to simulate the
 Ising model on a square lattice at a given temperature. Choose
 N=L<sup>2</sup>=32<sup>2</sup>. Run for at least 200 Monte Carlo steps per spin at each value of the field.
 
 <ol type ="a">
 
 <li>
-Set H = 0.2 and T = 3 and estimate the approximate value of the magnetization. Then change the field to H = 0.1 and continue updating the spins (do not press <tt>New</tt>) so that the simulation is continued from the last microstate. Note the value of m. Continue this procedure with H = 0, then H = -0.1 and then H = -0.2. Do your values of m change abruptly as you change the field?
+Set H = 0.2 and T = 3 and estimate the approximate value of the magnetization. Then change the field to H = 0.1 and continue updating the spins (do not press <code>New</code>) so that the simulation is continued from the last microstate. Note the value of m. Continue this procedure with H = 0, then H = -0.1 and then H = -0.2. Do your values of m change abruptly as you change the field?
 Is there any indication of a phase transition as you change H?</li> 
 
 <li>
@@ -123,7 +108,7 @@ Repeat the same procedure as in part (a) at T = 1.8 which is below the critical 
 <ol type ="a">
 
 <li>
-Use Program <tt>Ising2d</tt> to simulate the Ising model in a magnetic field. Choose L = 64, T = 1, and H = 0.7. 
+Use Program <code>Ising2d</code> to simulate the Ising model in a magnetic field. Choose L = 64, T = 1, and H = 0.7. 
 Run until the system reaches equilibrium. You will notice that most of the spins are aligned with the magnetic field.</li>
 
 
@@ -182,7 +167,7 @@ to determine the ratio &gamma;/&nu;. This method of analysis is known as <i>fini
 <ol type ="a">
 
 <li>
-Use Program <tt>Ising2d</tt> to estimate &chi; at T = T<sub>c</sub> for different values of L. 
+Use Program <code>Ising2d</code> to estimate &chi; at T = T<sub>c</sub> for different values of L. 
 Make a log-log plot of &chi; versus L and use the scaling relation
 Eq. (6) to determine the ratio
 &gamma;/&nu;. Use the exact result

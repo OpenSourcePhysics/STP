@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -36,13 +21,13 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>Ising1d</tt>  simulates N Ising  spins  on a ring, although we visualize the ring as a straight line. 
+<p>Program <code>Ising1d</code>  simulates N Ising  spins  on a ring, although we visualize the ring as a straight line. 
 The Metropolis Monte Carlo algorithm is used.  The goal of this simulation is to explore the properties of the 1d Ising model and compare with analytical results. 
 It is also important  to understand why there is no phase transition for  temperature T > 0. </p>
 
 <h2>Problem: Computer simulation of the Ising chain</h2>
 
-Use Program <tt>Ising1d</tt> to simulate the
+Use Program <code>Ising1d</code> to simulate the
 one-dimensional Ising model. It is convenient to measure the temperature in 
 units such that J/k = 1. For example, a temperature of T = 2 means that T = 2J/k. The &#8220;time&#8221; is 
 measured in terms of Monte Carlo steps per spin (mcs), where in one Monte Carlo step per spin, N 

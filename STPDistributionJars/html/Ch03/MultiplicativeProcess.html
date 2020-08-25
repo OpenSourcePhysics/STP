@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -37,7 +22,7 @@ MathJax.Hub.Config({
 
 
 <p>An example of a process which does not follow the central limit theorem is a 
-multiplicative process. Program <tt>MultiplicativeProcess</tt> explores the distribution of 
+multiplicative process. Program <code>MultiplicativeProcess</code> explores the distribution of 
 the quantity   &Pi; = (x<sub>1</sub>)<sup>n</sup>(x<sub>2</sub>)<sup>N-n</sup>, where x<sub>1</sub> is chosen n times with 
 probability p   and x<sub>2</sub> is chosen N-n times with probability q = 1-p.  
 You can choose x<sub>1</sub>, x<sub>2</sub>, N, and p. The distribution of &Pi; is plotted, and the mean value and 
@@ -46,7 +31,7 @@ most probable value of &Pi; are computed.
 
 <h2> Problem: Simulation of a multiplicative process</h2>
 
-<p>Use Program  <tt>MultiplicativeProcess</tt> to simulate the
+<p>Use Program  <code>MultiplicativeProcess</code> to simulate the
 distribution of values of the product
 (x<sub>1</sub>)<sup>n</sup> (x<sub>2</sub>)<sup>N-n</sup>. Choose
 x<sub>1</sub> = 2, x<sub>2</sub> = 1/2, and p = q = 1/2.

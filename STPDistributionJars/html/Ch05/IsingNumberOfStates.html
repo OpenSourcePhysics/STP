@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -36,7 +21,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>IsingNumberOfStates</tt> uses the Wang-Landau Monte Carlo algorithm to estimate the 
+<p>Program <code>IsingNumberOfStates</code> uses the Wang-Landau Monte Carlo algorithm to estimate the 
 number of microstates &Omega;(E) for each value of E of the 2d Ising model on a square lattice. Once &Omega;(E) is 
 known from one simulation  averages 
 such as the mean energy can be found at any temperature using
@@ -46,7 +31,7 @@ such as the mean energy can be found at any temperature using
 
 <h2>Problem: Wang-Landau algorithm for the Ising model</h2>
 
-<p>Program <tt>IsingNumberOfStates</tt> implements the Wang-Landau algorithm for the Ising model on a square lattice.
+<p>Program <code>IsingNumberOfStates</code> implements the Wang-Landau algorithm for the Ising model on a square lattice.
 
 <ol type ="a">
 

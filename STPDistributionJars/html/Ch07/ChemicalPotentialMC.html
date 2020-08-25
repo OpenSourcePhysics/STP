@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -50,7 +35,7 @@ simulation by using the Widom insertion method such that
 and computes &mu;<sub>excess</sub>. </p>
 
 <h2>Problem: The excess chemical potential of a Lennard-Jones fluid</h2>
-Program <tt>ChemicalPotentialMC</tt> implements the Widom insertion method to estimate the chemical potential 
+Program <code>ChemicalPotentialMC</code> implements the Widom insertion method to estimate the chemical potential 
 for a system of particles interacting with the Lennard-Jones potential. 
 Determine the density dependence of the excess chemical potential of a Lennard-Jones fluid. 
 Are your results for &mu;<sub>excess</sub> consistent with qualitative arguments given in the text?</p>

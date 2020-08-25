@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -43,7 +28,7 @@ hard disks are moved during the time between the last collision and the next col
 and the new velocities of the colliding disks after the collision are determined.        </p>
 
 <p>This model is very versatile. 
-In Chapter 4 we used Program <tt>HardDisksMD</tt> to explore the pressure dependence of the density and the possibility 
+In Chapter 4 we used Program <code>HardDisksMD</code> to explore the pressure dependence of the density and the possibility 
 of a phase transition. 
 In Chapter 8 we explore the structure of the fluid, and in Chapter 10 we will explore the self-diffusion constant, 
 as well as the mean free time and mean free path.
@@ -51,7 +36,7 @@ as well as the mean free time and mean free path.
 
 <h2>Problem: Qualitative behavior of g(r)</h2>
 
-Use Programs <tt>HardDisksMD</tt> and <tt>LennardJonesMD</tt> to simulate a system of hard disks
+Use Programs <code>HardDisksMD</code> and <code>LennardJonesMD</code> to simulate a system of hard disks
  and particles interacting with the Lennard-Jones potential
   to determine the behavior of g(r) for various densities and temperatures. 
    We consider two-dimensional systems because they are easier to visualize.

@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -41,7 +26,7 @@ which can be distributed among the oscillators in &Omega; ways, where
 &Omega; = (E+N-1)!/[E! (N-1)!]. 
 Each way is  a  <i>microstate</i>. </p>
 
-<p>Program <tt>EinsteinSolidEntropy</tt> considers two systems which can share energy; the number of
+<p>Program <code>EinsteinSolidEntropy</code> considers two systems which can share energy; the number of
 oscillators in each system is fixed. The key idea is to explore the    total entropy 
 S = k ln &Omega;  and the inverse temperature &#8706;S/&#8706;E for each system at equilibrium. 
 In the program k = 1.</p>
@@ -50,7 +35,7 @@ In the program k = 1.</p>
 
 The
 entropies of two Einstein solids in thermal contact are computed and plotted in 
-Program <tt>EinsteinSolidEntropy</tt>.
+Program <code>EinsteinSolidEntropy</code>.
 
 <ol type ="a">
 

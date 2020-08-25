@@ -1,22 +1,6 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
@@ -36,7 +20,7 @@ MathJax.Hub.Config({
   
    
 
-<p>Program <tt>HoleInWall</tt> models the behavior of N particles that are located in one of two halves of a two-dimensional box. 
+<p>Program <code>HoleInWall</code> models the behavior of N particles that are located in one of two halves of a two-dimensional box. 
 The dynamics is very simple. A a particle is chosen at random and moved to the other half of the box.
  The macroscopic quantity of interest is the number of particles in 
 the left half of the box. 
@@ -64,7 +48,7 @@ state during the time you have patience to watch the system? </li>
 left-hand side, depend on N after the system has reached
 equilibrium?  The program computes various averages
 from the time t = 0. Why does such a calculation not yield the
-correct equilibrium average values? Use the <tt>Zero Averages</tt> button to reset the calculation of the averages.</li>
+correct equilibrium average values? Use the <code>Zero Averages</code> button to reset the calculation of the averages.</li>
 <li> Define the quantity &sigma; by the
 relation (This use of &sigma; should not be confused with the length &sigma; in the Lennard-Jones potential.)
 

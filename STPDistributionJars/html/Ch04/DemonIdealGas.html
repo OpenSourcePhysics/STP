@@ -1,22 +1,5 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
 <html>
 
 <head>
@@ -36,7 +19,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt> DemonIdeaGas</tt> model an ideal thermometer,   called the <i>demon</i>. 
+<p>Program <code> DemonIdeaGas</code> model an ideal thermometer,   called the <i>demon</i>. 
 The demon is in thermal equilibrium 
 with the system of interest, an ideal gas. The energy of the demon is its only property. 
 The demon measures randomly chooses a particle and attempts to change its velocity. If the change decreases 
@@ -54,7 +37,7 @@ Consider a demon that exchanges energy with an ideal classical gas
 of
 N identical particles of mass m = 1 in d dimensions. Because the
 energy of a particle in an ideal gas depends only on its speed, the positions
-of the particles are irrelevant. In Program <tt>DemonIdealGas</tt> 
+of the particles are irrelevant. In Program <code>DemonIdealGas</code> 
 the demon chooses a
 particle i at random and changes a random component k of the particle's velocity by an amount
 &#948; chosen at random between

@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -36,7 +21,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>LennardJonesMD</tt>   simulates behavior of particles moving in a two-dimensional box 
+<p>Program <code>LennardJonesMD</code>   simulates behavior of particles moving in a two-dimensional box 
 interacting through a Lennard-Jones potential. 
 The program implements the numerical solution of the 
 differential equations in Newton's second law. The velocity Verlet algorithm is used to update the positions 
@@ -50,7 +35,7 @@ information about the spatial correlations structure of the system, and the diff
 
 <h2>Problem: Qualitative behavior of g(r)</h2>
 
-<p>Use Programs <tt>HardDisksMD</tt> and <tt>LennardJonesMD</tt> to simulate a system of hard disks
+<p>Use Programs <code>HardDisksMD</code> and <code>LennardJonesMD</code> to simulate a system of hard disks
  and particles interacting with the Lennard-Jones potential
   to determine the behavior of g(r) for various densities and temperatures. 
    We consider two-dimensional systems because they are easier to visualize.

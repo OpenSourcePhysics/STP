@@ -1,22 +1,5 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
 <html>
 
 <head>
@@ -36,11 +19,11 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>ThermalContact</tt> models the behavior of two types of particles interacting 
+<p>Program <code>ThermalContact</code> models the behavior of two types of particles interacting 
 through a Lennard-Jones potential and moving in a two-dimensional box. The Lennard-Jones parameters &epsilon; and &sigma; are different for the two 
 types of particles, and the interaction of the particles between the two parts also has different values of &epsilon; and &sigma;. 
 The motion evolves using the numerical solution of Newton's second law. The velocity Verlet algorithm is used to update the positions and velocities of the particles. 
-Each type of particle is initially separated by a wall, and the two types do not interact. After thermal equilibrium has been established, press the <tt>Contact</tt> button to turn on the interaction between the 
+Each type of particle is initially separated by a wall, and the two types do not interact. After thermal equilibrium has been established, press the <code>Contact</code> button to turn on the interaction between the 
  two types of particles. The potential energy per particle and the
  kinetic energy per 
  particle is plotted versus time.  </p>
@@ -53,7 +36,7 @@ temperature</h2>
 
 <ol type ="a">
 
-<li> Use Program <tt> ThermalContact</tt> to simulate two systems, 
+<li> Use Program <code> ThermalContact</code> to simulate two systems, 
 A and B, of particles  that interact via the
 Lennard-Jones potential.  Both systems are in a square box with linear
 dimension

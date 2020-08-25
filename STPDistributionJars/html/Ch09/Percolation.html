@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -44,13 +29,13 @@ p = p<sub>c</sub>, such that below p<sub>c</sub> there are only small clusters o
 At the phase transition various quantities diverge or vanish as a power law typical of critical phenomena. Percolation models 
 are useful for understanding conductivity in metal-insulator mixtures and flow through porous materials. </p>
 
-<p> Program <tt>Percolation</tt> calculates mean values of various quantities as a function of p and 
+<p> Program <code>Percolation</code> calculates mean values of various quantities as a function of p and 
 provides a visualization of the clusters
 at a user specified value of p. Clusters are identified using the Hoshen-Kopelman algorithm. </p>
 
 <h2>Problem: Simulation of percolation</h2>
 
-Program <tt>Percolation</tt> generates site percolation configurations on a
+Program <code>Percolation</code> generates site percolation configurations on a
 square lattice and computes P<sub>&infin;</sub>(p), the fraction of states in the spanning cluster; S(p), 
 the mean number of sites in the finite clusters; P<sub>span</sub>(p), the probability of a spanning cluster; 
 and n<sub>s</sub>, the number of clusters with s sites for various values of p. The clusters are shown at the 
@@ -67,7 +52,7 @@ Do the spanning clusters become less dense? Do you see clusters of all sizes at 
 
 <li> Run the program for at least 100 trials at p = p<sub>c</sub> and make a log-log plot of the cluster size 
 distribution n<sub>s</sub> versus s. Do you see linear behavior for some range of values of s? 
-Choose <tt>Data Table</tt> under the <tt>Views</tt> menu and fit your data to the form n<sub>s</sub> = A s<sup>-&tau;</sup>, 
+Choose <code>Data Table</code> under the <code>Views</code> menu and fit your data to the form n<sub>s</sub> = A s<sup>-&tau;</sup>, 
 where A and &tau; are fitting parameters. Compare your estimate for &tau; to the exact result 
 for &tau; in d = 2 given by &tau; = 187/91.</li>
 
@@ -89,7 +74,7 @@ the connectedness length &xi;.
 We write &xi; &sim; |p-p<sub>c</sub>|<sup>-&nu;</sup> and |p - p<sub>c</sub>| &sim; &xi;<sup>-1/&nu;</sup>. 
 Hence P<sub>&infin;</sub> &sim; (p - p<sub>c</sub>)<sup>&beta;</sup> &sim; &xi;<sup>-&beta;/&nu;</sup>. For a finite system we 
 replace &xi; by L and write P<sub>&infin;</sub> &sim; L<sup>-&beta;/&nu;</sup>. Similar 
-reasoning gives S &sim; L<sup>&gamma;/&nu;</sup>. Use Program <tt>Percolation</tt> to generate 
+reasoning gives S &sim; L<sup>&gamma;/&nu;</sup>. Use Program <code>Percolation</code> to generate 
 configurations at p = p<sub>c</sub> for L = 10, 20, 40, and 80, and determine the ratios &beta;/&nu; and &gamma;/&nu;. 
 Use the exact result &nu; = 4/3, and compare your results with the exact 
 results &beta; = 5/36 and &gamma; = 43/18. 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 
 <html>
@@ -19,7 +19,7 @@
   <div style="position:absolute;left:30px;top:500px;">
 
   
-<p>Program <tt>HardDisksMD</tt>  
+<p>Program <code>HardDisksMD</code>  
 keeps track of the location and velocity of each hard disk and determines when the next collision occurs. Then  the 
 hard disks are moved during the time between the last collision and the next collision, 
 and the new velocities of the colliding disks after the collision are determined.        </p>
@@ -27,7 +27,7 @@ and the new velocities of the colliding disks after the collision are determined
 <h2>Problem: The motion of particles in a fluid</h2>
 
 
-Program <tt>HardDisksMD</tt> simulates a system of hard disks
+Program <code>HardDisksMD</code> simulates a system of hard disks
 and tags one of the particles blue so that it can be distinguished from the other particles. 
 The default density is &rho; = 0.16, a density that is far from the density at the fluid-solid transition. 
 How would you describe the motion of the tagged particle? Does its motion differ from that of the other particles?
@@ -41,12 +41,12 @@ How would you describe the motion of the tagged particle? Does its motion differ
 
 <li> Why is the mean displacement, (1/N)&sum; &lt; <b>r</b><sub>i</sub>(t)&gt;, of little interest? </li>
 
-<li> Program <tt>HardDisksMD</tt>  computes the mean square displacement r<sup>2</sup>(t) 
+<li> Program <code>HardDisksMD</code>  computes the mean square displacement r<sup>2</sup>(t) 
 of a system of hard disks. The displacements in the x and y directions are computed separately 
 to give you an idea of the statistical error. Describe the behavior of r<sup>2</sup>(t) for very short times 
 and for long times. </li>
 
-<li> Program <tt>LennardJonesMD</tt> simulates a system of particles interacting with the Lennard-Jones potential. 
+<li> Program <code>LennardJonesMD</code> simulates a system of particles interacting with the Lennard-Jones potential. 
 Is the motion of the tagged particle similar to what you observed for hard disks?  </li>
 
 <li> How does r<sup>2</sup>(t) for the two systems compare at the same density?</li>
@@ -55,7 +55,7 @@ Is the motion of the tagged particle similar to what you observed for hard disks
 <h2>Problem: The self-diffusion coefficient of hard disks</h2>
 
 
-<p>Program <tt>HardDisksMD</tt> computes the mean square displacement by averaging over all particles and over time 
+<p>Program <code>HardDisksMD</code> computes the mean square displacement by averaging over all particles and over time 
 origins chosen at 10 &tau; apart. The time is measured in units of &tau; = (m&sigma;<sup>2</sup>/kT)<sup>1/2</sup>, 
 where &sigma; is the hard disk diameter, m is the mass of a disk, and T is the 
 temperature. 
@@ -88,7 +88,7 @@ system of hard disks.
 <li> Let P(t) be the distribution of times t between successive collisions of a particular particle with any 
 other particle in the system. What do you expect the form of P(t) to be for low densities?</li>
 
-<li> Program <tt>HardDisksMD</tt>  computes the histogram of collision times for a 
+<li> Program <code>HardDisksMD</code>  computes the histogram of collision times for a 
 system of hard disks at density &rho; = 0.16 (and T = 1). The results are averaged over all 
 particles to obtain better results. The histogram is an estimate of P(t) if the data is normalized. 
 Does the qualitative behavior of the histogram agree with your expectations?</li>
@@ -100,7 +100,7 @@ the mean time between collisions.</li>
 
 <h2>Problem: Tests of simple kinetic theory arguments</h2>
 
-<p>Compare the results from Program <tt>HardDisksMD</tt> for the mean collision time and mean free path 
+<p>Compare the results from Program <code>HardDisksMD</code> for the mean collision time and mean free path 
 to the predictions &tau; = 1/&nu; = 1/&rho; &sigma;<sub>c</sub> &lt;v&gt; 
 and &lambda; &asymp; 1/(2<sup>1/2</sup>&rho;&sigma;<sub>c</sub>). (Note that &tau; has been used to represent the unit of time and the mean collision time.) </p>
 
@@ -113,7 +113,7 @@ determine the temperature and density dependence of D for a dilute system of har
 You will need to calculate &lt;v&gt; using the two-dimensional version of the Maxwell 
 velocity distribution function. </li> 
 
-<li>  Compare your results from Program <tt>HardDisksMD</tt> for the self-diffusion 
+<li>  Compare your results from Program <code>HardDisksMD</code> for the self-diffusion 
 coefficient to the predictions from part (a) and the Boltzmann 
 equation given by D<sub>B</sub> = (1/2&rho;&sigma;) (kT/&pi;m)<sup>1/2</sup>.</li> 
 

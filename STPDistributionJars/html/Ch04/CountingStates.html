@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -54,7 +39,7 @@ of the particle, and h is the Planck constant.  </p>
 <p>Equation (1) for &Gamma;(E) is valid only
 for large E because the area of a quadrant of a circle
 overestimates the number of lattice points n<sub>x</sub>,n<sub>y</sub> inside a circle
-of radius R. Use  Program <tt>CountingStates</tt> to explore how well the relation &Gamma; = &pi;R<sup>2</sup>/4
+of radius R. Use  Program <code>CountingStates</code> to explore how well the relation &Gamma; = &pi;R<sup>2</sup>/4
 approximates the actual number of microstates. The program computes the number of nonzero, positive integers that satisfy
 the condition (n<sub>x</sub>)<sup>2</sup> + (n<sub>y</sub>)<sup>2</sup> &le; R<sup>2</sup>.
 What is the minimum value of R for which the difference between

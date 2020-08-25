@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -50,7 +35,7 @@ we can determine the actual equilibrium value(s) of m. Units are chosen so that 
 
 <h2>Problem: Numerical solutions of  mean field equations</h2>
 
-Program <tt>IsingMeanField</tt> uses Newton's method to find the zeros of the 
+Program <code>IsingMeanField</code> uses Newton's method to find the zeros of the 
 function g(m) = m - tanh &beta;(Jqm + H).
 
 <ol type ="a">
@@ -85,7 +70,7 @@ m = &plusmn; m<sub>0</sub> corresponds to a
 lower value of f for T &lt; T<sub>c</sub>.</li>
 
 <li>
-Use Program <tt>IsingMeanField</tt> to plot f(m) as a function 
+Use Program <code>IsingMeanField</code> to plot f(m) as a function 
 of m for T&gt;T<sub>c</sub>. For what value of m does f(m) have a minimum? </li>
 
 <li>

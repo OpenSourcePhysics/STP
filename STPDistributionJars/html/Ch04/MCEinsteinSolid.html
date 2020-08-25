@@ -1,22 +1,5 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
 <html>
 
 <head>
@@ -36,7 +19,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>MCEinsteinSolid</tt> simulates the Einstein solid using the Metropolis Monte Carlo (MC) algorithm, 
+<p>Program <code>MCEinsteinSolid</code> simulates the Einstein solid using the Metropolis Monte Carlo (MC) algorithm, 
 which simulates systems  at  constant temperature. An oscillator is chosen at random and one unit of energy is 
 either added or taken from the oscillator. If the change decreases the energy of the system,  the change is accepted. 
 If it increases the energy, a random number r between 0 and 1 is computed and 
@@ -50,7 +33,7 @@ canonical ensemble. </p>
 <h2>Problem: Simulation of the Einstein solid in
 equilibrium with a reservoir</h2>
 
-Program <tt>MCEinsteinSolid</tt>  implements the Metropolis algorithm for an Einstein solid of N
+Program <code>MCEinsteinSolid</code>  implements the Metropolis algorithm for an Einstein solid of N
 particles at a temperature T. (As usual, we choose units such
 that the Boltzmann constant k = 1.)
 

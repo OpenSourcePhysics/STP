@@ -1,21 +1,5 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
@@ -35,7 +19,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>ThreePartsMD</tt> models the behavior of particles moving in a two-dimensional box interacting through the Lennard-Jones potential. 
+<p>Program <code>ThreePartsMD</code> models the behavior of particles moving in a two-dimensional box interacting through the Lennard-Jones potential. 
 The program uses the velocity Verlet algorithm   to update the positions and velocities of the particles which evolve according to Newton's second law.  
 Toroidal boundary conditions are used so that particles that leave the box enter on the other side, much like many video games. Initially, all the particles are located in the middle third of the box. The macroscopic quantity of interest is the number of particles in 
 each of the three parts of the box. 
@@ -64,7 +48,7 @@ motion. We say that the removal of a wall corresponds
 to the removal of an internal constraint. What do you think will
 happen? 
 
-<p>Program <tt>ThreePartsMD</tt> implements this simulation. The program shows the positions of the particles 
+<p>Program <code>ThreePartsMD</code> implements this simulation. The program shows the positions of the particles 
 and plots the number of particles in the left (n<sub>1</sub>), center (n<sub>2</sub>), and right (n<sub>3</sub>) part of the box as a 
 function of time. The input parameter is N, the number of particles initially in the center, so that n<sub>1</sub> = 0, n<sub>2</sub> = N, 
 and n<sub>3</sub> = 0 at t = 0.</p> 
@@ -89,7 +73,7 @@ time. For argon &sigma; = 3.4 x 10<sup>-10</sup> meters, &epsilon; = 1.65 x 10<s
  What is the value of &sigma;(m/&epsilon;)<sup>1/2</sup> for argon? How much 
  real time has elapsed if the program shows that t = 100?</li>
  
- <li> See Program <tt>TwoPartsMD</tt>.
+ <li> See Program <code>TwoPartsMD</code>.
 
 <li>  Why does the system exhibit a direction of
 time when the motion of each particle is time reversible?</li>

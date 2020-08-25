@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -122,7 +107,7 @@ to part(a).) What is the upper limit of &mu;?
 Discuss their behavior as a function of temperature.
 
 <li>  Although it is instructive to write your own program, 
-Program  <tt>BoseGasSum</tt> implements the sum over <b>n</b> and computes &mu; by varying its value until the 
+Program  <code>BoseGasSum</code> implements the sum over <b>n</b> and computes &mu; by varying its value until the 
 computed N equals the desired input value. The program plots &lt;N<sub>0</sub>&gt;, &lt;N<sub>ex</sub>&gt; = N - &lt;N<sub>0</sub>&gt;
 and the specific heat C = (1/N)&Delta;E/&Delta;T by using two neighboring values of the temperature.
 Use the default values and explain why there appears to be a phase transition. How does the value of the transition 

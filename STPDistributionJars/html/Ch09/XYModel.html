@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -65,7 +50,7 @@ transition at a nonzero temperature T<sub>KT</sub> known as the
  decreases exponentially. The power law decay of C(r) for T &le; T<sub>KT</sub> implies that every 
  temperature below T<sub>KT</sub> acts as a critical point.</p>
 
-<p>Program <tt>XYModel</tt> uses the Metropolis algorithm  to simulate the XY model in two dimensions. 
+<p>Program <code>XYModel</code> uses the Metropolis algorithm  to simulate the XY model in two dimensions. 
 In this case a spin is chosen at random and rotated by a random angle up to a maximum value &delta;.
 
 <ol type ="a">
@@ -82,12 +67,12 @@ Follow the arrows as they turn around a vortex. A vortex is indicated by a squar
 difference between a positive (blue) and negative (yellow) vortex? Does a vortex ever appear isolated? 
 Count the number of positive vortices and negative vortices. Is the number the same at all times?</li>
 
-<li> Click the <tt>New</tt> button, change the temperature to 0.2, set
+<li> Click the <code>New</code> button, change the temperature to 0.2, set
 the initial configuration to random, and run the simulation. You should see quenched-in vortices 
 which don't change with time. Are there an equal number of positive and negative vortices? 
 Are there isolated vortices whose centers are more than a lattice spacing apart?</li>
 
-<li> Click the <tt>New</tt> button and set the initial configuration to
+<li> Click the <code>New</code> button and set the initial configuration to
 ordered and the temperature to 0.2. Also set steps per display to 100
 so that the simulation will run much faster. Run the simulation for
 at least 1000 mcs to equilibrate and 10,000 mcs to collect data,

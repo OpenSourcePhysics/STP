@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -36,12 +21,12 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>RandomWalk1d</tt> allows you to explore the properties of random walks in one dimension. Random walks are an example of a Bernoulli process for which there are two possible independent 
+<p>Program <code>RandomWalk1d</code> allows you to explore the properties of random walks in one dimension. Random walks are an example of a Bernoulli process for which there are two possible independent 
 events (a step to the right or to the left). The distribution of walks in a particular direction is given by the <i>binomial distribution</i>. In addition, random walks are models of <i>diffusion</i>.    </p>
 
 <h2>Problem: Monte Carlo simulation of a one-dimensional random walk</h2>
 
-Program <tt>RandomWalk1d</tt> simulates a random walk in one dimension. 
+Program <code>RandomWalk1d</code> simulates a random walk in one dimension. 
 A walker starts at the origin and takes N steps. At each step the walker goes to 
 the right with probability p or to the left with probability q = 1 - p. Each step has the same unit 
 length and is independent of the previous steps. 
@@ -56,7 +41,7 @@ We can simulate an N-step walk by the following pseudocode:
 <br>end do
 
 
-<p>The function <tt>rnd</tt> generates a  number between zero
+<p>The function <code>rnd</code> generates a  number between zero
 and one with equal probability. The quantity
 x is the net displacement after N steps assuming that the steps are of unit
 length.

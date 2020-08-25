@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -71,7 +56,7 @@ Eq. (3) as
 <br>where we have substituted 
 <br> &nbsp; &nbsp; &epsilon;<sub>f</sub> = [(h/2&pi;)<sup>2</sup> / 2m] (3 &pi;<sup>2</sup> &rho;)<sup>2/3</sup> &nbsp; &nbsp; (7)
  <br>for &epsilon;<sub>f</sub>. To find the dependence
-of &mu;<sup>*</sup> on T<sup>*</sup> use Program <tt>QuantumGasIntegral</tt> to evaluate the integral on the right-hand side of
+of &mu;<sup>*</sup> on T<sup>*</sup> use Program <code>QuantumGasIntegral</code> to evaluate the integral on the right-hand side of
 Eq. (6) numerically. 
 
 <ol type ="a">
@@ -92,7 +77,7 @@ Describe its qualitative T dependence and the T dependence of C<sub>V</sub>.</li
 
 <h2>Problem: Evaluation of &mu; for an ideal Bose gas</h2>
 
-Program <tt>QuantumGasIntegral</tt> numerically evaluates the
+Program <code>QuantumGasIntegral</code> numerically evaluates the
 integral on the right-hand side of 
 
 <p> &nbsp; &nbsp; &rho;  = N/V = [(2m)<sup>3/2</sup> / 4 &pi;<sup>2</sup> (h/2&pi;)<sup>3</sup>} &int; d&epsilon;
@@ -125,7 +110,7 @@ error until you find the desired result. You should find that &mu;<sup>*</sup> &
 
 <li> Let T<sup>*</sup>=5 and find the value of &mu;<sup>*</sup> so that the right-hand side of Eq. (10) equals 1. 
 Does &mu; increase or decrease in magnitude? Continue this procedure for lower values of T<sup>*</sup>. 
-Click on the <tt>plot</tt> button each time an approximately correct value of &mu; is found and generate a 
+Click on the <code>plot</code> button each time an approximately correct value of &mu; is found and generate a 
 plot of &mu;<sup>*</sup> versus T<sup>*</sup>.</li>
 
 <li> Discuss the qualitative temperature dependence of &mu; for fixed density.</li>

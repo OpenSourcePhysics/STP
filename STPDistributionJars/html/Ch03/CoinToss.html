@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -36,13 +21,13 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>CoinToss</tt> models the repeated tossing of a single coin or the tossing of a large number of identical coins at the same time. 
+<p>Program <code>CoinToss</code> models the repeated tossing of a single coin or the tossing of a large number of identical coins at the same time. 
 The goal of this simulation is to see how the percentage of times that you obtain  heads fluctuates and to obtain some feel 
 for how close you come to the expected average after N tosses of a single coin or the toss of N coins at one time.   </p>
 
 <h2>Problem: Multiple tosses of a single coin</h2>
 
-<p>Use Program <tt>CoinToss</tt>  to simulate
+<p>Use Program <code>CoinToss</code>  to simulate
 multiple tosses of a single coin. What is the correspondence
 between this simulation of a coin being tossed many times and the
 actual physical tossing of a coin? If the coin is &#8220;fair,&#8221; what

@@ -1,22 +1,6 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ [' ',' '] ],
-      displayMath: [ ['  ','  '] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
 <html>
 
 <head>
@@ -36,7 +20,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>DemonIdealGas</tt> models an ideal thermometer called the <i>demon</i>. The demon is in thermal equilibrium 
+<p>Program <code>DemonIdealGas</code> models an ideal thermometer called the <i>demon</i>. The demon is in thermal equilibrium 
 with the system of interest such as an ideal gas. The energy of the demon is its only property. The demon randomly visits a particle in the system and attempts to change its velocity. If the change decreases 
 the energy,
  the change is accepted and the system's lost energy goes to the demon. If the velocity change increases the system's energy, 
@@ -48,7 +32,7 @@ and probability distribution are related to the temperature. </p>
 
 <h2>Problem: The demon and the ideal gas</h2>
 
-Program  <tt> DemonIdealGas</tt> simulates a demon that
+Program  <code> DemonIdealGas</code> simulates a demon that
 exchanges energy with an ideal gas of  N  particles in  d 
 spatial dimensions. Because the particles do not interact, the only
 coordinate of interest is the velocity of the particles.

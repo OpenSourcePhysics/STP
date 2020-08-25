@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -57,18 +42,18 @@ the phase transition in this model, the program can be used to explore quenches 
 What is the value of the critical temperature T<sub>c</sub> for the lattice gas in two dimensions in units of u<sub>0</sub>/k?</li>
 
 <li>
-Program <tt>LatticeGas</tt> simulates the lattice gas on a square lattice of linear dimension L. 
+Program <code>LatticeGas</code> simulates the lattice gas on a square lattice of linear dimension L. 
 The initial state has all the particles at the bottom of the simulation cell. Choose L = 32 and 
 set the gravitational field equal to zero. Do a simulation at T = 0.4 with N = 600 particles. 
 After a few Monte Carlo steps you should see the bottom region of particles (blue sites) develop a 
 few small holes or bubbles and the unoccupied region contain a few isolated particles or small clusters of 
 particles. This system represents a liquid (the predominately blue region) in equilibrium with its 
-vapor (the mostly yellow region). Record the energy. To speed up the simulation set <tt>steps per display</tt>
+vapor (the mostly yellow region). Record the energy. To speed up the simulation set <code>steps per display</code>
  equal to 100.</li>
 
 <li>
 Increase the temperature in steps of 0.05 until T = 0.7. At each value of T run for at least 10,000 mcs to 
-reach equilibrium and then press the <tt>Zero Averages</tt> button. Run for at least 20,000 mcs before recording 
+reach equilibrium and then press the <code>Zero Averages</code> button. Run for at least 20,000 mcs before recording 
 your estimate of the energy. Describe the visual appearance of the positions of the particle and empty sites at 
 each temperature. At what temperature does the one large liquid region break up into many pieces, such that 
 there is no longer a sharp distinction between the liquid and vapor region? At this temperature there is a 

@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -36,7 +21,7 @@ MathJax.Hub.Config({
   
 
 
-<p>Program <tt>TwoPartsMD</tt> models the behavior of particles moving in a two-dimensional box interacting through the Lennard-Jones potential. 
+<p>Program <code>TwoPartsMD</code> models the behavior of particles moving in a two-dimensional box interacting through the Lennard-Jones potential. 
 The motion evolves using the numerical solution of the 
 differential equations in Newton's second law. The velocity Verlet algorithm is used to update the positions and velocities of the particles. 
 Toroidal boundary conditions are used so that particles that leave the box enter on the other side, much like many video games. Initially, all the particles are located in the left half of the box. The macroscopic quantity of interest is the number of particles in 
@@ -46,8 +31,8 @@ The goals of this simulation are to explore the approach to equilibrium,
  microscopic motion is reversible.  </p>
 
 <h2>Problem: Approach to equilibrium</h2>
-Program <tt>TwoPartsMD</tt> initially divides the box into two parts rather than three. Run the program 
-and verify that the simulation shows similar qualitative behavior to that found using Program <tt>ThreePartsMD</tt>. 
+Program <code>TwoPartsMD</code> initially divides the box into two parts rather than three. Run the program 
+and verify that the simulation shows similar qualitative behavior to that found using Program <code>ThreePartsMD</code>. 
 Explain the use of toroidal boundary conditions.
 
    <h2>Resources</h2>

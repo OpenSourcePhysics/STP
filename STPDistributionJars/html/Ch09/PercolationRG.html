@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -46,7 +31,7 @@ This process is repeated using the blocked spins. The goal of the program is to 
 
 <h2>Problem: Visual coarse-graining</h2>
 
-<p>Use Program <tt>PercolationRG</tt> to estimate
+<p>Use Program <code>PercolationRG</code> to estimate
 the value of the percolation threshold. For example, confirm that for p = 0.4, the coarse-grained lattices almost
 always reduce to an unoccupied site. What happens for p =
 0.8? How can you use the properties of the coarse-grained lattices to

@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script type="text/javascript">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    TeX: { equationNumbers: {autoNumber: "all"} },
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['',''] ],
-      displayMath: [ ['',''] ],
-      processEscapes: true
-    },
-    SVG: { linebreaks: { automatic: true } },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-});
-</script>
+
+
 <html>
 
 <head>
@@ -54,7 +39,7 @@ repulsion can be added to prevent more than one particle at the same position.
 
 <h2>Problem: The chemical potential of a one-dimensional ideal gas</h2>
 
-Program <tt>ChemicalPotentialDemon</tt>
+Program <code>ChemicalPotentialDemon</code>
 implements this algorithm for the one-dimensional ideal gas and computes P(E<sub>d</sub>,N<sub>d</sub>), the probability 
 that the demon has energy E<sub>d</sub> and N<sub>d</sub> particles.
 
@@ -83,9 +68,9 @@ Show that the chemical potential is given by
 (Remember that &Delta;x &Delta;p = 1.)</li>
 
 <li> Use the same parameters as in part (a) and run for about 200 Monte Carlo steps per particle (mcs) to 
-equilibrate the system. Then click <tt>Zero Averages</tt> and average over at least 1000 mcs. 
+equilibrate the system. Then click <code>Zero Averages</code> and average over at least 1000 mcs. 
 (The simulation will run faster if you increase the steps per display to 10 or 100.) 
-After the simulation is stopped, click the <tt>Plot Demon Distributions</tt> button to display the demon energy and 
+After the simulation is stopped, click the <code>Plot Demon Distributions</code> button to display the demon energy and 
 particle number distributions. The plot of ln P(E<sub>d</sub>, 
 N<sub>d</sub> = 1) versus E<sub>d</sub> should be approximately linear for 
 small E<sub>d</sub>.
@@ -104,7 +89,7 @@ What are the effects of including interactions between the particles in a dilute
 
 <li> If the interaction has a hard core, no two particles can have the same position. 
 How do you expect &mu; to change compared to the ideal gas?
-Use Program <tt>ChemicalPotentialDemon</tt> and determine the effect of including a hard core on &mu;. 
+Use Program <code>ChemicalPotentialDemon</code> and determine the effect of including a hard core on &mu;. 
 For this comparison set L = 200 and N = 100. Why must L be much larger than N?</li>
 
 <li> If we include an attractive interaction between particles that are nearest neighbors in position, 
