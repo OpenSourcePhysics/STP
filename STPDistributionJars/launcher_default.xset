@@ -2,7 +2,7 @@
 <object class="org.opensourcephysics.tools.Launcher$LaunchSet">
     <property name="width" type="int">1092</property>
     <property name="height" type="int">585</property>
-    <property name="divider" type="int">364</property>
+    <property name="divider" type="int">340</property>
     <property name="editor_enabled" type="boolean">true</property>
     <property name="selected_node" type="string">STP Interactive Programs/Chapter 1: Micro to Macro</property>
     <property name="expanded" type="array" class="[Ljava.util.Collection;">
