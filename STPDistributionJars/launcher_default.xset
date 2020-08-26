@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <object class="org.opensourcephysics.tools.Launcher$LaunchSet">
     <property name="classpath" type="string">STPLauncher.jar</property>
-    <property name="width" type="int">1158</property>
-    <property name="height" type="int">836</property>
+    <property name="width" type="int">1092</property>
+    <property name="height" type="int">585</property>
     <property name="divider" type="int">340</property>
     <property name="editor_enabled" type="boolean">true</property>
     <property name="selected_node" type="string">STP Interactive Programs</property>
@@ -808,7 +808,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string">Chapter 10: Time-Dependent Phomena</property>
+                    <property name="name" type="string">Chapter 10: Time-Dependent Phenomena</property>
                     <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                         <property name="[0]" type="array" class="[Ljava.lang.String;">
                             <property name="[1]" type="string">html/Ch10/Chapter10.html</property>
