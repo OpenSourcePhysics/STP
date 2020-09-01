@@ -5,7 +5,7 @@
     <property name="height" type="int">585</property>
     <property name="divider" type="int">340</property>
     <property name="editor_enabled" type="boolean">true</property>
-    <property name="selected_node" type="string">STP Interactive Programs</property>
+    <property name="selected_node" type="string">STP Interactive Programs/Chapter 3: Probability</property>
     <property name="expanded" type="array" class="[Ljava.util.Collection;">
         <property name="[0]" type="collection" class="java.util.ArrayList">
             <property name="item" type="string">STP Interactive Programs</property>
@@ -178,7 +178,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                 </property>
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.tools.LaunchNode">
-                    <property name="name" type="string"><![CDATA[Chapter 3: Concepts & Tools]]></property>
+                    <property name="name" type="string">Chapter 3: Probability</property>
                     <property name="display_tabs" type="array" class="[[Ljava.lang.String;">
                         <property name="[0]" type="array" class="[Ljava.lang.String;">
                             <property name="[1]" type="string">html/Ch03/Chapter03.html</property>
