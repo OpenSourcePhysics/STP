@@ -41,7 +41,10 @@ public class PercolationRGApp extends AbstractCalculation {
 		   blockedLattices = new LatticeFrame[n];
 	    }
     double p = control.getDouble("p");
-    if(n != nOld) blockedLattices[0] = new LatticeFrame("Original Lattice");
+    if(n != nOld) {
+    	blockedLattices[0] = new LatticeFrame("Original Lattice");
+			mainFrame.addChildFrame(blockedLattices[0]);
+    }
     newLattice(L, p, blockedLattices[0]);
     int Lnew = L/2;
     setLatticeColors(blockedLattices[0]);
@@ -49,7 +52,8 @@ public class PercolationRGApp extends AbstractCalculation {
     for(int i = 1; i < n; i++){
     	if(n != nOld) {
     		blockedLattices[i] = new LatticeFrame(Lnew + "x" + Lnew + " Coarse Grained Lattice");
-    	    setLatticeColors(blockedLattices[i]);
+  			mainFrame.addChildFrame(blockedLattices[i]);
+    	  setLatticeColors(blockedLattices[i]);
     	}
     	block(blockedLattices[i-1],blockedLattices[i],Lnew);
     	//blockedLattices[i].setVisible(true);
