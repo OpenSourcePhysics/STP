@@ -5,10 +5,10 @@
     <property name="height" type="int">585</property>
     <property name="divider" type="int">340</property>
     <property name="editor_enabled" type="boolean">true</property>
-    <property name="selected_node" type="string">STP Interactive Programs/Chapter 5: Magnetic Systems/Ising 2d</property>
+    <property name="selected_node" type="string">STP Interactive Programs/Chapter 10: Time-Dependent Phenomena</property>
     <property name="expanded" type="array" class="[Ljava.util.Collection;">
         <property name="[0]" type="collection" class="java.util.ArrayList">
-            <property name="item" type="string">STP Interactive Programs/Chapter 5: Magnetic Systems</property>
+            <property name="item" type="string">STP Interactive Programs/Chapter 1: Micro to Macro</property>
             <property name="item" type="string">STP Interactive Programs</property>
         </property>
     </property>
@@ -365,7 +365,7 @@ Use the File menu to Open or Edit an "xset" file. An "xset" file is an xml docum
                             <property name="display_args" type="array" class="[[Ljava.lang.String;">
                                 <property name="[0]" type="object">null</property>
                             </property>
-                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch04.HardDisksMDApp</property>
+                            <property name="launch_class" type="string">org.opensourcephysics.stp.Ch01.DemonIdealGasApp</property>
                             <property name="single_vm" type="boolean">true</property>
                         </object>
                         </property>
