@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 from numpy.random import random as rnd
 from myFunctions import *
 import math
+from LJ2d import *
 
 #initialize
 N = int(input0("N", 75))
@@ -83,6 +84,12 @@ dt = 0.01
 nSteps = int(runTime/dt)
 nPlot = int(plotTime/dt)
 
+#variables not used in this program
+cum = 0
+x2sum = 0
+y2sum = 0
+dx = 0
+dy = 0
 #start simulation
 keepRunning = 'c'
 t = 0
@@ -90,6 +97,7 @@ while keepRunning == 'c':
     for iSteps in range(nSteps):
         t += dt
         verlet(x,y,vx,vy,ax,ay,dt,N,L,L,L*L)
+        #verlet(x,y,vx,vy,ax,ay,dt,N,L,L,L*L)
         nLeft = 0
         nCenter = 0
         for i in range(N):
