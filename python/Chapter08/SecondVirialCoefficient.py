@@ -16,7 +16,7 @@ def main():
     runAgain = 'y'
     while runAgain == 'y':
         Tmin = float(input0('Tmin',1.0))
-        Tmax = float(input0('Tmin',25))
+        Tmax = float(input0('Tmax',25))
         numberOfPoints = 400
         dT = (Tmax-Tmin)/numberOfPoints   
         T = Tmin

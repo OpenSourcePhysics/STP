@@ -37,7 +37,8 @@ plotData = False
 #start off with energy randomly distributed
 oscillators = np.zeros(N) 
 for q in range(E):  # add energy quanta to oscillators
-    oscillators[n] = 1
+    n = int(rnd()*N)
+    oscillators[n] += 1
 
 #variables to accumulate data for averaging
 def reset(cum):

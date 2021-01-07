@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from numpy.random import random as rnd
 from myFunctions import *
 import math
-from LJ2d import *
+from LJ2d0 import *
 
 #initialize
 N = int(input0("N", 75))

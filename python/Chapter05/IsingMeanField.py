@@ -25,7 +25,7 @@ T = float(input0('T',1.0))
 q = float(input0('q',4))
 H = float(input0('H',0.0))
 dm = 0.01
-    
+  
 for ax, interp in zip(axs, ['tanh(m)', 'Helmholtz function']):
     if interp == 'tanh(m)':
         x = []
@@ -49,6 +49,5 @@ for ax, interp in zip(axs, ['tanh(m)', 'Helmholtz function']):
             y.append(0.5*q*m*m - T*math.log(2*math.cosh((q*m + H)/T)))
             m += dm
         ax.plot(x,y)
- 
-                             
-
+        plt.pause(0.001)
+input('Press return to close')

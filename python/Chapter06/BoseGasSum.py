@@ -84,6 +84,7 @@ for ax, interp in zip(axs, ['Chemical Potential', 'Specific Heat', 'Occupancy of
         ax.plot(kT,N0,'r.')
         ax.plot(kT,N1,'b.')
         ax.plot(kT,Nex,'g.')
+    plt.pause(0.0001)
 print("Now computing Tc")
 mu = 3
 Tplus = N
@@ -104,3 +105,4 @@ while(abs(N-Ntrial) > dN):
     else:
         Tminus = T
 print3f('Tc',T) 
+input('Press return to close')
