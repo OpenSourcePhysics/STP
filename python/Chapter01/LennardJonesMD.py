@@ -261,7 +261,7 @@ def main():
         print3f('mean temperature',meanT)
         print3f('PA/NkT', meanP)
         print3f('Heat Capacity',N/(1 - sigma2/(N*T*T)))
-        keepRunning = input('Continue/Stop/Reset/change Lx/Veclocity rescale (c/s/r/cl/vr)')
+        keepRunning = input('Continue/Stop/Reset/change Lx/Velocity rescale (c/s/r/cl/vr)')
         if keepRunning == 'r':
             g = rdfSetup(Lx,Ly)
             Nupdates = 0

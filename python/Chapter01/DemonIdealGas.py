@@ -104,7 +104,7 @@ while keepRunning == 'c':
     print3f('acceptance ratio',cum['accept']/cum['n'])
     print3f('average energy',cum['E']/(cum['n']))
     print3f('average demon energy',cum['Ed']/(cum['n']))
-    keepRunning = input('Continue/Stop/Reset Axerages? (c/s/r)')
+    keepRunning = input('Continue/Stop/Reset Averages? (c/s/r)')
     if keepRunning == 'r':  #reset averages
         reset(cum)
         keepRunning = 'c' 

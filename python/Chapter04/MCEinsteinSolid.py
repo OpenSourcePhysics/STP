@@ -2,6 +2,8 @@
 Created : Created June 16, 2020
 Author: Jan Tobochnik 
 Description: Einstein Solid using Metropolis MC algorithm
+Energy vs time plotted continuously. Specific Heat and Energy per Oscillator only plotted after user
+presses p for Plot Data when situation pauses 
     """
 import numpy as np
 import matplotlib.pyplot as plt

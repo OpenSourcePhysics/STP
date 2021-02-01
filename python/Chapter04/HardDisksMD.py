@@ -20,7 +20,7 @@ def main():
     initconf = input0('initial configuration:fluid(random), rectagular, hexangonal (f/r/h)','h')
     Lx = float(input0('Lx  (Ly = sqrt(3)Lx/2))',20))
     dt = float(input0('time step',0.01))
-    T = float(input0('Initial Kinetic Energy per particlee',1.0))
+    T = float(input0('Initial Kinetic Energy per particle',1.0))
     Ly = Lx*math.sqrt(3)/2
     nSteps = int(input0("number of collisions", 1000))
     nPlot = int(input0("number of collisions per plot ", 20))
@@ -63,10 +63,31 @@ def main():
     nx = int(0.01 + math.sqrt(N))
     if nx*nx < N:
         nx += 1
+    keepRunning = 'c'
     if initconf == 'f':
         for n in range(N):
-            x[n] = rnd()*Lx
-            y[n] = rnd()*Ly
+            attempts = 0
+            if keepRunning == 's':
+                break
+            while True:
+                attempts += 1
+                if attempts > 20:
+                    keepRunning = 's'
+                    print('CANNOT CREATE RANDOM CONFIGURATION')
+                    break
+                x[n] = rnd()*Lx
+                y[n] = rnd()*Ly
+                i = 0
+                overlap = False
+                while  (i < n):
+                    dx = sep(x[n] -x[i],Lx)
+                    dy = sep(y[n] -y[i],Ly)
+                    if (dx*dx + dy*dy) < 1:
+                        overlap = True
+                        break
+                    i += 1
+                if not overlap:
+                    break    
     elif initconf == 'r': 
         n = 0
         ax = Lx/nx
@@ -198,6 +219,7 @@ def main():
             Nupdates += 1
             cum['nCol'] += 1
             indexC = int(dt*100)
+          #  printi("......",indexC)
             if indexC < nBinsC: histogramCol[indexC] += 1
             if iStep % nPlot == 0:
                  meanT = cum['KE']/(cum['t']*N)
